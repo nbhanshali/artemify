@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.artemifyMusicStudio.RegularUserHomePage"
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"/>
+
+    <Button
+        android:id="@+id/profile_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile and Setting"/>
+
+    <Button
+        android:id="@+id/create_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create New Playlist"/>
+
+    <Button
+        android:id="@+id/upload_song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Song"/>
+
+    <Button
+        android:id="@+id/enable_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable Admin Mode"/>
+
+    <Button
+        android:id="@+id/log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log Out"/>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Artemify</string>
+    <string name="welcome_to_artemify_music_studio">Welcome to Artemify Music Studio!</string>
+    <string name="your_creations_today_will_be_the_greatest_works_of_art_tomorrow">Your creations today will be the greatest works of art tomorrow</string>
+    <string name="start">Start</string>
+    <string name="populate_entities">Populate Entities</string>
+    <string name="log_in">LOG IN</string>
+    <string name="join">JOIN</string>
+    <string name="title_activity_login_page">LoginPage</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="regular_user">Regular User</string>
+    <string name="admin_user">Admin User</string>
+    <string name="login_as">Login as:</string>
+    <string name="password">PASSWORD</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="username">USERNAME</string>
+    <string name="create_account">Create Account</string>
+    <string name="app_logo">APP LOGO</string>
+    <string name="search">Search</string>
+    <string name="exit">exit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

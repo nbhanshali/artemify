@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminPage"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Admin Page"/>
+
+    <Button
+        android:id="@+id/exitAdminMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quit admin mode"/>
+
+    <Button
+        android:id="@+id/deleteUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete a user" />
+
+    <Button
+        android:id="@+id/banUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ban a user" />
+
+    <Button
+        android:id="@+id/unbanUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unban a user" />
+
+    <Button
+        android:id="@+id/MakeAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make a user an admin" />
+
+</LinearLayout>

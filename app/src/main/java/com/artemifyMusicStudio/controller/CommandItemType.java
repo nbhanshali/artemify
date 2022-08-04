@@ -1,0 +1,70 @@
+package com.artemifyMusicStudio.controller;
+
+/**
+ * An Enum class to store all menu item type
+ */
+public enum CommandItemType {
+
+    // For RegularUserHomePage
+    PROFILE_AND_SETTING,
+    INVOKE_SEARCH,
+    INVOKE_CREATE_NEW_PLAYLIST,
+    INVOKE_SONG_UPLOAD,
+    //
+
+    // For POP DIALOG
+    POP_UP_SEARCH_SONG_DIALOG,
+    POP_UP_SEARCH_USER_DIALOG,
+    POP_UP_SEARCH_PLAYLIST_DIALOG,
+    //
+
+    // For Search Page
+    SEARCH_SONG,
+    SEARCH_PLAYLIST,
+    SEARCH_USER,
+    //
+    BACK_TO_PREVIOUS_PAGE,
+    EXIT_PAGE,
+    REGULAR_LOG_IN_MODE,
+    ADMIN_LOG_IN_MODE,
+    ENABLE_ADMIN_MODE,
+    QUIT_ADMIN_MODE,
+    DELETE_USER,
+    BAN_USER,
+    UNBAN_USER,
+    GRANT_ADMIN_RIGHT,
+    USER_MODE,
+    CREATE_REGULAR_ACCOUNT,
+    LOG_IN,
+    LOG_OUT,
+    ACCOUNT_CREATION,
+    EXIT_PROGRAM,
+    // For UploadSongPage
+    UPLOAD_SONG,
+    // For DisplaySongPage
+    VIEW_LYRICS,
+    LIKE_SONG,
+    ADD_TO_EXISTING_PLAYLIST,
+    ADD_TO_NEW_PLAYLIST,
+    // For UserDisplayPage:
+    FOLLOW_USER,
+    UNFOLLOW_USER,
+    VIEW_FOLLOWERS,
+    VIEW_FOLLOWINGS,
+    VIEW_USER_SONGS,
+    VIEW_USER_PLAYLISTS,
+    VIEW_USER_FAVORITES,
+    VIEW_USER_LIKED_PLAYLISTS,
+
+    // For PlaylistDisplayPage
+    VIEW_PLAYLIST_SONGS,
+    VIEW_CREATOR,
+    LIKE_PLAYLIST,
+    PLAY_PLAYLIST,
+    // For NewPlaylistPage
+    CREATE_NEW_PLAYLIST,
+    // For MyAccountPage
+    VIEW_LOGIN_HISTORY,
+    VIEW_PRIVATE_SONGS,
+    VIEW_PRIVATE_PLAYLISTS
+}
