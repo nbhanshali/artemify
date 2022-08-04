@@ -1,5 +1,7 @@
 package com.artemifyMusicStudio.controller.commandCreator;
 
+import android.widget.EditText;
+
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleCommand;
@@ -18,9 +20,11 @@ public class QueueServiceCommandCreator implements SimpleCommandCreator {
     private final LanguagePresenter languagePresenter;
     private final ActivityServiceCache activityServiceCache;
     private final Queue queueService;
+    private final EditText inputSongIndex;
 
-    public QueueServiceCommandCreator(ActivityServiceCache activityServiceCache) {
+    public QueueServiceCommandCreator(ActivityServiceCache activityServiceCache, EditText inputSongIndex) {
         this.activityServiceCache = activityServiceCache;
+        this.inputSongIndex = inputSongIndex;
         this.languagePresenter = this.activityServiceCache.getLanguagePresenter();
         this.queueService = this.activityServiceCache.getQueueManager();
     }
@@ -34,8 +38,8 @@ public class QueueServiceCommandCreator implements SimpleCommandCreator {
             case SKIP_SONG:
                 return new SkipSongCommand(activityServiceCache, languagePresenter, queueService);
             case REMOVE_FROM_QUEUE:
-                // return new RemoveFromQueueCommand(activityServiceCache, languagePresenter,
-                 //       queueService);
+                return new RemoveFromQueueCommand(activityServiceCache, languagePresenter,
+                       queueService, inputSongIndex);
             //case PLAY_PAUSE_SONG:
             //    return new PlayPauseSongCommand();
             case PLAY_PREVIOUS_SONG:
