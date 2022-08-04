@@ -66,5 +66,14 @@ public enum CommandItemType {
     // For MyAccountPage
     VIEW_LOGIN_HISTORY,
     VIEW_PRIVATE_SONGS,
-    VIEW_PRIVATE_PLAYLISTS
+    VIEW_PRIVATE_PLAYLISTS,
+
+    // For QueueDisplay Page
+    SHUFFLE_QUEUE,
+    SKIP_SONG,
+    REMOVE_FROM_QUEUE,
+    PLAY_PAUSE_SONG,
+    PLAY_PREVIOUS_SONG,
+    REPEAT_SONG_ONCE,
+    REPEAT_SONG_INF
 }
