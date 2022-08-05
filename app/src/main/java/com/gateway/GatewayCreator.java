@@ -2,8 +2,6 @@ package com.gateway;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.artemifyMusicStudio.PageActivity;
-
 /**
  * A Gateway class that create the corresponding Gateway class.
  */

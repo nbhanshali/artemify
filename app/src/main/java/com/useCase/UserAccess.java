@@ -65,10 +65,17 @@ public class UserAccess implements Serializable {
     }
 
     /**
+     * getter to get this.user
+     */
+    public UserEntityContainer getUsers() {
+        return users;
+    }
+
+    /**
      * getter for the users list
      * @return the users list
      */
-    protected ArrayList<User> getUsers(){
+    protected ArrayList<User> getUserList(){
         return users.values();
     }
 
@@ -100,7 +107,7 @@ public class UserAccess implements Serializable {
         results.put("IsBanned", false);
         results.put("IsAdmin", false);
         //Loop to check if a user exists with this username password pair
-        for (User user: getUsers()){
+        for (User user: getUserList()){
             //update results if such a user exists and update their loginHistory
             if ((Objects.equals(user.getUsername(), username)) && (Objects.equals(user.getPassword(), password))){
                 results.replace("Exists", true);
@@ -314,7 +321,7 @@ public class UserAccess implements Serializable {
      */
     public HashMap<String, HashMap<String, String>> outputUserInfo(){
         HashMap<String, HashMap<String, String>> userInfo = new HashMap<>();
-        for (User user: getUsers()){
+        for (User user: getUserList()){
             HashMap<String, String> userInfoDetail = new HashMap<>();
             String userName = user.getUsername();
             String password = user.getPassword();
@@ -337,7 +344,7 @@ public class UserAccess implements Serializable {
      */
     public HashMap<String, ArrayList<Timestamp>> userLogInHistory(){
         HashMap<String, ArrayList<Timestamp>> loginHistory = new HashMap<>();
-        for (User user: getUsers()){
+        for (User user: getUserList()){
             loginHistory.put(user.getUsername(), user.getLoginHistory());
         }
         return loginHistory;
@@ -527,7 +534,7 @@ public class UserAccess implements Serializable {
      * @return The username of the user that created the playlist with the specified ID
      */
     public String getCreator(int playlistID) {
-        for (User user: getUsers()) {
+        for (User user: getUserList()) {
             if (getListOfPlaylistsIDs(user.getUsername(), "Public").contains(playlistID)) {
                 return user.getUsername();
             }

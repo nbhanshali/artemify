@@ -75,10 +75,18 @@ public class SongManager implements Serializable {
     }
 
     /**
+     * A getter to get the song container object
+     * @return this.songs
+     */
+    public SongEntityContainer getSongs() {
+        return songs;
+    }
+
+    /**
      * getter for the list of all the songs
      * @return the songs list
      */
-    public ArrayList<Song> getSongs() {
+    public ArrayList<Song> getSongList() {
         return songs.values();
     }
 
@@ -287,7 +295,7 @@ public class SongManager implements Serializable {
      */
     public ArrayList<String> getStringSongsIDsFromSongName(String songName) {
         ArrayList<String> IDs = new ArrayList<>();
-        for (Song song: getSongs()) {
+        for (Song song: getSongList()) {
             if (Objects.equals(song.getName(), songName) && song.isPublic()) {
                 IDs.add(String.valueOf(song.getId()));
             }

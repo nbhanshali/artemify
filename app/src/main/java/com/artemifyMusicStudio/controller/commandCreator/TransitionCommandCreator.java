@@ -8,7 +8,7 @@ import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.transitionCommand.CreateAccountCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.EnableAdminCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
-import com.artemifyMusicStudio.controller.transitionCommand.InvokeLogInCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.InvokeLogOutCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeNewPlaylistPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokePlaylistDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeProfileAndSettingPageCommand;
@@ -66,7 +66,7 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new InvokeNewPlaylistPageCommand(this.activityServiceCache);
             case LOG_OUT:
                 // TODO: Discuss with Tom
-                return new InvokeLogInCommand(this.activityServiceCache);
+                return new InvokeLogOutCommand(this.activityServiceCache);
             case EXIT_PAGE:
                 return new ExitPageCommand(this.activityServiceCache);
             default:

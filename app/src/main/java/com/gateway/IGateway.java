@@ -8,12 +8,13 @@ import com.useCase.SongEntityContainer;
 import com.useCase.UserEntityContainer;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * An abstract Gateway class that handles system I/O.
  */
 
-public abstract class IGateway implements SimpleGateway {
+public abstract class IGateway implements SimpleGateway{
 
     protected AppCompatActivity currentPageActivity;
 

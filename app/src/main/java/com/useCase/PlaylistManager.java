@@ -64,10 +64,18 @@ public class PlaylistManager implements Serializable {
     }
 
     /**
+     * A getter to get the playlists container object
+     * @return this.playlists
+     */
+    public PlaylistEntityContainer getPlaylists() {
+        return playlists;
+    }
+
+    /**
      * getter for the list of all playlists
      * @return the list of all playlists
      */
-    protected ArrayList<Playlist> getPlaylists() {
+    protected ArrayList<Playlist> getPlaylistInArray() {
         return playlists.values();
     }
 
@@ -276,7 +284,7 @@ public class PlaylistManager implements Serializable {
      */
     public ArrayList<String> getListOfStringPlaylistIDs(String playlistName) {
         ArrayList<String> IDs = new ArrayList<>();
-        for (Playlist playlist: getPlaylists()) {
+        for (Playlist playlist: getPlaylistInArray()) {
             if (Objects.equals(playlist.getName(), playlistName) && playlist.isPublic()) {
                 IDs.add(String.valueOf(playlist.getId()));
             }
@@ -294,7 +302,7 @@ public class PlaylistManager implements Serializable {
      * @return the playlistID Integer object, return null if the id does not exit.
      */
     public Integer getUserOwnedPlaylistIDFromName(String userID, String playlistName){
-        for (Playlist playlist: getPlaylists()) {
+        for (Playlist playlist: getPlaylistInArray()) {
             if (Objects.equals(playlist.getName(), playlistName) &&
                     Objects.equals(playlist.getCreatorUsername(), userID)) {
                 return playlist.getId();
