@@ -54,17 +54,9 @@ public class PlaylistServiceCommandCreator implements SimpleCommandCreator {
      */
     public PlaylistServiceCommand create(CommandItemType type){
         switch (type) {
-            case VIEW_PLAYLIST_SONGS:
-                return new ViewPlaylistSongsCommand(this.activityServiceCache, this.languagePresenter,
-                        this.playlistServiceManager, this.playlistID);
-            case VIEW_CREATOR:
-                return new ViewCreatorCommand(this.activityServiceCache, this.playlistServiceManager, this.viewedID);
             case LIKE_PLAYLIST:
                 return new LikePlaylistCommand(this.activityServiceCache, this.languagePresenter,
                         this.playlistServiceManager, this.userID, this.playlistID);
-            case PLAY_PLAYLIST:
-                return new PlayPlaylistCommand(this.activityServiceCache, this.languagePresenter,
-                        this.playlistServiceManager, this.playlistID);
             case CREATE_NEW_PLAYLIST:
                 return new CreateNewPlaylistCommand(this.activityServiceCache, this.languagePresenter,
                         this.playlistServiceManager, this.userID);

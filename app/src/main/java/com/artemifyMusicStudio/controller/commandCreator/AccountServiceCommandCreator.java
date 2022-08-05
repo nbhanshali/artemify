@@ -56,8 +56,6 @@ public class AccountServiceCommandCreator implements SimpleCommandCreator {
      */
     public AccountServiceCommand create(CommandItemType type){
         switch (type) {
-            case ADMIN_LOG_IN_MODE:
-                return new AdminLogInCommand(this.activityServiceCache,this.languagePresenter,this.acctServiceManager);
             case VIEW_LOGIN_HISTORY:
                 return new ViewLoginHistoryCommand(this.languagePresenter, this.acctServiceManager, this.userID);
             case VIEW_PRIVATE_SONGS:
