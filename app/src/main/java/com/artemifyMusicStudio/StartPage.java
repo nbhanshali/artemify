@@ -1,6 +1,5 @@
 package com.artemifyMusicStudio;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.entity.Playlist;
 import com.entity.Song;
 import com.entity.User;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.presenters.LanguageType;
 import com.presenters.PresenterCreator;
@@ -22,31 +24,28 @@ import com.useCase.SongManager;
 import com.useCase.UserAccess;
 import com.useCase.UserEntityContainer;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Program Starting Page Activity
+ */
 public class StartPage extends AppCompatActivity {
+    private IGateway ioGateway;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_page);
-        try {
 
+        // Initialize the IGateway
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        this.ioGateway = gatewayCreator.createIGateway(FileType.SER, this);
+        try {
             Button button = findViewById(R.id.button_start);
             button.setOnClickListener(v -> {
                 ActivityServiceCache finalActivityServiceCache = getActivityServiceCache();
@@ -62,35 +61,11 @@ public class StartPage extends AppCompatActivity {
                 UserEntityContainer users = populateUserEntities();
                 PlaylistEntityContainer playlists = populatePlaylistEntities();
                 SongEntityContainer songs = populateSongEntities();
+
                 try {
-                    FileOutputStream fileOutputStream1 = null;
-                    fileOutputStream1 = openFileOutput("Users.ser", Context.MODE_PRIVATE);
-                    OutputStream buffer1 = new BufferedOutputStream(fileOutputStream1);
-                    ObjectOutput output1 = new ObjectOutputStream(buffer1);
-
-                    //
-                    output1.writeObject(users);
-                    output1.close();
-
-                    FileOutputStream fileOutputStream2 = null;
-                    fileOutputStream2 = openFileOutput("Playlists.ser", Context.MODE_PRIVATE);
-                    OutputStream buffer2 = new BufferedOutputStream(fileOutputStream2);
-                    ObjectOutput output2 = new ObjectOutputStream(buffer2);
-
-                    //
-                    output2.writeObject(playlists);
-                    output2.close();
-
-                    FileOutputStream fileOutputStream3 = null;
-                    fileOutputStream3 = openFileOutput("Songs.ser", Context.MODE_PRIVATE);
-                    OutputStream buffer3 = new BufferedOutputStream(fileOutputStream3);
-                    ObjectOutput output3 = new ObjectOutputStream(buffer3);
-
-                    //
-                    output3.writeObject(songs);
-                    output3.close();
-
-
+                    ioGateway.saveToFile("Users.ser", users);
+                    ioGateway.saveToFile("Playlists.ser", playlists);
+                    ioGateway.saveToFile("Songs.ser", songs);
                 } catch (FileNotFoundException e) {
                     Log.e("warning", "cannot find file");
                 } catch (IOException e){
@@ -101,6 +76,33 @@ public class StartPage extends AppCompatActivity {
         }catch (Exception e){
             Log.e("warning", "other things go wrong");
         }
+    }
+
+    private ActivityServiceCache getActivityServiceCache(){
+        try {
+            // Initialize a SerGateway to read all entities from .ser files to the program
+
+            UserEntityContainer users = ioGateway.readUsersFromFile();
+            PlaylistEntityContainer playlists = ioGateway.readPlaylistsFromFile();
+            SongEntityContainer songs = ioGateway.readSongsFromFile();
+
+            // Initialize Language Presenter
+            PresenterCreator presenterCreator = new PresenterCreator();
+            LanguagePresenter languagePresenter = presenterCreator.createLanguagePresenter(LanguageType.ENGLISH);
+
+            // Initialize the UserAccess, PlaylistManager, SongManager and Queue for only once
+            UserAccess acctServiceManager = new UserAccess(users);
+            PlaylistManager playlistManager = new PlaylistManager(playlists);
+            SongManager songManager = new SongManager(acctServiceManager, playlistManager, songs);
+            Queue queue = new Queue();
+
+            // initialize the one and only PageCreator object that will be used by all controllers in the system
+            return new ActivityServiceCache(languagePresenter, acctServiceManager, queue,
+                    playlistManager, songManager, "");
+        } catch (IOException | ClassNotFoundException e) {
+            Log.e("warning", "other things go wrong");
+        }
+        return null;
     }
 
     private UserEntityContainer populateUserEntities(){
@@ -259,50 +261,5 @@ public class StartPage extends AppCompatActivity {
         playlistEntityContainer.add(playlist114);
         playlistEntityContainer.add(playlist115);
         return playlistEntityContainer;
-    }
-
-    private ActivityServiceCache getActivityServiceCache(){
-        try {
-            FileInputStream fis1 = openFileInput("Users.ser");
-            InputStream buffer1 = new BufferedInputStream(fis1);
-            ObjectInput input1 = new ObjectInputStream(buffer1);
-
-            // serialize the Map
-            UserEntityContainer users = (UserEntityContainer) input1.readObject();
-            input1.close();
-
-            FileInputStream fis2 = openFileInput("Playlists.ser");
-            InputStream buffer2 = new BufferedInputStream(fis2);
-            ObjectInput input2 = new ObjectInputStream(buffer2);
-
-            // serialize the Map
-            PlaylistEntityContainer playlists = (PlaylistEntityContainer) input2.readObject();
-            input2.close();
-
-            FileInputStream fis3 = openFileInput("Songs.ser");
-            InputStream buffer3 = new BufferedInputStream(fis3);
-            ObjectInput input3 = new ObjectInputStream(buffer3);
-
-            // serialize the Map
-            SongEntityContainer songs = (SongEntityContainer) input3.readObject();
-            input3.close();
-
-            // Initialize Language Presenter
-            PresenterCreator presenterCreator = new PresenterCreator();
-            LanguagePresenter languagePresenter = presenterCreator.createLanguagePresenter(LanguageType.ENGLISH);
-
-            // Initialize the UserAccess, PlaylistManager, SongManager and Queue for only once
-            UserAccess acctServiceManager = new UserAccess(users);
-            PlaylistManager playlistManager = new PlaylistManager(playlists);
-            SongManager songManager = new SongManager(acctServiceManager, playlistManager, songs);
-            Queue queue = new Queue();
-
-            // initialize the one and only PageCreator object that will be used by all controllers in the system
-            return new ActivityServiceCache(languagePresenter, acctServiceManager, queue,
-                    playlistManager, songManager, "");
-        } catch (IOException | ClassNotFoundException e) {
-            Log.e("warning", "other things go wrong");
-        }
-        return null;
     }
 }

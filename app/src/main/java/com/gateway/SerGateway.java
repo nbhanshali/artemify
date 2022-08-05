@@ -1,5 +1,10 @@
 package com.gateway;
 
+import android.content.Context;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.artemifyMusicStudio.PageActivity;
 import com.useCase.PlaylistEntityContainer;
 import com.useCase.SongEntityContainer;
 import com.useCase.UserEntityContainer;
@@ -15,23 +20,22 @@ public class SerGateway extends IGateway{
 
     /**
      * Constructor for SerGateway
-     * @param filePath the directory path of the file
+     * @param currentPageActivity a PageActivity object
      */
-    public SerGateway(String filePath) {
-        super(filePath);
+    public SerGateway(AppCompatActivity currentPageActivity) {
+        super(currentPageActivity);
     }
 
     /**
      * A method to save entities to a .ser file
-     *
+     * @param fileName a String to represent the file name
      * @param entities a container that stores the entities to be saved
-     * @param fileName fileName the fileName that will be saved
      * @throws IOException throw IOException
      */
     @Override
-    public void saveToFile(Object entities, String fileName) throws IOException {
-        String fullFilePath = this.filePath + fileName;
-        OutputStream file = new FileOutputStream(fullFilePath);
+    public void saveToFile(String fileName, Object entities) throws IOException {
+        FileOutputStream file = this.currentPageActivity.openFileOutput(fileName,
+                Context.MODE_PRIVATE);
         OutputStream buffer = new BufferedOutputStream(file);
         ObjectOutput output = new ObjectOutputStream(buffer);
 
@@ -49,8 +53,7 @@ public class SerGateway extends IGateway{
      */
     @Override
     public UserEntityContainer readUsersFromFile() throws IOException, ClassNotFoundException {
-        String fullFilePath = this.filePath + "Users.ser";
-        InputStream file = new FileInputStream(fullFilePath);
+        FileInputStream file = this.currentPageActivity.openFileInput("Users.ser");
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
@@ -69,8 +72,7 @@ public class SerGateway extends IGateway{
      */
     @Override
     public PlaylistEntityContainer readPlaylistsFromFile() throws IOException, ClassNotFoundException {
-        String fullFilePath = this.filePath + "Playlists.ser";
-        InputStream file = new FileInputStream(fullFilePath);
+        FileInputStream file = this.currentPageActivity.openFileInput("Playlists.ser") ;
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
@@ -89,8 +91,7 @@ public class SerGateway extends IGateway{
      */
     @Override
     public SongEntityContainer readSongsFromFile() throws IOException, ClassNotFoundException {
-        String fullFilePath = this.filePath + "Songs.ser";
-        InputStream file = new FileInputStream(fullFilePath);
+        FileInputStream file = this.currentPageActivity.openFileInput("Songs.ser");
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
