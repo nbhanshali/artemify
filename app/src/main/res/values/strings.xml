@@ -26,6 +26,15 @@
     <string name="app_logo">APP LOGO</string>
     <string name="search">Search</string>
     <string name="exit">exit</string>
+    <string name="view_followers">Followers</string>
+    <string name="view_followings">Following</string>
+    <string name="view_login_history">Login History</string>
+    <string name="view_user_songs">Public Songs</string>
+    <string name="view_private_songs">Private Songs</string>
+    <string name="view_user_playlists">Public Playlists</string>
+    <string name="view_private_playlists">Private Playlists</string>
+    <string name="view_user_favorites">Favorite Songs</string>
+    <string name="view_user_liked_playlists">Liked Playlists</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

@@ -11,4 +11,64 @@
         android:layout_height="wrap_content"
         android:text="Welcome to Profile and Setting Page"/>
 
+    <Button
+        android:id="@+id/view_followers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_followers" />
+
+    <Button
+        android:id="@+id/view_followings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_followings" />
+
+    <Button
+        android:id="@+id/view_login_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_login_history" />
+
+    <Button
+        android:id="@+id/view_user_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_user_songs" />
+
+    <Button
+        android:id="@+id/view_private_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_private_songs" />
+
+    <Button
+        android:id="@+id/view_user_playlists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_user_playlists" />
+
+    <Button
+        android:id="@+id/view_private_playlists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_private_playlists" />
+
+    <Button
+        android:id="@+id/view_user_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_user_favorites" />
+
+    <Button
+        android:id="@+id/view_user_liked_playlists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_user_liked_playlists" />
+
+    <Button
+        android:id="@+id/exit_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exit" />
+
 </LinearLayout>
