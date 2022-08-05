@@ -65,7 +65,6 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
             case INVOKE_CREATE_NEW_PLAYLIST:
                 return new InvokeNewPlaylistPageCommand(this.activityServiceCache);
             case LOG_OUT:
-                // TODO: Discuss with Tom
                 return new InvokeLogOutCommand(this.activityServiceCache);
             case EXIT_PAGE:
                 return new ExitPageCommand(this.activityServiceCache);
