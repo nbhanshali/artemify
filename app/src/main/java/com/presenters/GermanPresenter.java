@@ -22,6 +22,6 @@ public class GermanPresenter extends LanguagePresenter {
 
     @Override
     public String translateString(String otherLanguageString) {
-        return translator.translate("","de", otherLanguageString);
+        return translator.translate("","Gr", otherLanguageString);
     }
 }

@@ -7,17 +7,16 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-/**The translator class is adapted from StackExchange author Maksym,
- * whose original post can be found here:
- * https://stackoverflow.com/questions/8147284/how-to-use-google-translate-api-in-my-java-application
- * The google script is largely adapted from the same author, although slight modifications were
- * needed to get the script running on our end. These modifications have since been added to the
- * original author's post coincidentally.
- */
-
 public class translator {
 
+    public static void main(String[] args) {
+        String text = "Hello!";
+        //Translated text: Hallo Welt!
+        System.out.println("Translated text: " + translate("", "af", text));
+    }
+
     static String translate(String langFrom, String langTo, String text)  {
+        // INSERT YOU URL HERE
         try{
             String urlStr = "https://script.google.com/macros/s/AKfycbw_wAAny4t8GEQSvbNM8q_SfpXnqJ3Kc9GQih-KtmcnRgCmZSo/exec" +
                     "?q=" + URLEncoder.encode(text, "UTF-8") +

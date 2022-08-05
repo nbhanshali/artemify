@@ -20,8 +20,8 @@ public class EnglishPresenter extends LanguagePresenter {
     }
 
     @Override
-    public String translateString(String otherLanguageString) {
-        return translator.translate("","en", otherLanguageString);
+    public String translateString(String english) {
+        return english;
     }
 
 }
