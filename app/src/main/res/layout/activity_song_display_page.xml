@@ -4,93 +4,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SongDisplayPage"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="10dp">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/display_song_name"
+    <Button
+        android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="song name"/>
-
-    <TextView
-        android:id="@+id/display_artist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="artist"/>
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="#7700ff"
-        android:text="cover"
-        android:textColor="#ffffff"
-        android:gravity="center"/>
+        android:text="exit"/>
 
     <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/display_song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="song name"/>
+
+        <TextView
+            android:id="@+id/display_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="artist"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#7700ff"
+            android:text="cover"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp">
+
+            <ImageButton
+                android:id="@+id/display_like_song_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="like"
+                android:background="@drawable/like_button"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:id="@+id/display_like_song"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="like"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/display_listen_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="listen"
+                android:background="@drawable/listen"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:id="@+id/display_listen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="listen"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/display_song_public"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="private/public"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/display_song_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="duration"/>
+
+        <!--Here are 2 buttons-->
 
         <Button
-            android:id="@+id/display_like_song_button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="like" />
-
-        <TextView
-            android:id="@+id/display_like_song"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="like"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"/>
+            android:id="@+id/view_lyrics"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="View Lyrics"
+            android:layout_marginTop="20dp"/>
 
         <Button
-            android:id="@+id/display_listen_button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="listen"/>
+            android:id="@+id/display_add_to_playlist"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Add To Playlist"
+            android:layout_marginTop="20dp"/>
 
-        <TextView
-            android:id="@+id/display_listen"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="listen"/>
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/display_song_public"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="private/public"/>
-
-    <TextView
-        android:id="@+id/display_song_duration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="duration"/>
-    
-<!--Here are 2 buttons-->
-    
-    <Button
-        android:id="@+id/view_lyrics"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="View Lyrics"/>
-
-    <Button
-        android:id="@+id/display_add_to_playlist"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Add To Playlist"/>
 
 </LinearLayout>
