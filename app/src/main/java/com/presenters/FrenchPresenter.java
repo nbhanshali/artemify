@@ -1,27 +1,27 @@
 package com.presenters;
 
-public class EnglishPresenter extends LanguagePresenter {
+public class FrenchPresenter extends LanguagePresenter {
 
     /**
      * Constructor of EnglishPresenter
      * @param language a Language type
      */
-    public EnglishPresenter(LanguageType language) {
+    public FrenchPresenter(LanguageType language) {
         super(language);
     }
 
     /**
      * Display method to display an English string to the language of this Presenter
-     * @param englishString a String written in english
+     * @param frenchString a String written in french
      */
     @Override
-    public void display(String englishString) {
-        System.out.println(englishString);
+    public void display(String frenchString) {
+        System.out.println(frenchString);
     }
 
     @Override
     public String translateString(String otherLanguageString) {
-        return translator.translate("","en", otherLanguageString);
+        return translator.translate("","fr", otherLanguageString);
     }
 
 }
