@@ -6,6 +6,9 @@ import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.popupCommand.LikePlaylistCommand;
+import com.artemifyMusicStudio.controller.popupCommand.PlayPlaylistCommand;
+import com.artemifyMusicStudio.controller.popupCommand.ViewCreatorCommand;
+import com.artemifyMusicStudio.controller.popupCommand.ViewPlaylistSongsCommand;
 import com.artemifyMusicStudio.controller.popupCommand.inputDialogPopupCommand.PopUpInputDialogCommand;
 
 /**
@@ -40,11 +43,25 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         "Search by Song",
                         "Enter the name of the song you wish to search",
                         CommandItemType.SEARCH_SONG);
+            case VIEW_PLAYLIST_SONGS:
+                return new ViewPlaylistSongsCommand(this.activityServiceCache,
+                        this.activityServiceCache.getLanguagePresenter(),
+                        this.activityServiceCache.getPlaylistManager(),
+                        this.activityServiceCache.getTargetPlaylistID());
+            case VIEW_CREATOR:
+                return new ViewCreatorCommand(this.activityServiceCache,
+                        this.activityServiceCache.getPlaylistManager(),
+                        this.activityServiceCache.getTargetUserID());
             case LIKE_PLAYLIST:
                 return new LikePlaylistCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(),
                         this.activityServiceCache.getPlaylistManager(),
                         this.activityServiceCache.getUserID(),
+                        this.activityServiceCache.getTargetPlaylistID());
+            case PLAY_PLAYLIST:
+                return new PlayPlaylistCommand(this.activityServiceCache,
+                        this.activityServiceCache.getLanguagePresenter(),
+                        this.activityServiceCache.getPlaylistManager(),
                         this.activityServiceCache.getTargetPlaylistID());
             default:
                 return null;

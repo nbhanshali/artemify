@@ -60,6 +60,7 @@ public class PlaylistDisplayPage extends PageActivity {
         idMenuItemMap.put(CommandItemType.VIEW_PLAYLIST_SONGS, R.id.view_playlist_songs);
         idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator);
         idMenuItemMap.put(CommandItemType.LIKE_PLAYLIST, R.id.like_playlist);
+        idMenuItemMap.put(CommandItemType.PLAY_PLAYLIST, R.id.play_playlist);
         idMenuItemMap.put(CommandItemType.EXIT_PAGE, R.id.exit);
 
     }
@@ -69,7 +70,8 @@ public class PlaylistDisplayPage extends PageActivity {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
                 Arrays.asList(CommandItemType.VIEW_PLAYLIST_SONGS,
                         CommandItemType.VIEW_CREATOR,
-                        CommandItemType.LIKE_PLAYLIST)
+                        CommandItemType.LIKE_PLAYLIST,
+                        CommandItemType.PLAY_PLAYLIST)
         );
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.EXIT_PAGE)

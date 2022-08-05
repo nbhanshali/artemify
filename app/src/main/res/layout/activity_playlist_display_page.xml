@@ -8,19 +8,6 @@
     tools:context="com.artemifyMusicStudio.PlaylistDisplayPage">
 
 
-    <Button
-        android:id="@+id/like_playlist"
-        android:layout_width="84dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="126dp"
-        android:adjustViewBounds="true"
-        android:drawableTop="@drawable/like_button"
-        android:scaleType="centerInside"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playlist_name_display" />
-
     <TextView
         android:id="@+id/playlist_name_display"
         android:layout_width="wrap_content"
@@ -30,6 +17,47 @@
         android:text="Playlist Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/like_playlist"
+        android:layout_width="84dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="27dp"
+        android:text="Like playlist"
+        android:adjustViewBounds="true"
+        android:drawableTop="@drawable/like_button"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@+id/play_playlist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playlist_name_display" />
+
+    // need to find a picture for this button
+
+    <Button
+        android:id="@+id/play_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="48dp"
+        android:text="Play playlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/like_playlist"
+        app:layout_constraintTop_toBottomOf="@+id/playlist_name_display" />
+
+    <TextView
+        android:id="@+id/creator_info_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="160dp"
+        android:text="Creator Info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/like_playlist" />
 
     <Button
         android:id="@+id/view_playlist_songs"
@@ -57,16 +85,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_playlist_songs" />
 
-    <TextView
-        android:id="@+id/creator_info_display"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="160dp"
-        android:text="Creator Info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/like_playlist" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
