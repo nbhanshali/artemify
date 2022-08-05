@@ -8,12 +8,14 @@ import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.transitionCommand.CreateAccountCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.EnableAdminCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
-import com.artemifyMusicStudio.controller.transitionCommand.InvokeAdminPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeLogInCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeNewPlaylistPageCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.InvokePlaylistDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeProfileAndSettingPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeSearchPageCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.InvokeSongDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUploadSongPageCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.InvokeUserDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.StartLogInCommand;
 
 /**
@@ -21,6 +23,7 @@ import com.artemifyMusicStudio.controller.transitionCommand.StartLogInCommand;
  */
 public class TransitionCommandCreator implements SimpleButtonCommandCreator {
     private final ActivityServiceCache activityServiceCache;
+    private String targetID = "";
 
     /**
      *  A constructor of the transitionCommandCreator
@@ -30,6 +33,13 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
         this.activityServiceCache = activityServiceCache;
     }
 
+    /**
+     * A setter to set the targetID
+     * @param targetID a string of targetID
+     */
+    public void setTargetID(String targetID) {
+        this.targetID = targetID;
+    }
 
     @Override
     public View.OnClickListener create(CommandItemType type) {
@@ -44,6 +54,12 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new EnableAdminCommand(this.activityServiceCache);
             case INVOKE_SONG_UPLOAD:
                 return new InvokeUploadSongPageCommand(this.activityServiceCache);
+            case INVOKE_SONG_DISPLAY:
+                return new InvokeSongDisplayPage(this.activityServiceCache, this.targetID);
+            case INVOKE_PLAYLIST_DISPLAY:
+                return new InvokePlaylistDisplayPage(this.activityServiceCache, this.targetID);
+            case INVOKE_USER_DISPLAY:
+                return new InvokeUserDisplayPage(this.activityServiceCache, this.targetID);
             case PROFILE_AND_SETTING:
                 return new InvokeProfileAndSettingPageCommand(this.activityServiceCache);
             case INVOKE_CREATE_NEW_PLAYLIST:

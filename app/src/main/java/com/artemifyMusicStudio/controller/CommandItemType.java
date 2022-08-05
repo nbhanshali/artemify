@@ -23,7 +23,12 @@ public enum CommandItemType {
     SEARCH_PLAYLIST,
     SEARCH_USER,
     //
-    BACK_TO_PREVIOUS_PAGE,
+
+    // For Search Result Page
+    INVOKE_SONG_DISPLAY,
+    INVOKE_PLAYLIST_DISPLAY,
+    INVOKE_USER_DISPLAY,
+    //
     EXIT_PAGE,
     REGULAR_LOG_IN_MODE,
     ADMIN_LOG_IN_MODE,
@@ -33,7 +38,6 @@ public enum CommandItemType {
     BAN_USER,
     UNBAN_USER,
     GRANT_ADMIN_RIGHT,
-    USER_MODE,
     CREATE_REGULAR_ACCOUNT,
     LOG_IN,
     LOG_OUT,
