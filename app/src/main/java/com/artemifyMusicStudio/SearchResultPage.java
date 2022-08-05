@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -69,7 +70,7 @@ public class SearchResultPage extends PageActivity {
             searchResultDisplay.addView(button);
             count += 1;
         }
-
+        searchResultDisplay.setGravity(Gravity.CENTER);
     }
 
     /**
