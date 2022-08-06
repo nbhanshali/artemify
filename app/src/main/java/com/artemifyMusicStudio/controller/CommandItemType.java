@@ -50,9 +50,11 @@ public enum CommandItemType {
     VIEW_LYRICS,
     LIKE_SONG,
     ADD_TO_EXISTING_PLAYLIST,
-    ADD_TO_NEW_PLAYLIST,
+    JUMP_TO_CREATE_NEW_PLAYLIST,
     PLAY_SONG,
     ADD_TO_QUEUE,
+    // For CreateNewPlaylistPage
+    ADD_TO_NEW_PLAYLIST,
     // For UserDisplayPage:
     FOLLOW_USER,
     UNFOLLOW_USER,
