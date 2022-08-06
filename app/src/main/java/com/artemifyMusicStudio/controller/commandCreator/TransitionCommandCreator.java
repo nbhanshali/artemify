@@ -18,6 +18,7 @@ import com.artemifyMusicStudio.controller.transitionCommand.InvokeSearchPageComm
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeSongDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUploadSongPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUserDisplayPage;
+import com.artemifyMusicStudio.controller.transitionCommand.JumpToCreateNewPlaylistCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.StartLogInCommand;
 
 /**
@@ -74,6 +75,8 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new EnableRegularUserHomePageCommand(this.activityServiceCache);
             case ADD_TO_QUEUE:
                 return new AddToQueueCommand(this.activityServiceCache);
+            case JUMP_TO_CREATE_NEW_PLAYLIST:
+                return new JumpToCreateNewPlaylistCommand(this.activityServiceCache);
             default:
                 return null;
         }
