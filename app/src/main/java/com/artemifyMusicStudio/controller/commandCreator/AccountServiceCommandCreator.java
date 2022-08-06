@@ -64,15 +64,15 @@ public class AccountServiceCommandCreator implements SimpleCommandCreator {
             case VIEW_PRIVATE_PLAYLISTS:
                 return new ViewPrivatePlaylistsCommand(this.acctServiceManager, this.languagePresenter,
                         this.playlistServiceManager, this.userID);
-            case BAN_USER:
-                return new BanUserCommand(this.languagePresenter, this.acctServiceManager);
-            case UNBAN_USER:
-                return new UnBanUserCommand(this.languagePresenter, this.acctServiceManager);
-            case DELETE_USER:
-                return new DeleteUserCommand(this.languagePresenter, this.acctServiceManager,
-                        this.playlistServiceManager, this.songManager);
-            case GRANT_ADMIN_RIGHT:
-                return new MakeAdminUserCommand(this.languagePresenter, this.acctServiceManager);
+//            case BAN_USER:
+//                return new BanUserCommand(this.languagePresenter, this.acctServiceManager);
+//            case UNBAN_USER:
+//                return new UnBanUserCommand(this.languagePresenter, this.acctServiceManager);
+//            case DELETE_USER:
+//                return new DeleteUserCommand(this.languagePresenter, this.acctServiceManager,
+//                        this.playlistServiceManager, this.songManager);
+//            case GRANT_ADMIN_RIGHT:
+//                return new MakeAdminUserCommand(this.languagePresenter, this.acctServiceManager);
             default:
                 return null;
         }

@@ -71,6 +71,26 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         this.activityServiceCache.getTargetPlaylistID());
             case VIEW_LYRICS:
                 return new ViewLyricsCommand(this.activityServiceCache);
+            case BAN_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Ban a user:",
+                        "Enter the username of the user you wish to ban",
+                        CommandItemType.BAN_USER);
+            case UNBAN_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Unban a user:",
+                        "Enter the username of the user you wish to unban",
+                        CommandItemType.UNBAN_USER);
+            case DELETE_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Delete a user:",
+                        "Enter the username of the user you wish to delete",
+                        CommandItemType.DELETE_USER);
+            case GRANT_ADMIN_RIGHT:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Make existing user an admin:",
+                        "Enter the username of the user you wish to make an admin",
+                        CommandItemType.GRANT_ADMIN_RIGHT);
             default:
                 return null;
         }
