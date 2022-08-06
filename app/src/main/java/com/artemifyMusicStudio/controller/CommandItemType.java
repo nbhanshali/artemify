@@ -16,6 +16,7 @@ public enum CommandItemType {
     POP_UP_SEARCH_SONG_DIALOG,
     POP_UP_SEARCH_USER_DIALOG,
     POP_UP_SEARCH_PLAYLIST_DIALOG,
+    POP_UP_REMOVE_FROM_QUEUE_DIALOG,
     //
 
     // For Search Page
@@ -76,7 +77,6 @@ public enum CommandItemType {
     SHUFFLE_QUEUE,
     SKIP_SONG,
     REMOVE_FROM_QUEUE,
-    PLAY_PAUSE_SONG,
     PLAY_PREVIOUS_SONG,
     REPEAT_SONG_ONCE,
     REPEAT_SONG_INF

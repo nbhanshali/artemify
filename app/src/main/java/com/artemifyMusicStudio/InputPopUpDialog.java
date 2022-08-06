@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
+import com.artemifyMusicStudio.controller.queueServiceCommand.RemoveFromQueueCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchPlaylistCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchSongCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchUserCommand;
@@ -89,6 +90,8 @@ public class InputPopUpDialog extends AppCompatDialogFragment {
                 return new SearchPlaylistCommand(this.activityServiceCache, userInputTargetName);
             case SEARCH_USER:
                 return new SearchUserCommand(this.activityServiceCache, userInputTargetName);
+            case REMOVE_FROM_QUEUE:
+                return new RemoveFromQueueCommand(this.activityServiceCache, userInputTargetName);
             // TODO: Rosalyn, put all the admin commands that require pop up dialog in here
             default:
                 return null;

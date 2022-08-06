@@ -44,6 +44,11 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         "Search by Song",
                         "Enter the name of the song you wish to search",
                         CommandItemType.SEARCH_SONG);
+            case POP_UP_REMOVE_FROM_QUEUE_DIALOG:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Remove from Queue",
+                        "Enter the index of the song in the queue you wish to remove",
+                        CommandItemType.REMOVE_FROM_QUEUE);
             case VIEW_PLAYLIST_SONGS:
                 return new ViewPlaylistSongsCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(),
