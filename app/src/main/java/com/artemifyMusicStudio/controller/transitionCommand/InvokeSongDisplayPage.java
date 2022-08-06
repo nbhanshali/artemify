@@ -31,6 +31,8 @@ public class InvokeSongDisplayPage implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         this.activityServiceCache.setTargetSongID(this.targetSongID);
+        String userId = activityServiceCache.getSongManager().getSongArtist(Integer.parseInt(targetSongID));
+        this.activityServiceCache.setTargetUserID(userId);
         PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
         Intent it = new Intent(currentPageActivity, SongDisplayPage.class);
         it.putExtra("cache", this.activityServiceCache);

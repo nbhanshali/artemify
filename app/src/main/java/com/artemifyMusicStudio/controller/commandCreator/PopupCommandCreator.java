@@ -8,6 +8,7 @@ import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.popupCommand.LikePlaylistCommand;
 import com.artemifyMusicStudio.controller.popupCommand.PlayPlaylistCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewCreatorCommand;
+import com.artemifyMusicStudio.controller.popupCommand.ViewLyricsCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewPlaylistSongsCommand;
 import com.artemifyMusicStudio.controller.popupCommand.inputDialogPopupCommand.PopUpInputDialogCommand;
 
@@ -63,6 +64,8 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         this.activityServiceCache.getLanguagePresenter(),
                         this.activityServiceCache.getPlaylistManager(),
                         this.activityServiceCache.getTargetPlaylistID());
+            case VIEW_LYRICS:
+                return new ViewLyricsCommand(this.activityServiceCache);
             default:
                 return null;
         }

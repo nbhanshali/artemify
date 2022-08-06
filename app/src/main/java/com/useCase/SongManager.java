@@ -270,6 +270,10 @@ public class SongManager implements Serializable {
         findSong(id).setNumLikes(findSong(id).getNumLikes() + 1);
     }
 
+    public void unlikeSong(int id){
+        findSong(id).setNumLikes(findSong(id).getNumLikes() - 1);
+    }
+
     /**
      * (Get input from PlaylistManager.getListOfSongsID)
      *
