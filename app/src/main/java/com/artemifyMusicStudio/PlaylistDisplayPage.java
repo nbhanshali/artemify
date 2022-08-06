@@ -3,15 +3,17 @@ package com.artemifyMusicStudio;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
+import com.artemifyMusicStudio.controller.actionCommand.LikePlaylistCommand;
+import com.artemifyMusicStudio.controller.commandCreator.ActionCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.useCase.PlaylistManager;
 
-import java.net.CookieManager;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,35 +29,12 @@ public class PlaylistDisplayPage extends PageActivity {
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
 
-        int playlistID = Integer.parseInt(activityServiceCache.getTargetPlaylistID());
-
-        // display playlist name
-        TextView playlistNameDisplay = findViewById(R.id.playlist_name_display);
-        playlistNameDisplay.setText(this.activityServiceCache.getPlaylistManager().getPlaylistName(playlistID));
-        // display numLikes
-        TextView numLikes = findViewById(R.id.display_numlikes);
-        numLikes.setText(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).getNumLikes());
-        // display creatorName
-        TextView creatorName = findViewById(R.id.creator_info_display);
-        creatorName.setText(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).getCreatorUsername());
-        // display playlist description
-        TextView playlistDescription = findViewById(R.id.playlist_description_display);
-        playlistDescription.setText(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).getDescription());
-        // display public/private
-        TextView visibility = findViewById(R.id.display_song_public);
-        if(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).isPublic()){
-            visibility.setText("public");
-        }else visibility.setText("private");
-
-
         // populate button
         populateMenuCommandCreatorMap();
         populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
-//        // set user name
-//        TextView tv = findViewById(R.id.user_name);
-//        tv.setText(activityServiceCache.getUserID());
+        setUpPlaylistInformation();
 
     }
 
@@ -66,6 +45,8 @@ public class PlaylistDisplayPage extends PageActivity {
                 return new PopupCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
                 return new TransitionCommandCreator(this.activityServiceCache);
+            case "ActionCommandCreator":
+                return new ActionCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }
@@ -75,7 +56,6 @@ public class PlaylistDisplayPage extends PageActivity {
     protected void populateIdMenuMap() {
         idMenuItemMap.put(CommandItemType.VIEW_PLAYLIST_SONGS, R.id.view_playlist_songs);
         idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator);
-        idMenuItemMap.put(CommandItemType.LIKE_PLAYLIST, R.id.like_playlist);
         idMenuItemMap.put(CommandItemType.PLAY_PLAYLIST, R.id.play_playlist);
         idMenuItemMap.put(CommandItemType.EXIT_PAGE, R.id.exit);
 
@@ -86,7 +66,6 @@ public class PlaylistDisplayPage extends PageActivity {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
                 Arrays.asList(CommandItemType.VIEW_PLAYLIST_SONGS,
                         CommandItemType.VIEW_CREATOR,
-                        CommandItemType.LIKE_PLAYLIST,
                         CommandItemType.PLAY_PLAYLIST)
         );
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
@@ -99,5 +78,49 @@ public class PlaylistDisplayPage extends PageActivity {
     @Override
     protected void populateExitPageMenuItems() {
         this.exitPageMenuItems.add(CommandItemType.EXIT_PAGE);
+    }
+
+    private void setUpPlaylistInformation(){
+
+        // primary setup
+        PlaylistManager playlistManager = activityServiceCache.getPlaylistManager();
+        int playlistID = Integer.parseInt(activityServiceCache.getTargetPlaylistID());
+        String playlistName = playlistManager.getPlaylistName(playlistID);
+        int numLikes = playlistManager.getNumLikes(playlistID);
+        String creatorName = playlistManager.getCreatorUsername(playlistID);
+        String description = playlistManager.getPlaylistDescription(playlistID);
+        String isPublic = playlistManager.IsPublic(playlistID)? "public" : "private";
+
+        // setup TextView
+        // display playlist name
+        TextView playlistNameDisplay = findViewById(R.id.playlist_name_display);
+        playlistNameDisplay.setText(playlistName);
+        // display numLikes
+        TextView numLikesDisplay = findViewById(R.id.display_numlikes);
+        numLikesDisplay.setText(numLikes);
+        // display creatorName
+        TextView creatorNameDisplay = findViewById(R.id.creator_info_display);
+        creatorNameDisplay.setText(creatorName);
+        // display playlist description
+        TextView playlistDescriptionDisplay = findViewById(R.id.playlist_description_display);
+        playlistDescriptionDisplay.setText(description);
+        // display public/private
+        TextView visibility = findViewById(R.id.display_song_public);
+        visibility.setText(isPublic);
+
+        // setup ImageView
+        ImageButton imageButton = findViewById(R.id.display_like_playlist_button);
+        if (checkUnlike(playlistID)){
+            imageButton.setBackgroundResource(R.drawable.empty_heart);
+        } else{
+            imageButton.setBackgroundResource(R.drawable.like_button);
+        }
+        String userID = this.activityServiceCache.getUserID();
+        imageButton.setOnClickListener(new LikePlaylistCommand(activityServiceCache, Integer.parseInt(userID), playlistID));
+    }
+
+    private boolean checkUnlike(int playlistID){
+        String userId = activityServiceCache.getUserID();
+        return !activityServiceCache.getUserAcctServiceManager().getUserLikedPlaylistsIDs(userId).contains(playlistID);
     }
 }

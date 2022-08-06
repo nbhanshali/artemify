@@ -227,6 +227,10 @@ public class PlaylistManager implements Serializable {
         findPlaylist(id).setNumLikes(findPlaylist(id).getNumLikes() + 1);
     }
 
+    public void unlikePlaylist(int id){
+        findPlaylist(id).setNumLikes(findPlaylist(id).getNumLikes() - 1);
+    }
+
     /**
      *
      * @param playlistID The ID of a playlist
