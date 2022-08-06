@@ -130,4 +130,9 @@ public class Queue implements Serializable {
     public void shuffleQueue() {
         Collections.shuffle(upcomingSongs);
     }
+
+    public void addToQueueEnd(int songID){
+        int length = upcomingSongs.size();
+        addToQueue(songID, length);
+    }
 }
