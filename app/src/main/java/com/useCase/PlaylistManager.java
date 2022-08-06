@@ -236,6 +236,10 @@ public class PlaylistManager implements Serializable {
         findPlaylist(playlistID).getSongs().add(songID);
     }
 
+    public void removeFromFavoritePlaylist(int userFavouritesID, int songID){
+        findPlaylist(userFavouritesID).removeSong(songID);
+    }
+
     /**
      * Check if a song is allowed to be added to a playlist, whenever the case is not: Public Playlist & Private Songs.
      * @param playlistID The ID of a playlist

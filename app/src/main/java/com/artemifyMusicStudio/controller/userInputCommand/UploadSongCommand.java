@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.RegularUserHomePage;
+import com.artemifyMusicStudio.SongDisplayPage;
 import com.presenters.LanguagePresenter;
 import com.useCase.SongManager;
 
@@ -65,7 +66,7 @@ public class UploadSongCommand implements View.OnClickListener {
             PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
             displaySuccessfulMsg(songName, currentPageActivity);
             currentPageActivity = activityServiceCache.getCurrentPageActivity();
-            Intent it = new Intent(currentPageActivity, RegularUserHomePage.class);
+            Intent it = new Intent(currentPageActivity, SongDisplayPage.class);
             it.putExtra("cache", this.activityServiceCache);
             currentPageActivity.startActivity(it);
             currentPageActivity.finish();

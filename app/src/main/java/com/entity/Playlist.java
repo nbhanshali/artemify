@@ -145,6 +145,10 @@ public class Playlist implements Serializable {
     public String toString() {
         return String.valueOf(getId());
     }
+
+    public void removeSong(int songID){
+        songs.remove(Integer.valueOf(songID));
+    }
 }
 
 
