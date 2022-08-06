@@ -27,10 +27,26 @@ public class PlaylistDisplayPage extends PageActivity {
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
 
-
-        TextView tv = findViewById(R.id.playlist_name_display);
         int playlistID = Integer.parseInt(activityServiceCache.getTargetPlaylistID());
-        tv.setText(this.activityServiceCache.getPlaylistManager().getPlaylistName(playlistID));
+
+        // display playlist name
+        TextView playlistNameDisplay = findViewById(R.id.playlist_name_display);
+        playlistNameDisplay.setText(this.activityServiceCache.getPlaylistManager().getPlaylistName(playlistID));
+        // display numLikes
+        TextView numLikes = findViewById(R.id.display_numlikes);
+        numLikes.setText(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).getNumLikes());
+        // display creatorName
+        TextView creatorName = findViewById(R.id.creator_info_display);
+        creatorName.setText(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).getCreatorUsername());
+        // display playlist description
+        TextView playlistDescription = findViewById(R.id.playlist_description_display);
+        playlistDescription.setText(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).getDescription());
+        // display public/private
+        TextView visibility = findViewById(R.id.display_song_public);
+        if(this.activityServiceCache.getPlaylistManager().findPlaylist(playlistID).isPublic()){
+            visibility.setText("public");
+        }else visibility.setText("private");
+
 
         // populate button
         populateMenuCommandCreatorMap();
