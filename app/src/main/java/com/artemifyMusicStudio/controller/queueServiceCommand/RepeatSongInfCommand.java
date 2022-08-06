@@ -1,6 +1,10 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
+import android.view.View;
+import android.widget.Toast;
+
 import com.artemifyMusicStudio.ActivityServiceCache;
+import com.artemifyMusicStudio.PageActivity;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
 
@@ -17,7 +21,8 @@ public class RepeatSongInfCommand extends QueueServiceCommand{
     }
 
     @Override
-    public void execute() {
+    public void onClick(View view) {
+        PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
         int nowPlaying = activityServiceCache.getQueueManager().getNowPlaying();
 
         if(activityServiceCache.getSongManager().exists(nowPlaying)) {
@@ -25,11 +30,14 @@ public class RepeatSongInfCommand extends QueueServiceCommand{
             for (int i = 0; i < 50; i++) {
                 activityServiceCache.getQueueManager().addToQueue(nowPlaying, 0);
             }
-            languagePresenter.
-                    display("Current song will be repeated infinitely. \n");
+            String warningMsg =  this.languagePresenter.
+                    translateString("Current song will be repeated infinitely.") ;
+            Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         } else {
-            languagePresenter.display("No song is currently being played. \n");
+            String warningMsg =  this.languagePresenter.
+                    translateString("No sung is currently being played.") ;
+            Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         }
-
     }
+
 }
