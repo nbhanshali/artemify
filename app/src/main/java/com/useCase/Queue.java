@@ -102,10 +102,10 @@ public class Queue implements Serializable {
 
     /**
      * Remove a song from the queue.
-     * @param songID The ID of a song
+     * @param songIndex The ID of a song
      */
-    public void removeFromQueue(int songID) {
-        getUpcomingSongs().remove(songID);
+    public void removeFromQueue(int songIndex) {
+        upcomingSongs.remove(songIndex);
     }
 
     /**
@@ -120,8 +120,8 @@ public class Queue implements Serializable {
      */
     public void popFromQueue() {
         recentlyPlayedSongs.add(0, nowPlaying);
-        nowPlaying = getUpcomingSongs().get(0);
-        removeFromQueue(nowPlaying);
+        nowPlaying = upcomingSongs.get(0);
+        removeFromQueue(0);
     }
 
     /**
