@@ -37,5 +37,30 @@
     <string name="view_user_liked_playlists">Liked Playlists</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_out">Log Out</string>
+    <string name="quit_admin_mode">Quit admin mode</string>
+    <string name="manage_users">Manage Users</string>
+    <string name="delete_a_user">Delete a user</string>
+    <string name="ban_a_user">Ban a user</string>
+    <string name="unban_a_user">Unban a user</string>
+    <string name="make_a_user_an_admin">Make a user an admin</string>
+    <string name="home_search">Search</string>
+    <string name="profile_and_setting">Profile and Setting</string>
+    <string name="create_new_playlist">Create New Playlist</string>
+    <string name="upload_song">Upload Song</string>
+    <string name="enable_admin_mode">Enable Admin Mode</string>
+    <string name="home_log_out">Log Out</string>
+    <string name="view_queue">View Queue</string>
+    <string name="welcome_username">"Welcome, "</string>
+    <string name="admin_page">Admin Page</string>
+    <string name="admin_welcome_username">"Welcome, "</string>
+    <string name="home">Home</string>
+    <string name="enter_the_require_info">Enter the require Info</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="likes">Likes</string>
+    <string name="songs">Songs</string>
+    <string name="playlists">Playlists</string>
+    <string name="liked_playlists">Liked Playlists</string>
 
 </resources>

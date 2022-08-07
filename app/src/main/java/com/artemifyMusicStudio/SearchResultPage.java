@@ -50,13 +50,14 @@ public class SearchResultPage extends PageActivity {
 
     @Override
     protected void populateButtons(){
+        LanguagePresenter languagePresenter = this.activityServiceCache.getLanguagePresenter();
         LinearLayout searchResultDisplay = findViewById(R.id.search_result_display_layout);
         HashMap<String, String> searchResultInfoMap = this.searchResultContainer.getSearchResultMap();
         ArrayList<String> resultTargetID = new ArrayList<>(searchResultInfoMap.keySet());
         int count = 0;
         TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
         for (String targetID : resultTargetID){
-            String buttonDescription = searchResultInfoMap.get(targetID);
+            String buttonDescription = languagePresenter.translateString(searchResultInfoMap.get(targetID));
             Button button = new Button(this);
             button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
