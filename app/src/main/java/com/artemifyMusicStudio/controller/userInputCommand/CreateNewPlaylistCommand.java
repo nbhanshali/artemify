@@ -7,17 +7,11 @@ import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.PageType;
 import com.artemifyMusicStudio.PlaylistDisplayPage;
-import com.artemifyMusicStudio.RegularUserHomePage;
-import com.artemifyMusicStudio.controller.playlistServiceCommand.PlaylistServiceCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
-import com.useCase.SongManager;
 
 import java.sql.Timestamp;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 /**
  * A CreateNewPlaylistCommand object to handle the user's create new playlist request
@@ -57,13 +51,8 @@ public class CreateNewPlaylistCommand implements View.OnClickListener {
                     newPlaylistID, isPublic);
             // set target playlist id
             activityServiceCache.setTargetPlaylistID(String.valueOf(newPlaylistID));
-            // go back to regular user home page
-            PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
-            displaySuccessfulMsg(playlistName, currentPageActivity);
-            currentPageActivity = activityServiceCache.getCurrentPageActivity();
-            Intent it = new Intent(currentPageActivity, PlaylistDisplayPage.class);
-            it.putExtra("cache", this.activityServiceCache);
-            currentPageActivity.startActivity(it);
+            // go to playlist display page
+            goToPlaylistDisplayPage(playlistName);
         }
     }
 
@@ -91,5 +80,14 @@ public class CreateNewPlaylistCommand implements View.OnClickListener {
             }
         }
         return true;
+    }
+
+    private void goToPlaylistDisplayPage(String playlistName){
+        PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+        displaySuccessfulMsg(playlistName, currentPageActivity);
+        currentPageActivity = activityServiceCache.getCurrentPageActivity();
+        Intent it = new Intent(currentPageActivity, PlaylistDisplayPage.class);
+        it.putExtra("cache", this.activityServiceCache);
+        currentPageActivity.startActivity(it);
     }
 }

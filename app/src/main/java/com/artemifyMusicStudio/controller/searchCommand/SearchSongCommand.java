@@ -39,14 +39,4 @@ public class SearchSongCommand extends SearchServiceCommand {
                 + this.songManager.getSongArtist(songID);
     }
 
-    @Override
-    protected PageActivity getEntityDisplayPage(String targetEntityID) {
-        int targetSongID = Integer.parseInt(targetEntityID);
-        String targetSongCreator = this.songManager.getSongArtist(targetSongID);
-        // Update the targetSongId and targetUserId in page creator
-        this.activityServiceCache.setTargetSongID(String.valueOf(targetSongID));
-        this.activityServiceCache.setTargetUserID(targetSongCreator);
-        return this.activityServiceCache.creat(PageType.SONG_DISPLAY_PAGE);
-    }
-
 }

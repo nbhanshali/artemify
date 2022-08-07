@@ -1,7 +1,8 @@
 package com.artemifyMusicStudio.controller.userInputCommand;
 
+import android.view.View;
+
 import com.artemifyMusicStudio.ActivityServiceCache;
-import com.artemifyMusicStudio.controller.playlistServiceCommand.PlaylistServiceCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
@@ -14,8 +15,9 @@ import java.util.Scanner;
 /**
  * An AddToExistingPlaylistCommand class to add the currently viewed song to an existing playlist by user input
  */
-public class AddToExistingPlaylistCommand extends PlaylistServiceCommand {
+public class AddToExistingPlaylistCommand implements View.OnClickListener {
     private final LanguagePresenter languagePresenter;
+    private final PlaylistManager playlistServiceManager;
     private final UserAccess accountServiceManager;
     private final SongManager songManager;
     private final String userID;
@@ -30,7 +32,7 @@ public class AddToExistingPlaylistCommand extends PlaylistServiceCommand {
      */
     public AddToExistingPlaylistCommand(ActivityServiceCache activityServiceCache, LanguagePresenter languagePresenter,
                                         PlaylistManager playlistServiceManager){
-        super(playlistServiceManager);
+        this.playlistServiceManager = playlistServiceManager;
         this.languagePresenter = languagePresenter;
         this.accountServiceManager = activityServiceCache.getUserAcctServiceManager();
         this.songManager = activityServiceCache.getSongManager();
@@ -42,60 +44,60 @@ public class AddToExistingPlaylistCommand extends PlaylistServiceCommand {
      * Execute the AddToExistingPlaylistCommand
      */
     @Override
-    public void execute() {
-        boolean executionIsComplete = false;
-        while (!executionIsComplete) {
-            try {
-                // Show existing Playlist names for the user
-                boolean available_playlists = displayExistingPlaylist();
-                if (!available_playlists) {
-                    executionIsComplete = true;
-                }
-                else {
-
-                    // Input target Playlist
-                    Scanner inputStream = new Scanner(System.in);
-                    languagePresenter.display("Please enter the name of the playlist: ");
-                    String playlistName = inputStream.nextLine();
-                    Integer playlistID = this.playlistServiceManager.getUserOwnedPlaylistIDFromName(this.userID,
-                            playlistName);
-                    if (playlistID == null) {
-                        languagePresenter.display("There is no playlist with the name " + playlistName +
-                                ", please enter the correct name of the playlist");
-                    } else if (!accountServiceManager.editPlaylistAccess(userID, playlistID)) {
-                        this.languagePresenter.display("You don't have access to the playlist\n");
-                        if (wantToCancel(languagePresenter)) {
-                            executionIsComplete = true;
-                        }
-                    } else {
-                        boolean songIsPublic = songManager.isPublic(songID);
-                        // check if it is possible to add the song to the selected playlist
-                        boolean succeed = playlistServiceManager.addableToPlaylist(playlistID, songIsPublic);
-                        if (!succeed) {
-                            languagePresenter.display("You cannot add a private song to a public playlist\n");
-                            if (wantToCancel(languagePresenter)) {
-                                executionIsComplete = true;
-                            }
-                        } else {
-                            if (playlistServiceManager.getListOfSongsID(playlistID).contains(songID)) {
-                                languagePresenter.display(
-                                        "Already added! (⌒‿⌒) You can find this song in \uD83D\uDCBD " +
-                                                songManager.getSongName(songID) + " \uD83D\uDCBD.\n");
-                            } else {
-                                playlistServiceManager.addToPlaylist(playlistID, songID);
-                                languagePresenter.display(
-                                        "Successfully added! (⌒‿⌒) You can now find this song in \uD83D\uDCBD " +
-                                                songManager.getSongName(songID) + " \uD83D\uDCBD.\n");
-                            }
-                            executionIsComplete = true;
-
-                        }
-                    }
-                }
-            } catch (InputMismatchException e) {
-                this.languagePresenter.display("Invalid input format, please try again.");
-            }
-        }
+    public void onClick(View view) {
+//        boolean executionIsComplete = false;
+//        while (!executionIsComplete) {
+//            try {
+//                // Show existing Playlist names for the user
+//                boolean available_playlists = displayExistingPlaylist();
+//                if (!available_playlists) {
+//                    executionIsComplete = true;
+//                }
+//                else {
+//
+//                    // Input target Playlist
+//                    Scanner inputStream = new Scanner(System.in);
+//                    languagePresenter.display("Please enter the name of the playlist: ");
+//                    String playlistName = inputStream.nextLine();
+//                    Integer playlistID = this.playlistServiceManager.getUserOwnedPlaylistIDFromName(this.userID,
+//                            playlistName);
+//                    if (playlistID == null) {
+//                        languagePresenter.display("There is no playlist with the name " + playlistName +
+//                                ", please enter the correct name of the playlist");
+//                    } else if (!accountServiceManager.editPlaylistAccess(userID, playlistID)) {
+//                        this.languagePresenter.display("You don't have access to the playlist\n");
+//                        if (wantToCancel(languagePresenter)) {
+//                            executionIsComplete = true;
+//                        }
+//                    } else {
+//                        boolean songIsPublic = songManager.isPublic(songID);
+//                        // check if it is possible to add the song to the selected playlist
+//                        boolean succeed = playlistServiceManager.addableToPlaylist(playlistID, songIsPublic);
+//                        if (!succeed) {
+//                            languagePresenter.display("You cannot add a private song to a public playlist\n");
+//                            if (wantToCancel(languagePresenter)) {
+//                                executionIsComplete = true;
+//                            }
+//                        } else {
+//                            if (playlistServiceManager.getListOfSongsID(playlistID).contains(songID)) {
+//                                languagePresenter.display(
+//                                        "Already added! (⌒‿⌒) You can find this song in \uD83D\uDCBD " +
+//                                                songManager.getSongName(songID) + " \uD83D\uDCBD.\n");
+//                            } else {
+//                                playlistServiceManager.addToPlaylist(playlistID, songID);
+//                                languagePresenter.display(
+//                                        "Successfully added! (⌒‿⌒) You can now find this song in \uD83D\uDCBD " +
+//                                                songManager.getSongName(songID) + " \uD83D\uDCBD.\n");
+//                            }
+//                            executionIsComplete = true;
+//
+//                        }
+//                    }
+//                }
+//            } catch (InputMismatchException e) {
+//                this.languagePresenter.display("Invalid input format, please try again.");
+//            }
+//        }
     }
 
     /**
@@ -126,4 +128,5 @@ public class AddToExistingPlaylistCommand extends PlaylistServiceCommand {
         }
         return true;
     }
+
 }

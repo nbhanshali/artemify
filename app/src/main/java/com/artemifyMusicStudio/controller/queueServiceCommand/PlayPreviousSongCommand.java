@@ -1,6 +1,10 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
+import android.view.View;
+import android.widget.Toast;
+
 import com.artemifyMusicStudio.ActivityServiceCache;
+import com.artemifyMusicStudio.PageActivity;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
 
@@ -19,10 +23,12 @@ public class PlayPreviousSongCommand extends QueueServiceCommand{
     }
 
     @Override
-    public void execute() {
+    public void onClick (View view) {
+        PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
         if (activityServiceCache.getQueueManager().getRecentlyPlayedSongs().size() == 0) {
-            languagePresenter.
-                    display("You have not played any songs previously. \n");
+            String warningMsg =  this.languagePresenter.
+                    translateString("No song has been played previously.") ;
+            Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         } else {
             ArrayList<Integer> recentlyPlayedSongs = activityServiceCache.getQueueManager().
                     getRecentlyPlayedSongs();
@@ -32,8 +38,12 @@ public class PlayPreviousSongCommand extends QueueServiceCommand{
             activityServiceCache.getQueueManager().addToQueue(currSong, 0);
             activityServiceCache.getQueueManager().setNowPlaying(prevSong);
             activityServiceCache.getQueueManager().setRecentlyPlayedSongs(recentlyPlayedSongs);
-            languagePresenter.
-                    display("Previous song is being played. \n");
+            String warningMsg =  this.languagePresenter.
+                    translateString("Previous is song is being played.") ;
+            Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         }
     }
+
 }
+
+

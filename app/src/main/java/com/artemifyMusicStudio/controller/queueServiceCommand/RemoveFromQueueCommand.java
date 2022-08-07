@@ -1,39 +1,57 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
+import android.content.Intent;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
+import com.artemifyMusicStudio.PageActivity;
+import com.artemifyMusicStudio.QueueDisplayPage;
+import com.artemifyMusicStudio.SearchResultPage;
 import com.entity.Song;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
 
-public class RemoveFromQueueCommand extends QueueServiceCommand{
+public class RemoveFromQueueCommand implements View.OnClickListener {
 
     private final ActivityServiceCache activityServiceCache;
     private final LanguagePresenter languagePresenter;
     private final EditText inputSongIndex;
 
 
-    public RemoveFromQueueCommand(ActivityServiceCache activityServiceCache,
-                               LanguagePresenter languagePresenter, Queue queueService,
-                                  EditText inputSongIndex) {
-        super(queueService);
+    public RemoveFromQueueCommand(ActivityServiceCache activityServiceCache, EditText inputSongIndex) {
         this.activityServiceCache = activityServiceCache;
-        this.languagePresenter = languagePresenter;
+        this.languagePresenter = activityServiceCache.getLanguagePresenter();
         this.inputSongIndex = inputSongIndex;
     }
 
     @Override
-    public void execute() {
-        int songIndex = Integer.parseInt(inputSongIndex.getText().toString());
+    public void onClick(View v) {
+        PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+        String text = inputSongIndex.getText().toString();
+        try {
+            int songIndex = Integer.parseInt(text);
 
-        if(songIndex <= activityServiceCache.getQueueManager().getUpcomingSongs().size()){
-            int songID = activityServiceCache.getQueueManager().getUpcomingSongs().get(songIndex);
-            String songName = activityServiceCache.getSongManager().getSongName(songID);
-            activityServiceCache.getQueueManager().removeFromQueue(songID);
-            languagePresenter.display(songName + " has been removed from the queue.");
-        } else {
-            languagePresenter.display("There is no song at your given index.");
+            if(songIndex <= activityServiceCache.getQueueManager().getUpcomingSongs().size()){
+                int songID = activityServiceCache.getQueueManager().getUpcomingSongs().get(songIndex);
+                String songName = activityServiceCache.getSongManager().getSongName(songID);
+                activityServiceCache.getQueueManager().removeFromQueue(songID);
+                Intent it = new Intent(currentPageActivity, QueueDisplayPage.class);
+                currentPageActivity.startActivity(it);
+                String warningMsg =  this.languagePresenter.
+                        translateString(songName + "has been removed from the queue.") ;
+                Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
+            } else {
+                String warningMsg =  this.languagePresenter.
+                        translateString("There is no song at your given index. ") ;
+                Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
+            }
+        } catch (NumberFormatException e) {
+            String warningMsg =  this.languagePresenter.
+                    translateString("Input is not an integer, please enter a valid input.") ;
+            Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         }
+
     }
 }

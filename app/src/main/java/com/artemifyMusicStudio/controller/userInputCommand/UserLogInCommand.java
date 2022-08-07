@@ -55,6 +55,7 @@ public abstract class UserLogInCommand implements View.OnClickListener {
         if (exists){
             if (failForSecondLayerAuthentication){this.secondLayerAuthenticationFailAction(this.activityServiceCache.getCurrentPageActivity());}
             else{this.logInSuccessfulAction(userID);}
+            // seems to stop over here
         }
         else{
             String warningMsg = this.languagePresenter.translateString("Incorrect username or password, please try again");

@@ -22,37 +22,37 @@ public class AdminPage extends PageActivity {
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
 
-//        // populate button
-//        populateMenuCommandCreatorMap();
-//        populateExitPageMenuItems();
-//        populateIdMenuMap();
-//        populateButtons();
-//        //set user name
-//        TextView tv = findViewById(R.id.user_name);
-//        tv.setText(activityServiceCache.getUserID());
+        // populate button
+        populateMenuCommandCreatorMap();
+        populateExitPageMenuItems();
+        populateIdMenuMap();
+        populateButtons();
+        //set user name
+        TextView tv = findViewById(R.id.user_name);
+        tv.append(activityServiceCache.getUserID());
     }
 
     @Override
     protected void populateMenuCommandCreatorMap() {
-        ArrayList<CommandItemType> tempList = new ArrayList<>(
+        ArrayList<CommandItemType> popupList = new ArrayList<>(
                 List.of(CommandItemType.DELETE_USER, CommandItemType.BAN_USER,
-                        CommandItemType.UNBAN_USER, CommandItemType.QUIT_ADMIN_MODE,
-                        CommandItemType.LOG_OUT)
+                        CommandItemType.UNBAN_USER, CommandItemType.GRANT_ADMIN_RIGHT)
         );
-        menuCommandCreatorMap.put("TransitionCommandCreator", tempList);
-        menuCommandCreatorMap.put("PopupCommandCreator", tempList);
-        // TODO: add other (popup)commandcreators
+        ArrayList<CommandItemType> transitionList = new ArrayList<>(
+                List.of(CommandItemType.QUIT_ADMIN_MODE, CommandItemType.LOG_OUT)
+        );
+        menuCommandCreatorMap.put("TransitionCommandCreator", transitionList);
+        menuCommandCreatorMap.put("PopupCommandCreator", popupList);
     }
 
     @Override
     protected void populateIdMenuMap() {
-        idMenuItemMap.put(CommandItemType.LOG_OUT, R.id.exit);
+        idMenuItemMap.put(CommandItemType.LOG_OUT, R.id.adminLogOut);
         idMenuItemMap.put(CommandItemType.QUIT_ADMIN_MODE, R.id.exitAdminMode);
         idMenuItemMap.put(CommandItemType.DELETE_USER, R.id.deleteUser);
         idMenuItemMap.put(CommandItemType.BAN_USER, R.id.banUser);
         idMenuItemMap.put(CommandItemType.UNBAN_USER, R.id.unbanUser);
         idMenuItemMap.put(CommandItemType.GRANT_ADMIN_RIGHT, R.id.MakeAdmin);
-        // TODO: add other commands that are not implemented yet
     }
 
     @Override

@@ -42,9 +42,4 @@ public class SearchUserCommand extends SearchServiceCommand {
         return "  " + index + ". " + searchString;
     }
 
-    @Override
-    protected PageActivity getEntityDisplayPage(String targetUserID) {
-        this.activityServiceCache.setTargetUserID(targetUserID);
-        return this.activityServiceCache.creat(PageType.USER_DISPLAY_PAGE);
-    }
 }

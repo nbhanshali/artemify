@@ -8,6 +8,7 @@ import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.popupCommand.LikePlaylistCommand;
 import com.artemifyMusicStudio.controller.popupCommand.PlayPlaylistCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewCreatorCommand;
+import com.artemifyMusicStudio.controller.popupCommand.ViewLyricsCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewFollowersCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewPlaylistSongsCommand;
 import com.artemifyMusicStudio.controller.popupCommand.inputDialogPopupCommand.PopUpInputDialogCommand;
@@ -45,6 +46,11 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         "Search by Song",
                         "Enter the name of the song you wish to search",
                         CommandItemType.SEARCH_SONG);
+            case POP_UP_REMOVE_FROM_QUEUE_DIALOG:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Remove from Queue",
+                        "Enter the index of the song in the queue you wish to remove",
+                        CommandItemType.REMOVE_FROM_QUEUE);
             case VIEW_PLAYLIST_SONGS:
                 return new ViewPlaylistSongsCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(),
@@ -65,6 +71,28 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         this.activityServiceCache.getLanguagePresenter(),
                         this.activityServiceCache.getPlaylistManager(),
                         this.activityServiceCache.getTargetPlaylistID());
+            case VIEW_LYRICS:
+                return new ViewLyricsCommand(this.activityServiceCache);
+            case BAN_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Ban a user:",
+                        "Enter the username of the user you wish to ban",
+                        CommandItemType.BAN_USER);
+            case UNBAN_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Unban a user:",
+                        "Enter the username of the user you wish to unban",
+                        CommandItemType.UNBAN_USER);
+            case DELETE_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Delete a user:",
+                        "Enter the username of the user you wish to delete",
+                        CommandItemType.DELETE_USER);
+            case GRANT_ADMIN_RIGHT:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Make existing user an admin:",
+                        "Enter the username of the user you wish to make an admin",
+                        CommandItemType.GRANT_ADMIN_RIGHT);
             case VIEW_FOLLOWERS:
                 return new ViewFollowersCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(),

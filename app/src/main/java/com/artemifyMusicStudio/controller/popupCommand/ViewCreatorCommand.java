@@ -5,10 +5,7 @@ import android.view.View;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.PageType;
-import com.artemifyMusicStudio.RegularUserHomePage;
 import com.artemifyMusicStudio.UserDisplayPage;
-import com.artemifyMusicStudio.controller.playlistServiceCommand.PlaylistServiceCommand;
 import com.useCase.PlaylistManager;
 
 /**

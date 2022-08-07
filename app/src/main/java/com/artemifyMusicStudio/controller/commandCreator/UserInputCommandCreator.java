@@ -6,6 +6,7 @@ import android.widget.EditText;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
+import com.artemifyMusicStudio.controller.userInputCommand.AddToNewPlaylistCommand;
 import com.artemifyMusicStudio.controller.userInputCommand.AdminLogInCommand;
 import com.artemifyMusicStudio.controller.userInputCommand.CreateNewPlaylistCommand;
 import com.artemifyMusicStudio.controller.userInputCommand.CreateRegularAccountCommand;
@@ -74,6 +75,10 @@ public class UserInputCommandCreator implements SimpleButtonCommandCreator {
                         this.activityServiceCache.getPlaylistManager(), this.inputUserName, this.inputPassword);
             case CREATE_NEW_PLAYLIST:
                 return new CreateNewPlaylistCommand(this.activityServiceCache,
+                        this.activityServiceCache.getLanguagePresenter(), this.inputPlaylistName,
+                        this.inputDescription, this.isPublic);
+            case ADD_TO_NEW_PLAYLIST:
+                return new AddToNewPlaylistCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(), this.inputPlaylistName,
                         this.inputDescription, this.isPublic);
             default:

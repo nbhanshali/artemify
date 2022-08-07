@@ -27,8 +27,8 @@ public class RegularUserHomePage extends PageActivity {
         populateIdMenuMap();
         populateButtons();
         // set user name
-        TextView tv = findViewById(R.id.user_name);
-        tv.setText(activityServiceCache.getUserID());
+        TextView tv = findViewById(R.id.welcome_username);
+        tv.append(activityServiceCache.getUserID());
     }
 
     @Override

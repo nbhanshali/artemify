@@ -1,44 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminPage"
-    android:orientation="vertical">
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".AdminPage">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Admin Page"/>
+        android:text="@string/admin_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"/>
 
-    <Button
-        android:id="@+id/exitAdminMode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Quit admin mode"/>
 
-    <Button
-        android:id="@+id/deleteUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete a user" />
 
-    <Button
-        android:id="@+id/banUser"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ban a user" />
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/unbanUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Unban a user" />
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/admin_welcome_username"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"/>
 
-    <Button
-        android:id="@+id/MakeAdmin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Make a user an admin" />
+        <Button
+            android:id="@+id/exitAdminMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/quit_admin_mode"
+            android:textSize="11sp"/>
+
+        <Button
+            android:id="@+id/adminLogOut"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/log_out"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text= "@string/manage_users"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:id="@+id/deleteUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_a_user" />
+
+        <Button
+            android:id="@+id/banUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ban_a_user" />
+
+        <Button
+            android:id="@+id/unbanUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unban_a_user" />
+
+        <Button
+            android:id="@+id/MakeAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/make_a_user_an_admin" />
+
+    </LinearLayout>
 
 </LinearLayout>

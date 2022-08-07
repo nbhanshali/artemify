@@ -1,41 +1,31 @@
 package com.artemifyMusicStudio.controller.popupCommand;
 
+import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+
 import com.artemifyMusicStudio.ActivityServiceCache;
-import com.artemifyMusicStudio.controller.musicServiceCommand.MusicServiceCommand;
-import com.presenters.LanguagePresenter;
-import com.useCase.SongManager;
 
 /**
  * A ViewLyricsCommand to view the time created and the lyrics of the song
  */
-public class ViewLyricsCommand extends MusicServiceCommand {
+public class ViewLyricsCommand implements View.OnClickListener {
 
-    private final LanguagePresenter languagePresenter;
-    private final int songID;
+    private final ActivityServiceCache activityServiceCache;
+    private final int songId;
 
-    /**
-     * Constructor of ViewLyricsCommand
-     *
-     * @param activityServiceCache a PageCreator object
-     * @param languagePresenter a LanguagePresenter object
-     * @param songManager UserAccess UseCase object
-     */
-    public ViewLyricsCommand(ActivityServiceCache activityServiceCache, LanguagePresenter languagePresenter,
-                             SongManager songManager){
-        super(songManager);
-        this.languagePresenter = languagePresenter;
-        this.songID = Integer.parseInt(activityServiceCache.getTargetSongID());
+    public ViewLyricsCommand(ActivityServiceCache activityServiceCache){
+        this.activityServiceCache = activityServiceCache;
+        this.songId = Integer.parseInt(activityServiceCache.getTargetSongID());
     }
 
-    /**
-     * Display the time created and lyrics of the song
-     */
     @Override
-    public void execute() {
-        languagePresenter.display("The song is created in " + songManager.getSongDateTimeCreated(songID) + "\n");
-        languagePresenter.display("The lyrics of the song is the following: ");
-        languagePresenter.display("=======================================");
-        languagePresenter.display("♪ " +songManager.getSongLyrics(songID) + " ♪");
-        languagePresenter.display("=======================================\n");
+    public void onClick(View v) {
+        String msg = "♪ " + activityServiceCache.getSongManager().getSongLyrics(songId) + " ♪";
+        AlertDialog.Builder builder = new AlertDialog.Builder(activityServiceCache.getCurrentPageActivity());
+        builder.setTitle("Lyrics")
+                .setMessage(msg)
+                .create()
+                .show();
     }
 }

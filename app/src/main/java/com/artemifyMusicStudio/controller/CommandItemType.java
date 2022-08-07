@@ -16,6 +16,7 @@ public enum CommandItemType {
     POP_UP_SEARCH_SONG_DIALOG,
     POP_UP_SEARCH_USER_DIALOG,
     POP_UP_SEARCH_PLAYLIST_DIALOG,
+    POP_UP_REMOVE_FROM_QUEUE_DIALOG,
     //
 
     // For Search Page
@@ -45,10 +46,14 @@ public enum CommandItemType {
     EXIT_PROGRAM,
     // For UploadSongPage
     UPLOAD_SONG,
-    // For DisplaySongPage
+    // For SongDisplayPage
     VIEW_LYRICS,
     LIKE_SONG,
     ADD_TO_EXISTING_PLAYLIST,
+    JUMP_TO_CREATE_NEW_PLAYLIST,
+    PLAY_SONG,
+    ADD_TO_QUEUE,
+    // For CreateNewPlaylistPage
     ADD_TO_NEW_PLAYLIST,
     // For UserDisplayPage:
     FOLLOW_USER,
@@ -73,10 +78,10 @@ public enum CommandItemType {
     VIEW_PRIVATE_PLAYLISTS,
 
     // For QueueDisplay Page
+    VIEW_QUEUE,
     SHUFFLE_QUEUE,
     SKIP_SONG,
     REMOVE_FROM_QUEUE,
-    PLAY_PAUSE_SONG,
     PLAY_PREVIOUS_SONG,
     REPEAT_SONG_ONCE,
     REPEAT_SONG_INF

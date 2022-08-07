@@ -13,6 +13,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
+import com.artemifyMusicStudio.controller.popupCommand.BanUserCommand;
+import com.artemifyMusicStudio.controller.popupCommand.DeleteUserCommand;
+import com.artemifyMusicStudio.controller.popupCommand.MakeAdminUserCommand;
+import com.artemifyMusicStudio.controller.popupCommand.UnBanUserCommand;
+import com.artemifyMusicStudio.controller.queueServiceCommand.RemoveFromQueueCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchPlaylistCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchSongCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchUserCommand;
@@ -89,7 +94,16 @@ public class InputPopUpDialog extends AppCompatDialogFragment {
                 return new SearchPlaylistCommand(this.activityServiceCache, userInputTargetName);
             case SEARCH_USER:
                 return new SearchUserCommand(this.activityServiceCache, userInputTargetName);
-            // TODO: Rosalyn, put all the admin commands that require pop up dialog in here
+            case REMOVE_FROM_QUEUE:
+                return new RemoveFromQueueCommand(this.activityServiceCache, userInputTargetName);
+            case GRANT_ADMIN_RIGHT:
+                return new MakeAdminUserCommand(this.activityServiceCache, userInputTargetName);
+            case UNBAN_USER:
+                return new UnBanUserCommand(this.activityServiceCache, userInputTargetName);
+            case BAN_USER:
+                return new BanUserCommand(this.activityServiceCache, userInputTargetName);
+            case DELETE_USER:
+                return new DeleteUserCommand(this.activityServiceCache, userInputTargetName);
             default:
                 return null;
         }
