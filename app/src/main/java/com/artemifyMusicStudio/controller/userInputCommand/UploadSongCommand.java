@@ -57,9 +57,8 @@ public class UploadSongCommand implements View.OnClickListener {
             int second = Integer.parseInt(secondString);
             // add song
             SongManager songManager = activityServiceCache.getSongManager();
-            songManager.addSong(songName, new int[]{minute, second}, artist,
+            songManager.addSong(songName," ", new int[]{minute, second}, artist,
                     dateTimeCreated, lyrics, isPublic);
-            // TODO: suppose to direct to song display page
             activityServiceCache.setTargetSongID(String.valueOf(songManager.latestSongID()));
             activityServiceCache.setTargetUserID(activityServiceCache.getUserID());
             // go back to regular user home page

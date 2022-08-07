@@ -203,7 +203,7 @@ public class SongManager implements Serializable {
      * @param lyrics The lyrics of the song
      * @param isPublic Public status of the song
      */
-    public void addSong(String title, int[] duration, String artist, String source,
+    public void addSong(String title, String source, int[] duration, String artist,
                         Timestamp dateTimeCreated, String lyrics, boolean isPublic) {
         int newID = IdCounter.incrementAndGet();
         Song newSong = new Song(newID, title, source, duration, artist, dateTimeCreated, lyrics, isPublic);
