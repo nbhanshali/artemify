@@ -14,6 +14,7 @@ import com.artemifyMusicStudio.controller.transitionCommand.InvokeLogOutCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeNewPlaylistPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokePlaylistDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeProfileAndSettingPageCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.InvokeQueueCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeSearchPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeSongDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUploadSongPageCommand;
@@ -53,6 +54,8 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new CreateAccountCommand(this.activityServiceCache);
             case INVOKE_SEARCH:
                 return new InvokeSearchPageCommand(this.activityServiceCache);
+            case INVOKE_QUEUE:
+                return new InvokeQueueCommand(this.activityServiceCache);
             case ENABLE_ADMIN_MODE:
                 return new EnableAdminCommand(this.activityServiceCache);
             case INVOKE_SONG_UPLOAD:
