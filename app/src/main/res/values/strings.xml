@@ -70,5 +70,6 @@
     <string name="private_public">private/public</string>
     <string name="view_playlist_songs">View Playlist Songs</string>
     <string name="view_creator">View Creator</string>
+    <string name="favourite_songs">Favourite Songs</string>
 
 </resources>

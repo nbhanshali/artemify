@@ -21,6 +21,8 @@ import com.artemifyMusicStudio.controller.transitionCommand.InvokeUploadSongPage
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUserDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.JumpToCreateNewPlaylistCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.StartLogInCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.ViewFollowersCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.ViewFollowingsCommand;
 
 /**
  *  A transition command factory to manufacture commands that are in transition command  category
@@ -70,6 +72,10 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new InvokeProfileAndSettingPageCommand(this.activityServiceCache);
             case INVOKE_CREATE_NEW_PLAYLIST:
                 return new InvokeNewPlaylistPageCommand(this.activityServiceCache);
+            case VIEW_FOLLOWINGS:
+                return new ViewFollowingsCommand(this.activityServiceCache);
+            case VIEW_FOLLOWERS:
+                return new ViewFollowersCommand(this.activityServiceCache);
             case LOG_OUT:
                 return new InvokeLogOutCommand(this.activityServiceCache);
             case EXIT_PAGE:

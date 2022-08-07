@@ -128,6 +128,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
+                    android:text="@string/favourite_songs"
+                    android:textStyle="bold"/>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="left">
+
+                    <LinearLayout
+                        android:id="@+id/display_favourites_songs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
                     android:text="@string/playlists"
                     android:textStyle="bold"/>
 
@@ -167,7 +189,6 @@
                     </LinearLayout>
 
                 </HorizontalScrollView>
-
 
             </LinearLayout>
         </LinearLayout>

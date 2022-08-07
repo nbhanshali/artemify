@@ -60,26 +60,6 @@ public class UserInteractionCommandCreator implements SimpleCommandCreator {
             case UNFOLLOW_USER:
                 return new UnfollowUserCommand(this.acctServiceManager, this.languagePresenter, this.userID,
                         this.viewedID);
-            case VIEW_FOLLOWERS:
-                return new ViewFollowersCommand(this.acctServiceManager, this.languagePresenter, this.userID,
-                        this.viewedID);
-            case VIEW_FOLLOWINGS:
-                return new ViewFollowingsCommand(this.acctServiceManager, this.languagePresenter, this.userID,
-                        this.viewedID);
-            case VIEW_USER_SONGS:
-                return new ViewUserSongsCommand(this.acctServiceManager, this.languagePresenter,
-                        this.playlistServiceManager, this.songManager,
-                        this.userID, this.viewedID);
-            case VIEW_USER_PLAYLISTS:
-                return new ViewUserPlaylistsCommand(this.acctServiceManager, this.languagePresenter,
-                        this.playlistServiceManager, this.userID, this.viewedID);
-            case VIEW_USER_FAVORITES:
-                return new ViewUserFavouritesCommand(this.acctServiceManager, this.languagePresenter,
-                        this.playlistServiceManager, this.songManager,
-                        this.userID, this.viewedID);
-            case VIEW_USER_LIKED_PLAYLISTS:
-                return new ViewUserLikedPlaylistsCommand(this.acctServiceManager, this.languagePresenter,
-                        this.playlistServiceManager, this.userID, this.viewedID);
             default:
                 return null;
         }
