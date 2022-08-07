@@ -5,8 +5,10 @@ import android.view.View;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
+import com.artemifyMusicStudio.controller.transitionCommand.AddToQueueCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.CreateAccountCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.EnableAdminCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.EnableRegularUserHomePageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeLogOutCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeNewPlaylistPageCommand;
@@ -16,6 +18,7 @@ import com.artemifyMusicStudio.controller.transitionCommand.InvokeSearchPageComm
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeSongDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUploadSongPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUserDisplayPage;
+import com.artemifyMusicStudio.controller.transitionCommand.JumpToCreateNewPlaylistCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.StartLogInCommand;
 
 /**
@@ -68,6 +71,12 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new InvokeLogOutCommand(this.activityServiceCache);
             case EXIT_PAGE:
                 return new ExitPageCommand(this.activityServiceCache);
+            case QUIT_ADMIN_MODE:
+                return new EnableRegularUserHomePageCommand(this.activityServiceCache);
+            case ADD_TO_QUEUE:
+                return new AddToQueueCommand(this.activityServiceCache);
+            case JUMP_TO_CREATE_NEW_PLAYLIST:
+                return new JumpToCreateNewPlaylistCommand(this.activityServiceCache);
             default:
                 return null;
         }

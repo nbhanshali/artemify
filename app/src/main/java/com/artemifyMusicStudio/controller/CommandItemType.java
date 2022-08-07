@@ -46,10 +46,14 @@ public enum CommandItemType {
     EXIT_PROGRAM,
     // For UploadSongPage
     UPLOAD_SONG,
-    // For DisplaySongPage
+    // For SongDisplayPage
     VIEW_LYRICS,
     LIKE_SONG,
     ADD_TO_EXISTING_PLAYLIST,
+    JUMP_TO_CREATE_NEW_PLAYLIST,
+    PLAY_SONG,
+    ADD_TO_QUEUE,
+    // For CreateNewPlaylistPage
     ADD_TO_NEW_PLAYLIST,
     // For UserDisplayPage:
     FOLLOW_USER,

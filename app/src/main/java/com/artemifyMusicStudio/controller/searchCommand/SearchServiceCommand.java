@@ -10,7 +10,7 @@ import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.SearchResultPage;
 import com.presenters.LanguagePresenter;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * An abstract SearchServiceCommand to provide unify helper methods for all its child search command
@@ -47,7 +47,7 @@ public abstract class SearchServiceCommand implements View.OnClickListener {
         // Check whether songs with the userInputSongName exits
         if (targetEntityIDs != null){
             //this.viewSuccessfulSearchResult(userInputSearchString, searchResults);
-            HashMap<String, String> searchResultMap = populateSearchResultMap(userInputSearchString,
+            LinkedHashMap<String, String> searchResultMap = populateSearchResultMap(userInputSearchString,
                     targetEntityIDs);
             SearchResultContainer searchResults = new SearchResultContainer(searchResultMap);
             Intent it = new Intent(currentPageActivity, SearchResultPage.class);
@@ -69,10 +69,10 @@ public abstract class SearchServiceCommand implements View.OnClickListener {
      * @return a HashMap stores the target entity ids as the key and the descripiton of that entity
      *         as a correspondent
      */
-    protected HashMap<String, String> populateSearchResultMap(String searchString,
+    protected LinkedHashMap<String, String> populateSearchResultMap(String searchString,
                                                               ArrayList<String> uniqueIDs){
         int numberOfSongs = uniqueIDs.size();
-        HashMap<String, String> searchResultMap = new HashMap<>();
+        LinkedHashMap<String, String> searchResultMap = new LinkedHashMap<>();
         for (int i = 0 ; i < numberOfSongs; i++){
             String uniqueID = uniqueIDs.get(i);
             String currDescription = this.getSearchResultDescription(i+1,
@@ -100,13 +100,5 @@ public abstract class SearchServiceCommand implements View.OnClickListener {
 
     protected abstract String getSearchResultDescription(int index, String searchString, String targetEntityID);
 
-    /**
-     * A protected abstract method to force child search commands to define their way to get the entity display page
-     * that the user can view the result that he/she wants
-     *
-     * @param targetEntityID a String for target entity id
-     * @return a PageCreator object to represent the entity display page
-     */
-    protected abstract PageActivity getEntityDisplayPage(String targetEntityID);
 
 }

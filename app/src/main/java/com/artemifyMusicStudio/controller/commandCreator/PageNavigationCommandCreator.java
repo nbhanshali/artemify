@@ -41,10 +41,6 @@ public class PageNavigationCommandCreator implements SimpleCommandCreator {
         switch (type) {
             case PROFILE_AND_SETTING:
                 return new ProfileAndSettingCommand(this.activityServiceCache);
-            case ENABLE_ADMIN_MODE:
-                return new EnableAdminCommand(this.activityServiceCache);
-            case QUIT_ADMIN_MODE:
-                return new QuitAdminCommand(this.activityServiceCache);
             default:
                 return null;
         }

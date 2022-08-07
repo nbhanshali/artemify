@@ -42,14 +42,4 @@ public class SearchPlaylistCommand extends SearchServiceCommand {
         return "  " + index + ". " + searchName + ", created by "
                 + this.playlistServiceManager.getCreatorUsername(playlistID);
     }
-
-    @Override
-    protected PageActivity getEntityDisplayPage(String targetEntityID) {
-        int targetPlaylistID = Integer.parseInt(targetEntityID);
-        String targetSongCreator = this.playlistServiceManager.getCreatorUsername(targetPlaylistID);
-        // Update the targetSongId and targetUserId in page creator
-        this.activityServiceCache.setTargetPlaylistID(String.valueOf(targetPlaylistID));
-        this.activityServiceCache.setTargetUserID(targetSongCreator);
-        return this.activityServiceCache.creat(PageType.PLAYLIST_DISPLAY_PAGE);
-    }
 }
