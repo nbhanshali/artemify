@@ -66,7 +66,7 @@ public class UserDisplayPage extends PageActivity {
         exitButton.setOnClickListener(new ExitPageCommand(this.activityServiceCache));
     }
 
-    private void populatePublicSongButtons(LanguagePresenter languagePresenter,
+    protected void populatePublicSongButtons(LanguagePresenter languagePresenter,
                                            UserAccess acctServiceManager,
                                            PlaylistManager playlistServiceManager,
                                            SongManager songManager,
@@ -80,7 +80,7 @@ public class UserDisplayPage extends PageActivity {
                 CommandItemType.INVOKE_SONG_DISPLAY);
     }
 
-    private void populateFavouriteSongsButtons(LanguagePresenter languagePresenter,
+    protected void populateFavouriteSongsButtons(LanguagePresenter languagePresenter,
                                                UserAccess acctServiceManager,
                                                PlaylistManager playlistServiceManager,
                                                SongManager songManager,
@@ -101,7 +101,7 @@ public class UserDisplayPage extends PageActivity {
                 CommandItemType.INVOKE_SONG_DISPLAY);
     }
 
-    private void populatePublicPlaylistButtons(LanguagePresenter languagePresenter,
+    protected void populatePublicPlaylistButtons(LanguagePresenter languagePresenter,
                                                UserAccess acctServiceManager,
                                                PlaylistManager playlistServiceManager,
                                                String targetUserID){
@@ -113,7 +113,7 @@ public class UserDisplayPage extends PageActivity {
                 CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    private void populateViewFollowerAndFollowingButtons(){
+    protected void populateViewFollowerAndFollowingButtons(){
         TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
 
         // populate view follower button
@@ -127,7 +127,7 @@ public class UserDisplayPage extends PageActivity {
         viewFollowingButton.setOnClickListener(viewFollowingCommand);
     }
 
-    private void populateLikedPlaylistButtons(LanguagePresenter languagePresenter,
+    protected void populateLikedPlaylistButtons(LanguagePresenter languagePresenter,
                                               UserAccess acctServiceManager,
                                               PlaylistManager playlistServiceManager,
                                               String targetUserID){
@@ -143,7 +143,7 @@ public class UserDisplayPage extends PageActivity {
                 R.id.display_liked_playlist, CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    private void populateTargetInfoButtons(LanguagePresenter languagePresenter,
+    protected void populateTargetInfoButtons(LanguagePresenter languagePresenter,
                                            ArrayList<Integer> targetIDs,
                                            ArrayList<String> targetNames, Integer layoutID,
                                            CommandItemType targetCommandType){
@@ -169,7 +169,7 @@ public class UserDisplayPage extends PageActivity {
         publicSongDisplay.setGravity(Gravity.CENTER);
     }
 
-    private void setUpUserDisplayInfo(){
+    protected void setUpUserDisplayInfo(){
         // get the user's name for display
         String targetUserID = activityServiceCache.getTargetUserID();
         //calculate the user's accumulated likes
