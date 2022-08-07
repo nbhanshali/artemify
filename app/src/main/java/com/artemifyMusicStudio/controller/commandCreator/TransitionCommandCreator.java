@@ -14,12 +14,16 @@ import com.artemifyMusicStudio.controller.transitionCommand.InvokeLogOutCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeNewPlaylistPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokePlaylistDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeProfileAndSettingPageCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.InvokeQueueCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeSearchPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeSongDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUploadSongPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeUserDisplayPage;
 import com.artemifyMusicStudio.controller.transitionCommand.JumpToCreateNewPlaylistCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.StartLogInCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.ViewFollowersCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.ViewFollowingsCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.ViewQueueCommand;
 
 /**
  *  A transition command factory to manufacture commands that are in transition command  category
@@ -53,6 +57,10 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new CreateAccountCommand(this.activityServiceCache);
             case INVOKE_SEARCH:
                 return new InvokeSearchPageCommand(this.activityServiceCache);
+            case INVOKE_QUEUE:
+                return new InvokeQueueCommand(this.activityServiceCache);
+            case VIEW_QUEUE:
+                return new ViewQueueCommand(this.activityServiceCache);
             case ENABLE_ADMIN_MODE:
                 return new EnableAdminCommand(this.activityServiceCache);
             case INVOKE_SONG_UPLOAD:
@@ -67,6 +75,10 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new InvokeProfileAndSettingPageCommand(this.activityServiceCache);
             case INVOKE_CREATE_NEW_PLAYLIST:
                 return new InvokeNewPlaylistPageCommand(this.activityServiceCache);
+            case VIEW_FOLLOWINGS:
+                return new ViewFollowingsCommand(this.activityServiceCache);
+            case VIEW_FOLLOWERS:
+                return new ViewFollowersCommand(this.activityServiceCache);
             case LOG_OUT:
                 return new InvokeLogOutCommand(this.activityServiceCache);
             case EXIT_PAGE:

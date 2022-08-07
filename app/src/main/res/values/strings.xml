@@ -58,5 +58,18 @@
     <string name="enter_the_require_info">Enter the require Info</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
+    <string name="likes">Likes</string>
+    <string name="songs">Songs</string>
+    <string name="playlists">Playlists</string>
+    <string name="liked_playlists">Liked Playlists</string>
+    <string name="playlist_name">Playlist Name</string>
+    <string name="cover">cover</string>
+    <string name="play_playlist">Play Playlist</string>
+    <string name="creator_info">Creator Info</string>
+    <string name="playlist_description">Playlist Description</string>
+    <string name="private_public">private/public</string>
+    <string name="view_playlist_songs">View Playlist Songs</string>
+    <string name="view_creator">View Creator</string>
+    <string name="favourite_songs">Favourite Songs</string>
 
 </resources>

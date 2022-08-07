@@ -39,6 +39,7 @@ public class RegularUserHomePage extends PageActivity {
                         CommandItemType.INVOKE_SONG_UPLOAD,
                         CommandItemType.INVOKE_CREATE_NEW_PLAYLIST,
                         CommandItemType.PROFILE_AND_SETTING,
+                        CommandItemType.INVOKE_QUEUE,
                         CommandItemType.LOG_OUT)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList);
@@ -63,6 +64,7 @@ public class RegularUserHomePage extends PageActivity {
     @Override
     protected void populateIdMenuMap(){
         idMenuItemMap.put(CommandItemType.INVOKE_SEARCH, R.id.search);
+        idMenuItemMap.put(CommandItemType.INVOKE_QUEUE, R.id.queue_page);
         idMenuItemMap.put(CommandItemType.PROFILE_AND_SETTING, R.id.profile_setting);
         idMenuItemMap.put(CommandItemType.INVOKE_CREATE_NEW_PLAYLIST, R.id.create_playlist);
         idMenuItemMap.put(CommandItemType.INVOKE_SONG_UPLOAD, R.id.upload_song);

@@ -25,7 +25,7 @@ public class SongManager implements Serializable {
     /**
      * Constructor for a SongManagerConstructor
      * @param songInfo stores information on all songs in the following format:
-     *                 {ID: {"Name": String, "Artist": String, "Date Time Created": String,
+     *                 {ID: {"Name": String, "Source": String, "Artist": String, "Date Time Created": String,
      *                 "Lyrics": String, "isPublic": String, "Number of Likes": String, "Number of Listens": String}}
      * @param songDuration {ID: [minutes, seconds]}
      * @param userManager a UserAccess object that stores all users.
@@ -44,6 +44,7 @@ public class SongManager implements Serializable {
             HashMap<String, String> currSongDetails = songInfo.get(ids);
             assert currSongDetails != null;
             String name = currSongDetails.get("Name");
+            String source = currSongDetails.get("Source");
             String artist = currSongDetails.get("Artist");
             Timestamp dateTimeCreated = Timestamp.valueOf(currSongDetails.get("Date Time Created"));
             String lyrics = currSongDetails.get("Lyrics");
@@ -51,7 +52,7 @@ public class SongManager implements Serializable {
             int[] duration = songDuration.get(ids);
             int numlikes = Integer.parseInt(Objects.requireNonNull(currSongDetails.get("Number of Likes")));
             int numlistens = Integer.parseInt(Objects.requireNonNull(currSongDetails.get("Number of Listens")));
-            Song currSong = new Song(ids, name, duration, artist, dateTimeCreated,
+            Song currSong = new Song(ids, name, source, duration, artist, dateTimeCreated,
                     numlikes, numlistens, lyrics, isPublic);
             songs.add(currSong);
         }
@@ -197,14 +198,15 @@ public class SongManager implements Serializable {
      * @param title The name of the song
      * @param duration The duration of the song
      * @param artist The user that uploaded the song
+     * @param source The source of the song
      * @param dateTimeCreated TimeStamp of when the song was uploaded
      * @param lyrics The lyrics of the song
      * @param isPublic Public status of the song
      */
-    public void addSong(String title, int[] duration, String artist,
+    public void addSong(String title, String source, int[] duration, String artist,
                         Timestamp dateTimeCreated, String lyrics, boolean isPublic) {
         int newID = IdCounter.incrementAndGet();
-        Song newSong = new Song(newID, title, duration, artist, dateTimeCreated, lyrics, isPublic);
+        Song newSong = new Song(newID, title, source, duration, artist, dateTimeCreated, lyrics, isPublic);
         songs.add(newSong);
         if (isPublic) {
             int playlistID = acctServiceManager.findUser(artist).getMyPublicSongsPlaylistId();

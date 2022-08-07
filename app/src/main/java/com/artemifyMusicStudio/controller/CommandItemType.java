@@ -10,6 +10,7 @@ public enum CommandItemType {
     INVOKE_SEARCH,
     INVOKE_CREATE_NEW_PLAYLIST,
     INVOKE_SONG_UPLOAD,
+    INVOKE_QUEUE,
     //
 
     // For POP DIALOG

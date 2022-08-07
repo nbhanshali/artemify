@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.artemifyMusicStudio.QueueDisplayPage"
     android:padding="10dp"
-    android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <Button
@@ -15,48 +13,54 @@
         android:layout_height="wrap_content"
         android:text="exit" />
 
-    <Button
-        android:id="@+id/view_queue"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Queue"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/view_queue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Songs"/>
 
 
-    <Button
-        android:id="@+id/shuffle_queue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Shuffle Queue"/>
+        <Button
+            android:id="@+id/shuffle_queue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shuffle Queue"/>
 
-    <Button
-        android:id="@+id/skip_song"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Skip Song"/>
+        <Button
+            android:id="@+id/skip_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skip Song"/>
 
-    <Button
-        android:id="@+id/remove_from_queue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Remove from Queue"/>
+        <Button
+            android:id="@+id/remove_from_queue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove from Queue"/>
 
-    <Button
-        android:id="@+id/play_previous_song"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Play Previous Song"/>
+        <Button
+            android:id="@+id/play_previous_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play Previous Song"/>
 
-    <Button
-        android:id="@+id/repeat_song_once"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Repeat Song Once"/>
+        <Button
+            android:id="@+id/repeat_song_once"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Repeat Song Once"/>
 
-    <Button
-        android:id="@+id/repeat_song_infinitely"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Repeat Song Infinitely"/>
+        <Button
+            android:id="@+id/repeat_song_infinitely"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Repeat Song Infinitely"/>
 
+    </LinearLayout>
 
 </LinearLayout>

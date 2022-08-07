@@ -35,7 +35,7 @@ public class RepeatSongInfCommand extends QueueServiceCommand{
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         } else {
             String warningMsg =  this.languagePresenter.
-                    translateString("No sung is currently being played.") ;
+                    translateString("No song is currently being played.") ;
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         }
     }

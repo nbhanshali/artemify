@@ -10,10 +10,8 @@ import com.artemifyMusicStudio.controller.popupCommand.PlayPlaylistCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewCreatorCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewLoginHistoryCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewLyricsCommand;
-import com.artemifyMusicStudio.controller.popupCommand.ViewFollowersCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewPlaylistSongsCommand;
-import com.artemifyMusicStudio.controller.popupCommand.inputDialogPopupCommand.PopUpInputDialogCommand;
-import com.presenters.LanguagePresenter;
+import com.artemifyMusicStudio.controller.popupCommand.PopUpInputDialogCommand;
 
 /**
  * A PopupCommandCreator to create pop up related command
