@@ -7,17 +7,12 @@ import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.PageType;
 import com.artemifyMusicStudio.PlaylistDisplayPage;
-import com.artemifyMusicStudio.controller.playlistServiceCommand.PlaylistServiceCommand;
-import com.artemifyMusicStudio.controller.transitionCommand.InvokeNewPlaylistPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
 
 import java.sql.Timestamp;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 /**
  * A AddToNewPlaylistCommand that will create a new playlist, then add the song to this newly created playlist

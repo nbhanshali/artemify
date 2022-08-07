@@ -7,17 +7,11 @@ import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.PageType;
 import com.artemifyMusicStudio.PlaylistDisplayPage;
-import com.artemifyMusicStudio.RegularUserHomePage;
-import com.artemifyMusicStudio.controller.playlistServiceCommand.PlaylistServiceCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
-import com.useCase.SongManager;
 
 import java.sql.Timestamp;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 /**
  * A CreateNewPlaylistCommand object to handle the user's create new playlist request

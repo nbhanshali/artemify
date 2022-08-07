@@ -5,9 +5,6 @@ import android.view.View;
 import androidx.appcompat.app.AlertDialog;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
-import com.artemifyMusicStudio.controller.musicServiceCommand.MusicServiceCommand;
-import com.presenters.LanguagePresenter;
-import com.useCase.SongManager;
 
 /**
  * A ViewLyricsCommand to view the time created and the lyrics of the song
