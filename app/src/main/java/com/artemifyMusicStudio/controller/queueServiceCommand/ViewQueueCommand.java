@@ -1,10 +1,13 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
+import com.artemifyMusicStudio.PlaylistSongsDisplayPage;
+import com.artemifyMusicStudio.QueueDisplayPage;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
 
@@ -26,6 +29,9 @@ public class ViewQueueCommand extends QueueServiceCommand{
     @Override
     public void onClick (View view) {
         PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+        Intent it = new Intent(currentPageActivity, PlaylistSongsDisplayPage.class);
+        it.putExtra("cache", this.activityServiceCache);
+        currentPageActivity.startActivity(it);
         String displayMsg =  this.languagePresenter.
                 translateString("Here are all the songs in the queue.") ;
         Toast.makeText(currentPageActivity, displayMsg, Toast.LENGTH_LONG).show();
