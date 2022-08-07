@@ -18,21 +18,55 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:contentDescription="username"
+                android:layout_width="78dp"
+                android:layout_height="69dp"
+                android:contentDescription="@string/userlogo"
                 android:scaleType="fitCenter"
                 android:src="@drawable/temp_logo" />
 
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/follow_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="@string/follow"
+                    android:textSize="11sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:id="@+id/unfollow_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/unfollow"
+                    android:textSize="11sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal">
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
                 <Button
                     android:id="@+id/view_followers"
@@ -41,7 +75,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/view_followers"
-                    android:textSize="11sp"
+                    android:textSize="9sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
@@ -51,7 +85,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/view_followings"
-                    android:textSize="11sp"
+                    android:textSize="9sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
@@ -59,7 +93,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/likes"
-                    android:textSize="11sp"
+                    android:textSize="9sp"
                     style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
 
@@ -100,48 +134,349 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_margin="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/songs"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/display_public_songs"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_song1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_song1_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_song2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_song2_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_song3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_song3_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_song4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_song4_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_song5"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_song5_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
+
 
                 </HorizontalScrollView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/favourite_songs"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/display_favourites_songs"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_gravity="start"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/favourites1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/favourites1_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/favourites2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/favourites2_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/favourites3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/favourites3_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/favourites4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/favourites4_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/favourites5"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/favourites5_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -149,21 +484,172 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/playlists"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/display_public_playlist"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_gravity="start"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_playlist1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_playlist1_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_playlist2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_playlist2_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_playlist3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_playlist3_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_playlist4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_playlist4_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/my_playlist5"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/my_playlist5_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -171,21 +657,172 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/liked_playlists"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/display_liked_playlist"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_gravity="start"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/liked_playlist1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/liked_playlist1_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/liked_playlist2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/liked_playlist2_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/liked_playlist3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/liked_playlist3_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/liked_playlist4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/liked_playlist4_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/liked_playlist5"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="#7700ff"
+                                android:gravity="center"
+                                android:contentDescription="@string/song_logo"
+                                android:textColor="#ffffff"
+                                android:layout_margin="3dp"
+                                android:layout_marginEnd="2dp"/>
+
+                            <TextView
+                                android:id="@+id/liked_playlist5_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="title"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </HorizontalScrollView>
