@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 public class Song implements Serializable {
     private final int id;
     private String name;
+    private String source;
     private int[] duration;
     private String artistUsername;
     private Timestamp dateTimeCreated;
@@ -20,16 +21,18 @@ public class Song implements Serializable {
      * Song constructor used when uploading a new song
      * @param id                the id of this Song
      * @param name              the name of this Song
+     * @param source            the source of this Song
      * @param duration          the duration of this song given as a list [minutes, seconds]
      * @param artistUsername    the username of the User who uploaded this Song
      * @param dateTimeCreated   the date and time this Song was uploaded
      * @param lyrics            the lyrics of this Song
      * @param isPublic          checks whether this Song is public
      */
-    public Song(int id, String name, int[] duration, String artistUsername, Timestamp dateTimeCreated, String lyrics,
-                boolean isPublic) {
+    public Song(int id, String name, String source, int[] duration, String artistUsername,
+                Timestamp dateTimeCreated, String lyrics, boolean isPublic) {
         this.id = id;
         this.name = name;
+        this.source = source;
         this.duration = duration;
         this.artistUsername = artistUsername;
         this.dateTimeCreated = dateTimeCreated;
@@ -44,6 +47,7 @@ public class Song implements Serializable {
      *  saved on an external file before the program stopped running.
      * @param id                the id of this Song
      * @param name              the name of this Song
+     * @param source            the source of this Song
      * @param duration          the duration of this song given as a list [minutes, seconds]
      * @param artistUsername    the username of the User who uploaded this Song
      * @param dateTimeCreated   the date and time this Song was uploaded
@@ -52,10 +56,12 @@ public class Song implements Serializable {
      * @param lyrics            the lyrics of this Song
      * @param isPublic          checks whether this Song is public
      */
-    public Song(int id, String name, int[] duration, String artistUsername, Timestamp dateTimeCreated, int numLikes,
-                int numListens, String lyrics, boolean isPublic) {
+    public Song(int id, String name, String source, int[] duration, String artistUsername,
+                Timestamp dateTimeCreated, int numLikes, int numListens, String lyrics,
+                boolean isPublic) {
         this.id = id;
         this.name = name;
+        this.source = source;
         this.duration = duration;
         this.artistUsername = artistUsername;
         this.dateTimeCreated = dateTimeCreated;
@@ -77,6 +83,15 @@ public class Song implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    // source getter and setter
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     // duration getter and setter
