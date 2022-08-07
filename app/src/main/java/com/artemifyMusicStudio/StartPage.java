@@ -171,7 +171,7 @@ public class StartPage extends AppCompatActivity {
         userEntityContainer.add(user5);
         return userEntityContainer;
     }
-
+    String source = " ";
     private SongEntityContainer populateSongEntities(){
         Song song201 = new Song(201, "Heat Waves", source, new int[]{3, 59}, "Glass Animals",
                 Timestamp.valueOf("2022-06-17 21:10:39.311"), 1000000, 2000000,
