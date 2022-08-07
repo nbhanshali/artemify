@@ -32,6 +32,7 @@
             android:layout_margin="20dp">
 
             <LinearLayout
+                android:id="@+id/list_songs_display"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
