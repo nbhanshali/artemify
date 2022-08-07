@@ -74,6 +74,7 @@ public enum CommandItemType {
     VIEW_PRIVATE_PLAYLISTS,
 
     // For QueueDisplay Page
+    VIEW_QUEUE,
     SHUFFLE_QUEUE,
     SKIP_SONG,
     REMOVE_FROM_QUEUE,

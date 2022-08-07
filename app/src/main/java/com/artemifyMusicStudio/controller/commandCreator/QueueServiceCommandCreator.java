@@ -14,6 +14,7 @@ import com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongInfComma
 import com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongOnceCommand;
 import com.artemifyMusicStudio.controller.queueServiceCommand.ShuffleQueueCommand;
 import com.artemifyMusicStudio.controller.queueServiceCommand.SkipSongCommand;
+import com.artemifyMusicStudio.controller.queueServiceCommand.ViewQueueCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
 
@@ -32,6 +33,8 @@ public class QueueServiceCommandCreator implements SimpleButtonCommandCreator {
     @Override
     public View.OnClickListener create(CommandItemType type) {
         switch (type) {
+            case VIEW_QUEUE:
+                return new ViewQueueCommand(activityServiceCache, languagePresenter, queueService);
             case SHUFFLE_QUEUE:
                 return new ShuffleQueueCommand(activityServiceCache, languagePresenter,
                         queueService);

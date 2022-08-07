@@ -31,7 +31,7 @@ public class QueueDisplayPage extends PageActivity{
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType) {
-            case "TransitionCommandCreator":
+            case "QueueServiceCommandCreator":
                 return new QueueServiceCommandCreator(this.activityServiceCache);
             case "PopupCommandCreator" :
                 return new PopupCommandCreator(this.activityServiceCache);
@@ -42,6 +42,8 @@ public class QueueDisplayPage extends PageActivity{
 
     @Override
     protected void populateIdMenuMap() {
+        this.idMenuItemMap.put(CommandItemType.VIEW_QUEUE,
+                R.id.view_queue);
         this.idMenuItemMap.put(CommandItemType.SHUFFLE_QUEUE,
                 R.id.shuffle_queue);
         this.idMenuItemMap.put(CommandItemType.SKIP_SONG,
@@ -62,7 +64,9 @@ public class QueueDisplayPage extends PageActivity{
     protected void populateMenuCommandCreatorMap() {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
                 List.of(
-                        CommandItemType.SHUFFLE_QUEUE, CommandItemType.SKIP_SONG,
+                        CommandItemType.VIEW_QUEUE,
+                        CommandItemType.SHUFFLE_QUEUE,
+                        CommandItemType.SKIP_SONG,
                         CommandItemType.PLAY_PREVIOUS_SONG,
                         CommandItemType.REPEAT_SONG_ONCE,
                         CommandItemType.REPEAT_SONG_INF,
@@ -71,7 +75,7 @@ public class QueueDisplayPage extends PageActivity{
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.POP_UP_REMOVE_FROM_QUEUE_DIALOG)
         );
-        menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
+        menuCommandCreatorMap.put("QueueServiceCommandCreator", tempList1);
         menuCommandCreatorMap.put("PopupCommandCreator", tempList2);
     }
 
