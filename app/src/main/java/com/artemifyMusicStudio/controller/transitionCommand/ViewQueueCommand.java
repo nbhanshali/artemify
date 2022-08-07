@@ -1,40 +1,32 @@
-package com.artemifyMusicStudio.controller.queueServiceCommand;
+package com.artemifyMusicStudio.controller.transitionCommand;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.PlaylistSongsDisplayPage;
 import com.artemifyMusicStudio.QueueDisplayPage;
+import com.artemifyMusicStudio.RegularUserHomePage;
+import com.artemifyMusicStudio.SearchPage;
+import com.artemifyMusicStudio.StartPage;
 import com.artemifyMusicStudio.ViewQueuePage;
-import com.presenters.LanguagePresenter;
-import com.useCase.Queue;
 
-import java.util.ArrayList;
+/**
+ * A InvokeQueueCommand to handle the request when user want to view queue in RegularUserHomePage
+ */
 
-public class ViewQueueCommand extends QueueServiceCommand{
-
+public class ViewQueueCommand implements View.OnClickListener {
     private final ActivityServiceCache activityServiceCache;
-    private final LanguagePresenter languagePresenter;
 
-
-    public ViewQueueCommand(ActivityServiceCache activityServiceCache,
-                           LanguagePresenter languagePresenter, Queue queueService) {
-        super(queueService);
+    public ViewQueueCommand(ActivityServiceCache activityServiceCache){
         this.activityServiceCache = activityServiceCache;
-        this.languagePresenter = languagePresenter;
     }
 
     @Override
-    public void onClick (View view) {
+    public void onClick(View v) {
         PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
         Intent it = new Intent(currentPageActivity, ViewQueuePage.class);
         it.putExtra("cache", this.activityServiceCache);
         currentPageActivity.startActivity(it);
-
-
     }
 }
-

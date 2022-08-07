@@ -22,6 +22,7 @@ public class QueueDisplayPage extends PageActivity{
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
 
+        
         // populate button
         populateMenuCommandCreatorMap();
         populateExitPageMenuItems();
@@ -67,7 +68,6 @@ public class QueueDisplayPage extends PageActivity{
     protected void populateMenuCommandCreatorMap() {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
                 List.of(
-                        CommandItemType.VIEW_QUEUE,
                         CommandItemType.SHUFFLE_QUEUE,
                         CommandItemType.SKIP_SONG,
                         CommandItemType.PLAY_PREVIOUS_SONG,
@@ -78,7 +78,8 @@ public class QueueDisplayPage extends PageActivity{
                 List.of(CommandItemType.POP_UP_REMOVE_FROM_QUEUE_DIALOG)
         );
         ArrayList<CommandItemType> tempList3 = new ArrayList<>(
-                List.of(CommandItemType.EXIT_PAGE)
+                List.of(CommandItemType.VIEW_QUEUE,
+                        CommandItemType.EXIT_PAGE)
         );
         menuCommandCreatorMap.put("QueueServiceCommandCreator", tempList1);
         menuCommandCreatorMap.put("PopupCommandCreator", tempList2);

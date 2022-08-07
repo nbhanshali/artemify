@@ -7,6 +7,7 @@ import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.QueueDisplayPage;
 import com.artemifyMusicStudio.SearchPage;
+import com.artemifyMusicStudio.ViewQueuePage;
 
 /**
  * A InvokeQueueCommand to handle the request when user want to view queue in RegularUserHomePage

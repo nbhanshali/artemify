@@ -1,87 +1,59 @@
 package com.artemifyMusicStudio;
 
 import android.os.Bundle;
-import android.view.Gravity;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
+import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-
-import com.presenters.LanguagePresenter;
+import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ViewQueuePage extends PageActivity {
+public class ViewQueuePage extends PageActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_result_page);
+        setContentView(R.layout.activity_view_queue_page);
 
-        // parse service cache, searchResult and searchType
+        // parse and updated service cache
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
 
-        // get language presenter
-        LanguagePresenter languagePresenter = this.activityServiceCache.getLanguagePresenter();
-
-        // populate head message
-        String headMsgEng = "Songs in Queue";
-        String headMsg = languagePresenter.translateString(headMsgEng);
-        TextView tv = findViewById(R.id.search_result_head_msg);
-        tv.setText(headMsg);
-
-        //populate search result buttons
+        // populate button
+        populateMenuCommandCreatorMap();
+        populateExitPageMenuItems();
+        populateIdMenuMap();
         populateButtons();
     }
 
     @Override
-    protected void populateButtons(){
-        LanguagePresenter languagePresenter = this.activityServiceCache.getLanguagePresenter();
-        LinearLayout searchResultDisplay = findViewById(R.id.search_result_display_layout);
-        ArrayList<Integer> allSongsID = this.activityServiceCache.getQueueManager().getUpcomingSongs();
-        int count = 1;
-        for (Integer songID: allSongsID){
-            String num = String.valueOf(count);
-            String songName = activityServiceCache.getSongManager().getSongName(songID);
-            String buttonDescription = languagePresenter.translateString( num + ". " + songName);
-            Button button = new Button(this);
-            button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT));
-            button.setId(count);
-            button.setText(buttonDescription);
-            searchResultDisplay.addView(button);
-            count += 1;
-        }
-        searchResultDisplay.setGravity(Gravity.CENTER);
-    }
-
-    /**
-     * The getSimpleOnClickCommandCreator will not be used in SearchResultPage. Therefore,
-     * no implementation in here
-     *
-     */
-    @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
-        return null;
+        switch (creatorType) {
+            case "TransitionCommandCreator":
+                return new TransitionCommandCreator(this.activityServiceCache);
+            default:
+                return null;
+        }
     }
 
-    /**
-     * The idMenuMap will not be used in SearchResultPage. No implementation here
-     */
     @Override
     protected void populateIdMenuMap() {
+        idMenuItemMap.put(CommandItemType.EXIT_PAGE, R.id.exit);
     }
 
-    /**
-     * The menuCommandCreatorMap will not be used in SearchResultPage, no population in here
-     */
     @Override
-    protected void populateMenuCommandCreatorMap() {}
+    protected void populateMenuCommandCreatorMap() {
+        ArrayList<CommandItemType> tempList = new ArrayList<>(
+                List.of(CommandItemType.EXIT_PAGE)
+        );
+        menuCommandCreatorMap.put("TransitionCommandCreator", tempList);
+    }
 
     @Override
-    protected void populateExitPageMenuItems() {}
-
-
+    protected void populateExitPageMenuItems() {
+        this.exitPageMenuItems.add(CommandItemType.EXIT_PAGE);
+    }
 }
