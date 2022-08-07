@@ -23,6 +23,9 @@
             android:name=".QueueDisplayPage"
             android:exported="false" />
         <activity
+            android:name=".ViewQueuePage"
+            android:exported="false" />
+        <activity
             android:name=".PlaylistSongsDisplayPage"
             android:exported="false" />
         <activity
