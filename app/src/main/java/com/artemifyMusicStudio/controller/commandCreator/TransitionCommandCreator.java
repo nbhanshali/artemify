@@ -23,6 +23,7 @@ import com.artemifyMusicStudio.controller.transitionCommand.JumpToCreateNewPlayl
 import com.artemifyMusicStudio.controller.transitionCommand.StartLogInCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.ViewFollowersCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.ViewFollowingsCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.ViewQueueCommand;
 
 /**
  *  A transition command factory to manufacture commands that are in transition command  category
@@ -58,6 +59,8 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new InvokeSearchPageCommand(this.activityServiceCache);
             case INVOKE_QUEUE:
                 return new InvokeQueueCommand(this.activityServiceCache);
+            case VIEW_QUEUE:
+                return new ViewQueueCommand(this.activityServiceCache);
             case ENABLE_ADMIN_MODE:
                 return new EnableAdminCommand(this.activityServiceCache);
             case INVOKE_SONG_UPLOAD:
