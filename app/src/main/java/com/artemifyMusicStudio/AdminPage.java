@@ -29,7 +29,7 @@ public class AdminPage extends PageActivity {
         populateButtons();
         //set user name
         TextView tv = findViewById(R.id.user_name);
-        tv.setText(activityServiceCache.getUserID());
+        tv.append(activityServiceCache.getUserID());
     }
 
     @Override
