@@ -71,5 +71,10 @@
     <string name="view_playlist_songs">View Playlist Songs</string>
     <string name="view_creator">View Creator</string>
     <string name="favourite_songs">Favourite Songs</string>
+    <string name="userlogo">userlogo</string>
+    <string name="my_songs">My Songs</string>
+    <string name="song_logo">song_logo</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollow</string>
 
 </resources>
