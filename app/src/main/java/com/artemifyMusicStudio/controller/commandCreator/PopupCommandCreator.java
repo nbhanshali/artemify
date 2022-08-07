@@ -8,6 +8,7 @@ import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.popupCommand.LikePlaylistCommand;
 import com.artemifyMusicStudio.controller.popupCommand.PlayPlaylistCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewCreatorCommand;
+import com.artemifyMusicStudio.controller.popupCommand.ViewLoginHistoryCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewLyricsCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewFollowersCommand;
 import com.artemifyMusicStudio.controller.popupCommand.ViewPlaylistSongsCommand;
@@ -93,10 +94,9 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         "Make existing user an admin:",
                         "Enter the username of the user you wish to make an admin",
                         CommandItemType.GRANT_ADMIN_RIGHT);
-            case VIEW_FOLLOWERS:
-                return new ViewFollowersCommand(this.activityServiceCache,
+            case VIEW_LOGIN_HISTORY:
+                return new ViewLoginHistoryCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(),
-                        this.activityServiceCache.getUserID(),
                         this.activityServiceCache.getTargetUserID());
             default:
                 return null;

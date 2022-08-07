@@ -1,5 +1,9 @@
 package com.artemifyMusicStudio.controller.popupCommand;
 
+import android.view.View;
+
+import com.artemifyMusicStudio.ActivityServiceCache;
+import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.controller.accountServiceCommand.AccountServiceCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.UserAccess;
@@ -10,19 +14,23 @@ import java.util.ArrayList;
  * A ViewLoginHistoryCommand class to handle the view login history request from a user
  *
  */
-public class ViewLoginHistoryCommand extends AccountServiceCommand {
+public class ViewLoginHistoryCommand extends RegularPopupCommand implements View.OnClickListener {
 
+    private final ActivityServiceCache activityServiceCache;
+    private final UserAccess acctServiceManager;
     private final LanguagePresenter languagePresenter;
     private final String userID;
 
     /** Constructor of ViewLoginHistoryCommand
      *
+     * @param activityServiceCache a PageCreator Object
      * @param languagePresenter A LanguagePresenter object
-     * @param acctServiceManager A UserAccess UserCase object
      * @param userID the id of the user for whom the login history is being diplayed
      */
-    public ViewLoginHistoryCommand(LanguagePresenter languagePresenter, UserAccess acctServiceManager, String userID){
-        super(acctServiceManager);
+    public ViewLoginHistoryCommand(ActivityServiceCache activityServiceCache,
+                                   LanguagePresenter languagePresenter, String userID){
+        this.activityServiceCache = activityServiceCache;
+        this.acctServiceManager = this.activityServiceCache.getUserAcctServiceManager();
         this.languagePresenter = languagePresenter;
         this.userID = userID;
     }
@@ -31,12 +39,15 @@ public class ViewLoginHistoryCommand extends AccountServiceCommand {
      * Execute the ViewLoginHistoryCommand to query the user's previous login history
      */
     @Override
-    public void execute() {
-        this.languagePresenter.display("Hey " + userID + ", you were logged in previously at: ");
+    public void onClick(View view) {
+        this.popupTitle = this.languagePresenter.translateString("Hey " + userID + ", you were logged in previously at: ");
         ArrayList<String> logInHistory = this.acctServiceManager.getPreviousLogin(this.userID);
+        StringBuilder tempBody = new StringBuilder();
         for (String history: logInHistory){
-            this.languagePresenter.display(history);
-            //System.out.println("\n");
-        } languagePresenter.display("\n");
+            tempBody.append(history).append("\n");
+        }
+        this.popupBody = String.valueOf(tempBody);
+        PageActivity currActivity = this.activityServiceCache.getCurrentPageActivity();
+        displayPopup(currActivity);
     }
 }
