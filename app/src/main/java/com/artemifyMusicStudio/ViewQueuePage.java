@@ -57,6 +57,7 @@ public class ViewQueuePage extends PageActivity{
             artistNameDisplay.setText(artistName);
             // put this song in PlaylistSongsDisplay
             songLists.addView(oneSong);
+            count = count + 1;
         }
     }
 
