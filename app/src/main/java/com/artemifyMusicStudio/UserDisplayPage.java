@@ -1,6 +1,5 @@
 package com.artemifyMusicStudio;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -11,6 +10,7 @@ import android.widget.TextView;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
@@ -51,13 +51,22 @@ public class UserDisplayPage extends PageActivity {
         // populate Song, Playlist and LikedPlaylistButtons
         populatePublicSongButtons(languagePresenter, acctServiceManager, playlistServiceManager,
                 songManager, targetUserID);
+        populateFavouriteSongsButtons(languagePresenter, acctServiceManager, playlistServiceManager,
+                songManager, targetUserID);
         populatePublicPlaylistButtons(languagePresenter, acctServiceManager, playlistServiceManager,
                 targetUserID);
         populateLikedPlaylistButtons(languagePresenter, acctServiceManager, playlistServiceManager,
                 targetUserID);
+
+        // populate View Follower and View Following buttons
+        populateViewFollowerAndFollowingButtons();
+
+        // populate Exit button
+        Button exitButton = findViewById(R.id.exit);
+        exitButton.setOnClickListener(new ExitPageCommand(this.activityServiceCache));
     }
 
-    private void populatePublicSongButtons(LanguagePresenter languagePresenter,
+    protected void populatePublicSongButtons(LanguagePresenter languagePresenter,
                                            UserAccess acctServiceManager,
                                            PlaylistManager playlistServiceManager,
                                            SongManager songManager,
@@ -71,7 +80,28 @@ public class UserDisplayPage extends PageActivity {
                 CommandItemType.INVOKE_SONG_DISPLAY);
     }
 
-    private void populatePublicPlaylistButtons(LanguagePresenter languagePresenter,
+    protected void populateFavouriteSongsButtons(LanguagePresenter languagePresenter,
+                                               UserAccess acctServiceManager,
+                                               PlaylistManager playlistServiceManager,
+                                               SongManager songManager,
+                                               String targetUserID){
+        int favouriteSongsPlaylistID = acctServiceManager.getUserFavouritesID(targetUserID);
+        ArrayList<Integer> favouriteSongIDs = playlistServiceManager.getListOfSongsID(favouriteSongsPlaylistID);
+        ArrayList<String>  favouriteSongNames = new ArrayList<>();
+        for (int songID: favouriteSongIDs){
+            String creatorName = songManager.getSongArtist(songID);
+            String songName = songManager.getSongName(songID);
+            String composite_name = songName + ", created by " + creatorName;
+            favouriteSongNames.add(composite_name);
+        }
+
+        // Populate Favourite
+        populateTargetInfoButtons(languagePresenter, favouriteSongIDs,favouriteSongNames,
+                R.id.display_favourites_songs,
+                CommandItemType.INVOKE_SONG_DISPLAY);
+    }
+
+    protected void populatePublicPlaylistButtons(LanguagePresenter languagePresenter,
                                                UserAccess acctServiceManager,
                                                PlaylistManager playlistServiceManager,
                                                String targetUserID){
@@ -83,7 +113,21 @@ public class UserDisplayPage extends PageActivity {
                 CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    private void populateLikedPlaylistButtons(LanguagePresenter languagePresenter,
+    protected void populateViewFollowerAndFollowingButtons(){
+        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+
+        // populate view follower button
+        Button viewFollowerButton = findViewById(R.id.view_followers);
+        View.OnClickListener viewFollowerCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
+        viewFollowerButton.setOnClickListener(viewFollowerCommand);
+
+        // populate view following button
+        Button viewFollowingButton = findViewById(R.id.view_followings);
+        View.OnClickListener viewFollowingCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
+        viewFollowingButton.setOnClickListener(viewFollowingCommand);
+    }
+
+    protected void populateLikedPlaylistButtons(LanguagePresenter languagePresenter,
                                               UserAccess acctServiceManager,
                                               PlaylistManager playlistServiceManager,
                                               String targetUserID){
@@ -99,7 +143,7 @@ public class UserDisplayPage extends PageActivity {
                 R.id.display_liked_playlist, CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    private void populateTargetInfoButtons(LanguagePresenter languagePresenter,
+    protected void populateTargetInfoButtons(LanguagePresenter languagePresenter,
                                            ArrayList<Integer> targetIDs,
                                            ArrayList<String> targetNames, Integer layoutID,
                                            CommandItemType targetCommandType){
@@ -125,7 +169,7 @@ public class UserDisplayPage extends PageActivity {
         publicSongDisplay.setGravity(Gravity.CENTER);
     }
 
-    private void setUpUserDisplayInfo(){
+    protected void setUpUserDisplayInfo(){
         // get the user's name for display
         String targetUserID = activityServiceCache.getTargetUserID();
         //calculate the user's accumulated likes

@@ -10,7 +10,6 @@ import com.artemifyMusicStudio.controller.commandCreator.ActionCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
 import com.artemifyMusicStudio.controller.actionCommand.LikeSongCommand;
-import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
 import com.useCase.SongManager;
 
 import java.util.ArrayList;

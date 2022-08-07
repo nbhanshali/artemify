@@ -1,4 +1,4 @@
-package com.artemifyMusicStudio.controller.popupCommand.inputDialogPopupCommand;
+package com.artemifyMusicStudio.controller.popupCommand;
 
 import android.view.View;
 
