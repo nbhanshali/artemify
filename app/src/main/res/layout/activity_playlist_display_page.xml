@@ -10,7 +10,7 @@
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="exit"/>
+        android:text="@string/exit"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,16 +24,15 @@
             android:id="@+id/playlist_name_display"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Playlist Name" />
+            android:text="@string/playlist_name" />
 
-        <TextView
+        <ImageView
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
-            android:background="#7700ff"
-            android:gravity="center"
-            android:text="cover"
-            android:textColor="#ffffff" />
+            android:text="@string/cover"
+            android:src="@drawable/playlist"
+            android:contentDescription="@string/playlist_description" />
 
         <LinearLayout
             android:layout_width="250dp"
@@ -44,16 +43,17 @@
                 android:id="@+id/display_like_playlist_button"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:text="like"
+                android:text="@string/likes"
                 android:background="@drawable/like_button"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/likes" />
 
             <TextView
                 android:id="@+id/display_numlikes"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="like"
+                android:text="@string/likes"
                 android:gravity="center"/>
 
             <TextView
@@ -65,9 +65,10 @@
                 android:id="@+id/play_playlist"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:text="Play Playlist"
+                android:text="@string/play_playlist"
                 android:background="@drawable/listen"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/play_playlist" />
 
         </LinearLayout>
 
@@ -76,7 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Creator Info" />
+            android:text="@string/creator_info" />
 
 
         <TextView
@@ -84,29 +85,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Playlist Description" />
+            android:text="@string/playlist_description" />
 
         <TextView
             android:id="@+id/song_public_display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="private/public"
+            android:text="@string/private_public"
             android:layout_marginTop="20dp"/>
 
         <Button
             android:id="@+id/view_playlist_songs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View Playlist Songs"
+            android:text="@string/view_playlist_songs"
             android:layout_marginTop="20dp"/>
 
         <Button
             android:id="@+id/view_creator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View Creator"
+            android:text="@string/view_creator"
             android:layout_marginTop="20dp"/>
-
 
     </LinearLayout>
 

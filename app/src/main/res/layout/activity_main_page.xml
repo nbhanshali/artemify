@@ -4,27 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainPage">
+    tools:context=".MainPage"
+    android:gravity="center_horizontal">
 
     <ImageView
-        android:layout_width="236dp"
-        android:layout_height="254dp"
-        android:layout_gravity="center"
+        android:layout_width="240dp"
+        android:layout_height="255dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/temp_logo"
+        android:src="@drawable/temp_logo"
         android:contentDescription="@string/app_logo"/>
 
     <Button
         android:id="@+id/user_login"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log_in"/>
 
     <Button
         android:id="@+id/create_account"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/join"/>
