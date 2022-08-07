@@ -9,6 +9,7 @@ import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.QueueDisplayPage;
 import com.artemifyMusicStudio.SearchResultPage;
+import com.artemifyMusicStudio.ViewQueuePage;
 import com.entity.Song;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
@@ -36,11 +37,12 @@ public class RemoveFromQueueCommand implements View.OnClickListener {
             if(songIndex <= activityServiceCache.getQueueManager().getUpcomingSongs().size()){
                 int songID = activityServiceCache.getQueueManager().getUpcomingSongs().get(songIndex);
                 String songName = activityServiceCache.getSongManager().getSongName(songID);
-                activityServiceCache.getQueueManager().removeFromQueue(songID);
+                activityServiceCache.getQueueManager().removeFromQueue(songIndex);
                 Intent it = new Intent(currentPageActivity, QueueDisplayPage.class);
+                it.putExtra("cache", this.activityServiceCache);
                 currentPageActivity.startActivity(it);
                 String warningMsg =  this.languagePresenter.
-                        translateString(songName + "has been removed from the queue.") ;
+                        translateString(songName + " has been removed from the queue.") ;
                 Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
             } else {
                 String warningMsg =  this.languagePresenter.
