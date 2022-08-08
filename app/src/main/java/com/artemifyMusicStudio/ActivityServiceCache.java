@@ -208,11 +208,4 @@ public class ActivityServiceCache implements Serializable {
         return queueManager;
     }
 
-    public PageActivity creat(PageType pageType) {
-        switch (pageType) {
-            case REGULAR_USER_HOME_PAGE:
-                return new RegularUserHomePage();
-        }
-        return null;
-    }
 }
