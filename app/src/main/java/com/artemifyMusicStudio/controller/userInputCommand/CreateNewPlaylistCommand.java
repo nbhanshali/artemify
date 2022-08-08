@@ -89,5 +89,6 @@ public class CreateNewPlaylistCommand implements View.OnClickListener {
         Intent it = new Intent(currentPageActivity, PlaylistDisplayPage.class);
         it.putExtra("cache", this.activityServiceCache);
         currentPageActivity.startActivity(it);
+        currentPageActivity.finish();
     }
 }
