@@ -7,9 +7,6 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.AdminPage;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.PageType;
-import com.artemifyMusicStudio.SearchPage;
-import com.artemifyMusicStudio.controller.pageNavigationCommand.PageNavigationCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.UserAccess;
 

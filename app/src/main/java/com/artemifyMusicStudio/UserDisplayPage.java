@@ -241,8 +241,6 @@ public class UserDisplayPage extends PageActivity {
                     numOfFollowersDisplay);
             followUserSwitch.setOnCheckedChangeListener(followAndUnFollowUserCommand);
         }
-
-
     }
 
     /**
