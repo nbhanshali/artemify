@@ -47,12 +47,10 @@ public class RegularUserHomePage extends PageActivity {
 
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
-        switch (creatorType){
-            case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
-            default:
-                return null;
+        if ("TransitionCommandCreator".equals(creatorType)) {
+            return new TransitionCommandCreator(this.activityServiceCache);
         }
+        return null;
     }
 
     @Override
