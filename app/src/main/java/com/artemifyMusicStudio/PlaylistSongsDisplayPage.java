@@ -1,7 +1,6 @@
 package com.artemifyMusicStudio;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
@@ -39,12 +37,10 @@ public class PlaylistSongsDisplayPage extends PageActivity {
 
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
-        switch (creatorType) {
-            case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
-            default:
-                return null;
+        if ("TransitionCommandCreator".equals(creatorType)) {
+            return new TransitionCommandCreator(this.activityServiceCache);
         }
+        return null;
     }
 
 
@@ -93,7 +89,8 @@ public class PlaylistSongsDisplayPage extends PageActivity {
         for (Integer songID: allSongIDs) {
             String songName = songManager.getSongName(songID);
             String artistName = songManager.getSongArtist(songID);
-            View oneSong = LayoutInflater.from(this).inflate(R.layout.one_song_display, null);
+            @SuppressLint("InflateParams") View oneSong = LayoutInflater.from(this).
+                    inflate(R.layout.one_song_display, null);
             // set song name for this song
             TextView songNameDisplay = oneSong.findViewById(R.id.display_song_name);
             songNameDisplay.setText(songName);

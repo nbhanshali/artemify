@@ -6,7 +6,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-
+/*
+This presenter class is responsible for connecting to the external interface(Google api) and
+connecting it to our internal program.  This class translates the text by taking in the language
+codes from the individual language presenter classes
+ */
 public class translator {
 
     public static void main(String[] args) {

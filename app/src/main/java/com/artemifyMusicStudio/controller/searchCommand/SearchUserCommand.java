@@ -3,8 +3,6 @@ package com.artemifyMusicStudio.controller.searchCommand;
 import android.widget.EditText;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
-import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.PageType;
 import com.useCase.UserAccess;
 
 import java.util.ArrayList;

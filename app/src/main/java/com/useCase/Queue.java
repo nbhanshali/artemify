@@ -6,26 +6,13 @@ import java.util.Collections;
 
 /**
  * A class responsible for storing songs that have played, to be played, and is currently playing.
- *
- * NOTE: This use case class will be used for Queue Display Page, which will be implemented in Phase 2.
  */
 
 public class Queue implements Serializable {
-    /**
-     * nowPlaying is an integer representing the ID of the song that is currently being played.
-     */
+
     private int nowPlaying = 0;
-
-    /**
-     * upcomingSongs stores a list of song IDs that the queue consists of, in the order that the songs will be played
-     */
-    private ArrayList<Integer> upcomingSongs = new ArrayList<>();
-
-    /**
-     * recentlyPlayedSongs stores a list of song IDs that have been recently played, in order starting from the song
-     * that was most recently played.
-     */
-    private ArrayList<Integer> recentlyPlayedSongs = new ArrayList<>();
+    private ArrayList<Integer> upcomingSongs;
+    private ArrayList<Integer> recentlyPlayedSongs;
 
     /**
      * Constructor for a Queue Object
@@ -38,10 +25,12 @@ public class Queue implements Serializable {
     }
 
     /**
-     * An empty constructor to make the code run in Phase 1, this constructor will be removed when Phase 2
-     * development starts
+     * Constructor for an empty Queue object.
      */
-    public Queue(){}
+    public Queue(){
+        upcomingSongs = new ArrayList<>();
+        recentlyPlayedSongs = new ArrayList<>();
+    }
 
     /**
      * getter for getNowPlaying
@@ -97,7 +86,7 @@ public class Queue implements Serializable {
      * @param index The position at which the song will be played.
      */
     public void addToQueue(int songID, int index) {
-        getUpcomingSongs().add(index, songID);
+        upcomingSongs.add(index, songID);
     }
 
     /**
@@ -125,13 +114,17 @@ public class Queue implements Serializable {
     }
 
     /**
-     * Shuffle the songs in the queue
+     * Shuffle the songs in the queue.
      */
     public void shuffleQueue() {
         Collections.shuffle(upcomingSongs);
     }
 
-    public void addToQueueEnd(int songID){
+    /**
+     * Add a song to the end of the queue.
+     * @param songID The ID of a song
+     */
+    public void addToQueueEnd(int songID) {
         int length = upcomingSongs.size();
         addToQueue(songID, length);
     }

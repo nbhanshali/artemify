@@ -20,11 +20,9 @@ public class ActionCommandCreator implements SimpleButtonCommandCreator {
     }
     @Override
     public View.OnClickListener create(CommandItemType type) {
-        switch (type){
-            case PLAY_SONG:
-                return new PlaySongCommand(activityServiceCache);
-            default:
-                return null;
+        if (type == CommandItemType.PLAY_SONG) {
+            return new PlaySongCommand(activityServiceCache);
         }
+        return null;
     }
 }

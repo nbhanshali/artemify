@@ -5,10 +5,6 @@ import android.view.View;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.QueueDisplayPage;
-import com.artemifyMusicStudio.RegularUserHomePage;
-import com.artemifyMusicStudio.SearchPage;
-import com.artemifyMusicStudio.StartPage;
 import com.artemifyMusicStudio.ViewQueuePage;
 
 /**
