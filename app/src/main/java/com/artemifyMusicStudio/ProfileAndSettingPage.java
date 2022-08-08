@@ -30,6 +30,10 @@ public class ProfileAndSettingPage extends PageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_and_setting_page);
 
+//        // set target user to be the current user so that we can reuse some commands from UserDisplayPage
+//        String currUserID = this.activityServiceCache.getUserID();
+//        this.activityServiceCache.setTargetUserID(currUserID);
+
         // parse service cache, searchResult and searchType
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
@@ -65,6 +69,9 @@ public class ProfileAndSettingPage extends PageActivity {
 
         // populate View Login History button
         populateViewLoginHistoryButton();
+
+        // popular View Followers/Following buttons
+        populateViewFollowerAndFollowingButtons();
 
         // populate Exit button
         Button exitButton = findViewById(R.id.exit);
@@ -144,13 +151,6 @@ public class ProfileAndSettingPage extends PageActivity {
                 CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    protected void populateViewLoginHistoryButton(){
-        PopupCommandCreator popupCommandCreator = new PopupCommandCreator(this.activityServiceCache);
-        Button viewFollowerButton = findViewById(R.id.my_login_history);
-        View.OnClickListener viewFollowerCommand = popupCommandCreator.create(CommandItemType.VIEW_LOGIN_HISTORY);
-        viewFollowerButton.setOnClickListener(viewFollowerCommand);
-    }
-
     protected void populateLikedPlaylistButtons(LanguagePresenter languagePresenter,
                                                 UserAccess acctServiceManager,
                                                 PlaylistManager playlistServiceManager,
@@ -165,6 +165,31 @@ public class ProfileAndSettingPage extends PageActivity {
         }
         populateTargetInfoButtons(languagePresenter, likedPlaylistIDs,likedPlaylistNames,
                 R.id.my_display_liked_playlist, CommandItemType.INVOKE_PLAYLIST_DISPLAY);
+    }
+
+    protected void populateViewLoginHistoryButton(){
+        PopupCommandCreator popupCommandCreator = new PopupCommandCreator(this.activityServiceCache);
+        Button viewFollowerButton = findViewById(R.id.my_login_history);
+        View.OnClickListener viewFollowerCommand = popupCommandCreator.create(CommandItemType.VIEW_LOGIN_HISTORY);
+        viewFollowerButton.setOnClickListener(viewFollowerCommand);
+    }
+
+    protected void populateViewFollowerAndFollowingButtons(){
+        // set target user to be the current user so that we can reuse some commands from UserDisplayPage
+        String currUserID = this.activityServiceCache.getUserID();
+        this.activityServiceCache.setTargetUserID(currUserID);
+
+        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+
+        // populate view follower button
+        Button viewFollowerButton = findViewById(R.id.my_view_followers);
+        View.OnClickListener viewFollowerCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
+        viewFollowerButton.setOnClickListener(viewFollowerCommand);
+
+        // populate view following button
+        Button viewFollowingButton = findViewById(R.id.my_view_followings);
+        View.OnClickListener viewFollowingCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
+        viewFollowingButton.setOnClickListener(viewFollowingCommand);
     }
 
     protected void populateTargetInfoButtons(LanguagePresenter languagePresenter,
