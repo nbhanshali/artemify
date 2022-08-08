@@ -8,11 +8,7 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.QueueDisplayPage;
-import com.artemifyMusicStudio.SearchResultPage;
-import com.artemifyMusicStudio.ViewQueuePage;
-import com.entity.Song;
 import com.presenters.LanguagePresenter;
-import com.useCase.Queue;
 
 public class RemoveFromQueueCommand implements View.OnClickListener {
 

@@ -5,5 +5,6 @@ package com.presenters;
  */
 public enum LanguageType {
     ENGLISH,
-    GERMAN
+    GERMAN,
+    //as more languages are implemented, this enum list increases with supported languages
 }

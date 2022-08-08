@@ -79,5 +79,6 @@
     <string name="private_songs">Private Songs</string>
     <string name="private_playlists">Private Playlists</string>
     <string name="login_history">View Login History</string>
+    <string name="ok_login_history">OK</string>
 
 </resources>

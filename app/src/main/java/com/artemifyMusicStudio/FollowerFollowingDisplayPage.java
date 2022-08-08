@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.UserAccess;
 
@@ -79,6 +80,8 @@ public class FollowerFollowingDisplayPage extends PageActivity {
             count += 1;
         }
         resultDisplay.setGravity(Gravity.CENTER);
+        Button exitButton = findViewById(R.id.exit);
+        exitButton.setOnClickListener(new ExitPageCommand(this.activityServiceCache));
     }
 
 

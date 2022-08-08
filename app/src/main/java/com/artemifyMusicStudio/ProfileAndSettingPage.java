@@ -43,6 +43,10 @@ public class ProfileAndSettingPage extends PageActivity {
 
         // populateButtons
         populateButtons();
+
+        //set username
+        TextView tv = findViewById(R.id.my_user_name);
+        tv.setText(activityServiceCache.getUserID());
     }
 
     @Override
