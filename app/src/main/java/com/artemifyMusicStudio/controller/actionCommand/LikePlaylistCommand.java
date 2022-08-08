@@ -28,11 +28,11 @@ public class LikePlaylistCommand implements View.OnClickListener{
      * @param userID a String represents the user's id
      * @param playlistID a String represents the playlist's id
      */
-    public LikePlaylistCommand(ActivityServiceCache activityServiceCache, int userID, int playlistID){
+    public LikePlaylistCommand(ActivityServiceCache activityServiceCache, String userID, int playlistID){
         this.activityServiceCache = activityServiceCache;
         playlistDisplayPage = activityServiceCache.getCurrentPageActivity();
         this.languagePresenter = activityServiceCache.getLanguagePresenter();
-        this.userID = String.valueOf(userID);
+        this.userID = userID;
         this.playlistID = playlistID;
 
         imageButton = playlistDisplayPage.findViewById(R.id.display_like_playlist_button);

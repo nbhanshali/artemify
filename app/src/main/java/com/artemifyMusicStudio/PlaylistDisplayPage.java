@@ -103,7 +103,7 @@ public class PlaylistDisplayPage extends PageActivity {
         TextView playlistDescriptionDisplay = findViewById(R.id.playlist_description_display);
         playlistDescriptionDisplay.setText(description);
         // display public/private
-        TextView visibility = findViewById(R.id.display_song_public);
+        TextView visibility = findViewById(R.id.song_public_display);
         visibility.setText(isPublic);
 
         // setup ImageView
@@ -114,7 +114,7 @@ public class PlaylistDisplayPage extends PageActivity {
             imageButton.setBackgroundResource(R.drawable.like_button);
         }
         String userID = this.activityServiceCache.getUserID();
-        imageButton.setOnClickListener(new LikePlaylistCommand(activityServiceCache, Integer.parseInt(userID), playlistID));
+        imageButton.setOnClickListener(new LikePlaylistCommand(activityServiceCache, userID, playlistID));
     }
 
     private boolean checkUnlike(int playlistID){
