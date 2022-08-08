@@ -3,6 +3,7 @@ package com.artemifyMusicStudio.controller.actionCommand;
 import android.annotation.SuppressLint;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
@@ -16,6 +17,7 @@ import com.useCase.UserAccess;
  * A FollowUserCommand class to handle the follow user request from a user
  *
  */
+@SuppressLint("UseSwitchCompatOrMaterialCode")
 public class FollowAndUnFollowUserCommand implements CompoundButton.OnCheckedChangeListener {
 
     private final ActivityServiceCache activityServiceCache;
@@ -24,19 +26,22 @@ public class FollowAndUnFollowUserCommand implements CompoundButton.OnCheckedCha
     private final String userID;
     private final String targetUserID;
     private final Switch followUnfollowSwitch;
+    private final TextView numOfFollowersDisplay;
 
     /** Constructor of FollowUserCommand
      *
      *
      */
     public FollowAndUnFollowUserCommand(ActivityServiceCache activityServiceCache,
-                                        Switch followUnfollowSwitch){
+                                        Switch followUnfollowSwitch,
+                                        TextView numOfFollowersDisplay){
         this.activityServiceCache = activityServiceCache;
         this.acctServiceManager = activityServiceCache.getUserAcctServiceManager();
         this.languagePresenter = activityServiceCache.getLanguagePresenter();
         this.userID = activityServiceCache.getUserID();
         this.targetUserID = activityServiceCache.getTargetUserID();
         this.followUnfollowSwitch = followUnfollowSwitch;
+        this.numOfFollowersDisplay = numOfFollowersDisplay;
     }
 
 
@@ -52,6 +57,8 @@ public class FollowAndUnFollowUserCommand implements CompoundButton.OnCheckedCha
         if(switchIsChecked){
             this.acctServiceManager.addFollower(this.targetUserID, this.userID);
             this.followUnfollowSwitch.setText(this.languagePresenter.translateString("Follow"));
+            String numFollowers = Integer.toString(activityServiceCache.getUserAcctServiceManager().getNumFollowers(targetUserID));
+            this.numOfFollowersDisplay.setText(numFollowers);
             String msg = this.languagePresenter.translateString(
                     "Successfully followed " + this.targetUserID + "! (ꈍᴗꈍ)ε｀●)");
             Toast.makeText(currentPageActivity, msg, Toast.LENGTH_LONG).show();
@@ -59,6 +66,8 @@ public class FollowAndUnFollowUserCommand implements CompoundButton.OnCheckedCha
         else{
             this.acctServiceManager.removeFollower(this.targetUserID,this.userID);
             this.followUnfollowSwitch.setText(this.languagePresenter.translateString("UnFollow"));
+            String numFollowers = Integer.toString(activityServiceCache.getUserAcctServiceManager().getNumFollowers(targetUserID));
+            this.numOfFollowersDisplay.setText(numFollowers);
             String msg = "Successfully unfollowed " + this.targetUserID + ". (っ˘̩╭╮˘̩)っ";
             Toast.makeText(currentPageActivity, msg, Toast.LENGTH_LONG).show();
         }

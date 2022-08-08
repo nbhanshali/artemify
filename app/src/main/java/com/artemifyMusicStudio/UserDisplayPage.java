@@ -21,6 +21,7 @@ import com.useCase.SongManager;
 import com.useCase.UserAccess;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * A UserDisplayPage
@@ -226,13 +227,22 @@ public class UserDisplayPage extends PageActivity {
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     protected void populateFollowUserSwitch(){
         Switch followUserSwitch = findViewById(R.id.follow_user_switch);
+        TextView numOfFollowersDisplay = findViewById(R.id.num_followers);
+        String userID = this.activityServiceCache.getUserID();
         String targetUserID = this.activityServiceCache.getTargetUserID();
-        if (checkFollow(targetUserID)){
-            followUserSwitch.setChecked(true);
+        if (Objects.equals(userID, targetUserID)){
+            followUserSwitch.setVisibility(View.GONE);
+        }else{
+            if (checkFollow(targetUserID)){
+                followUserSwitch.setChecked(true);
+            }
+            CompoundButton.OnCheckedChangeListener followAndUnFollowUserCommand
+                    = new FollowAndUnFollowUserCommand(this.activityServiceCache,followUserSwitch,
+                    numOfFollowersDisplay);
+            followUserSwitch.setOnCheckedChangeListener(followAndUnFollowUserCommand);
         }
-        CompoundButton.OnCheckedChangeListener followAndUnFollowUserCommand
-                = new FollowAndUnFollowUserCommand(this.activityServiceCache,followUserSwitch);
-        followUserSwitch.setOnCheckedChangeListener(followAndUnFollowUserCommand);
+
+
     }
 
     /**

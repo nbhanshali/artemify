@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:text="@string/songs"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
@@ -144,8 +144,8 @@
                         android:id="@+id/display_public_songs"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -155,7 +155,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:text="@string/favourite_songs"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
@@ -166,8 +166,8 @@
                         android:id="@+id/display_favourites_songs"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -177,7 +177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:text="@string/playlists"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
@@ -188,8 +188,8 @@
                         android:id="@+id/display_public_playlist"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -199,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:text="@string/liked_playlists"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
@@ -210,12 +210,11 @@
                         android:id="@+id/display_liked_playlist"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
-
             </LinearLayout>
         </LinearLayout>
 
