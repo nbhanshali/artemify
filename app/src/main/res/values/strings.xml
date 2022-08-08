@@ -78,5 +78,6 @@
     <string name="unfollow">Unfollow</string>
     <string name="private_songs">Private Songs</string>
     <string name="private_playlists">Private Playlists</string>
+    <string name="login_history">View Login History</string>
 
 </resources>

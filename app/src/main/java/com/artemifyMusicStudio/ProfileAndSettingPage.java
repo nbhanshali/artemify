@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
 import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
@@ -62,8 +63,8 @@ public class ProfileAndSettingPage extends PageActivity {
         populateLikedPlaylistButtons(languagePresenter, acctServiceManager, playlistServiceManager,
                 myUserID);
 
-        // populate View Follower and View Following buttons
-        populateViewFollowerAndFollowingButtons();
+        // populate View Login History button
+        populateViewLoginHistoryButton();
 
         // populate Exit button
         Button exitButton = findViewById(R.id.exit);
@@ -143,18 +144,11 @@ public class ProfileAndSettingPage extends PageActivity {
                 CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    protected void populateViewFollowerAndFollowingButtons(){
-        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
-
-        // populate view follower button
-        Button viewFollowerButton = findViewById(R.id.my_view_followers);
-        View.OnClickListener viewFollowerCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
+    protected void populateViewLoginHistoryButton(){
+        PopupCommandCreator popupCommandCreator = new PopupCommandCreator(this.activityServiceCache);
+        Button viewFollowerButton = findViewById(R.id.my_login_history);
+        View.OnClickListener viewFollowerCommand = popupCommandCreator.create(CommandItemType.VIEW_LOGIN_HISTORY);
         viewFollowerButton.setOnClickListener(viewFollowerCommand);
-
-        // populate view following button
-        Button viewFollowingButton = findViewById(R.id.my_view_followings);
-        View.OnClickListener viewFollowingCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
-        viewFollowingButton.setOnClickListener(viewFollowingCommand);
     }
 
     protected void populateLikedPlaylistButtons(LanguagePresenter languagePresenter,

@@ -95,7 +95,7 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
             case VIEW_LOGIN_HISTORY:
                 return new ViewLoginHistoryCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(),
-                        this.activityServiceCache.getTargetUserID());
+                        this.activityServiceCache.getUserID());
             default:
                 return null;
         }

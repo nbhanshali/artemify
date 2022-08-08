@@ -42,21 +42,12 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/follow_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:text="@string/follow"
-                    android:textSize="11sp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
-
-                <Button
-                    android:id="@+id/unfollow_button"
+                    android:id="@+id/my_login_history"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:text="@string/unfollow"
+                    android:text="@string/login_history"
                     android:textSize="11sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
