@@ -94,7 +94,8 @@ public class StartPage extends AppCompatActivity {
             UserAccess acctServiceManager = new UserAccess(users);
             PlaylistManager playlistManager = new PlaylistManager(playlists);
             SongManager songManager = new SongManager(acctServiceManager, playlistManager, songs);
-            Queue queue = new Queue();
+            ArrayList<Integer> empty = new ArrayList<>();
+            Queue queue = new Queue(songs.keys(), empty);
 
             // initialize the one and only PageCreator object that will be used by all controllers in the system
             return new ActivityServiceCache(languagePresenter, acctServiceManager, queue,
