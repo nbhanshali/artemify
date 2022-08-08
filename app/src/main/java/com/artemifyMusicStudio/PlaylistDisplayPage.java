@@ -56,7 +56,6 @@ public class PlaylistDisplayPage extends PageActivity {
     protected void populateIdMenuMap() {
         idMenuItemMap.put(CommandItemType.VIEW_PLAYLIST_SONGS, R.id.view_playlist_songs);
         idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator);
-        idMenuItemMap.put(CommandItemType.PLAY_PLAYLIST, R.id.play_playlist);
         idMenuItemMap.put(CommandItemType.EXIT_PAGE, R.id.exit);
 
     }
@@ -65,8 +64,7 @@ public class PlaylistDisplayPage extends PageActivity {
     protected void populateMenuCommandCreatorMap() {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
                 Arrays.asList(CommandItemType.VIEW_PLAYLIST_SONGS,
-                        CommandItemType.VIEW_CREATOR,
-                        CommandItemType.PLAY_PLAYLIST)
+                        CommandItemType.VIEW_CREATOR)
         );
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.EXIT_PAGE)
@@ -97,7 +95,7 @@ public class PlaylistDisplayPage extends PageActivity {
         playlistNameDisplay.setText(playlistName);
         // display numLikes
         TextView numLikesDisplay = findViewById(R.id.display_numlikes);
-        numLikesDisplay.setText(numLikes);
+        numLikesDisplay.setText(String.valueOf(numLikes));
         // display creatorName
         TextView creatorNameDisplay = findViewById(R.id.creator_info_display);
         creatorNameDisplay.setText(creatorName);
