@@ -35,6 +35,10 @@ public class ViewQueuePage extends PageActivity{
         populateIdMenuMap();
         populateButtons();
 
+        TextView tv = findViewById(R.id.playlist_name_display);
+        String queueName = "Queue";
+        tv.setText(queueName);
+
         LinearLayout songLists = findViewById(R.id.list_songs_display);
         // remove all existing songs in the lists to prevent redundancy
         songLists.removeAllViews();
