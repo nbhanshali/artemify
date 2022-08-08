@@ -11,6 +11,7 @@ import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
 import com.artemifyMusicStudio.controller.searchCommand.SearchResultContainer;
+import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 
 import java.util.ArrayList;
@@ -72,6 +73,8 @@ public class SearchResultPage extends PageActivity {
             count += 1;
         }
         searchResultDisplay.setGravity(Gravity.CENTER);
+        Button exitButton = findViewById(R.id.exit);
+        exitButton.setOnClickListener(new ExitPageCommand(this.activityServiceCache));
     }
 
     /**
