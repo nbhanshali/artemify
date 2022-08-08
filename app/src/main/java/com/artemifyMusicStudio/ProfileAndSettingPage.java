@@ -1,82 +1,272 @@
 package com.artemifyMusicStudio;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
+import com.presenters.LanguagePresenter;
+import com.useCase.PlaylistManager;
+import com.useCase.SongManager;
+import com.useCase.UserAccess;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
+/**
+ * A ProfileAndSettingPage
+ */
 public class ProfileAndSettingPage extends PageActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_and_setting_page);
 
+        // parse service cache, searchResult and searchType
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
 
-        populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
-        populateIdMenuMap();
+        // set UserDisplayPage info
+        setUpUserDisplayInfo();
+
+        // populateButtons
         populateButtons();
     }
 
     @Override
-    protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
-        switch (creatorType){
-            case "PopupCommandCreator":
-                return new PopupCommandCreator(this.activityServiceCache);
-            case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
-            default:
-                return null;
+    protected void populateButtons() {
+        LanguagePresenter languagePresenter = this.activityServiceCache.getLanguagePresenter();
+        PlaylistManager playlistServiceManager = this.activityServiceCache.getPlaylistManager();
+        UserAccess acctServiceManager = this.activityServiceCache.getUserAcctServiceManager();
+        SongManager songManager = this.activityServiceCache.getSongManager();
+        String myUserID = this.activityServiceCache.getUserID();
+
+        // populate Song, Playlist and LikedPlaylistButtons
+        populatePublicSongButtons(languagePresenter, acctServiceManager, playlistServiceManager,
+                songManager, myUserID);
+        populatePrivateSongButtons(languagePresenter, acctServiceManager, playlistServiceManager,
+                songManager, myUserID);
+        populateFavouriteSongsButtons(languagePresenter, acctServiceManager, playlistServiceManager,
+                songManager, myUserID);
+        populatePublicPlaylistButtons(languagePresenter, acctServiceManager, playlistServiceManager,
+                myUserID);
+        populatePrivatePlaylistButtons(languagePresenter, acctServiceManager, playlistServiceManager,
+                myUserID);
+        populateLikedPlaylistButtons(languagePresenter, acctServiceManager, playlistServiceManager,
+                myUserID);
+
+        // populate View Follower and View Following buttons
+        populateViewFollowerAndFollowingButtons();
+
+        // populate Exit button
+        Button exitButton = findViewById(R.id.exit);
+        exitButton.setOnClickListener(new ExitPageCommand(this.activityServiceCache));
+    }
+
+    protected void populatePublicSongButtons(LanguagePresenter languagePresenter,
+                                             UserAccess acctServiceManager,
+                                             PlaylistManager playlistServiceManager,
+                                             SongManager songManager,
+                                             String myUserID){
+        int publicSongsPlaylistID = acctServiceManager.getUserPublicSongsID(myUserID);
+        ArrayList<Integer> songsIDs = playlistServiceManager.getListOfSongsID(publicSongsPlaylistID);
+        ArrayList<String> songNames = songManager.getPlaylistSongNames(songsIDs);
+
+        // Populate Song display buttons
+        populateTargetInfoButtons(languagePresenter, songsIDs,songNames,R.id.my_display_public_songs,
+                CommandItemType.INVOKE_SONG_DISPLAY);
+    }
+
+    protected void populatePrivateSongButtons(LanguagePresenter languagePresenter,
+                                             UserAccess acctServiceManager,
+                                             PlaylistManager playlistServiceManager,
+                                             SongManager songManager,
+                                             String myUserID){
+        int privateSongsPlaylistID = acctServiceManager.getUserPrivateSongsID(myUserID);
+        ArrayList<Integer> songsIDs = playlistServiceManager.getListOfSongsID(privateSongsPlaylistID);
+        ArrayList<String> songNames = songManager.getPlaylistSongNames(songsIDs);
+
+        // Populate Song display buttons
+        populateTargetInfoButtons(languagePresenter, songsIDs,songNames,R.id.my_display_private_songs,
+                CommandItemType.INVOKE_SONG_DISPLAY);
+    }
+
+    protected void populateFavouriteSongsButtons(LanguagePresenter languagePresenter,
+                                                 UserAccess acctServiceManager,
+                                                 PlaylistManager playlistServiceManager,
+                                                 SongManager songManager,
+                                                 String myUserID){
+        int favouriteSongsPlaylistID = acctServiceManager.getUserFavouritesID(myUserID);
+        ArrayList<Integer> favouriteSongIDs = playlistServiceManager.getListOfSongsID(favouriteSongsPlaylistID);
+        ArrayList<String>  favouriteSongNames = new ArrayList<>();
+        for (int songID: favouriteSongIDs){
+            String creatorName = songManager.getSongArtist(songID);
+            String songName = songManager.getSongName(songID);
+            String composite_name = songName + ", created by " + creatorName;
+            favouriteSongNames.add(composite_name);
         }
+
+        // Populate Favourite
+        populateTargetInfoButtons(languagePresenter, favouriteSongIDs,favouriteSongNames,
+                R.id.my_display_favourites_songs,
+                CommandItemType.INVOKE_SONG_DISPLAY);
     }
 
-    @Override
-    protected void populateIdMenuMap() {
-        idMenuItemMap.put(CommandItemType.VIEW_FOLLOWERS, R.id.view_followers);
-        idMenuItemMap.put(CommandItemType.VIEW_FOLLOWINGS, R.id.view_followings);
-        idMenuItemMap.put(CommandItemType.VIEW_LOGIN_HISTORY, R.id.view_login_history);
-        idMenuItemMap.put(CommandItemType.VIEW_USER_SONGS, R.id.view_user_songs);
-        idMenuItemMap.put(CommandItemType.VIEW_PRIVATE_SONGS, R.id.view_private_songs);
-        idMenuItemMap.put(CommandItemType.VIEW_USER_PLAYLISTS, R.id.view_user_playlists);
-        idMenuItemMap.put(CommandItemType.VIEW_PRIVATE_PLAYLISTS, R.id.view_private_playlists);
-        idMenuItemMap.put(CommandItemType.VIEW_USER_FAVORITES, R.id.view_user_favorites);
-        idMenuItemMap.put(CommandItemType.VIEW_USER_LIKED_PLAYLISTS, R.id.view_user_liked_playlists);
-        idMenuItemMap.put(CommandItemType.EXIT_PAGE, R.id.exit_page);
+    protected void populatePublicPlaylistButtons(LanguagePresenter languagePresenter,
+                                                 UserAccess acctServiceManager,
+                                                 PlaylistManager playlistServiceManager,
+                                                 String myUserID){
+        ArrayList<Integer> playlistIDs = acctServiceManager.getListOfPlaylistsIDs(myUserID,
+                "Public");
+        ArrayList<String> playlistNames = playlistServiceManager.getListOfPlaylistNames(playlistIDs);
+        // Populate Song display buttons
+        populateTargetInfoButtons(languagePresenter, playlistIDs,playlistNames,R.id.my_display_public_playlist,
+                CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    @Override
-    protected void populateMenuCommandCreatorMap() {
-        ArrayList<CommandItemType> tempList1 = new ArrayList<>(
-                Arrays.asList(CommandItemType.VIEW_FOLLOWERS,
-                        CommandItemType.VIEW_FOLLOWINGS,
-                        CommandItemType.VIEW_LOGIN_HISTORY,
-                        CommandItemType.VIEW_USER_SONGS,
-                        CommandItemType.VIEW_PRIVATE_SONGS,
-                        CommandItemType.VIEW_USER_PLAYLISTS,
-                        CommandItemType.VIEW_PRIVATE_PLAYLISTS,
-                        CommandItemType.VIEW_USER_FAVORITES,
-                        CommandItemType.VIEW_USER_LIKED_PLAYLISTS)
-        );
-        ArrayList<CommandItemType> tempList2 = new ArrayList<>(
-                List.of(CommandItemType.EXIT_PAGE)
-        );
-        menuCommandCreatorMap.put("PopupCommandCreator", tempList1);
-        menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
+    protected void populatePrivatePlaylistButtons(LanguagePresenter languagePresenter,
+                                                 UserAccess acctServiceManager,
+                                                 PlaylistManager playlistServiceManager,
+                                                 String myUserID){
+        ArrayList<Integer> privatePlaylistIDs = acctServiceManager.getListOfPlaylistsIDs(myUserID,
+                "Private");
+        ArrayList<String> privatePlaylistNames = playlistServiceManager.getListOfPlaylistNames(privatePlaylistIDs);
+        // Populate Song display buttons
+        populateTargetInfoButtons(languagePresenter, privatePlaylistIDs,privatePlaylistNames,R.id.my_display_private_playlist,
+                CommandItemType.INVOKE_PLAYLIST_DISPLAY);
     }
 
-    @Override
-    protected void populateExitPageMenuItems() {
-        this.exitPageMenuItems.add(CommandItemType.EXIT_PAGE);
+    protected void populateViewFollowerAndFollowingButtons(){
+        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+
+        // populate view follower button
+        Button viewFollowerButton = findViewById(R.id.my_view_followers);
+        View.OnClickListener viewFollowerCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
+        viewFollowerButton.setOnClickListener(viewFollowerCommand);
+
+        // populate view following button
+        Button viewFollowingButton = findViewById(R.id.my_view_followings);
+        View.OnClickListener viewFollowingCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
+        viewFollowingButton.setOnClickListener(viewFollowingCommand);
     }
+
+    protected void populateLikedPlaylistButtons(LanguagePresenter languagePresenter,
+                                                UserAccess acctServiceManager,
+                                                PlaylistManager playlistServiceManager,
+                                                String myUserID){
+        ArrayList<Integer> likedPlaylistIDs = acctServiceManager.getUserLikedPlaylistsIDs(myUserID);
+        ArrayList<String>  likedPlaylistNames = new ArrayList<>();
+        for (int playlistID: likedPlaylistIDs){
+            String creator_username = playlistServiceManager.getCreatorUsername(playlistID);
+            String playlist_name = playlistServiceManager.getPlaylistName(playlistID);
+            String composite_name = playlist_name + ", created by " + creator_username;
+            likedPlaylistNames.add(composite_name);
+        }
+        populateTargetInfoButtons(languagePresenter, likedPlaylistIDs,likedPlaylistNames,
+                R.id.my_display_liked_playlist, CommandItemType.INVOKE_PLAYLIST_DISPLAY);
+    }
+
+    protected void populateTargetInfoButtons(LanguagePresenter languagePresenter,
+                                             ArrayList<Integer> targetIDs,
+                                             ArrayList<String> targetNames, Integer layoutID,
+                                             CommandItemType targetCommandType){
+        // Get layout and create buttons
+        LinearLayout publicSongDisplay = findViewById(layoutID);
+        int count = 0;
+        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+        for (int targetID: targetIDs){
+            String buttonDescription = languagePresenter.translateString(targetNames.get(count));
+            Button button = new Button(this);
+            button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
+            button.setId(count);
+            button.setText(buttonDescription);
+            transitionCommandCreator.setTargetID(Integer.toString(targetID));
+            View.OnClickListener onClickListener = transitionCommandCreator.create(targetCommandType);
+            button.setOnClickListener(onClickListener);
+
+            // populate the button to the layout
+            publicSongDisplay.addView(button);
+            count += 1;
+        }
+        publicSongDisplay.setGravity(Gravity.CENTER);
+    }
+
+    protected void setUpUserDisplayInfo(){
+        // get the user's name for display
+        String myUserID = activityServiceCache.getUserID();
+        //calculate the user's accumulated likes
+        int accumulateLikes = 0;
+        //calculate the likes from this user's songs
+        int publicSongs = activityServiceCache.getUserAcctServiceManager().getUserPublicSongsID(myUserID);
+        int privateSongs = activityServiceCache.getUserAcctServiceManager().getUserPrivateSongsID(myUserID);
+        ArrayList<Integer> publicSongsID = activityServiceCache.getPlaylistManager().getListOfSongsID(publicSongs);
+        ArrayList<Integer> privateSongsID = activityServiceCache.getPlaylistManager().getListOfSongsID(privateSongs);
+        for (int i: publicSongsID) {
+            accumulateLikes += activityServiceCache.getSongManager().getSongNumLikes(i);
+        }
+        for (int i: privateSongsID) {
+            accumulateLikes += activityServiceCache.getSongManager().getSongNumLikes(i);
+        }
+        //calculate the likes from this user's playlists
+        ArrayList<Integer> publicPlaylists = activityServiceCache.getUserAcctServiceManager().
+                getListOfPlaylistsIDs(myUserID, "Public");
+        ArrayList<Integer> privatePlaylists = activityServiceCache.getUserAcctServiceManager().
+                getListOfPlaylistsIDs(myUserID, "Private");
+        for (int i: publicPlaylists) {
+            accumulateLikes += activityServiceCache.getPlaylistManager().getNumLikes(i);
+        }
+        for (int i: privatePlaylists) {
+            accumulateLikes += activityServiceCache.getPlaylistManager().getNumLikes(i);
+        }
+        String numFollowers = Integer.toString(activityServiceCache.getUserAcctServiceManager().getNumFollowers(myUserID));
+        String numFollowing = Integer.toString(activityServiceCache.getUserAcctServiceManager().getNumFollowing(myUserID));
+        String numLikes = Integer.toString(accumulateLikes);
+
+        // populate num of follower info
+        TextView numOfFollowersDisplay = findViewById(R.id.my_num_followers);
+        numOfFollowersDisplay.setText(numFollowers);
+
+        // populate num of following info
+        TextView numOfFollowingDisplay = findViewById(R.id.my_num_followings);
+        numOfFollowingDisplay.setText(numFollowing);
+
+        // populate like info
+        TextView numOfLikes = findViewById(R.id.my_num_of_likes);
+        numOfLikes.setText(numLikes);
+    }
+
+    /**
+     *
+     * No usage in this class, no actual implementation
+     */
+    @Override
+    protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
+        return null;
+    }
+
+    /**
+     * No usage in this class, no actual implementation
+     */
+    @Override
+    protected void populateIdMenuMap() {}
+
+    /**
+     * No usage in this class, no actual implementation
+     */
+    @Override
+    protected void populateMenuCommandCreatorMap() {}
+
+    /**
+     * No usage in this class, no actual implementation
+     */
+    @Override
+    protected void populateExitPageMenuItems() {}
 }

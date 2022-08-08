@@ -76,5 +76,7 @@
     <string name="song_logo">song_logo</string>
     <string name="follow">Follow</string>
     <string name="unfollow">Unfollow</string>
+    <string name="private_songs">Private Songs</string>
+    <string name="private_playlists">Private Playlists</string>
 
 </resources>
