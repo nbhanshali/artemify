@@ -1,14 +1,18 @@
 package com.artemifyMusicStudio;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
+import com.artemifyMusicStudio.controller.actionCommand.FollowAndUnFollowUserCommand;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
 import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
@@ -38,6 +42,9 @@ public class UserDisplayPage extends PageActivity {
 
         // populateButtons
         populateButtons();
+
+        // populate the follow/unfollow switch
+        populateFollowUserSwitch();
     }
 
     @Override
@@ -200,6 +207,10 @@ public class UserDisplayPage extends PageActivity {
         String numFollowing = Integer.toString(activityServiceCache.getUserAcctServiceManager().getNumFollowing(targetUserID));
         String numLikes = Integer.toString(accumulateLikes);
 
+        // populate target username
+        TextView targetUserNameDisplay = findViewById(R.id.user_name);
+        targetUserNameDisplay.setText(targetUserID);
+
         // populate num of follower info
         TextView numOfFollowersDisplay = findViewById(R.id.num_followers);
         numOfFollowersDisplay.setText(numFollowers);
@@ -211,6 +222,28 @@ public class UserDisplayPage extends PageActivity {
         // populate like info
         TextView numOfLikes = findViewById(R.id.num_of_likes);
         numOfLikes.setText(numLikes);
+    }
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
+    protected void populateFollowUserSwitch(){
+        Switch followUserSwitch = findViewById(R.id.follow_user_switch);
+        String targetUserID = this.activityServiceCache.getTargetUserID();
+        if (checkFollow(targetUserID)){
+            followUserSwitch.setChecked(true);
+        }
+        CompoundButton.OnCheckedChangeListener followAndUnFollowUserCommand
+                = new FollowAndUnFollowUserCommand(this.activityServiceCache,followUserSwitch);
+        followUserSwitch.setOnCheckedChangeListener(followAndUnFollowUserCommand);
+    }
+
+    /**
+     * To broadcast the states of following the user
+     * @param targetUserID a string for targetUserID
+     * @return true if the user with userID has been follow already
+     */
+    private boolean checkFollow(String targetUserID){
+        UserAccess acctServiceManager = this.activityServiceCache.getUserAcctServiceManager();
+        String userID = this.activityServiceCache.getUserID();
+        return acctServiceManager.getFollowing(userID).contains(targetUserID);
     }
 
     /**

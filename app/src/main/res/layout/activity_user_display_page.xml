@@ -41,24 +41,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <Button
-                    android:id="@+id/follow_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:text="@string/follow"
-                    android:textSize="11sp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
-
-                <Button
-                    android:id="@+id/unfollow_button"
+                <Switch
+                    android:id="@+id/follow_user_switch"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:text="@string/unfollow"
                     android:textSize="11sp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:gravity="start"
+                    tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
 
             </LinearLayout>
 
