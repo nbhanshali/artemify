@@ -1,9 +1,13 @@
 package com.artemifyMusicStudio.controller.popupCommand;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
+import com.artemifyMusicStudio.PageActivity;
+import com.artemifyMusicStudio.PlaylistSongsDisplayPage;
+import com.artemifyMusicStudio.UserDisplayPage;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 
@@ -40,19 +44,11 @@ public class ViewPlaylistSongsCommand implements View.OnClickListener {
      */
     @Override
     public void onClick(View view) {
-        String playlistName = this.activityServiceCache.getPlaylistManager().
-                getPlaylistName(Integer.parseInt(this.targetPlaylistID));
-        String songDisplayMsg =  this.languagePresenter.translateString("Here are all the songs in" + playlistName + ":");
-        Toast.makeText(this.activityServiceCache.getCurrentPageActivity(),
-                songDisplayMsg, Toast.LENGTH_LONG).show();
-        ArrayList<Integer> allSongsID = this.activityServiceCache.getPlaylistManager().getListOfSongsID
-                (Integer.parseInt(this.targetPlaylistID));
-        for (Integer songID: allSongsID){
-            String songNameMsg =  this.languagePresenter.translateString(this.activityServiceCache.getSongManager().findSong(songID).getName());
-            Toast.makeText(this.activityServiceCache.getCurrentPageActivity(),
-                    songNameMsg, Toast.LENGTH_LONG).show();
-        }
-//        languagePresenter.display("\n");
+        // Bring user to PlaylistSongsDisplayPage
+        PageActivity currentPageActivity = this.activityServiceCache.getCurrentPageActivity();
+        Intent it = new Intent(currentPageActivity, PlaylistSongsDisplayPage.class);
+        it.putExtra("cache", this.activityServiceCache);
+        currentPageActivity.startActivity(it);
     }
 
 }
