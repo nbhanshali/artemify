@@ -37,31 +37,8 @@ public class ViewQueuePage extends PageActivity{
         String queueName = "Queue";
         tv.setText(queueName);
 
-        LinearLayout songLists = findViewById(R.id.list_songs_display);
-        // remove all existing songs in the lists to prevent redundancy
-        songLists.removeAllViews();
+        showListSongs();
 
-        SongManager songManager = activityServiceCache.getSongManager();
-        Queue queueManager = activityServiceCache.getQueueManager();
-        ArrayList<Integer> allSongIDs = queueManager.getUpcomingSongs();
-        int count = 0;
-        for (Integer songID: allSongIDs) {
-            String num = String.valueOf(count);
-            String songName = songManager.getSongName(songID);
-            String artistName = songManager.getSongArtist(songID);
-            String displayName = num + ". " + songName;
-            @SuppressLint("InflateParams") View oneSong = LayoutInflater.from(this).
-                    inflate(R.layout.one_song_display, null);
-            // set song name for this song
-            TextView songNameDisplay = oneSong.findViewById(R.id.display_song_name);
-            songNameDisplay.setText(displayName);
-            // set artist name for this song
-            TextView artistNameDisplay = oneSong.findViewById(R.id.display_artist_name);
-            artistNameDisplay.setText(artistName);
-            // put this song in ViewQueuePage
-            songLists.addView(oneSong);
-            count = count + 1;
-        }
     }
 
     @Override
@@ -88,5 +65,34 @@ public class ViewQueuePage extends PageActivity{
     @Override
     protected void populateExitPageMenuItems() {
         this.exitPageMenuItems.add(CommandItemType.EXIT_PAGE);
+    }
+
+    private void showListSongs() {
+
+        LinearLayout songLists = findViewById(R.id.list_songs_display);
+        // remove all existing songs in the lists to prevent redundancy
+        songLists.removeAllViews();
+
+        SongManager songManager = activityServiceCache.getSongManager();
+        Queue queueManager = activityServiceCache.getQueueManager();
+        ArrayList<Integer> allSongIDs = queueManager.getUpcomingSongs();
+        int count = 0;
+        for (Integer songID: allSongIDs) {
+            String num = String.valueOf(count);
+            String songName = songManager.getSongName(songID);
+            String artistName = songManager.getSongArtist(songID);
+            String displayName = num + ". " + songName;
+            @SuppressLint("InflateParams") View oneSong = LayoutInflater.from(this).
+                    inflate(R.layout.one_song_display, null);
+            // set song name for this song
+            TextView songNameDisplay = oneSong.findViewById(R.id.display_song_name);
+            songNameDisplay.setText(displayName);
+            // set artist name for this song
+            TextView artistNameDisplay = oneSong.findViewById(R.id.display_artist_name);
+            artistNameDisplay.setText(artistName);
+            // put this song in ViewQueuePage
+            songLists.addView(oneSong);
+            count = count + 1;
+        }
     }
 }
