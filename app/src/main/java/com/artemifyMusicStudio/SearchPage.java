@@ -4,8 +4,8 @@ import android.os.Bundle;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,9 +35,9 @@ public class SearchPage extends PageActivity {
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
             case "UserInputCommandCreator":
-                return new UserInputCommandCreator(this.activityServiceCache);
+                return new UserInputRequestCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new pageTransitionCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }

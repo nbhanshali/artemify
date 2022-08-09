@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
+import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
@@ -172,9 +172,9 @@ public class ProfileAndSettingPage extends PageActivity {
     }
 
     protected void populateViewLoginHistoryButton(){
-        PopupCommandCreator popupCommandCreator = new PopupCommandCreator(this.activityServiceCache);
+        InfoDisplayCommandCreator infoDisplayCommandCreator = new InfoDisplayCommandCreator(this.activityServiceCache);
         Button viewFollowerButton = findViewById(R.id.my_login_history);
-        View.OnClickListener viewFollowerCommand = popupCommandCreator.create(CommandItemType.VIEW_LOGIN_HISTORY);
+        View.OnClickListener viewFollowerCommand = infoDisplayCommandCreator.create(CommandItemType.VIEW_LOGIN_HISTORY);
         viewFollowerButton.setOnClickListener(viewFollowerCommand);
     }
 
@@ -183,16 +183,16 @@ public class ProfileAndSettingPage extends PageActivity {
         String currUserID = this.activityServiceCache.getUserID();
         this.activityServiceCache.setTargetUserID(currUserID);
 
-        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
 
         // populate view follower button
         Button viewFollowerButton = findViewById(R.id.my_view_followers);
-        View.OnClickListener viewFollowerCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
+        View.OnClickListener viewFollowerCommand = pageTransitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
         viewFollowerButton.setOnClickListener(viewFollowerCommand);
 
         // populate view following button
         Button viewFollowingButton = findViewById(R.id.my_view_followings);
-        View.OnClickListener viewFollowingCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
+        View.OnClickListener viewFollowingCommand = pageTransitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
         viewFollowingButton.setOnClickListener(viewFollowingCommand);
     }
 
@@ -203,7 +203,7 @@ public class ProfileAndSettingPage extends PageActivity {
         // Get layout and create buttons
         LinearLayout publicSongDisplay = findViewById(layoutID);
         int count = 0;
-        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
         for (int targetID: targetIDs){
             String buttonDescription = languagePresenter.translateString(targetNames.get(count));
             Button button = new Button(this);
@@ -211,8 +211,8 @@ public class ProfileAndSettingPage extends PageActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT));
             button.setId(count);
             button.setText(buttonDescription);
-            transitionCommandCreator.setTargetID(Integer.toString(targetID));
-            View.OnClickListener onClickListener = transitionCommandCreator.create(targetCommandType);
+            pageTransitionCommandCreator.setTargetID(Integer.toString(targetID));
+            View.OnClickListener onClickListener = pageTransitionCommandCreator.create(targetCommandType);
             button.setOnClickListener(onClickListener);
 
             // populate the button to the layout

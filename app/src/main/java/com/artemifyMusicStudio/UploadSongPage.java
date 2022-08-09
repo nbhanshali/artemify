@@ -7,8 +7,8 @@ import android.widget.RadioGroup;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,9 +58,9 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
         EditText inputLyrics = findViewById(R.id.lyrics);
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new pageTransitionCommandCreator(this.activityServiceCache);
             case "UserInputCommandCreator":
-                return new UserInputCommandCreator(this.activityServiceCache, inputSongName,
+                return new UserInputRequestCommandCreator(this.activityServiceCache, inputSongName,
                         inputMinute, inputSecond, inputLyrics, isPublic);
             default:
                 return null;

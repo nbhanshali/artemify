@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.actionCommand.FollowAndUnFollowUserCommand;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
+import com.artemifyMusicStudio.controller.stateChangedActionCommand.FollowAndUnFollowUserCommand;
+import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
@@ -122,16 +122,16 @@ public class UserDisplayPage extends PageActivity {
     }
 
     protected void populateViewFollowerAndFollowingButtons(){
-        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
 
         // populate view follower button
         Button viewFollowerButton = findViewById(R.id.view_followers);
-        View.OnClickListener viewFollowerCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
+        View.OnClickListener viewFollowerCommand = pageTransitionCommandCreator.create(CommandItemType.VIEW_FOLLOWERS);
         viewFollowerButton.setOnClickListener(viewFollowerCommand);
 
         // populate view following button
         Button viewFollowingButton = findViewById(R.id.view_followings);
-        View.OnClickListener viewFollowingCommand = transitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
+        View.OnClickListener viewFollowingCommand = pageTransitionCommandCreator.create(CommandItemType.VIEW_FOLLOWINGS);
         viewFollowingButton.setOnClickListener(viewFollowingCommand);
     }
 
@@ -158,7 +158,7 @@ public class UserDisplayPage extends PageActivity {
         // Get layout and create buttons
         LinearLayout publicSongDisplay = findViewById(layoutID);
         int count = 0;
-        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
         for (int targetID: targetIDs){
             String buttonDescription = languagePresenter.translateString(targetNames.get(count));
             Button button = new Button(this);
@@ -166,8 +166,8 @@ public class UserDisplayPage extends PageActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT));
             button.setId(count);
             button.setText(buttonDescription);
-            transitionCommandCreator.setTargetID(Integer.toString(targetID));
-            View.OnClickListener onClickListener = transitionCommandCreator.create(targetCommandType);
+            pageTransitionCommandCreator.setTargetID(Integer.toString(targetID));
+            View.OnClickListener onClickListener = pageTransitionCommandCreator.create(targetCommandType);
             button.setOnClickListener(onClickListener);
 
             // populate the button to the layout

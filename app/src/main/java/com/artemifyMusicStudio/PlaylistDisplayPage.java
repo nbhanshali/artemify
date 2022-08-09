@@ -6,10 +6,10 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.actionCommand.LikePlaylistCommand;
-import com.artemifyMusicStudio.controller.commandCreator.ActionCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand;
+import com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
 import com.useCase.PlaylistManager;
 
 import java.util.ArrayList;
@@ -18,7 +18,6 @@ import java.util.List;
 
 public class PlaylistDisplayPage extends PageActivity {
     private int playlistID;
-    private String artist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class PlaylistDisplayPage extends PageActivity {
         this.activityServiceCache.setCurrentPageActivity(this);
         // set up target
         playlistID = Integer.parseInt(activityServiceCache.getTargetPlaylistID());
-        artist = activityServiceCache.getPlaylistManager().getCreatorUsername(playlistID);
+        String artist = activityServiceCache.getPlaylistManager().getCreatorUsername(playlistID);
         activityServiceCache.setTargetUserID(artist);
 
         // populate button
@@ -46,11 +45,11 @@ public class PlaylistDisplayPage extends PageActivity {
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
             case "PopupCommandCreator":
-                return new PopupCommandCreator(this.activityServiceCache);
+                return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new pageTransitionCommandCreator(this.activityServiceCache);
             case "ActionCommandCreator":
-                return new ActionCommandCreator(this.activityServiceCache);
+                return new StateChangedActionCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }

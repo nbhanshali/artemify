@@ -5,7 +5,7 @@ import android.widget.EditText;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +46,7 @@ public class CreateAccountPage extends PageActivity {
         EditText inputUserName = findViewById(R.id.inputUserName);
         EditText inputPassword = findViewById(R.id.inputPassword);
         if ("UserInputCommandCreator".equals(creatorType)) {
-            return new UserInputCommandCreator(this.activityServiceCache, inputUserName, inputPassword);
+            return new UserInputRequestCommandCreator(this.activityServiceCache, inputUserName, inputPassword);
         }
         return null;
     }

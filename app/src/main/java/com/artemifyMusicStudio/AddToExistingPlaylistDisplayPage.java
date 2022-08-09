@@ -5,16 +5,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
-import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.transitionCommand.AddToExistingPlaylistCommand;
-import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
+import com.artemifyMusicStudio.controller.pageTransitionCommand.AddToExistingPlaylistCommand;
+import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
-import com.useCase.SongManager;
 import com.useCase.UserAccess;
 
 import java.util.ArrayList;

@@ -6,10 +6,10 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.ActionCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.actionCommand.LikeSongCommand;
+import com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand;
 import com.useCase.SongManager;
 
 import java.util.ArrayList;
@@ -44,11 +44,11 @@ public class SongDisplayPage extends PageActivity {
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new pageTransitionCommandCreator(this.activityServiceCache);
             case "PopupCommandCreator":
-                return new PopupCommandCreator(this.activityServiceCache);
+                return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "ActionCommandCreator":
-                return new ActionCommandCreator(this.activityServiceCache);
+                return new StateChangedActionCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }
