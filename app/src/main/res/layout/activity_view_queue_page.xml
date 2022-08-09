@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context="com.artemifyMusicStudio.ViewQueuePage"
     android:padding="10dp"
-    android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <Button
@@ -26,6 +25,7 @@
             android:id="@+id/playlist_name_display"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:text="Playlist Name" />
 
         <ScrollView
