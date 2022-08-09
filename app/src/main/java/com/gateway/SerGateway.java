@@ -1,7 +1,6 @@
 package com.gateway;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -103,23 +102,15 @@ public class SerGateway extends IGateway{
     }
 
     @Override
-    public ActivityServiceCache readActivityServiceCacheFromFile(){
-        try{
-            FileInputStream file = this.currentPageActivity.openFileInput("ActivityServiceCache.ser");
-            InputStream buffer = new BufferedInputStream(file);
-            ObjectInput input = new ObjectInputStream(buffer);
+    public ActivityServiceCache readActivityServiceCacheFromFile() throws IOException, ClassNotFoundException {
+        FileInputStream file = this.currentPageActivity.openFileInput("ActivityServiceCache.ser");
+        InputStream buffer = new BufferedInputStream(file);
+        ObjectInput input = new ObjectInputStream(buffer);
 
-            // serialize the Map
-            ActivityServiceCache activityServiceCache = (ActivityServiceCache) input.readObject();
-            input.close();
-            return activityServiceCache;
-        }catch (IOException e){
-            Log.e("warning", "IO exception");
-            return null;
-        }catch (ClassNotFoundException e){
-            Log.e("warning", "cannot find the Activity");
-            return null;
-        }
+        // serialize the Map
+        ActivityServiceCache activityServiceCache = (ActivityServiceCache) input.readObject();
+        input.close();
+        return activityServiceCache;
     }
 
 }

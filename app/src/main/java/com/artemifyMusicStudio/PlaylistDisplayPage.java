@@ -44,7 +44,7 @@ public class PlaylistDisplayPage extends PageActivity {
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
-            case "InfoDisplayCommandCreator":
+            case "PopupCommandCreator":
                 return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
                 return new PageTransitionCommandCreator(this.activityServiceCache);
@@ -76,7 +76,7 @@ public class PlaylistDisplayPage extends PageActivity {
         ArrayList<CommandItemType> tempList3 = new ArrayList<>(
                 List.of(CommandItemType.PLAY_PLAYLIST)
         );
-        menuCommandCreatorMap.put("InfoDisplayCommandCreator", tempList1);
+        menuCommandCreatorMap.put("PopupCommandCreator", tempList1);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
         menuCommandCreatorMap.put("ActionCommandCreator", tempList3);
     }

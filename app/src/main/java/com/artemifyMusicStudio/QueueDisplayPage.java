@@ -35,7 +35,7 @@ public class QueueDisplayPage extends PageActivity{
         switch (creatorType) {
             case "QueueServiceCommandCreator":
                 return new QueueServiceCommandCreator(this.activityServiceCache);
-            case "UserInputRequestCommandCreator" :
+            case "UserInputCommandCreator" :
                 return new UserInputRequestCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator" :
                 return new PageTransitionCommandCreator(this.activityServiceCache);
@@ -82,7 +82,7 @@ public class QueueDisplayPage extends PageActivity{
                         CommandItemType.EXIT_PAGE)
         );
         menuCommandCreatorMap.put("QueueServiceCommandCreator", tempList1);
-        menuCommandCreatorMap.put("UserInputRequestCommandCreator", tempList2);
+        menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList3);
     }
 
