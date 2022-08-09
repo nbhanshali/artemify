@@ -228,38 +228,6 @@ public class SongManager implements Serializable {
     }
 
     /**
-     * NOTE: This method has been implemented to be used in Phase 2
-     * Make a song public
-     * @param id The ID of the song
-     * @return true if the song with the specified ID exists and is made public, and false otherwise.
-     */
-    public boolean makePublic(int id) {
-        if (exists(id)) {
-            Song privSong = findSong(id);
-            assert privSong != null;
-            privSong.setPublic(true);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * NOTE: This method has been implemented to be used in Phase 2
-     * Make a song private
-     * @param id The ID of the song
-     * @return true if the song with the specified ID exists and is made private, and false otherwise.
-     */
-    public boolean makePrivate(int id) {
-        if (exists(id)) {
-            Song privSong = findSong(id);
-            assert privSong != null;
-            privSong.setPublic(false);
-            return true;
-        }
-        return false;
-    }
-
-    /**
      * Have the user with the specified username like the song with the specified song ID.
      *
      * NOTE: Controllers have to add songID to the user's Favourite playlist.

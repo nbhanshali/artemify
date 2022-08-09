@@ -230,21 +230,6 @@ public class SongManagerTest {
     }
 
     @Test
-    public void makePublic() {
-        int newId = songManager.latestSongID();
-        songManager.makePrivate(newId);
-        assertFalse(songManager.isPublic(newId));
-        songManager.makePublic(newId);
-        assertTrue(songManager.isPublic(newId));
-    }
-
-    @Test
-    public void makePrivate() {
-        songManager.makePrivate(201);
-        assertFalse(songManager.isPublic(201));
-    }
-
-    @Test
     public void likeSong() {
         songManager.likeSong(201);
         assertEquals(1000001, songManager.getSongNumLikes(201));
