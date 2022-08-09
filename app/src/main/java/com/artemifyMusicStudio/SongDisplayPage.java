@@ -60,6 +60,7 @@ public class SongDisplayPage extends PageActivity {
         idMenuItemMap.put(CommandItemType.VIEW_LYRICS, R.id.view_lyrics);
         idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator);
         idMenuItemMap.put(CommandItemType.JUMP_TO_CREATE_NEW_PLAYLIST, R.id.display_add_to_new_playlist);
+        idMenuItemMap.put(CommandItemType.INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY, R.id.display_add_to_existing_playlist);
         idMenuItemMap.put(CommandItemType.PLAY_SONG, R.id.play_song);
         idMenuItemMap.put(CommandItemType.ADD_TO_QUEUE, R.id.display_add_to_queue);
     }
@@ -68,7 +69,8 @@ public class SongDisplayPage extends PageActivity {
     protected void populateMenuCommandCreatorMap() {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
                 List.of(CommandItemType.EXIT_PAGE, CommandItemType.ADD_TO_QUEUE,
-                        CommandItemType.JUMP_TO_CREATE_NEW_PLAYLIST)
+                        CommandItemType.JUMP_TO_CREATE_NEW_PLAYLIST,
+                        CommandItemType.INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY)
         );
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.VIEW_LYRICS, CommandItemType.VIEW_CREATOR)

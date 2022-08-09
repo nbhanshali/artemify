@@ -5,11 +5,13 @@ import android.view.View;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
+import com.artemifyMusicStudio.controller.transitionCommand.AddToExistingPlaylistCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.AddToQueueCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.CreateAccountCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.EnableAdminCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.EnableRegularUserHomePageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
+import com.artemifyMusicStudio.controller.transitionCommand.InvokeAddToExistingPlaylistDisplayCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeLogOutCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokeNewPlaylistPageCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.InvokePlaylistDisplayPage;
@@ -71,6 +73,8 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new InvokePlaylistDisplayPage(this.activityServiceCache, this.targetID);
             case INVOKE_USER_DISPLAY:
                 return new InvokeUserDisplayPage(this.activityServiceCache, this.targetID);
+            case INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY:
+                return new InvokeAddToExistingPlaylistDisplayCommand(this.activityServiceCache);
             case PROFILE_AND_SETTING:
                 return new InvokeProfileAndSettingPageCommand(this.activityServiceCache);
             case INVOKE_CREATE_NEW_PLAYLIST:
