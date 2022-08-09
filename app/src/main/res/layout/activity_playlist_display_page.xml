@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PlaylistDisplayPage"
+    android:padding="10dp"
     android:orientation="vertical">
 
     <Button
@@ -103,21 +104,21 @@
 
         <Button
             android:id="@+id/play_playlist"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Play Playlist"
             android:layout_marginTop="12dp"/>
 
         <Button
             android:id="@+id/view_creator_in_playlist"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/view_creator"
             android:layout_marginTop="12dp"/>
 
         <Button
             android:id="@+id/view_playlist_songs"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/view_playlist_songs"
             android:layout_marginTop="12dp"/>
