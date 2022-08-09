@@ -1,0 +1,2645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/nbhan/IdeaProjects/untitled/src/com</OriginalElement>
+  <nodes>
+    <node x="4904.812963357219" y="685.5179888075661">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeUploadSongPageCommand</node>
+    <node x="4514.461230908486" y="862.4250604033884">com.artemifyMusicStudio.controller.stateChangedActionCommand.FollowAndUnFollowUserCommand</node>
+    <node x="5245.479925073492" y="723.8964817345087">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeLogOutCommand</node>
+    <node x="5029.803839955265" y="561.8187664165791">com.artemifyMusicStudio.controller.searchCommand.SearchSongCommand</node>
+    <node x="-122.45139805140197" y="942.8365501681296">com.gateway.FileType</node>
+    <node x="5829.360088642432" y="692.7374711208334">com.artemifyMusicStudio.controller.pageTransitionCommand.ViewFollowersCommand</node>
+    <node x="2441.6064172296033" y="808.022029871724">com.artemifyMusicStudio.controller.infoDisplayCommand.ViewCreatorCommand</node>
+    <node x="4217.255778738966" y="1033.5861349537115">com.artemifyMusicStudio.controller.pageTransitionCommand.ViewQueueCommand</node>
+    <node x="-84.27806155111372" y="350.1524620731966">com.artemifyMusicStudio.PlaylistSongsDisplayPage</node>
+    <node x="449.76665708711823" y="351.69889452134134">com.artemifyMusicStudio.AddToExistingPlaylistDisplayPage</node>
+    <node x="1681.6487019597291" y="593.0300154259426">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeSearchPageCommand</node>
+    <node x="6018.338699465066" y="298.2105730565828">com.artemifyMusicStudio.UploadSongPage</node>
+    <node x="4860.865356471817" y="1116.2296794326198">com.gateway.GatewayCreator</node>
+    <node x="3096.160683062241" y="827.5024573084946">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeProfileAndSettingPageCommand</node>
+    <node x="3596.487086258326" y="990.4617675244031">com.artemifyMusicStudio.controller.searchCommand.SearchResultContainer</node>
+    <node x="-85.3624280801412" y="642.1745145629759">com.artemifyMusicStudio.controller.userInputRequestCommand.RegularLogInCommand</node>
+    <node x="697.6950116754448" y="76.97334226156062">com.gateway.SimpleGateway</node>
+    <node x="10.289687881628083" y="472.1327335584299">com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator</node>
+    <node x="3686.887979585317" y="629.204951800963">com.artemifyMusicStudio.PageActivity</node>
+    <node x="6551.0487617363415" y="534.8171661157754">com.artemifyMusicStudio.RegularPopupDialog</node>
+    <node x="1114.8832192157893" y="368.644172352324">com.artemifyMusicStudio.controller.SimpleButtonCommandCreator</node>
+    <node x="2944.894569279257" y="714.3084455865121">com.artemifyMusicStudio.SearchPage</node>
+    <node x="5793.348608470702" y="894.9331976105759">com.useCase.SongManager</node>
+    <node x="4420.206268284434" y="620.5588979908586">com.artemifyMusicStudio.QueueDisplayPage</node>
+    <node x="5375.618570150542" y="562.6594516270645">com.artemifyMusicStudio.controller.searchCommand.SearchPlaylistCommand</node>
+    <node x="6321.434619407272" y="203.37103831451722">com.artemifyMusicStudio.FollowerFollowingDisplayPage</node>
+    <node x="-170.50149344347182" y="780.4675166606509">com.artemifyMusicStudio.controller.stateChangedActionCommand.AddToQueueCommand</node>
+    <node x="4469.432746661417" y="1017.5446586746564">com.artemifyMusicStudio.controller.stateChangedActionCommand.PlayPlaylistCommand</node>
+    <node x="2180.1048841341117" y="920.1945149804097">com.artemifyMusicStudio.controller.userInputRequestCommand.UploadSongCommand</node>
+    <node x="4174.546880192635" y="913.762003565478">com.artemifyMusicStudio.controller.pageTransitionCommand.ViewFollowingsCommand</node>
+    <node x="1403.4974657460061" y="278.9742433352841">com.artemifyMusicStudio.RegularUserHomePage</node>
+    <node x="2673.0220697624104" y="661.2324439127441">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeUserDisplayPage</node>
+    <node x="2007.4053123262047" y="600.7713886524522">com.artemifyMusicStudio.controller.userInputRequestCommand.AddToNewPlaylistCommand</node>
+    <node x="365.30170403487864" y="514.3253632155377">com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand</node>
+    <node x="364.7943629757117" y="1084.5583339805555">com.entity.Playlist</node>
+    <node x="5820.776296100173" y="420.8821189767467">com.artemifyMusicStudio.controller.searchCommand.SearchUserCommand</node>
+    <node x="-78.06203444083974" y="129.20081199654322">com.presenters.EnglishPresenter</node>
+    <node x="6677.324632541501" y="677.524549812679">com.presenters.translator</node>
+    <node x="3876.691540659921" y="665.822900845359">com.artemifyMusicStudio.controller.queueServiceCommand.QueueServiceCommand</node>
+    <node x="3832.8714232498714" y="875.7863445061255">com.artemifyMusicStudio.controller.pageTransitionCommand.JumpToCreateNewPlaylistCommand</node>
+    <node x="181.64064001716298" y="657.5335070256922">com.artemifyMusicStudio.controller.queueServiceCommand.RemoveFromQueueCommand</node>
+    <node x="6143.581874915758" y="713.1289770275241">com.artemifyMusicStudio.controller.pageTransitionCommand.StartLogInCommand</node>
+    <node x="3693.0942081798116" y="729.1255580516118">com.artemifyMusicStudio.MainPage</node>
+    <node x="3230.438442164737" y="1107.2587994189807">com.artemifyMusicStudio.controller.userInputRequestCommand.CreateNewPlaylistCommand</node>
+    <node x="4953.358198626598" y="442.8530945948708">com.artemifyMusicStudio.UserDisplayPage</node>
+    <node x="5539.216111086148" y="813.7904739994393">com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand</node>
+    <node x="2057.3428997653064" y="268.80175940854633">com.artemifyMusicStudio.CreateAccountPage</node>
+    <node x="455.6871977087036" y="195.7217433985968">com.presenters.GermanPresenter</node>
+    <node x="2077.0017502713467" y="803.8985989082395">com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand</node>
+    <node x="2273.755441331039" y="365.26937511468805">com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator</node>
+    <node x="2754.8012206044004" y="839.4065556567605">com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator</node>
+    <node x="5283.149344157843" y="447.09197378132404">com.artemifyMusicStudio.controller.searchCommand.SearchServiceCommand</node>
+    <node x="1836.8718824864861" y="715.1060953019822">com.artemifyMusicStudio.controller.stateChangedActionCommand.PlaySongCommand</node>
+    <node x="6253.289620259766" y="827.6138138591728">com.useCase.UserAccess</node>
+    <node x="1579.1722672210078" y="983.1712592588428">com.entity.User</node>
+    <node x="2302.095665224984" y="535.1623886345662">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeAddToExistingPlaylistDisplayCommand</node>
+    <node x="1456.6566867507272" y="476.66604694945005">com.artemifyMusicStudio.controller.infoDisplayCommand.RegularPopupCommand</node>
+    <node x="3141.481716222846" y="691.6380802118628">com.artemifyMusicStudio.controller.queueServiceCommand.ShuffleQueueCommand</node>
+    <node x="5273.133614891336" y="865.7897010326477">com.artemifyMusicStudio.controller.userInputRequestCommand.DeleteUserCommand</node>
+    <node x="1976.9651631337483" y="460.9307733526629">com.artemifyMusicStudio.controller.CommandItemType</node>
+    <node x="680.7742977081081" y="815.0829563764045">com.useCase.Queue</node>
+    <node x="6397.179268787666" y="392.295795262541">com.artemifyMusicStudio.controller.pageTransitionCommand.AddToExistingPlaylistCommand</node>
+    <node x="3491.0414285164825" y="824.4930949895555">com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongInfCommand</node>
+    <node x="3962.071804631117" y="565.5198212526996">com.artemifyMusicStudio.AdminPage</node>
+    <node x="3297.556975882339" y="953.9330999914727">com.artemifyMusicStudio.controller.userInputRequestCommand.MakeAdminUserCommand</node>
+    <node x="5006.588237145885" y="951.0212604170364">com.artemifyMusicStudio.controller.userInputRequestCommand.UnBanUserCommand</node>
+    <node x="831.7495235630572" y="166.26782329388843">com.gateway.SerGateway</node>
+    <node x="3547.6661247834063" y="1104.7828672537833">com.useCase.PlaylistEntityContainer</node>
+    <node x="4423.807143447381" y="1147.9123979485805">com.presenters.PresenterCreator</node>
+    <node x="3950.3981811377944" y="1062.2316786322733">com.artemifyMusicStudio.controller.userInputRequestCommand.BanUserCommand</node>
+    <node x="6494.1689329815035" y="682.7779308949259">com.artemifyMusicStudio.StartPage</node>
+    <node x="614.4470752743907" y="541.421202095258">com.artemifyMusicStudio.controller.userInputRequestCommand.AdminLogInCommand</node>
+    <node x="5214.022217176171" y="357.46466701782134">com.artemifyMusicStudio.SearchResultPage</node>
+    <node x="4663.713718959881" y="691.2352274733671">com.artemifyMusicStudio.controller.queueServiceCommand.SkipSongCommand</node>
+    <node x="360.98914444903346" y="783.0125052729768">com.useCase.SongEntityContainer</node>
+    <node x="2987.8517312341232" y="969.614666884411">com.useCase.UserEntityContainer</node>
+    <node x="5515.648771663551" y="668.9305283738389">com.presenters.LanguageType</node>
+    <node x="3911.001976416339" y="755.3045724655784">com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongOnceCommand</node>
+    <node x="4730.178144242672" y="976.5402823314653">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokePlaylistDisplayPage</node>
+    <node x="5639.439992623148" y="533.0336904006065">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeNewPlaylistPageCommand</node>
+    <node x="1667.9964761842366" y="311.04197320627065">com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator</node>
+    <node x="3428.8025248661793" y="706.1435669595032">com.artemifyMusicStudio.ViewQueuePage</node>
+    <node x="3159.290784737164" y="1222.0921268828995">com.artemifyMusicStudio.InputPopUpDialog</node>
+    <node x="888.801865896286" y="627.4787545059276">com.artemifyMusicStudio.controller.userInputRequestCommand.PopUpInputDialogCommand</node>
+    <node x="2653.9975378470763" y="1087.6091849193294">com.artemifyMusicStudio.controller.infoDisplayCommand.ViewPlaylistSongsCommand</node>
+    <node x="3869.485737637117" y="1248.9127789830875">com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand</node>
+    <node x="2705.9790432190416" y="451.9639469015445">com.artemifyMusicStudio.LoginPage</node>
+    <node x="102.54191238733313" y="810.2324335449401">com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLyricsCommand</node>
+    <node x="4724.020394914057" y="562.9684003234844">com.artemifyMusicStudio.PlaylistDisplayPage</node>
+    <node x="1216.3150679645362" y="591.2733646266216">com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLoginHistoryCommand</node>
+    <node x="1241.2688366932628" y="-14.788228327494927">com.gateway.IGateway</node>
+    <node x="1104.7088110863313" y="1277.1640866080893">com.entity.Song</node>
+    <node x="4956.447929553563" y="815.5257007760523">com.artemifyMusicStudio.controller.pageTransitionCommand.CreateAccountCommand</node>
+    <node x="1085.116381063685" y="810.66353394568">com.artemifyMusicStudio.ActivityServiceCache</node>
+    <node x="5963.79487215815" y="510.55455281451">com.artemifyMusicStudio.controller.userInputRequestCommand.CreateRegularAccountCommand</node>
+    <node x="605.5015885999762" y="660.4511932066964">com.artemifyMusicStudio.controller.pageTransitionCommand.EnableAdminCommand</node>
+    <node x="2301.649152598712" y="689.1285517366837">com.artemifyMusicStudio.AddToNewPlaylistPage</node>
+    <node x="2614.441066748625" y="956.2381875877456">com.artemifyMusicStudio.controller.pageTransitionCommand.EnableRegularUserHomePageCommand</node>
+    <node x="1444.6194614837984" y="708.1477709047442">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeQueueCommand</node>
+    <node x="772.275693857538" y="427.16626770150515">com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator</node>
+    <node x="6284.192625376244" y="568.2538129486618">com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeSongDisplayPage</node>
+    <node x="4276.145446976376" y="747.8798906893524">com.artemifyMusicStudio.controller.queueServiceCommand.PlayPreviousSongCommand</node>
+    <node x="4171.0420213346415" y="629.0289781163448">com.artemifyMusicStudio.SongDisplayPage</node>
+    <node x="187.37950217785277" y="254.22822803229514">com.presenters.LanguagePresenter</node>
+    <node x="3133.5495267318643" y="560.0244565517338">com.artemifyMusicStudio.ProfileAndSettingPage</node>
+    <node x="5544.524483501742" y="304.0772513554015">com.artemifyMusicStudio.CreateNewPlayListPage</node>
+    <node x="5316.594877410731" y="1002.0194621304436">com.useCase.PlaylistManager</node>
+    <node x="330.6548049811425" y="105.98078553910123">com.presenters.SimplePresenter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.artemifyMusicStudio.SongDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" relationship="CREATE">
+      <point x="14.999978665358867" y="-14.499978116344778" />
+      <point x="4267.042" y="466.0" />
+      <point x="140.5" y="11.833732298494851" />
+    </edge>
+    <edge source="com.useCase.SongManager" target="com.useCase.PlaylistManager" relationship="TO_ONE">
+      <point x="-192.9996084707018" y="-1.976105759240454E-4" />
+      <point x="5767.0" y="1131.433" />
+      <point x="5767.0" y="1238.519" />
+      <point x="189.5" y="-4.6213044356591126E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchPlaylistCommand" target="com.artemifyMusicStudio.controller.searchCommand.SearchServiceCommand" relationship="GENERALIZATION">
+      <point x="4.298494577597012E-4" y="-14.5" />
+      <point x="5477.119" y="518.0" />
+      <point x="5385.649" y="518.0" />
+      <point x="-3.441578428464709E-4" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.QueueServiceCommand" target="com.useCase.Queue" relationship="TO_ONE">
+      <point x="-101.49954065992097" y="5.882099154641082" />
+      <point x="3638.541" y="686.205" />
+      <point x="3638.541" y="762.805" />
+      <point x="3054.801" y="762.805" />
+      <point x="3054.801" y="906.907" />
+      <point x="1365.116" y="906.907" />
+      <point x="1365.116" y="771.0" />
+      <point x="811.774" y="771.0" />
+      <point x="-2.977081080643984E-4" y="-115.4999563764045" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PlaylistDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator" relationship="CREATE">
+      <point x="-85.5" y="5.5315996765156115" />
+      <point x="4112.0" y="583.0" />
+      <point x="4112.0" y="392.269" />
+      <point x="147.99955866896107" y="-3.7511468804041215E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateRegularAccountCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="1.2784185037162388E-4" y="27.0" />
+      <point x="6093.795" y="625.254" />
+      <point x="4926.0" y="625.254" />
+      <point x="4926.0" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeUserDisplayPage" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-6.976241047595977E-5" y="26.999556087255883" />
+      <point x="2773.022" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.SongEntityContainer" relationship="CREATE">
+      <point x="-25.500381063684927" y="-125.99953394568001" />
+      <point x="1185.616" y="735.0" />
+      <point x="480.5" y="735.0" />
+      <point x="26.01085555096654" y="-81.99950527297676" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateRegularAccountCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="1.2784185037162388E-4" y="-26.99955281450997" />
+      <point x="6093.795" y="482.382" />
+      <point x="6241.295" y="482.382" />
+      <point x="6241.295" y="639.754" />
+      <point x="4706.52" y="639.754" />
+      <point x="4706.52" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ViewQueuePage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="4.7513382060060394E-4" y="-14.499566959503227" />
+      <point x="3505.303" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.ShuffleQueueCommand" target="com.artemifyMusicStudio.controller.queueServiceCommand.QueueServiceCommand" relationship="GENERALIZATION">
+      <point x="14.679283777154069" y="26.999919788137277" />
+      <point x="3258.661" y="800.522" />
+      <point x="3763.0" y="800.522" />
+      <point x="3763.0" y="826.993" />
+      <point x="3844.5" y="826.993" />
+      <point x="3844.5" y="852.026" />
+      <point x="3887.0" y="852.026" />
+      <point x="-91.19154065992097" y="14.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.PlayPreviousSongCommand" target="com.artemifyMusicStudio.controller.queueServiceCommand.QueueServiceCommand" relationship="GENERALIZATION">
+      <point x="-4.4697637531498913E-4" y="-26.999890689352355" />
+      <point x="4392.645" y="728.0" />
+      <point x="3887.0" y="728.0" />
+      <point x="-91.19154065992097" y="14.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.LoginPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="14.9999567809582" y="-37.99994690154449" />
+      <point x="2863.479" y="420.0" />
+      <point x="4195.0" y="420.0" />
+      <point x="4195.0" y="518.0" />
+      <point x="3065.895" y="518.0" />
+      <point x="3065.895" y="558.024" />
+      <point x="2923.0" y="558.024" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PageActivity" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="64.0" y="4.819903699626593E-5" />
+      <point x="3846.0" y="643.705" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.artemifyMusicStudio.PageActivity" relationship="TO_ONE">
+      <point x="125.99961893631507" y="-72.14153394567995" />
+      <point x="2038.0" y="864.522" />
+      <point x="2038.0" y="890.022" />
+      <point x="2718.022" y="890.022" />
+      <point x="2718.022" y="773.305" />
+      <point x="2912.5" y="773.305" />
+      <point x="2912.5" y="621.0" />
+      <point x="3638.541" y="621.0" />
+      <point x="3638.541" y="647.205" />
+      <point x="-63.999979585317305" y="3.5000481990369963" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.DeleteUserCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-102.99961489133602" y="-14.99970103264775" />
+      <point x="4882.961" y="888.79" />
+      <point x="4882.961" y="826.805" />
+      <point x="3862.0" y="826.805" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.EnableRegularUserHomePageCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-31.14006674862503" y="-27.0" />
+      <point x="2737.301" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="115.09261893631515" y="126.0" />
+      <point x="1326.209" y="1603.0" />
+      <point x="4040.0" y="1603.0" />
+      <point x="4040.0" y="1525.0" />
+      <point x="6196.849" y="1525.0" />
+      <point x="6196.849" y="850.114" />
+      <point x="6119.0" y="850.114" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.useCase.SongManager" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="3.915292982128449E-4" y="236.49980238942408" />
+      <point x="5986.349" y="1525.0" />
+      <point x="6196.849" y="1525.0" />
+      <point x="6196.849" y="850.114" />
+      <point x="6119.0" y="850.114" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" target="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlayPlaylistCommand" relationship="CREATE">
+      <point x="-56.473693857538024" y="26.99973229849485" />
+      <point x="856.302" y="721.951" />
+      <point x="1427.119" y="721.951" />
+      <point x="1427.119" y="968.0" />
+      <point x="2175.0" y="968.0" />
+      <point x="2175.0" y="1044.545" />
+      <point x="-94.4997466614168" y="3.413253436974628E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.CreateAccountCommand" relationship="CREATE">
+      <point x="80.24976190788175" y="-38.5" />
+      <point x="1888.7462380921183" y="307.90389069480403" />
+      <point x="5178.447929553563" y="307.90389069480403" />
+      <point x="5178.447929553563" y="842.5257007760523" />
+      <point x="106.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.QueueDisplayPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-2.6828443424165016E-4" y="-14.499897990858585" />
+      <point x="4505.206" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator" target="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlaySongCommand" relationship="CREATE">
+      <point x="-148.0" y="23.772624885311927" />
+      <point x="1951.9964761842366" y="416.042" />
+      <point x="25.62459369775047" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.artemifyMusicStudio.controller.queueServiceCommand.ShuffleQueueCommand" relationship="CREATE">
+      <point x="-140.5" y="0.0" />
+      <point x="-211.00149344347182" y="499.1327335584299" />
+      <point x="-211.00149344347182" y="-62.288" />
+      <point x="3103.660683062241" y="-62.288" />
+      <point x="3103.660683062241" y="721.8084455865121" />
+      <point x="-102.5" y="3.17036537464935" />
+    </edge>
+    <edge source="com.gateway.IGateway" target="com.gateway.SimpleGateway" relationship="REALIZATION">
+      <point x="-174.5" y="35.261570589055545" />
+      <point x="73.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand" relationship="CREATE">
+      <point x="14.999523815763496" y="-38.49997320627068" />
+      <point x="1823.496" y="175.0" />
+      <point x="3892.0" y="175.0" />
+      <point x="3892.0" y="376.0" />
+      <point x="4144.002" y="376.0" />
+      <point x="4144.002" y="983.462" />
+      <point x="3922.398" y="983.462" />
+      <point x="-33.08773763711679" y="-26.99977898308748" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ViewQueueCommand" relationship="CREATE">
+      <point x="140.5" y="6.592714351073369" />
+      <point x="4418.255778738966" y="356.134687557344" />
+      <point x="4418.255778738966" y="1060.5861349537115" />
+      <point x="95.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlaySongCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="1.1751351394195808E-4" y="26.999904698017758" />
+      <point x="1926.372" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.Queue" relationship="TO_ONE">
+      <point x="14.999618936315073" y="-125.99953394568001" />
+      <point x="1226.116" y="771.0" />
+      <point x="811.774" y="771.0" />
+      <point x="-2.977081080643984E-4" y="-115.4999563764045" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeSearchPageCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="2.9804027076352213E-4" y="26.999984574057407" />
+      <point x="1799.149" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeSongDisplayPage" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="3.7462375621544197E-4" y="27.0" />
+      <point x="6387.193" y="639.754" />
+      <point x="4706.52" y="639.754" />
+      <point x="4706.52" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-1.1108614762633806E-4" y="-27.0" />
+      <point x="5632.716" y="795.396" />
+      <point x="4607.706" y="795.396" />
+      <point x="4607.706" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.MakeAdminUserCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="112.0" y="-31.671099991472715" />
+      <point x="3819.871" y="960.262" />
+      <point x="3819.871" y="712.0" />
+      <point x="4122.5" y="712.0" />
+      <point x="4122.5" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.useCase.PlaylistEntityContainer" relationship="CREATE">
+      <point x="-55.49993298150366" y="2.959069105074036" />
+      <point x="6068.295" y="700.237" />
+      <point x="6068.295" y="865.114" />
+      <point x="6211.849" y="865.114" />
+      <point x="6211.849" y="1540.0" />
+      <point x="1956.372" y="1540.0" />
+      <point x="1956.372" y="1416.0" />
+      <point x="3645.166" y="1416.0" />
+      <point x="-1.2478340613597538E-4" y="82.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.entity.Song" relationship="CREATE">
+      <point x="55.5" y="6.910507408974809E-5" />
+      <point x="6615.169" y="697.278" />
+      <point x="6615.169" y="1560.0" />
+      <point x="1206.709" y="1560.0" />
+      <point x="1.889136688077997E-4" y="126.4999133919107" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.FollowAndUnFollowUserCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="167.99976909151428" y="-6.040338848833926E-5" />
+      <point x="4867.0" y="889.425" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-22.58773763711679" y="-26.99977898308748" />
+      <point x="3932.898" y="997.962" />
+      <point x="4157.0" y="997.962" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.UserDisplayPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-1.986265979212476E-4" y="-14.5" />
+      <point x="5031.358" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeLogOutCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="7.492650729545858E-5" y="-27.0" />
+      <point x="5350.48" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SongDisplayPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-2.1334641132852994E-5" y="-14.499978116344778" />
+      <point x="4252.042" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.CreateNewPlayListPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="-4.8350174165534554E-4" y="-27.0" />
+      <point x="5682.524" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchUserCommand" target="com.artemifyMusicStudio.controller.searchCommand.SearchServiceCommand" relationship="GENERALIZATION">
+      <point x="-2.961001728181145E-4" y="14.499881023253295" />
+      <point x="5914.276" y="518.0" />
+      <point x="5385.649" y="518.0" />
+      <point x="-3.441578428464709E-4" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.CreateAccountPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="1.0023469349107472E-4" y="14.5" />
+      <point x="2144.343" y="313.0" />
+      <point x="5141.858" y="313.0" />
+      <point x="5141.858" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.AddToExistingPlaylistCommand" target="com.useCase.PlaylistManager" relationship="TO_ONE">
+      <point x="-1.1302687876659547" y="27.0" />
+      <point x="6523.049" y="639.754" />
+      <point x="6402.193" y="639.754" />
+      <point x="6402.193" y="673.0" />
+      <point x="5767.0" y="673.0" />
+      <point x="5767.0" y="1238.519" />
+      <point x="189.5" y="-4.6213044356591126E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="2.4972865321615245E-4" y="-26.999598908239477" />
+      <point x="2165.502" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" target="com.artemifyMusicStudio.controller.SimpleButtonCommandCreator" relationship="REALIZATION">
+      <point x="3.061424619090758E-4" y="26.99973229849485" />
+      <point x="912.776" y="573.0" />
+      <point x="1185.616" y="573.0" />
+      <point x="-69.76721921578928" y="26.999827647676" />
+    </edge>
+    <edge source="com.useCase.PlaylistManager" target="com.useCase.PlaylistEntityContainer" relationship="CREATE">
+      <point x="-189.49987741073073" y="196.98053786955643" />
+      <point x="5295.634" y="1435.5" />
+      <point x="5295.634" y="1416.0" />
+      <point x="3645.166" y="1416.0" />
+      <point x="-1.2478340613597538E-4" y="82.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.searchCommand.SearchPlaylistCommand" relationship="CREATE">
+      <point x="54.75" y="49.5" />
+      <point x="3323.540784737164" y="1341.0921268828995" />
+      <point x="5477.118570150542" y="1341.0921268828995" />
+      <point x="-0.0" y="14.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" target="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewPlaylistSongsCommand" relationship="CREATE">
+      <point x="140.5" y="0.0" />
+      <point x="1063.275693857538" y="454.16626770150515" />
+      <point x="1063.275693857538" y="1114.6091849193294" />
+      <point x="-116.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.ViewFollowersCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-8.864243227435509E-5" y="-27.0" />
+      <point x="5933.86" y="639.754" />
+      <point x="4706.52" y="639.754" />
+      <point x="4706.52" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.LoginPage" target="com.artemifyMusicStudio.controller.CommandItemType" relationship="TO_ONE">
+      <point x="142.4999567809582" y="28.03605309845551" />
+      <point x="3050.895" y="518.0" />
+      <point x="3050.895" y="495.0" />
+      <point x="3200.05" y="495.0" />
+      <point x="3200.05" y="328.0" />
+      <point x="2094.965" y="328.0" />
+      <point x="-1.6313374817400472E-4" y="-37.99977335266294" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ProfileAndSettingPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="-14.99952673186408" y="-14.5" />
+      <point x="3215.05" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlaySongCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="1.1751351394195808E-4" y="-27.0" />
+      <point x="1926.372" y="405.542" />
+      <point x="1973.965" y="405.542" />
+      <point x="1973.965" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.FollowAndUnFollowUserCommand" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="-2.3090848571882816E-4" y="26.99993959661151" />
+      <point x="4682.461" y="1063.04" />
+      <point x="5280.634" y="1063.04" />
+      <point x="5280.634" y="1525.0" />
+      <point x="6196.849" y="1525.0" />
+      <point x="6196.849" y="850.114" />
+      <point x="6119.0" y="850.114" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AdminPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="1.953688829416933E-4" y="-14.499821252699576" />
+      <point x="4024.072" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.MainPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-2.0817981157961185E-4" y="-14.49955805161187" />
+      <point x="3749.594" y="675.705" />
+      <point x="3574.303" y="675.705" />
+      <point x="3574.303" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.JumpToCreateNewPlaylistCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="140.49957675012865" y="-3.445061255433757E-4" />
+      <point x="4157.0" y="902.786" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchUserCommand" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="93.49970389982718" y="-1.1897674670535707E-4" />
+      <point x="6256.295" y="435.382" />
+      <point x="6256.295" y="614.754" />
+      <point x="6119.0" y="614.754" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PlaylistDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="14.999605085943585" y="-14.5" />
+      <point x="4824.52" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-41.473693857538024" y="26.99973229849485" />
+      <point x="871.302" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.RegularPopupCommand" target="com.artemifyMusicStudio.RegularPopupDialog" relationship="CREATE">
+      <point x="49.340778995278924" y="-27.0" />
+      <point x="1617.9974657460061" y="98.71177167250508" />
+      <point x="6703.179268787666" y="98.71177167250508" />
+      <point x="42.63050705132446" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.AddToNewPlaylistCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-3.1232620449372916E-4" y="26.999611347547784" />
+      <point x="2124.405" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeQueueCommand" relationship="CREATE">
+      <point x="140.5" y="29.39766306649608" />
+      <point x="1958.2386479216145" y="378.93963627276673" />
+      <point x="1958.2386479216145" y="698.1477709047442" />
+      <point x="1546.6194614837984" y="698.1477709047442" />
+      <point x="-0.0" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.AddToNewPlaylistCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="106.05968767379545" y="-27.0" />
+      <point x="2230.465" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeUserDisplayPage" relationship="CREATE">
+      <point x="140.5" y="20.262743330790954" />
+      <point x="1970.7229913963704" y="369.8047165370616" />
+      <point x="1970.7229913963704" y="688.2324439127441" />
+      <point x="-100.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchSongCommand" target="com.useCase.SongManager" relationship="TO_ONE">
+      <point x="81.00916004473493" y="14.5" />
+      <point x="5207.313" y="780.896" />
+      <point x="5238.48" y="780.896" />
+      <point x="5238.48" y="1376.0" />
+      <point x="5266.134" y="1376.0" />
+      <point x="5266.134" y="963.021" />
+      <point x="-192.9996084707018" y="-168.41219761057596" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PlaylistSongsDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="105.5" y="-4.6207319661561996E-4" />
+      <point x="167.29" y="364.652" />
+      <point x="167.29" y="147.981" />
+      <point x="573.655" y="147.981" />
+      <point x="573.655" y="124.212" />
+      <point x="1238.269" y="124.212" />
+      <point x="1238.269" y="191.0" />
+      <point x="4377.0" y="191.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.artemifyMusicStudio.controller.SimpleButtonCommandCreator" relationship="REALIZATION">
+      <point x="140.5" y="2.66441570090592E-4" />
+      <point x="826.0" y="499.133" />
+      <point x="826.0" y="573.0" />
+      <point x="1185.616" y="573.0" />
+      <point x="-69.76721921578928" y="26.999827647676" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.UploadSongPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="3.0053493355808314E-4" y="27.0" />
+      <point x="6156.339" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeAddToExistingPlaylistDisplayCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="3.347750161992735E-4" y="-27.0" />
+      <point x="2473.596" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLyricsCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="8.761266690271441E-5" y="-27.0" />
+      <point x="194.542" y="754.648" />
+      <point x="573.002" y="754.648" />
+      <point x="573.002" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.useCase.SongManager" target="com.entity.Song" relationship="CREATE">
+      <point x="-14.999608470701787" y="236.49980238942408" />
+      <point x="5971.349" y="1560.0" />
+      <point x="1206.709" y="1560.0" />
+      <point x="1.889136688077997E-4" y="126.4999133919107" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.userInputRequestCommand.BanUserCommand" relationship="CREATE">
+      <point x="109.5" y="15.0" />
+      <point x="3833.666" y="1286.5921268828995" />
+      <point x="3833.666" y="1091.783" />
+      <point x="-103.0" y="-8.448678632273413" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.SkipSongCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-62.19371895988024" y="-27.0" />
+      <point x="4691.52" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.PlayPreviousSongCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-116.5" y="-14.999890689352355" />
+      <point x="4217.0" y="759.88" />
+      <point x="4217.0" y="737.805" />
+      <point x="3862.0" y="737.805" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-10.499750271346784" y="-26.999598908239477" />
+      <point x="2155.002" y="730.106" />
+      <point x="2260.755" y="730.106" />
+      <point x="2260.755" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeLogOutCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-104.9999250734927" y="11.838518265491302" />
+      <point x="4607.706" y="762.735" />
+      <point x="4607.706" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RemoveFromQueueCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-123.49964001716299" y="4.141492974307766" />
+      <point x="-102.862" y="688.675" />
+      <point x="-102.862" y="-32.288" />
+      <point x="3581.5" y="-32.288" />
+      <point x="3581.5" y="240.80199999999996" />
+      <point x="3862.0" y="240.802" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.SkipSongCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-47.19371895988024" y="-27.0" />
+      <point x="4706.52" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.useCase.PlaylistManager" relationship="CREATE">
+      <point x="19.00006701849634" y="14.5" />
+      <point x="6568.669" y="815.79" />
+      <point x="6250.849" y="815.79" />
+      <point x="6250.849" y="1511.519" />
+      <point x="5290.134" y="1511.519" />
+      <point x="5290.134" y="1465.0" />
+      <point x="5238.48" y="1465.0" />
+      <point x="5238.48" y="1391.0" />
+      <point x="-189.49987741073073" y="152.48053786955643" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.EnableRegularUserHomePageCommand" relationship="CREATE">
+      <point x="140.5" y="24.830203198643517" />
+      <point x="1964.4808196589925" y="374.37217640491417" />
+      <point x="1964.4808196589925" y="983.2381875877456" />
+      <point x="-154.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.searchCommand.SearchUserCommand" relationship="CREATE">
+      <point x="44.75" y="49.5" />
+      <point x="3313.540784737164" y="1351.0921268828995" />
+      <point x="5914.276296100173" y="1351.0921268828995" />
+      <point x="-0.0" y="14.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.UserEntityContainer" relationship="CREATE">
+      <point x="-123.90738106368485" y="126.0" />
+      <point x="1087.209" y="1648.114" />
+      <point x="3078.852" y="1648.114" />
+      <point x="2.687658766262757E-4" y="71.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.AddToExistingPlaylistCommand" target="com.useCase.SongManager" relationship="TO_ONE">
+      <point x="-127.0" y="-1.4137952625409866" />
+      <point x="6266.795" y="417.882" />
+      <point x="6266.795" y="656.254" />
+      <point x="5755.716" y="656.254" />
+      <point x="5755.716" y="960.79" />
+      <point x="5248.48" y="960.79" />
+      <point x="5248.48" y="1376.0" />
+      <point x="5266.134" y="1376.0" />
+      <point x="5266.134" y="963.021" />
+      <point x="-192.9996084707018" y="-168.41219761057596" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchResultPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-2.17176170735911E-4" y="14.5" />
+      <point x="5295.022" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateNewPlaylistCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="-76.38144216473711" y="-26.99979941898073" />
+      <point x="3269.557" y="896.407" />
+      <point x="3819.871" y="896.407" />
+      <point x="3819.871" y="712.0" />
+      <point x="4122.5" y="712.0" />
+      <point x="4122.5" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.DeleteUserCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-102.99961489133602" y="2.989673522506564E-4" />
+      <point x="4927.313" y="903.79" />
+      <point x="4927.313" y="842.526" />
+      <point x="4157.0" y="842.526" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchResultPage" target="com.artemifyMusicStudio.controller.CommandItemType" relationship="TO_ONE">
+      <point x="-34.52221717617067" y="14.5" />
+      <point x="5260.5" y="495.0" />
+      <point x="3200.05" y="495.0" />
+      <point x="3200.05" y="328.0" />
+      <point x="2094.965" y="328.0" />
+      <point x="-1.6313374817400472E-4" y="-37.99977335266294" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeSongDisplayPage" relationship="CREATE">
+      <point x="-10.500476184236504" y="-38.5" />
+      <point x="1797.996" y="109.21177167250508" />
+      <point x="6832.0487617363415" y="109.21177167250508" />
+      <point x="6832.0487617363415" y="616.8171661157754" />
+      <point x="103.0" y="21.563353167113632" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-93.5" y="-4.739994393503366E-4" />
+      <point x="5195.313" y="840.79" />
+      <point x="5195.313" y="887.026" />
+      <point x="4882.961" y="887.026" />
+      <point x="4882.961" y="826.805" />
+      <point x="3862.0" y="826.805" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ProfileAndSettingPage" target="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" relationship="CREATE">
+      <point x="-39.49952673186408" y="-14.5" />
+      <point x="3190.55" y="466.0" />
+      <point x="140.5" y="11.833732298494851" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeLogOutCommand" relationship="CREATE">
+      <point x="70.24976190788175" y="-38.5" />
+      <point x="1878.7462380921183" y="304.7658081833374" />
+      <point x="5238.921283382328" y="304.7658081833374" />
+      <point x="5238.921283382328" y="750.8964817345087" />
+      <point x="-105.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.artemifyMusicStudio.controller.queueServiceCommand.PlayPreviousSongCommand" relationship="CREATE">
+      <point x="-140.5" y="-14.5" />
+      <point x="-132.362" y="484.6327335584299" />
+      <point x="-132.362" y="-76.788" />
+      <point x="4366.5" y="-76.788" />
+      <point x="-26.14544697637575" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.EnableAdminCommand" relationship="CREATE">
+      <point x="-130.8397894335094" y="38.5" />
+      <point x="1677.6566867507272" y="435.644172352324" />
+      <point x="1158.801865896286" y="435.644172352324" />
+      <point x="1158.801865896286" y="711.1477709047442" />
+      <point x="102.0" y="23.696577698047804" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.FollowerFollowingDisplayPage" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand" relationship="CREATE">
+      <point x="-14.999619407271894" y="-14.5" />
+      <point x="6427.935" y="175.0" />
+      <point x="3892.0" y="175.0" />
+      <point x="3892.0" y="376.0" />
+      <point x="4144.002" y="376.0" />
+      <point x="4144.002" y="983.462" />
+      <point x="3922.398" y="983.462" />
+      <point x="-33.08773763711679" y="-26.99977898308748" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UnBanUserCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-2.3714588496659417E-4" y="-38.0" />
+      <point x="5109.588" y="933.925" />
+      <point x="4882.961" y="933.925" />
+      <point x="4882.961" y="826.805" />
+      <point x="3862.0" y="826.805" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="-61.49956927925723" y="-4.4558651211445977E-4" />
+      <point x="2923.0" y="728.808" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.JumpToCreateNewPlaylistCommand" relationship="CREATE">
+      <point x="-0.0" y="38.5" />
+      <point x="1808.4964761842366" y="915.7653433202731" />
+      <point x="-140.5" y="12.978998814147644" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeQueueCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-4.614837985172926E-4" y="27.0" />
+      <point x="1546.619" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.userInputRequestCommand.AdminLogInCommand" relationship="CREATE">
+      <point x="-0.0" y="27.0" />
+      <point x="2895.3012206044004" y="911.3361716601366" />
+      <point x="604.447075274391" y="911.3361716601366" />
+      <point x="604.447075274391" y="555.921202095258" />
+      <point x="-98.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.PopUpInputDialogCommand" target="com.artemifyMusicStudio.InputPopUpDialog" relationship="TO_ONE">
+      <point x="33.407324635556506" y="27.0" />
+      <point x="1041.7091905318425" y="1271.5921268828995" />
+      <point x="-109.5" y="0.0" />
+    </edge>
+    <edge source="com.useCase.SongManager" target="com.useCase.SongEntityContainer" relationship="CREATE">
+      <point x="-192.9996084707018" y="-146.9141976105759" />
+      <point x="5295.634" y="984.519" />
+      <point x="5295.634" y="1338.592" />
+      <point x="2001.372" y="1338.592" />
+      <point x="2001.372" y="833.164" />
+      <point x="1384.616" y="833.164" />
+      <point x="1384.616" y="735.0" />
+      <point x="480.5" y="735.0" />
+      <point x="26.01085555096654" y="-81.99950527297676" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.CreateNewPlayListPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="14.999516498258345" y="26.999748644598526" />
+      <point x="5697.524" y="420.0" />
+      <point x="4195.0" y="420.0" />
+      <point x="4195.0" y="518.0" />
+      <point x="3065.895" y="518.0" />
+      <point x="3065.895" y="558.024" />
+      <point x="2923.0" y="558.024" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchResultPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="-2.17176170735911E-4" y="-14.499667017821366" />
+      <point x="5295.022" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand" target="com.artemifyMusicStudio.PageActivity" relationship="TO_ONE">
+      <point x="-88.49975027134678" y="4.0109176052283146E-4" />
+      <point x="2038.0" y="830.899" />
+      <point x="2038.0" y="890.022" />
+      <point x="2718.022" y="890.022" />
+      <point x="2718.022" y="773.305" />
+      <point x="2912.5" y="773.305" />
+      <point x="2912.5" y="621.0" />
+      <point x="3638.541" y="621.0" />
+      <point x="3638.541" y="647.205" />
+      <point x="-63.999979585317305" y="3.5000481990369963" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" target="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLyricsCommand" relationship="CREATE">
+      <point x="-140.5" y="0.0" />
+      <point x="-182.50149344347182" y="454.16626770150515" />
+      <point x="-182.50149344347182" y="846.4675166606509" />
+      <point x="-92.0" y="9.235083115710722" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.RegularLogInCommand" target="com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand" relationship="GENERALIZATION">
+      <point x="4.2808014119977145E-4" y="-14.499514562975946" />
+      <point x="15.638" y="606.0" />
+      <point x="442.302" y="606.0" />
+      <point x="-14.999704034878619" y="26.999636784462382" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ProfileAndSettingPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="4.7326813592007966E-4" y="-14.5" />
+      <point x="3230.05" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AddToExistingPlaylistDisplayPage" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand" relationship="CREATE">
+      <point x="131.0" y="-10.554894521341339" />
+      <point x="1305.769" y="355.644" />
+      <point x="1305.769" y="175.0" />
+      <point x="3892.0" y="175.0" />
+      <point x="3892.0" y="376.0" />
+      <point x="4144.002" y="376.0" />
+      <point x="4144.002" y="983.462" />
+      <point x="3922.398" y="983.462" />
+      <point x="-33.08773763711679" y="-26.99977898308748" />
+    </edge>
+    <edge source="com.useCase.SongEntityContainer" target="com.entity.Song" relationship="TO_MANY">
+      <point x="93.5" y="0.0" />
+      <point x="628.0015885999762" y="865.0125052729768" />
+      <point x="628.0015885999762" y="1403.6640866080893" />
+      <point x="-102.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AddToNewPlaylistPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="137.99984740128775" y="2.103448263316295" />
+      <point x="2660.022" y="718.232" />
+      <point x="2660.022" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.CreateAccountCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-105.99992955356265" y="2.992239476498071E-4" />
+      <point x="4157.0" y="842.526" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlaySongCommand" target="com.artemifyMusicStudio.PageActivity" relationship="TO_ONE">
+      <point x="89.5" y="-9.53019822418355E-5" />
+      <point x="2038.0" y="742.106" />
+      <point x="2038.0" y="890.022" />
+      <point x="2718.022" y="890.022" />
+      <point x="2718.022" y="773.305" />
+      <point x="2912.5" y="773.305" />
+      <point x="2912.5" y="621.0" />
+      <point x="3638.541" y="621.0" />
+      <point x="3638.541" y="647.205" />
+      <point x="-63.999979585317305" y="3.5000481990369963" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongInfCommand" relationship="CREATE">
+      <point x="-140.5" y="10.5" />
+      <point x="-206.50149344347182" y="509.6327335584299" />
+      <point x="-206.50149344347182" y="1613.5" />
+      <point x="1869.8718824864861" y="1613.5" />
+      <point x="1869.8718824864861" y="1196.759" />
+      <point x="3182.8517312341232" y="1196.759" />
+      <point x="3182.8517312341232" y="906.907" />
+      <point x="3599.487086258326" y="906.907" />
+      <point x="1.445657741843661" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlayPlaylistCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="-94.4997466614168" y="3.413253436974628E-4" />
+      <point x="4439.0" y="1044.545" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.PlayPreviousSongCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-116.5" y="1.0931064764463372E-4" />
+      <point x="4157.0" y="774.88" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.presenters.GermanPresenter" target="com.presenters.LanguagePresenter" relationship="GENERALIZATION">
+      <point x="-101.0" y="-36.02074339859681" />
+      <point x="182.29" y="197.701" />
+      <point x="182.29" y="230.0" />
+      <point x="288.38" y="230.0" />
+      <point x="4.978221472242694E-4" y="-38.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RemoveFromQueueCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="123.5" y="4.929743078037063E-4" />
+      <point x="588.002" y="684.534" />
+      <point x="588.002" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeUploadSongPageCommand" relationship="CREATE">
+      <point x="140.5" y="-12.041973206270654" />
+      <point x="4941.358198626598" y="337.5" />
+      <point x="-99.95476473062081" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.DeleteUserCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="-102.99961489133602" y="15.00029896735225" />
+      <point x="4867.0" y="918.79" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongInfCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-4.2851648231589934E-4" y="-27.0" />
+      <point x="3598.041" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UploadSongCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="100.0" y="-14.999514980409685" />
+      <point x="3083.161" y="932.195" />
+      <point x="3083.161" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UnBanUserCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="14.999762854115033" y="-38.0" />
+      <point x="5124.588" y="918.79" />
+      <point x="4867.0" y="918.79" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongInfCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="106.99957148351768" y="-9.498955546405341E-5" />
+      <point x="3831.0" y="851.493" />
+      <point x="3831.0" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLoginHistoryCommand" target="com.artemifyMusicStudio.controller.infoDisplayCommand.RegularPopupCommand" relationship="GENERALIZATION">
+      <point x="115.0" y="0.0" />
+      <point x="1541.5" y="618.2733646266216" />
+      <point x="-27.156686750727204" y="26.999999999999943" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongOnceCommand" target="com.artemifyMusicStudio.controller.queueServiceCommand.QueueServiceCommand" relationship="GENERALIZATION">
+      <point x="-114.999976416339" y="-14.999572465578467" />
+      <point x="3887.0" y="767.305" />
+      <point x="-91.19154065992097" y="14.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.useCase.UserEntityContainer" relationship="CREATE">
+      <point x="55.5" y="6.910507408974809E-5" />
+      <point x="6658.0" y="697.278" />
+      <point x="6658.0" y="1648.114" />
+      <point x="3078.852" y="1648.114" />
+      <point x="2.687658766262757E-4" y="71.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.SongManager" relationship="CREATE">
+      <point x="125.99961893631507" y="4.660543199861422E-4" />
+      <point x="6646.0" y="936.664" />
+      <point x="6646.0" y="747.0" />
+      <point x="6406.693" y="747.0" />
+      <point x="6406.693" y="689.737" />
+      <point x="6051.36" y="689.737" />
+      <point x="65.01139152929773" y="-236.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.MainPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="-56.5" y="-1.4815580516118416" />
+      <point x="3680.094" y="742.144" />
+      <point x="3680.094" y="614.271" />
+      <point x="3913.0" y="614.271" />
+      <point x="3913.0" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="93.49988891385237" y="-4.739994393503366E-4" />
+      <point x="5739.216" y="840.79" />
+      <point x="5739.216" y="652.559" />
+      <point x="5360.98" y="652.559" />
+      <point x="5360.98" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator" target="com.artemifyMusicStudio.controller.stateChangedActionCommand.AddToQueueCommand" relationship="CREATE">
+      <point x="0.0" y="-27.0" />
+      <point x="2421.755441331039" y="-47.288" />
+      <point x="-192.00149344347182" y="-47.288" />
+      <point x="-192.00149344347182" y="807.4675166606509" />
+      <point x="-102.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.useCase.Queue" relationship="TO_ONE">
+      <point x="3.121183719088094E-4" y="27.0" />
+      <point x="150.79" y="634.979" />
+      <point x="826.0" y="634.979" />
+      <point x="826.0" y="771.0" />
+      <point x="811.774" y="771.0" />
+      <point x="-2.977081080643984E-4" y="-115.4999563764045" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.StartLogInCommand" relationship="CREATE">
+      <point x="43.999523815763496" y="-38.5" />
+      <point x="1852.496" y="119.71177167250508" />
+      <point x="6806.5487617363415" y="119.71177167250508" />
+      <point x="6806.5487617363415" y="656.254" />
+      <point x="6281.795" y="656.254" />
+      <point x="45.713125084242165" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.UserDisplayPage" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand" relationship="CREATE">
+      <point x="-15.000198626597921" y="-14.5" />
+      <point x="5016.358" y="376.0" />
+      <point x="4144.002" y="376.0" />
+      <point x="4144.002" y="983.462" />
+      <point x="3922.398" y="983.462" />
+      <point x="-33.08773763711679" y="-26.99977898308748" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AdminPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="-14.999804631117058" y="-14.499821252699576" />
+      <point x="4009.072" y="518.0" />
+      <point x="3065.895" y="518.0" />
+      <point x="3065.895" y="558.024" />
+      <point x="2923.0" y="558.024" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateRegularAccountCommand" target="com.useCase.PlaylistManager" relationship="TO_ONE">
+      <point x="-25.49987215814963" y="27.0" />
+      <point x="6068.295" y="673.0" />
+      <point x="5767.0" y="673.0" />
+      <point x="5767.0" y="1238.519" />
+      <point x="189.5" y="-4.6213044356591126E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeNewPlaylistPageCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="7.376851499429904E-6" y="-26.999690400606482" />
+      <point x="5771.44" y="482.382" />
+      <point x="6241.295" y="482.382" />
+      <point x="6241.295" y="639.754" />
+      <point x="4706.52" y="639.754" />
+      <point x="4706.52" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.MakeAdminUserCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="8.104024117661083" y="-38.0" />
+      <point x="3417.661" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchServiceCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="7.872655842156746" y="-26.99997378132406" />
+      <point x="5393.522" y="328.0" />
+      <point x="4157.0" y="328.0" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.useCase.SongManager" relationship="CREATE">
+      <point x="-47.99993298150366" y="14.5" />
+      <point x="6501.669" y="747.0" />
+      <point x="6406.693" y="747.0" />
+      <point x="6406.693" y="689.737" />
+      <point x="6051.36" y="689.737" />
+      <point x="65.01139152929773" y="-236.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.userInputRequestCommand.MakeAdminUserCommand" relationship="CREATE">
+      <point x="109.5" y="0.0" />
+      <point x="3473.438442164737" y="1271.5921268828995" />
+      <point x="63.88146628239792" y="38.000000000000114" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SongDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator" relationship="CREATE">
+      <point x="-15.000021334641133" y="-14.499978116344778" />
+      <point x="4237.042" y="583.0" />
+      <point x="4112.0" y="583.0" />
+      <point x="4112.0" y="392.269" />
+      <point x="147.99955866896107" y="-3.7511468804041215E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SongDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="80.99997866535887" y="2.188365522215463E-5" />
+      <point x="4377.0" y="643.529" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateRegularAccountCommand" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="57.287127841850634" y="27.0" />
+      <point x="6151.082" y="614.754" />
+      <point x="6119.0" y="614.754" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokePlaylistDisplayPage" relationship="CREATE">
+      <point x="140.5" y="2.025254483220806" />
+      <point x="4956.178144242672" y="351.56722768949146" />
+      <point x="4956.178144242672" y="1003.5402823314653" />
+      <point x="108.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" target="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewCreatorCommand" relationship="CREATE">
+      <point x="-140.5" y="-9.5" />
+      <point x="-226.00149344347182" y="444.66626770150515" />
+      <point x="-226.00149344347182" y="1688.614" />
+      <point x="1844.3718824864861" y="1688.614" />
+      <point x="1844.3718824864861" y="1095.1091849193294" />
+      <point x="2539.6064172296033" y="1095.1091849193294" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-2.206044005106378E-4" y="-26.999555656760435" />
+      <point x="2895.301" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="3.121183718803877E-4" y="-26.99973355842991" />
+      <point x="150.79" y="-32.288" />
+      <point x="3581.5" y="-32.288" />
+      <point x="3581.5" y="240.80199999999996" />
+      <point x="3862.0" y="240.802" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.useCase.PlaylistManager" target="com.entity.Playlist" relationship="CREATE">
+      <point x="-189.49987741073073" y="137.48053786955643" />
+      <point x="5295.634" y="1376.0" />
+      <point x="5295.634" y="1358.0" />
+      <point x="1915.872" y="1358.0" />
+      <point x="1915.872" y="926.164" />
+      <point x="1548.119" y="926.164" />
+      <point x="1548.119" y="1222.058" />
+      <point x="101.99963702428829" y="-3.339805555242492E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="10.500249728653216" y="-26.999598908239477" />
+      <point x="2176.002" y="761.126" />
+      <point x="2899.801" y="761.126" />
+      <point x="2899.801" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchSongCommand" target="com.artemifyMusicStudio.controller.searchCommand.SearchServiceCommand" relationship="GENERALIZATION">
+      <point x="1.6004473491193494E-4" y="-14.499766416579178" />
+      <point x="5126.304" y="518.0" />
+      <point x="5385.649" y="518.0" />
+      <point x="-3.441578428464709E-4" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.SkipSongCommand" target="com.artemifyMusicStudio.controller.queueServiceCommand.QueueServiceCommand" relationship="GENERALIZATION">
+      <point x="-89.99971895988074" y="-9.735227473367104" />
+      <point x="4637.706" y="708.5" />
+      <point x="4637.706" y="728.0" />
+      <point x="3887.0" y="728.0" />
+      <point x="-91.19154065992097" y="14.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.LoginPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-4.3219041799602564E-5" y="-37.99994690154449" />
+      <point x="2848.479" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeProfileAndSettingPageCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="3.169377591802913E-4" y="-27.0" />
+      <point x="3248.161" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.useCase.UserAccess" target="com.entity.User" relationship="CREATE">
+      <point x="-191.99962025976583" y="373.88618614082725" />
+      <point x="4055.0" y="1603.0" />
+      <point x="4055.0" y="1582.0" />
+      <point x="1702.672" y="1582.0" />
+      <point x="-2.6722100778897584E-4" y="280.4997407411572" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UploadSongCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="1.1586588834688882E-4" y="-26.999514980409685" />
+      <point x="2280.105" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="17.084430720742603" y="-14.5" />
+      <point x="3023.479" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" target="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLoginHistoryCommand" relationship="CREATE">
+      <point x="15.000306142461909" y="27.0" />
+      <point x="927.776" y="499.133" />
+      <point x="1331.3150679645362" y="499.133" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="140.5" y="-25.466733558429894" />
+      <point x="588.002" y="473.666" />
+      <point x="588.002" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UnBanUserCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-103.0" y="-29.981260417036424" />
+      <point x="4581.961" y="959.04" />
+      <point x="4581.961" y="985.262" />
+      <point x="4157.0" y="985.262" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.PopUpInputDialogCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="1.3410371411737287E-4" y="27.0" />
+      <point x="1008.302" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.presenters.PresenterCreator" target="com.presenters.EnglishPresenter" relationship="CREATE">
+      <point x="-187.0" y="-3.979485804848082E-4" />
+      <point x="3803.666" y="1174.912" />
+      <point x="3803.666" y="1091.783" />
+      <point x="3194.852" y="1091.783" />
+      <point x="3194.852" y="1174.259" />
+      <point x="2018.872" y="1174.259" />
+      <point x="2018.872" y="797.664" />
+      <point x="1003.802" y="797.664" />
+      <point x="1003.802" y="1066.0" />
+      <point x="85.042" y="1066.0" />
+      <point x="85.042" y="703.675" />
+      <point x="-117.862" y="703.675" />
+      <point x="-117.862" y="167.201" />
+      <point x="-100.99996555916026" y="1.8800345677050245E-4" />
+    </edge>
+    <edge source="com.useCase.PlaylistEntityContainer" target="com.entity.Playlist" relationship="TO_MANY">
+      <point x="0.0" y="-82.0" />
+      <point x="3645.1661247834063" y="1094.7828672537833" />
+      <point x="3537.6661247834063" y="1094.7828672537833" />
+      <point x="3537.6661247834063" y="1222.0583339805555" />
+      <point x="102.00000000000023" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.AdminLogInCommand" target="com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand" relationship="GENERALIZATION">
+      <point x="-27.947075274390727" y="14.499797904742081" />
+      <point x="684.5" y="606.0" />
+      <point x="442.302" y="606.0" />
+      <point x="-14.999704034878619" y="26.999636784462382" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand" target="com.presenters.PresenterCreator" relationship="CREATE">
+      <point x="2.9596512138141406E-4" y="26.999636784462382" />
+      <point x="457.302" y="656.0" />
+      <point x="4892.813" y="656.0" />
+      <point x="4892.813" y="947.79" />
+      <point x="4958.448" y="947.79" />
+      <point x="4958.448" y="1093.586" />
+      <point x="4610.807" y="1093.586" />
+      <point x="-1.434473815606907E-4" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchServiceCommand" target="com.artemifyMusicStudio.controller.searchCommand.SearchResultContainer" relationship="CREATE">
+      <point x="-29.669344157843625" y="27.0" />
+      <point x="5355.98" y="529.9639469015444" />
+      <point x="4651.206" y="529.9639469015444" />
+      <point x="4651.206" y="696.822900845359" />
+      <point x="4207.5" y="696.822900845359" />
+      <point x="4207.5" y="879.425" />
+      <point x="4416.255778738966" y="879.425" />
+      <point x="4416.255778738966" y="1015.5446586746564" />
+      <point x="139.5" y="-1.9171088497466826" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.PopUpInputDialogCommand" target="com.artemifyMusicStudio.InputPopUpDialog" relationship="CREATE">
+      <point x="43.407324635556506" y="27.0" />
+      <point x="1051.7091905318425" y="1212.0921268828995" />
+      <point x="3268.790784737164" y="1212.0921268828995" />
+      <point x="0.0" y="-49.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchServiceCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-102.5" y="-9.738973781324034" />
+      <point x="5126.858" y="464.353" />
+      <point x="5126.858" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.presenters.LanguagePresenter" target="com.presenters.LanguageType" relationship="TO_ONE">
+      <point x="0.0" y="-38.0" />
+      <point x="288.37950217785277" y="244.22822803229514" />
+      <point x="5620.148771663551" y="244.22822803229514" />
+      <point x="0.0" y="-38.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.CommandItemType" relationship="TO_ONE">
+      <point x="109.5" y="44.32087311710052" />
+      <point x="5225.804" y="1315.913" />
+      <point x="5225.804" y="716.896" />
+      <point x="5238.48" y="716.896" />
+      <point x="5238.48" y="495.0" />
+      <point x="3200.05" y="495.0" />
+      <point x="3200.05" y="328.0" />
+      <point x="2094.965" y="328.0" />
+      <point x="-1.6313374817400472E-4" y="-37.99977335266294" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.AddToExistingPlaylistCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-15.000268787665846" y="-26.999795262541" />
+      <point x="6509.179" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.UserAccess" relationship="CREATE">
+      <point x="-126.0" y="15.000466054319986" />
+      <point x="1067.616" y="951.664" />
+      <point x="1067.616" y="1663.114" />
+      <point x="6685.5" y="1663.114" />
+      <point x="6685.5" y="815.79" />
+      <point x="6616.5" y="815.79" />
+      <point x="171.2103797402342" y="-401.4998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.MakeAdminUserCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="22.24602411766091" y="-38.0" />
+      <point x="3431.803" y="811.022" />
+      <point x="3831.0" y="811.022" />
+      <point x="3831.0" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.userInputRequestCommand.RegularLogInCommand" relationship="CREATE">
+      <point x="39.13984614422452" y="27.0" />
+      <point x="2934.441066748625" y="1157.6091849193294" />
+      <point x="1858.8718824864861" y="1157.6091849193294" />
+      <point x="1858.8718824864861" y="1672.614" />
+      <point x="-201.50149344347182" y="1672.614" />
+      <point x="-201.50149344347182" y="656.6745145629759" />
+      <point x="-101.0" y="0.0" />
+    </edge>
+    <edge source="com.useCase.UserEntityContainer" target="com.entity.User" relationship="TO_MANY">
+      <point x="-91.0" y="18.930333115589065" />
+      <point x="123.5" y="-204.12625925884277" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.AddToNewPlaylistCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="116.9996876737955" y="19.433611347547867" />
+      <point x="2870.022" y="647.205" />
+      <point x="2870.022" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UploadSongCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-10.499884134111653" y="-26.999514980409685" />
+      <point x="2269.605" y="603.771" />
+      <point x="3831.0" y="603.771" />
+      <point x="3831.0" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ViewFollowingsCommand" relationship="CREATE">
+      <point x="140.5" y="11.160174218925931" />
+      <point x="4164.546880192635" y="360.7021474251966" />
+      <point x="4164.546880192635" y="940.762003565478" />
+      <point x="-108.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PageActivity" target="com.artemifyMusicStudio.controller.CommandItemType" relationship="TO_MANY">
+      <point x="-14.999979585317305" y="-14.499951800963004" />
+      <point x="3735.888" y="495.0" />
+      <point x="3200.05" y="495.0" />
+      <point x="3200.05" y="328.0" />
+      <point x="2094.965" y="328.0" />
+      <point x="-1.6313374817400472E-4" y="-37.99977335266294" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.UserDisplayPage" target="com.artemifyMusicStudio.controller.stateChangedActionCommand.FollowAndUnFollowUserCommand" relationship="CREATE">
+      <point x="-13.55435867133292" y="14.5" />
+      <point x="5017.803839955265" y="612.5588979908586" />
+      <point x="4855.713718959881" y="612.5588979908586" />
+      <point x="4855.713718959881" y="783.396" />
+      <point x="4682.461230908486" y="783.396" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="com.gateway.SerGateway" target="com.gateway.IGateway" relationship="GENERALIZATION">
+      <point x="0.0" y="-71.0" />
+      <point x="1006.2495235630572" y="56.21177167250507" />
+      <point x="-174.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="92.0" y="7.5956367844623855" />
+      <point x="588.002" y="548.921" />
+      <point x="588.002" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PlaylistDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator" relationship="CREATE">
+      <point x="-15.000394914056415" y="-14.5" />
+      <point x="4794.52" y="466.0" />
+      <point x="140.5" y="11.833732298494851" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AddToExistingPlaylistDisplayPage" target="com.artemifyMusicStudio.controller.pageTransitionCommand.AddToExistingPlaylistCommand" relationship="CREATE">
+      <point x="-3.410605131648481E-13" y="-14.5" />
+      <point x="580.7666570871179" y="341.69889452134134" />
+      <point x="6387.179268787666" y="341.69889452134134" />
+      <point x="6387.179268787666" y="419.295795262541" />
+      <point x="-127.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokePlaylistDisplayPage" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-108.0" y="-3.4952823314653187" />
+      <point x="4157.0" y="1000.045" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.QueueDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="14.999731715565758" y="-14.499897990858585" />
+      <point x="4520.206" y="518.0" />
+      <point x="3065.895" y="518.0" />
+      <point x="3065.895" y="558.024" />
+      <point x="2923.0" y="558.024" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.userInputRequestCommand.UnBanUserCommand" relationship="CREATE">
+      <point x="109.5" y="25.5" />
+      <point x="3850.166" y="1297.0921268828995" />
+      <point x="3850.166" y="1226.9123979485805" />
+      <point x="4828.807143447381" y="1226.9123979485805" />
+      <point x="4828.807143447381" y="1074.5446586746564" />
+      <point x="5109.588237145885" y="1074.5446586746564" />
+      <point x="0.0" y="38.000000000000114" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.artemifyMusicStudio.controller.queueServiceCommand.SkipSongCommand" relationship="CREATE">
+      <point x="10.425632126953417" y="27.0" />
+      <point x="161.2153200085815" y="755.2352274733671" />
+      <point x="4753.713718959881" y="755.2352274733671" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PlaylistSongsDisplayPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="6.155111372407873E-5" y="14.499537926803384" />
+      <point x="21.222" y="393.699" />
+      <point x="942.75" y="393.699" />
+      <point x="942.75" y="344.699" />
+      <point x="1400.497" y="344.699" />
+      <point x="1400.497" y="208.0" />
+      <point x="2039.843" y="208.0" />
+      <point x="2039.843" y="313.0" />
+      <point x="5141.858" y="313.0" />
+      <point x="5141.858" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateNewPlaylistCommand" relationship="CREATE">
+      <point x="59.63984614422452" y="27.0" />
+      <point x="2954.941066748625" y="1134.1091849193294" />
+      <point x="-115.5" y="-0.1496144996513067" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.QueueDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" relationship="CREATE">
+      <point x="0.0" y="14.5" />
+      <point x="4505.206268284434" y="659.5588979908586" />
+      <point x="171.2153200085815" y="659.5588979908586" />
+      <point x="20.425632126953417" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeProfileAndSettingPageCommand" relationship="CREATE">
+      <point x="58.999523815763496" y="-38.5" />
+      <point x="1867.496" y="240.80199999999996" />
+      <point x="3363.981716222846" y="240.80199999999996" />
+      <point x="115.82103316060511" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ViewQueuePage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="-14.9995248661794" y="-14.499566959503227" />
+      <point x="3490.303" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.searchCommand.SearchSongCommand" relationship="CREATE">
+      <point x="64.75" y="49.5" />
+      <point x="3333.540784737164" y="1331.0921268828995" />
+      <point x="5232.362641691164" y="1331.0921268828995" />
+      <point x="5232.362641691164" y="576.3187664165791" />
+      <point x="96.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateNewPlaylistCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-65.88144216473711" y="-26.99979941898073" />
+      <point x="3280.057" y="927.695" />
+      <point x="3417.661" y="927.695" />
+      <point x="3417.661" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PageActivity" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="CREATE">
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+      <point x="3750.888" y="619.205" />
+      <point x="2293.28" y="619.205" />
+      <point x="2293.28" y="691.0" />
+      <point x="1235.616" y="691.0" />
+      <point x="24.499618936315073" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AddToNewPlaylistPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="137.99984740128775" y="17.103448263316295" />
+      <point x="2923.0" y="733.232" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlayPlaylistCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-66.97174666141655" y="-26.999658674656416" />
+      <point x="4496.961" y="869.925" />
+      <point x="4217.0" y="869.925" />
+      <point x="4217.0" y="826.805" />
+      <point x="3862.0" y="826.805" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ProfileAndSettingPage" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand" relationship="CREATE">
+      <point x="15.00047326813592" y="-14.5" />
+      <point x="3245.05" y="376.0" />
+      <point x="4144.002" y="376.0" />
+      <point x="4144.002" y="983.462" />
+      <point x="3922.398" y="983.462" />
+      <point x="-33.08773763711679" y="-26.99977898308748" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-10.500381063684927" y="-125.99953394568001" />
+      <point x="1200.616" y="454.964" />
+      <point x="1926.372" y="454.964" />
+      <point x="1926.372" y="405.542" />
+      <point x="1973.965" y="405.542" />
+      <point x="1973.965" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeNewPlaylistPageCommand" relationship="CREATE">
+      <point x="68.4995238157635" y="-38.5" />
+      <point x="1876.996" y="265.302" />
+      <point x="2053.343" y="265.302" />
+      <point x="2053.343" y="144.768" />
+      <point x="6663.179268787666" y="144.768" />
+      <point x="6663.179268787666" y="495.882" />
+      <point x="5932.36" y="495.882" />
+      <point x="5932.36" y="560.0336904006065" />
+      <point x="132.0" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.ViewFollowingsCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-108.49988019263583" y="-3.565478095879371E-6" />
+      <point x="4157.0" y="940.762" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.CreateAccountPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="87.0" y="-2.590759408546319" />
+      <point x="2645.022" y="280.711" />
+      <point x="2645.022" y="420.0" />
+      <point x="4195.0" y="420.0" />
+      <point x="4195.0" y="518.0" />
+      <point x="3065.895" y="518.0" />
+      <point x="3065.895" y="558.024" />
+      <point x="2923.0" y="558.024" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.userInputRequestCommand.AddToNewPlaylistCommand" relationship="CREATE">
+      <point x="0.0" y="-27.0" />
+      <point x="2895.3012206044004" y="627.7713886524522" />
+      <point x="117.0" y="0.0" />
+    </edge>
+    <edge source="com.useCase.SongManager" target="com.useCase.SongEntityContainer" relationship="TO_ONE">
+      <point x="9.500391529298213" y="236.5" />
+      <point x="5995.849" y="1627.5" />
+      <point x="611.5015885999762" y="1627.5" />
+      <point x="611.5015885999762" y="874.5125052729768" />
+      <point x="93.5" y="9.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.presenters.PresenterCreator" relationship="CREATE">
+      <point x="-10.499932981503662" y="14.5" />
+      <point x="6539.169" y="780.896" />
+      <point x="5458.48" y="780.896" />
+      <point x="5458.48" y="694.518" />
+      <point x="5248.98" y="694.518" />
+      <point x="5248.98" y="656.0" />
+      <point x="4892.813" y="656.0" />
+      <point x="4892.813" y="947.79" />
+      <point x="4958.448" y="947.79" />
+      <point x="4958.448" y="1093.586" />
+      <point x="4610.807" y="1093.586" />
+      <point x="-1.434473815606907E-4" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="CREATE">
+      <point x="6.701849633827806E-5" y="-14.49993089492591" />
+      <point x="6549.669" y="672.778" />
+      <point x="2297.465" y="672.778" />
+      <point x="2297.465" y="691.0" />
+      <point x="1235.616" y="691.0" />
+      <point x="24.499618936315073" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.PlaylistManager" relationship="CREATE">
+      <point x="125.99961893631507" y="41.83646605432" />
+      <point x="1885.872" y="978.5" />
+      <point x="1885.872" y="1465.0" />
+      <point x="5238.48" y="1465.0" />
+      <point x="5238.48" y="1391.0" />
+      <point x="-189.49987741073073" y="152.48053786955643" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator" target="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongOnceCommand" relationship="CREATE">
+      <point x="-140.5" y="-9.5" />
+      <point x="-127.362" y="489.6327335584299" />
+      <point x="-127.362" y="-71.788" />
+      <point x="4098.071804631118" y="-71.788" />
+      <point x="72.06982821477868" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.RegularUserHomePage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="14.999534253993943" y="-14.5" />
+      <point x="1516.997" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.FollowerFollowingDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="3.805927281064214E-4" y="-14.5" />
+      <point x="6442.935" y="191.0" />
+      <point x="4377.0" y="191.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateNewPlaylistCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="115.4995578352632" y="2.0058101927133976E-4" />
+      <point x="3534.557" y="1134.259" />
+      <point x="3534.557" y="970.762" />
+      <point x="4131.371" y="970.762" />
+      <point x="4131.371" y="842.526" />
+      <point x="3862.0" y="842.526" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.BanUserCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="102.99981886220576" y="4.854321367726698" />
+      <point x="4439.0" y="1105.086" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlayPlaylistCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="2.533385832066415E-4" y="-26.999658674656416" />
+      <point x="4563.933" y="1000.045" />
+      <point x="4157.0" y="1000.045" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.SongManager" relationship="TO_ONE">
+      <point x="125.99961893631507" y="-87.14153394567995" />
+      <point x="1986.372" y="849.522" />
+      <point x="1986.372" y="1376.0" />
+      <point x="5266.134" y="1376.0" />
+      <point x="5266.134" y="963.021" />
+      <point x="-192.9996084707018" y="-168.41219761057596" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.userInputRequestCommand.PopUpInputDialogCommand" relationship="CREATE">
+      <point x="-140.5" y="-0.5079567485209964" />
+      <point x="2658.522" y="865.8985989082395" />
+      <point x="2658.522" y="775.1060953019822" />
+      <point x="2283.596" y="775.1060953019822" />
+      <point x="2283.596" y="700.648" />
+      <point x="1735.6487019597291" y="700.648" />
+      <point x="1735.6487019597291" y="774.1477709047442" />
+      <point x="1406.116" y="774.1477709047442" />
+      <point x="1406.116" y="666.5" />
+      <point x="119.5" y="12.021245494072446" />
+    </edge>
+    <edge source="com.presenters.EnglishPresenter" target="com.presenters.LanguagePresenter" relationship="GENERALIZATION">
+      <point x="3.4440839737470696E-5" y="38.0" />
+      <point x="22.938" y="230.0" />
+      <point x="288.38" y="230.0" />
+      <point x="4.978221472242694E-4" y="-38.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.UploadSongPage" target="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" relationship="CREATE">
+      <point x="-14.999699465066442" y="27.0" />
+      <point x="6141.339" y="375.577" />
+      <point x="5697.524" y="375.577" />
+      <point x="5697.524" y="420.0" />
+      <point x="4195.0" y="420.0" />
+      <point x="4195.0" y="518.0" />
+      <point x="3065.895" y="518.0" />
+      <point x="3065.895" y="558.024" />
+      <point x="2923.0" y="558.024" />
+      <point x="2923.0" y="811.022" />
+      <point x="2952.395" y="811.022" />
+      <point x="57.09377939559954" y="-26.999555656760435" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.gateway.IGateway" relationship="TO_ONE">
+      <point x="15.000067018496338" y="-14.5" />
+      <point x="6564.669" y="606.3171661157754" />
+      <point x="6821.5487617363415" y="606.3171661157754" />
+      <point x="6821.5487617363415" y="56.21177167250507" />
+      <point x="174.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.StartLogInCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="5.213125084242165" y="-26.999977027524096" />
+      <point x="6241.295" y="639.754" />
+      <point x="4706.52" y="639.754" />
+      <point x="4706.52" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.entity.Playlist" relationship="CREATE">
+      <point x="9.500067018496338" y="14.5" />
+      <point x="6559.169" y="805.79" />
+      <point x="6237.349" y="805.79" />
+      <point x="6237.349" y="1502.019" />
+      <point x="3571.5" y="1502.019" />
+      <point x="3571.5" y="1358.0" />
+      <point x="1915.872" y="1358.0" />
+      <point x="1915.872" y="926.164" />
+      <point x="1548.119" y="926.164" />
+      <point x="1548.119" y="1222.058" />
+      <point x="101.99963702428829" y="-3.339805555242492E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.useCase.SongEntityContainer" relationship="CREATE">
+      <point x="6.701849633827806E-5" y="14.5" />
+      <point x="6549.669" y="795.396" />
+      <point x="5926.86" y="795.396" />
+      <point x="5926.86" y="865.114" />
+      <point x="5739.216" y="865.114" />
+      <point x="5739.216" y="973.521" />
+      <point x="5295.634" y="973.521" />
+      <point x="5295.634" y="1338.592" />
+      <point x="2001.372" y="1338.592" />
+      <point x="2001.372" y="833.164" />
+      <point x="1384.616" y="833.164" />
+      <point x="1384.616" y="735.0" />
+      <point x="480.5" y="735.0" />
+      <point x="26.01085555096654" y="-81.99950527297676" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-55.8527847371638" y="-49.5" />
+      <point x="3212.938" y="927.695" />
+      <point x="3417.661" y="927.695" />
+      <point x="3417.661" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AddToNewPlaylistPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-1.5259871224770905E-4" y="-26.999551736683657" />
+      <point x="2439.649" y="636.705" />
+      <point x="2688.479" y="636.705" />
+      <point x="2688.479" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.useCase.UserAccess" target="com.useCase.UserEntityContainer" relationship="CREATE">
+      <point x="192.0" y="1.861408272816334E-4" />
+      <point x="6658.0" y="1229.114" />
+      <point x="6658.0" y="1648.114" />
+      <point x="3078.852" y="1648.114" />
+      <point x="2.687658766262757E-4" y="71.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.EnableAdminCommand" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="-44.22758859997623" y="26.999806793303605" />
+      <point x="663.274" y="1603.0" />
+      <point x="4040.0" y="1603.0" />
+      <point x="4040.0" y="1525.0" />
+      <point x="6196.849" y="1525.0" />
+      <point x="6196.849" y="850.114" />
+      <point x="6119.0" y="850.114" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.presenters.LanguagePresenter" target="com.presenters.SimplePresenter" relationship="REALIZATION">
+      <point x="93.5" y="-38.0" />
+      <point x="-24.77530280328972" y="14.500000000000014" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.ShuffleQueueCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="2.837771539816458E-4" y="26.999919788137277" />
+      <point x="3243.982" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.EnableAdminCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="4.114000237223081E-4" y="-27.0" />
+      <point x="707.502" y="606.273" />
+      <point x="1084.276" y="606.273" />
+      <point x="1084.276" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.AddToQueueCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="4.93443471810906E-4" y="-26.999516660650897" />
+      <point x="-68.501" y="754.648" />
+      <point x="573.002" y="754.648" />
+      <point x="573.002" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.EnableAdminCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="4.114000237223081E-4" y="26.999806793303605" />
+      <point x="707.502" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.ShuffleQueueCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="100.06828377715419" y="-27.0" />
+      <point x="3344.05" y="603.771" />
+      <point x="3831.0" y="603.771" />
+      <point x="3831.0" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateRegularAccountCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="-10.499872158149628" y="27.0" />
+      <point x="6083.295" y="607.52" />
+      <point x="5591.619" y="607.52" />
+      <point x="5591.619" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.presenters.EnglishPresenter" relationship="CREATE">
+      <point x="-126.0" y="4.660543199861422E-4" />
+      <point x="1023.302" y="936.664" />
+      <point x="1023.302" y="1066.0" />
+      <point x="85.042" y="1066.0" />
+      <point x="85.042" y="703.675" />
+      <point x="-117.862" y="703.675" />
+      <point x="-117.862" y="167.201" />
+      <point x="-100.99996555916026" y="1.8800345677050245E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.BanUserCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-1.811377942431136E-4" y="-37.999678632273344" />
+      <point x="4053.398" y="997.962" />
+      <point x="4157.0" y="997.962" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.userInputRequestCommand.UploadSongCommand" relationship="CREATE">
+      <point x="0.0" y="27.0" />
+      <point x="2895.3012206044004" y="922.695" />
+      <point x="100.0" y="-24.499514980409685" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.BanUserCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="77.97281886220571" y="-37.999678632273344" />
+      <point x="4131.371" y="842.526" />
+      <point x="3862.0" y="842.526" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.UserDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="14.999801373402079" y="-14.5" />
+      <point x="5046.358" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeUploadSongPageCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-110.8129633572189" y="-26.99998880756607" />
+      <point x="4930.5" y="639.754" />
+      <point x="4706.52" y="639.754" />
+      <point x="4706.52" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.userInputRequestCommand.DeleteUserCommand" relationship="CREATE">
+      <point x="0.0" y="49.5" />
+      <point x="3268.790784737164" y="1435.5" />
+      <point x="4197.046880192635" y="1435.5" />
+      <point x="4197.046880192635" y="1582.0" />
+      <point x="5717.094877410731" y="1582.0" />
+      <point x="5717.094877410731" y="910.0" />
+      <point x="103.0" y="6.210298967352287" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLoginHistoryCommand" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="23.300932035463802" y="26.999635373378396" />
+      <point x="1354.616" y="1603.0" />
+      <point x="4040.0" y="1603.0" />
+      <point x="4040.0" y="1525.0" />
+      <point x="6196.849" y="1525.0" />
+      <point x="6196.849" y="850.114" />
+      <point x="6119.0" y="850.114" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.entity.User" relationship="CREATE">
+      <point x="29.50006701849634" y="14.5" />
+      <point x="6579.169" y="801.29" />
+      <point x="6696.0" y="801.29" />
+      <point x="6696.0" y="1673.614" />
+      <point x="4050.5" y="1673.614" />
+      <point x="4050.5" y="1582.0" />
+      <point x="1702.672" y="1582.0" />
+      <point x="-2.6722100778897584E-4" y="280.4997407411572" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlaySongCommand" target="com.useCase.Queue" relationship="TO_ONE">
+      <point x="-14.999882486486058" y="26.999904698017758" />
+      <point x="1911.372" y="818.164" />
+      <point x="1369.616" y="818.164" />
+      <point x="1369.616" y="771.0" />
+      <point x="811.774" y="771.0" />
+      <point x="-2.977081080643984E-4" y="-115.4999563764045" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.ViewQueueCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-95.49977873896569" y="-21.086134953711507" />
+      <point x="4157.0" y="1039.5" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="-11.619932981503553" y="-14.49993089492591" />
+      <point x="6538.049" y="471.882" />
+      <point x="5501.149" y="471.882" />
+      <point x="5501.149" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.CreateNewPlayListPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-4.8350174165534554E-4" y="26.999748644598526" />
+      <point x="5682.524" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.Queue" relationship="CREATE">
+      <point x="-126.0" y="-41.66353394568" />
+      <point x="130.99970229189194" y="-35.58295637640447" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongInfCommand" target="com.artemifyMusicStudio.controller.queueServiceCommand.QueueServiceCommand" relationship="GENERALIZATION">
+      <point x="106.99957148351768" y="-15.000094989555464" />
+      <point x="3763.0" y="836.493" />
+      <point x="3763.0" y="826.993" />
+      <point x="3844.5" y="826.993" />
+      <point x="3844.5" y="852.026" />
+      <point x="3887.0" y="852.026" />
+      <point x="-91.19154065992097" y="14.5" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlaySongCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="15.000117513513942" y="-27.0" />
+      <point x="1941.372" y="554.431" />
+      <point x="2275.755" y="554.431" />
+      <point x="2275.755" y="517.662" />
+      <point x="2673.479" y="517.662" />
+      <point x="2673.479" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.userInputRequestCommand.CreateRegularAccountCommand" relationship="CREATE">
+      <point x="-9.50022060440051" y="-27.0" />
+      <point x="2885.801" y="645.705" />
+      <point x="3036.979" y="645.705" />
+      <point x="3036.979" y="154.268" />
+      <point x="6688.179268787666" y="154.268" />
+      <point x="6688.179268787666" y="514.55455281451" />
+      <point x="130.0" y="-23.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongOnceCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-114.99997641633854" y="4.275344215329824E-4" />
+      <point x="3862.0" y="782.305" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.SimpleButtonCommandCreator" relationship="REALIZATION">
+      <point x="-15.000476184236504" y="38.5" />
+      <point x="1793.496" y="573.0" />
+      <point x="1185.616" y="573.0" />
+      <point x="-69.76721921578928" y="26.999827647676" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.QueueDisplayPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="-85.0" y="1.0200914141478279E-4" />
+      <point x="4377.0" y="635.059" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-4.761842365041957E-4" y="38.5" />
+      <point x="1808.496" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator" target="com.artemifyMusicStudio.controller.SimpleButtonCommandCreator" relationship="REALIZATION">
+      <point x="-132.65944133103903" y="26.99962488531196" />
+      <point x="2289.096" y="672.0" />
+      <point x="1556.5" y="672.0" />
+      <point x="1556.5" y="573.0" />
+      <point x="1185.616" y="573.0" />
+      <point x="-69.76721921578928" y="26.999827647676" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SongDisplayPage" target="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand" relationship="CREATE">
+      <point x="-81.0" y="0.0" />
+      <point x="4161.0420213346415" y="643.5289781163448" />
+      <point x="4161.0420213346415" y="867.8985989082395" />
+      <point x="2165.5017502713467" y="867.8985989082395" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator" target="com.artemifyMusicStudio.controller.SimpleButtonCommandCreator" relationship="REALIZATION">
+      <point x="-132.7792206044005" y="-26.999555656760435" />
+      <point x="2762.522" y="746.308" />
+      <point x="2640.606" y="746.308" />
+      <point x="2640.606" y="672.0" />
+      <point x="1556.5" y="672.0" />
+      <point x="1556.5" y="573.0" />
+      <point x="1185.616" y="573.0" />
+      <point x="-69.76721921578928" y="26.999827647676" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.pageTransitionCommand.AddToExistingPlaylistCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-2.6878766584559344E-4" y="-26.999795262541" />
+      <point x="6524.179" y="251.302" />
+      <point x="4157.0" y="251.302" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="2.0844307207426027" y="-14.5" />
+      <point x="3008.479" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-60.921704034878644" y="-27.0" />
+      <point x="396.38" y="333.228" />
+      <point x="1084.276" y="333.228" />
+      <point x="1084.276" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.searchCommand.SearchPlaylistCommand" target="com.useCase.PlaylistManager" relationship="TO_ONE">
+      <point x="-5.484570150541913" y="14.499548372935465" />
+      <point x="5471.634" y="770.396" />
+      <point x="5767.0" y="770.396" />
+      <point x="5767.0" y="1238.519" />
+      <point x="189.5" y="-4.6213044356591126E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PlaylistDisplayPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-3.949140564145637E-4" y="-14.5" />
+      <point x="4809.52" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.PlaylistManager" relationship="TO_ONE">
+      <point x="125.99961893631507" y="4.660543199861422E-4" />
+      <point x="1971.372" y="936.664" />
+      <point x="1971.372" y="1492.519" />
+      <point x="5767.0" y="1492.519" />
+      <point x="5767.0" y="1238.519" />
+      <point x="189.5" y="-4.6213044356591126E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.queueServiceCommand.RepeatSongOnceCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="115.0" y="4.275344215329824E-4" />
+      <point x="4157.0" y="782.305" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-4.4133103892818326E-4" y="26.99962488531196" />
+      <point x="2421.755" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand" target="com.artemifyMusicStudio.PageActivity" relationship="TO_ONE">
+      <point x="-93.5" y="-10.50047399943935" />
+      <point x="5196.813" y="830.29" />
+      <point x="5196.813" y="671.931" />
+      <point x="4133.0" y="671.931" />
+      <point x="4133.0" y="645.205" />
+      <point x="3891.692" y="645.205" />
+      <point x="3891.692" y="584.52" />
+      <point x="3584.803" y="584.52" />
+      <point x="3584.803" y="621.0" />
+      <point x="3638.541" y="621.0" />
+      <point x="3638.541" y="647.205" />
+      <point x="-63.999979585317305" y="3.5000481990369963" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLoginHistoryCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="82.06793203546385" y="-27.0" />
+      <point x="1413.383" y="454.964" />
+      <point x="1926.372" y="454.964" />
+      <point x="1926.372" y="405.542" />
+      <point x="1973.965" y="405.542" />
+      <point x="1973.965" y="347.0" />
+      <point x="3862.0" y="347.0" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchResultPage" target="com.artemifyMusicStudio.controller.searchCommand.SearchResultContainer" relationship="TO_ONE">
+      <point x="-81.0" y="0.0" />
+      <point x="5204.022217176171" y="371.96466701782134" />
+      <point x="5204.022217176171" y="1017.4617675244031" />
+      <point x="139.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.ActivityServiceCache" target="com.useCase.PlaylistEntityContainer" relationship="CREATE">
+      <point x="125.99961893631507" y="15.000466054319986" />
+      <point x="1896.372" y="951.664" />
+      <point x="1896.372" y="1416.0" />
+      <point x="3645.166" y="1416.0" />
+      <point x="-1.2478340613597538E-4" y="82.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.SearchResultPage" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand" relationship="CREATE">
+      <point x="14.999782823829264" y="-14.499667017821366" />
+      <point x="5310.022" y="175.0" />
+      <point x="3892.0" y="175.0" />
+      <point x="3892.0" y="376.0" />
+      <point x="4144.002" y="376.0" />
+      <point x="4144.002" y="983.462" />
+      <point x="3922.398" y="983.462" />
+      <point x="-33.08773763711679" y="-26.99977898308748" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AddToExistingPlaylistDisplayPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="94.42034291288178" y="-14.499894521341332" />
+      <point x="675.187" y="148.768" />
+      <point x="2039.843" y="148.768" />
+      <point x="2039.843" y="313.0" />
+      <point x="5141.858" y="313.0" />
+      <point x="5141.858" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.presenters.PresenterCreator" target="com.presenters.GermanPresenter" relationship="CREATE">
+      <point x="0.0" y="27.0" />
+      <point x="4610.807143447381" y="1683.114" />
+      <point x="6705.5" y="1683.114" />
+      <point x="6705.5" y="760.5" />
+      <point x="6626.0" y="760.5" />
+      <point x="6626.0" y="638.254" />
+      <point x="6782.0487617363415" y="638.254" />
+      <point x="6782.0487617363415" y="138.481" />
+      <point x="583.155" y="138.481" />
+      <point x="26.46780229129638" y="-38.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.AddToQueueCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="-71.44950655652818" y="27.0" />
+      <point x="-139.951" y="1036.337" />
+      <point x="588.002" y="1036.337" />
+      <point x="588.002" y="1092.058" />
+      <point x="1497.119" y="1092.058" />
+      <point x="1497.119" y="879.522" />
+      <point x="2695.522" y="879.522" />
+      <point x="2695.522" y="761.126" />
+      <point x="2899.801" y="761.126" />
+      <point x="2899.801" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.useCase.UserAccess" target="com.useCase.UserEntityContainer" relationship="TO_ONE">
+      <point x="-192.0" y="388.88618614082725" />
+      <point x="3093.852" y="1618.0" />
+      <point x="15.000268765876626" y="71.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.UploadSongPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="3.0053493355808314E-4" y="-26.99957305658279" />
+      <point x="6156.339" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.gateway.GatewayCreator" target="com.gateway.SerGateway" relationship="CREATE">
+      <point x="173.5" y="0.0" />
+      <point x="5217.865356471817" y="1143.2296794326198" />
+      <point x="5217.865356471817" y="156.26782329388845" />
+      <point x="1006.2495235630577" y="156.26782329388845" />
+      <point x="4.547473508864641E-13" y="-71.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.InputPopUpDialog" target="com.artemifyMusicStudio.controller.queueServiceCommand.RemoveFromQueueCommand" relationship="CREATE">
+      <point x="-109.5" y="0.0" />
+      <point x="1863.8718824864861" y="1271.5921268828995" />
+      <point x="1863.8718824864861" y="1570.5" />
+      <point x="305.140640017163" y="1570.5" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PageActivity" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="13.706020414682826" y="14.5" />
+      <point x="3764.594" y="712.0" />
+      <point x="4122.5" y="712.0" />
+      <point x="4122.5" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.FollowAndUnFollowUserCommand" target="com.presenters.LanguagePresenter" relationship="TO_ONE">
+      <point x="-168.0" y="-15.000060403388488" />
+      <point x="4496.961" y="874.425" />
+      <point x="4496.961" y="869.925" />
+      <point x="4217.0" y="869.925" />
+      <point x="4217.0" y="826.805" />
+      <point x="3862.0" y="826.805" />
+      <point x="3862.0" y="280.711" />
+      <point x="3831.0" y="280.711" />
+      <point x="3831.0" y="255.802" />
+      <point x="1316.269" y="255.802" />
+      <point x="1316.269" y="321.268" />
+      <point x="101.0" y="29.039771967704837" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeAddToExistingPlaylistDisplayCommand" relationship="CREATE">
+      <point x="29.999523815763496" y="38.5" />
+      <point x="1838.496" y="573.0" />
+      <point x="-171.5" y="10.837611365433759" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.stateChangedActionCommand.FollowAndUnFollowUserCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-168.0" y="-6.040338848833926E-5" />
+      <point x="4157.0" y="889.425" />
+      <point x="4157.0" y="436.0" />
+      <point x="3846.0" y="436.0" />
+      <point x="3846.0" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.AdminPage" target="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" relationship="CREATE">
+      <point x="-61.99980463111706" y="1.7874730042422016E-4" />
+      <point x="3913.0" y="580.02" />
+      <point x="3913.0" y="297.0" />
+      <point x="4377.0" y="297.0" />
+      <point x="4377.0" y="225.0" />
+      <point x="1808.496" y="225.0" />
+      <point x="-4.761842365041957E-4" y="-38.49997320627068" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.PlaylistDisplayPage" target="com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand" relationship="CREATE">
+      <point x="0.0" y="14.5" />
+      <point x="4809.520394914057" y="601.9684003234844" />
+      <point x="5736.216111086148" y="601.9684003234844" />
+      <point x="5736.216111086148" y="840.7904739994393" />
+      <point x="93.5" y="0.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.RegularUserHomePage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-4.657460060570884E-4" y="-14.5" />
+      <point x="1501.997" y="208.0" />
+      <point x="2039.843" y="208.0" />
+      <point x="2039.843" y="313.0" />
+      <point x="5141.858" y="313.0" />
+      <point x="5141.858" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLoginHistoryCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-6.796453612878395E-5" y="26.999635373378396" />
+      <point x="1331.315" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewPlaylistSongsCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-116.49953784707623" y="-1.8491932951292256E-4" />
+      <point x="2059.502" y="1114.609" />
+      <point x="2059.502" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.FollowerFollowingDisplayPage" target="com.artemifyMusicStudio.PageActivity" relationship="GENERALIZATION">
+      <point x="-68.4346194072723" y="14.499961685482788" />
+      <point x="6374.5" y="404.0" />
+      <point x="3750.888" y="404.0" />
+      <point x="2.0414682694536168E-5" y="-14.499951800963004" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.useCase.UserAccess" relationship="CREATE">
+      <point x="48.00006701849634" y="14.5" />
+      <point x="6597.669" y="786.0" />
+      <point x="6616.5" y="786.0" />
+      <point x="171.2103797402342" y="-401.4998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator" target="com.artemifyMusicStudio.controller.stateChangedActionCommand.PlayPlaylistCommand" relationship="CREATE">
+      <point x="-148.0" y="-3.7511468804041215E-4" />
+      <point x="2247.405" y="392.269" />
+      <point x="2247.405" y="710.148" />
+      <point x="2028.372" y="710.148" />
+      <point x="2028.372" y="968.0" />
+      <point x="2175.0" y="968.0" />
+      <point x="2175.0" y="1044.545" />
+      <point x="-94.4997466614168" y="3.413253436974628E-4" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand" target="com.useCase.UserAccess" relationship="TO_ONE">
+      <point x="2.9596512138141406E-4" y="26.999636784462382" />
+      <point x="457.302" y="731.951" />
+      <point x="343.489" y="731.951" />
+      <point x="343.489" y="1603.0" />
+      <point x="4040.0" y="1603.0" />
+      <point x="4040.0" y="1525.0" />
+      <point x="6196.849" y="1525.0" />
+      <point x="6196.849" y="850.114" />
+      <point x="6119.0" y="850.114" />
+      <point x="6119.0" y="835.114" />
+      <point x="-191.99962025976583" y="-393.9998138591727" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.InvokeSearchPageCommand" relationship="CREATE">
+      <point x="14.999523815763496" y="38.5" />
+      <point x="24.34729804027097" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator" target="com.artemifyMusicStudio.controller.pageTransitionCommand.ViewFollowersCommand" relationship="CREATE">
+      <point x="60.24976190788175" y="-38.5" />
+      <point x="1868.7462380921183" y="300.93916884393485" />
+      <point x="5933.860088642432" y="300.93916884393485" />
+      <point x="-0.0" y="-27.0" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.userInputRequestCommand.UserLogInCommand" target="com.gateway.GatewayCreator" relationship="CREATE">
+      <point x="92.0" y="-18.15936321553761" />
+      <point x="1114.276" y="523.166" />
+      <point x="1114.276" y="554.431" />
+      <point x="2275.755" y="554.431" />
+      <point x="2275.755" y="517.662" />
+      <point x="2673.479" y="517.662" />
+      <point x="2673.479" y="544.0" />
+      <point x="4622.706" y="544.0" />
+      <point x="4622.706" y="624.754" />
+      <point x="4867.0" y="624.754" />
+      <point x="4867.0" y="944.04" />
+      <point x="4439.0" y="944.04" />
+      <point x="4439.0" y="1124.5" />
+      <point x="-173.5" y="-18.729679432619832" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.StartPage" target="com.useCase.Queue" relationship="CREATE">
+      <point x="6.701849633827806E-5" y="14.5" />
+      <point x="6549.669" y="895.0" />
+      <point x="130.99970229189194" y="-35.58295637640447" />
+    </edge>
+    <edge source="com.artemifyMusicStudio.controller.infoDisplayCommand.ViewCreatorCommand" target="com.artemifyMusicStudio.ActivityServiceCache" relationship="TO_ONE">
+      <point x="-4.172296030446887E-4" y="-27.0" />
+      <point x="2539.606" y="787.0" />
+      <point x="1211.116" y="787.0" />
+      <point x="-3.8106368492663023E-4" y="-125.99953394568001" />
+    </edge>
+    <edge source="com.useCase.PlaylistManager" target="com.useCase.PlaylistEntityContainer" relationship="TO_ONE">
+      <point x="-189.5" y="17.89331685264392" />
+      <point x="4314.755778738966" y="1256.4127789830875" />
+      <point x="4314.755778738966" y="1189.912" />
+      <point x="97.5" y="3.129132746216783" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.1641532182693481" showDependencies="true" x="1470.7500795904002" y="435.15143031791035" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+
