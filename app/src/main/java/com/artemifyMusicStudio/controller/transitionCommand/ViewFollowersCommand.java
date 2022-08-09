@@ -31,7 +31,7 @@ public class ViewFollowersCommand implements View.OnClickListener {
         PageActivity currentPageActivity = this.activityServiceCache.getCurrentPageActivity();
         Intent it = new Intent(currentPageActivity, FollowerFollowingDisplayPage.class);
         it.putExtra("cache", this.activityServiceCache);
-        it.putExtra("displayType", "Following");
+        it.putExtra("displayType", "Follower");
         currentPageActivity.startActivity(it);
     }
 
