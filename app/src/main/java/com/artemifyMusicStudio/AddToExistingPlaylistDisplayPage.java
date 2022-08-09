@@ -81,6 +81,8 @@ public class AddToExistingPlaylistDisplayPage extends PageActivity {
                                              ArrayList<String> targetNames, Integer layoutID){
         // Get layout and create buttons
         LinearLayout publicSongDisplay = findViewById(layoutID);
+        resetViewState(publicSongDisplay);
+
         int count = 0;
         for (int targetID: targetIDs){
             String buttonDescription = languagePresenter.translateString(targetNames.get(count));
@@ -100,6 +102,9 @@ public class AddToExistingPlaylistDisplayPage extends PageActivity {
         publicSongDisplay.setGravity(Gravity.CENTER);
     }
 
+    private void resetViewState(LinearLayout layout){
+        layout.removeAllViews();
+    }
 
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
