@@ -3,13 +3,11 @@ package com.gateway;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
-import com.artemifyMusicStudio.PageActivity;
 import com.useCase.PlaylistEntityContainer;
 import com.useCase.SongEntityContainer;
 import com.useCase.UserEntityContainer;
 
 import java.io.IOException;
-import java.io.Serializable;
 
 /**
  * An abstract Gateway class that handles system I/O.

@@ -10,8 +10,6 @@ import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.R;
 import com.presenters.LanguagePresenter;
 
-import java.util.ArrayList;
-
 public class LikePlaylistCommand implements View.OnClickListener{
     private final ActivityServiceCache activityServiceCache;
     private final PageActivity playlistDisplayPage;
