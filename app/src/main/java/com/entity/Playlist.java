@@ -134,18 +134,22 @@ public class Playlist implements Serializable {
      * @return the number of songs in the playlist
      */
     public int numSongs() {
-        int count = 0;
-        for (Integer ignored : songs) {
-            count = count + 1;
-        }
-        return count;
+        return songs.size();
     }
 
+    /**
+     * Converts the id from an int to a String
+     * @return the String representation of the id
+     */
     @NonNull
     public String toString() {
         return String.valueOf(getId());
     }
 
+    /**
+     * Removes song from playlist
+     * @param songID    the id of the song to be removed
+     */
     public void removeSong(int songID){
         songs.remove(Integer.valueOf(songID));
     }

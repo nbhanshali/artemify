@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 import java.util.*;
 
 public class User implements Serializable {
+
     private String username;
     private String password;
     private String displayLanguage;
@@ -31,19 +32,19 @@ public class User implements Serializable {
     public User(String username, String password){
         this.username = username;
         this.password = password;
-        this.displayLanguage = "english";
-        this.loginHistory = new ArrayList<>();
-        this.isBanned = false;
-        this.isAdmin = false;
-        this.following = new ArrayList<>();
-        this.followers = new ArrayList<>();
-        this.hoursListened = 0;
-        this.myPublicSongsPlaylistId = 0;
-        this.myPrivateSongsPlaylistId = 0;
-        this.favoritesPlaylistId = 0;
-        this.myPublicPlaylists = new ArrayList<>();
-        this.myPrivatePlaylists = new ArrayList<>();
-        this.myLikedPlaylists = new ArrayList<>();
+        displayLanguage = "english";
+        loginHistory = new ArrayList<>();
+        isBanned = false;
+        isAdmin = false;
+        following = new ArrayList<>();
+        followers = new ArrayList<>();
+        hoursListened = 0;
+        myPublicSongsPlaylistId = 0;
+        myPrivateSongsPlaylistId = 0;
+        favoritesPlaylistId = 0;
+        myPublicPlaylists = new ArrayList<>();
+        myPrivatePlaylists = new ArrayList<>();
+        myLikedPlaylists = new ArrayList<>();
     }
 
     /**
@@ -175,7 +176,7 @@ public class User implements Serializable {
     }
 
     public void setMyPublicSongsPlaylistId(int myPublicSongsPlaylistId) {
-        this.myPublicPlaylists.add(myPublicSongsPlaylistId);
+        myPublicPlaylists.add(myPublicSongsPlaylistId);
         this.myPublicSongsPlaylistId = myPublicSongsPlaylistId;
 
     }
@@ -186,7 +187,7 @@ public class User implements Serializable {
     }
 
     public void setMyPrivateSongsPlaylistId(int myPrivateSongsPlaylistId) {
-        this.myPrivatePlaylists.add(myPrivateSongsPlaylistId);
+        myPrivatePlaylists.add(myPrivateSongsPlaylistId);
         this.myPrivateSongsPlaylistId = myPrivateSongsPlaylistId;
     }
 
@@ -196,7 +197,7 @@ public class User implements Serializable {
     }
 
     public void setFavoritesPlaylistId(int favoritesPlaylistId) {
-        this.myPublicPlaylists.add(favoritesPlaylistId);
+        myPublicPlaylists.add(favoritesPlaylistId);
         this.favoritesPlaylistId = favoritesPlaylistId;
     }
 
@@ -227,7 +228,6 @@ public class User implements Serializable {
         this.myLikedPlaylists = myLikedPlaylists;
     }
 
-
     /**
      * Adds a new user login session everytime this User logs in
      * @param dateTime  the date and time that this User logged in at
@@ -241,7 +241,7 @@ public class User implements Serializable {
      * @return  the number of Users this User was following
      */
     public int numFollowing() {
-        return this.following.size();
+        return following.size();
     }
 
     /**
@@ -249,7 +249,7 @@ public class User implements Serializable {
      * @return  the number of Users this User was followed by
      */
     public int numFollowers() {
-        return this.followers.size();
+        return followers.size();
     }
 
     /**
@@ -276,14 +276,17 @@ public class User implements Serializable {
         return myLikedPlaylists.size();
     }
 
+    /**
+     * Converts the id from an int to a String
+     * @return the String representation of the id
+     */
     @NonNull
     public String toString() {
-        return getUsername();
+        return username;
     }
 
     /**
-     * Call this after this user unliked a playlist, so that the playlist is deleted to user's list of liked playlists.
-     *
+     * Playlist will be removes from Liked Playlists
      * @param playlistID The ID of the playlist
      */
     public void removeFromLikedPlaylist(int playlistID) {
