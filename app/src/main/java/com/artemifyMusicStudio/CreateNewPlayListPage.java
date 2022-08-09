@@ -45,7 +45,7 @@ public class CreateNewPlayListPage extends PageActivity implements RadioGroup.On
         switch (creatorType){
             case "TransitionCommandCreator":
                 return new PageTransitionCommandCreator(this.activityServiceCache);
-            case "UserInputCommandCreator":
+            case "UserInputRequestCommandCreator":
                 return new UserInputRequestCommandCreator(this.activityServiceCache, inputPlaylistName,
                         inputDescription, isPublic);
             default:
@@ -68,7 +68,7 @@ public class CreateNewPlayListPage extends PageActivity implements RadioGroup.On
                 List.of(CommandItemType.CREATE_NEW_PLAYLIST)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
-        menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
+        menuCommandCreatorMap.put("UserInputRequestCommandCreator", tempList2);
     }
 
     @Override
@@ -81,7 +81,7 @@ public class CreateNewPlayListPage extends PageActivity implements RadioGroup.On
     }
 
     private void resetCreateListener(){
-        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputCommandCreator");
+        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputRequestCommandCreator");
         Button create = findViewById(R.id.create_playlist);
         create.setOnClickListener(creator.create(CommandItemType.CREATE_NEW_PLAYLIST));
     }

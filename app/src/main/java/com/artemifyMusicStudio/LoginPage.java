@@ -73,14 +73,14 @@ public class LoginPage extends PageActivity {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
                 List.of(this.loginCommandType)
         );
-        menuCommandCreatorMap.put("UserInputCommandCreator", tempList1);
+        menuCommandCreatorMap.put("UserInputRequestCommandCreator", tempList1);
     }
 
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType){
         EditText inputUserName = findViewById(R.id.inputUserName);
         EditText inputPassword = findViewById(R.id.inputPassword);
-        if ("UserInputCommandCreator".equals(creatorType)) {
+        if ("UserInputRequestCommandCreator".equals(creatorType)) {
             return new UserInputRequestCommandCreator(this.activityServiceCache, inputUserName, inputPassword);
         }
         return null;

@@ -63,8 +63,7 @@ public abstract class IGateway implements SimpleGateway{
     /**
      * An abstract method that read activityServiceCache from a file
      * @return a ActivityServiceCache object
-     * @throws IOException throw IOException
-     * @throws ClassNotFoundException throw ClassNotFoundException
+     *
      */
-    public abstract ActivityServiceCache readActivityServiceCacheFromFile() throws IOException, ClassNotFoundException;
+    public abstract ActivityServiceCache readActivityServiceCacheFromFile();
 }

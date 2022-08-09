@@ -47,7 +47,7 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
                 List.of(CommandItemType.UPLOAD_SONG)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
-        menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
+        menuCommandCreatorMap.put("UserInputRequestCommandCreator", tempList2);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
         switch (creatorType){
             case "TransitionCommandCreator":
                 return new PageTransitionCommandCreator(this.activityServiceCache);
-            case "UserInputCommandCreator":
+            case "UserInputRequestCommandCreator":
                 return new UserInputRequestCommandCreator(this.activityServiceCache, inputSongName,
                         inputMinute, inputSecond, inputLyrics, isPublic);
             default:
@@ -85,7 +85,7 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
     }
 
     private void resetCreateListener(){
-        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputCommandCreator");
+        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputRequestCommandCreator");
         Button create = findViewById(R.id.create_song);
         create.setOnClickListener(creator.create(CommandItemType.UPLOAD_SONG));
     }

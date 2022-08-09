@@ -12,13 +12,13 @@ import com.artemifyMusicStudio.controller.infoDisplayCommand.ViewLyricsCommand;
 import com.artemifyMusicStudio.controller.infoDisplayCommand.ViewPlaylistSongsCommand;
 
 /**
- * A PopupCommandCreator to create pop up related command
+ * A PageTransitionCommandCreator to create pop up related command
  */
 public class InfoDisplayCommandCreator implements SimpleButtonCommandCreator {
     private final ActivityServiceCache activityServiceCache;
 
     /**
-     * Constructor of PopupCommandCreator
+     * Constructor of InfoDisplayCommandCreator
      * @param activityServiceCache a ActivityServiceCache object
      */
     public InfoDisplayCommandCreator(ActivityServiceCache activityServiceCache){
