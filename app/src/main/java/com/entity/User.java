@@ -281,4 +281,12 @@ public class User implements Serializable {
         return getUsername();
     }
 
+    /**
+     * Call this after this user unliked a playlist, so that the playlist is deleted to user's list of liked playlists.
+     *
+     * @param playlistID The ID of the playlist
+     */
+    public void removeFromLikedPlaylist(int playlistID) {
+        myLikedPlaylists.remove(Integer.valueOf(playlistID));
+    }
 }

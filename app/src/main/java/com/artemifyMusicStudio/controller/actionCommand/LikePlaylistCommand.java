@@ -56,7 +56,7 @@ public class LikePlaylistCommand implements View.OnClickListener{
             displayUnlikeMsg(playlistDisplayPage);
             imageButton.setBackgroundResource(R.drawable.empty_heart);
             this.activityServiceCache.getPlaylistManager().unlikePlaylist(playlistID);
-            this.activityServiceCache.getPlaylistManager().deletePlaylistsByIDs(new ArrayList<>(playlistID));
+            this.activityServiceCache.getUserAcctServiceManager().deleteFromUserLikedPlaylist(userID, playlistID);
         }
         setLike();
     }
