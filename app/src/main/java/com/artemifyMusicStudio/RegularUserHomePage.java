@@ -1,11 +1,15 @@
 package com.artemifyMusicStudio;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.CommandItemType;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +36,19 @@ public class RegularUserHomePage extends PageActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER, this);
+        ActivityServiceCache oldActivityServiceCache = this.activityServiceCache;
+        this.activityServiceCache = ioGateway.readActivityServiceCacheFromFile();
+        if (this.activityServiceCache == null){
+            this.activityServiceCache = oldActivityServiceCache;
+        }
+        populateButtons();
+    }
+
+    @Override
     protected void populateMenuCommandCreatorMap() {
         ArrayList<CommandItemType> tempList = new ArrayList<>(
                 List.of(
@@ -48,7 +65,7 @@ public class RegularUserHomePage extends PageActivity {
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         if ("TransitionCommandCreator".equals(creatorType)) {
-            return new TransitionCommandCreator(this.activityServiceCache);
+            return new PageTransitionCommandCreator(this.activityServiceCache);
         }
         return null;
     }

@@ -7,8 +7,8 @@ import android.widget.RadioGroup;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +43,9 @@ public class AddToNewPlaylistPage extends PageActivity implements RadioGroup.OnC
         EditText inputDescription = findViewById(R.id.playlist_desc);
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
-            case "UserInputCommandCreator":
-                return new UserInputCommandCreator(this.activityServiceCache, inputPlaylistName,
+                return new PageTransitionCommandCreator(this.activityServiceCache);
+            case "UserInputRequestCommandCreator":
+                return new UserInputRequestCommandCreator(this.activityServiceCache, inputPlaylistName,
                         inputDescription, isPublic);
             default:
                 return null;
@@ -67,7 +67,7 @@ public class AddToNewPlaylistPage extends PageActivity implements RadioGroup.OnC
                 List.of(CommandItemType.ADD_TO_NEW_PLAYLIST)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
-        menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
+        menuCommandCreatorMap.put("UserInputRequestCommandCreator", tempList2);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class AddToNewPlaylistPage extends PageActivity implements RadioGroup.OnC
     }
 
     private void resetCreateListener(){
-        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputCommandCreator");
+        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputRequestCommandCreator");
         Button create = findViewById(R.id.create_playlist);
         create.setOnClickListener(creator.create(CommandItemType.ADD_TO_NEW_PLAYLIST));
     }

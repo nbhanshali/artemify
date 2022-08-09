@@ -7,8 +7,8 @@ import android.widget.RadioGroup;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +47,7 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
                 List.of(CommandItemType.UPLOAD_SONG)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
-        menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
+        menuCommandCreatorMap.put("UserInputRequestCommandCreator", tempList2);
     }
 
     @Override
@@ -58,9 +58,9 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
         EditText inputLyrics = findViewById(R.id.lyrics);
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
-            case "UserInputCommandCreator":
-                return new UserInputCommandCreator(this.activityServiceCache, inputSongName,
+                return new PageTransitionCommandCreator(this.activityServiceCache);
+            case "UserInputRequestCommandCreator":
+                return new UserInputRequestCommandCreator(this.activityServiceCache, inputSongName,
                         inputMinute, inputSecond, inputLyrics, isPublic);
             default:
                 return null;
@@ -85,7 +85,7 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
     }
 
     private void resetCreateListener(){
-        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputCommandCreator");
+        SimpleButtonCommandCreator creator = getSimpleOnClickCommandCreator("UserInputRequestCommandCreator");
         Button create = findViewById(R.id.create_song);
         create.setOnClickListener(creator.create(CommandItemType.UPLOAD_SONG));
     }

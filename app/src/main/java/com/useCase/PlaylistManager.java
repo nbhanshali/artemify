@@ -227,12 +227,18 @@ public class PlaylistManager implements Serializable {
         findPlaylist(id).setNumLikes(findPlaylist(id).getNumLikes() + 1);
     }
 
+    /**
+     * Have the user with the specified username unlike the playlist with the specified playlist ID.
+     * @param id The ID of a playlist
+     *
+     * Note: controllers have to manually delete this playlist ID to the user's list of liked playlist
+     */
     public void unlikePlaylist(int id){
         findPlaylist(id).setNumLikes(findPlaylist(id).getNumLikes() - 1);
     }
 
     /**
-     *
+     * Add  a song with specific song ID into the playlist with playlist ID.
      * @param playlistID The ID of a playlist
      * @param songID The ID of a song
      */
@@ -240,6 +246,11 @@ public class PlaylistManager implements Serializable {
         findPlaylist(playlistID).getSongs().add(songID);
     }
 
+    /**
+     * Remove the song with sonngID from user's Favourite playlist.
+     * @param userFavouritesID
+     * @param songID
+     */
     public void removeFromFavoritePlaylist(int userFavouritesID, int songID){
         findPlaylist(userFavouritesID).removeSong(songID);
     }

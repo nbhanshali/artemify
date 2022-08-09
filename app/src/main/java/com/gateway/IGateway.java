@@ -2,6 +2,7 @@ package com.gateway;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.useCase.PlaylistEntityContainer;
 import com.useCase.SongEntityContainer;
@@ -59,4 +60,10 @@ public abstract class IGateway implements SimpleGateway{
      */
     public abstract SongEntityContainer readSongsFromFile() throws IOException, ClassNotFoundException;
 
+    /**
+     * An abstract method that read activityServiceCache from a file
+     * @return a ActivityServiceCache object
+     *
+     */
+    public abstract ActivityServiceCache readActivityServiceCacheFromFile();
 }

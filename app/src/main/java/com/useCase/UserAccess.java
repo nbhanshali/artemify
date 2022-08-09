@@ -443,6 +443,16 @@ public class UserAccess implements Serializable {
     }
 
     /**
+     * Call this after a user unliked a playlist, so that the playlist is deleted to user's list of liked playlists.
+     *
+     * @param username The username of the user that liked this playlist
+     * @param playlistID The ID of the playlist
+     */
+    public void deleteFromUserLikedPlaylist(String username, int playlistID){
+        findUser(username).removeFromLikedPlaylist(playlistID);
+    }
+
+    /**
      *
      * @param username the username of a user
      * @return The ID of this user's public songs playlist

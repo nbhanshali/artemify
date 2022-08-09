@@ -1,17 +1,15 @@
 package com.artemifyMusicStudio;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.actionCommand.LikePlaylistCommand;
-import com.artemifyMusicStudio.controller.commandCreator.ActionCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand;
+import com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.useCase.PlaylistManager;
 
 import java.util.ArrayList;
@@ -19,6 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PlaylistDisplayPage extends PageActivity {
+    private int playlistID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +27,10 @@ public class PlaylistDisplayPage extends PageActivity {
         // parse and updated service cache
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
+        // set up target
+        playlistID = Integer.parseInt(activityServiceCache.getTargetPlaylistID());
+        String artist = activityServiceCache.getPlaylistManager().getCreatorUsername(playlistID);
+        activityServiceCache.setTargetUserID(artist);
 
         // populate button
         populateMenuCommandCreatorMap();
@@ -41,12 +44,12 @@ public class PlaylistDisplayPage extends PageActivity {
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
-            case "PopupCommandCreator":
-                return new PopupCommandCreator(this.activityServiceCache);
+            case "InfoDisplayCommandCreator":
+                return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new PageTransitionCommandCreator(this.activityServiceCache);
             case "ActionCommandCreator":
-                return new ActionCommandCreator(this.activityServiceCache);
+                return new StateChangedActionCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }
@@ -55,7 +58,8 @@ public class PlaylistDisplayPage extends PageActivity {
     @Override
     protected void populateIdMenuMap() {
         idMenuItemMap.put(CommandItemType.VIEW_PLAYLIST_SONGS, R.id.view_playlist_songs);
-        idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator);
+        idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator_in_playlist);
+        idMenuItemMap.put(CommandItemType.PLAY_PLAYLIST, R.id.play_playlist);
         idMenuItemMap.put(CommandItemType.EXIT_PAGE, R.id.exit);
 
     }
@@ -69,8 +73,12 @@ public class PlaylistDisplayPage extends PageActivity {
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.EXIT_PAGE)
         );
-        menuCommandCreatorMap.put("PopupCommandCreator", tempList1);
+        ArrayList<CommandItemType> tempList3 = new ArrayList<>(
+                List.of(CommandItemType.PLAY_PLAYLIST)
+        );
+        menuCommandCreatorMap.put("InfoDisplayCommandCreator", tempList1);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
+        menuCommandCreatorMap.put("ActionCommandCreator", tempList3);
     }
 
     @Override
@@ -82,7 +90,6 @@ public class PlaylistDisplayPage extends PageActivity {
 
         // primary setup
         PlaylistManager playlistManager = activityServiceCache.getPlaylistManager();
-        int playlistID = Integer.parseInt(activityServiceCache.getTargetPlaylistID());
         String playlistName = playlistManager.getPlaylistName(playlistID);
         int numLikes = playlistManager.getNumLikes(playlistID);
         String creatorName = playlistManager.getCreatorUsername(playlistID);
