@@ -64,16 +64,20 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center"
+                            android:textSize="18dp"
                             android:text="Song Name" />
 
                         <TextView
                             android:id="@+id/display_artist_name1"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:gravity="center"
                             android:layout_weight="1"
+                            android:textSize="15dp"
                             android:text="Aritist Name" />
 
                     </LinearLayout>
@@ -106,16 +110,20 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center"
+                            android:textSize="18dp"
                             android:text="Song Name" />
 
                         <TextView
                             android:id="@+id/display_artist_name2"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:gravity="center"
                             android:layout_weight="1"
+                            android:textSize="15dp"
                             android:text="Aritist Name" />
 
                     </LinearLayout>
@@ -147,16 +155,20 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center"
+                            android:textSize="18dp"
                             android:text="Song Name" />
 
                         <TextView
                             android:id="@+id/display_artist_name3"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:gravity="center"
                             android:layout_weight="1"
+                            android:textSize="15dp"
                             android:text="Aritist Name" />
 
                     </LinearLayout>
@@ -188,16 +200,20 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center"
+                            android:textSize="18dp"
                             android:text="Song Name" />
 
                         <TextView
                             android:id="@+id/display_artist_name4"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:gravity="center"
                             android:layout_weight="1"
+                            android:textSize="15dp"
                             android:text="Aritist Name" />
 
                     </LinearLayout>
@@ -229,16 +245,20 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center"
+                            android:textSize="18dp"
                             android:text="Song Name" />
 
                         <TextView
                             android:id="@+id/display_artist_name5"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:gravity="center"
                             android:layout_weight="1"
+                            android:textSize="15dp"
                             android:text="Aritist Name" />
 
                     </LinearLayout>
@@ -270,18 +290,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="13dp"
+                            android:gravity="center"
+                            android:textSize="18dp"
                             android:text="Song Name" />
 
                         <TextView
                             android:id="@+id/display_artist_name6"
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginBottom="10dp"
+                            android:gravity="center"
                             android:layout_weight="1"
+                            android:textSize="15dp"
                             android:text="Aritist Name" />
-
                     </LinearLayout>
 
                 </LinearLayout>
