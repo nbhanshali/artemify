@@ -1,0 +1,16 @@
+id,name,description,creatorUsername,dateTimeCreated,isPublic,numLikes
+101,My Songs,Your songs the world will listen!,Glass Animals,2022-01-17 21:10:39.311,true,8000000
+102,Private Songs,Unlisted soundtracks,Glass Animals,2022-01-17 21:10:39.311,false,0
+103,Favorites,Songs you like will appear here!,Glass Animals,2022-02-17 21:10:39.311,true,4000000
+104,My Songs,Your songs the world will listen!,The Kid Laroi,2022-01-17 21:10:39.311,true,7000000
+105,Private Songs,Unlisted soundtracks,The Kid Laroi,2022-01-17 21:10:39.311,false,0
+106,Favorites,Songs you like will appear here!,The Kid Laroi,2022-02-17 21:10:39.311,true,4000000
+107,My Songs,Your songs the world will listen!,Dua Lipa,2022-01-17 21:10:39.311,true,10000000
+108,Private Songs,Unlisted soundtracks,Dua Lipa,2022-01-17 21:10:39.311,false,0
+109,Favorites,Songs you like will appear here!,Dua Lipa,2022-02-17 21:10:39.311,true,5000000
+110,My Songs,Your songs the world will listen!,adminUser,2022-01-17 21:10:39.311,true,2
+111,Private Songs,Unlisted soundtracks,adminUser,2022-01-17 21:10:39.311,false,0
+112,Favorites,Songs you like will appear here!,adminUser,2022-02-17 21:10:39.311,true,1
+113,My Songs,Your songs the world will listen!,foreignUser,2022-01-17 21:10:39.311,true,9
+114,Private Songs,Unlisted soundtracks,foreignUser,2022-01-17 21:10:39.311,false,0
+115,Favorites,Songs you like will appear here!,foreignUser,2022-02-17 21:10:39.311,true,5

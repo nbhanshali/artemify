@@ -1,0 +1,7 @@
+UserName,Password,DisplayLanguage,IsBanned,IsAdmin,hoursListened,myPublicSongsPlaylistId,myPrivateSongsPlaylistId,favoritesPlaylistId
+Glass Animals,pwd1,english,false,false,35933859,101,102,103
+The Kid Laroi,pwd2,english,false,false,41549942,104,105,106
+Dua Lipa,pwd3,english,true,false,71825610,107,108,109
+adminUser,pwd4,english,false,true,299,110,111,112
+foreignUser,pwd5,french,false,false,900,113,114,115
+
