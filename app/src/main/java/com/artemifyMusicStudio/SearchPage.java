@@ -34,7 +34,7 @@ public class SearchPage extends PageActivity {
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
-            case "UserInputRequestCommandCreator":
+            case "UserInputCommandCreator":
                 return new UserInputRequestCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
                 return new PageTransitionCommandCreator(this.activityServiceCache);
@@ -64,7 +64,7 @@ public class SearchPage extends PageActivity {
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.EXIT_PAGE)
         );
-        menuCommandCreatorMap.put("UserInputRequestCommandCreator", tempList1);
+        menuCommandCreatorMap.put("UserInputCommandCreator", tempList1);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
     }
 

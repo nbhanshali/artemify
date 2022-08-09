@@ -45,7 +45,7 @@ public class SongDisplayPage extends PageActivity {
         switch (creatorType){
             case "TransitionCommandCreator":
                 return new PageTransitionCommandCreator(this.activityServiceCache);
-            case "InfoDisplayCommandCreator":
+            case "PopupCommandCreator":
                 return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "ActionCommandCreator":
                 return new StateChangedActionCommandCreator(this.activityServiceCache);
@@ -79,7 +79,7 @@ public class SongDisplayPage extends PageActivity {
                 List.of(CommandItemType.PLAY_SONG, CommandItemType.ADD_TO_QUEUE)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
-        menuCommandCreatorMap.put("InfoDisplayCommandCreator", tempList2);
+        menuCommandCreatorMap.put("PopupCommandCreator", tempList2);
         menuCommandCreatorMap.put("ActionCommandCreator", tempList3);
     }
 

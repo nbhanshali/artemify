@@ -42,7 +42,7 @@ public class AdminPage extends PageActivity {
                 List.of(CommandItemType.QUIT_ADMIN_MODE, CommandItemType.LOG_OUT)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", transitionList);
-        menuCommandCreatorMap.put("UserInputRequestCommandCreator", popupList);
+        menuCommandCreatorMap.put("UserInputCommandCreator", popupList);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class AdminPage extends PageActivity {
         switch (creatorType) {
             case "TransitionCommandCreator":
                 return new PageTransitionCommandCreator(this.activityServiceCache);
-            case "UserInputRequestCommandCreator" :
+            case "UserInputCommandCreator" :
                 return new UserInputRequestCommandCreator(this.activityServiceCache);
             default:
                 return null;
