@@ -6,7 +6,6 @@ import android.view.View;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.UserDisplayPage;
-import com.useCase.PlaylistManager;
 
 /**
  * A ViewCreatorCommand object to handle the user view the creator of playlist request
@@ -15,19 +14,13 @@ import com.useCase.PlaylistManager;
 public class ViewCreatorCommand implements View.OnClickListener {
     private final ActivityServiceCache activityServiceCache;
 
-    private final String creatorID;
-
     /**
      * Constructor for ViewCreatorCommand.
      *
      * @param activityServiceCache            a PageCreator Object
-     * @param playlistServiceManager a UserAccess object
-     * @param creatorID a String that represents the userID of this playlist's creator
      */
-    public ViewCreatorCommand(ActivityServiceCache activityServiceCache,
-                              PlaylistManager playlistServiceManager, String creatorID) {
+    public ViewCreatorCommand(ActivityServiceCache activityServiceCache) {
         this.activityServiceCache = activityServiceCache;
-        this.creatorID = creatorID;
     }
 
     /**

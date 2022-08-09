@@ -31,9 +31,7 @@ public class InfoDisplayCommandCreator implements SimpleButtonCommandCreator {
             case VIEW_PLAYLIST_SONGS:
                 return new ViewPlaylistSongsCommand(this.activityServiceCache);
             case VIEW_CREATOR:
-                return new ViewCreatorCommand(this.activityServiceCache,
-                        this.activityServiceCache.getPlaylistManager(),
-                        this.activityServiceCache.getTargetUserID());
+                return new ViewCreatorCommand(this.activityServiceCache);
             case PLAY_PLAYLIST:
                 return new PlayPlaylistCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(),
