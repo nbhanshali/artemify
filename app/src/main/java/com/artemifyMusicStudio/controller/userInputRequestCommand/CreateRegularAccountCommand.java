@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio.controller.userInputRequestCommand;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -8,10 +9,14 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.RegularUserHomePage;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.UserAccess;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -62,8 +67,18 @@ public class CreateRegularAccountCommand implements View.OnClickListener {
             // Populate default playlist
             this.createDefaultPlaylist(username);
 
+            // Updated the ActivityServiceCache.ser file
+            PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
+            }
+
             // Bring user to User Home Page
-            PageActivity currentPageActivity = this.activityServiceCache.getCurrentPageActivity();
             Intent it = new Intent(currentPageActivity, RegularUserHomePage.class);
             it.putExtra("cache", this.activityServiceCache);
             currentPageActivity.startActivity(it);

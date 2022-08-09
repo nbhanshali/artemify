@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio.controller.userInputRequestCommand;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -8,10 +9,14 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.PlaylistDisplayPage;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 
 /**
@@ -62,6 +67,17 @@ public class AddToNewPlaylistCommand implements View.OnClickListener {
             }
             // set target playlist id
             activityServiceCache.setTargetPlaylistID(String.valueOf(newPlaylistID));
+
+            // updated ActivityServiceCache.ser file
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
+            }
+
             // go to playlist display page
             goToPlaylistDisplayPage();
         }

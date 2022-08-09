@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio.controller.stateChangedActionCommand;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -8,8 +9,13 @@ import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.UserAccess;
+
+import java.io.IOException;
 
 
 /**
@@ -70,5 +76,15 @@ public class FollowAndUnFollowUserCommand implements CompoundButton.OnCheckedCha
             String msg = "Successfully unfollowed " + this.targetUserID + ". (っ˘̩╭╮˘̩)っ";
             Toast.makeText(currentPageActivity, msg, Toast.LENGTH_LONG).show();
         }
+        // Updated the ActivityServiceCache.ser file
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                currentPageActivity);
+        try {
+            ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+        } catch (IOException e) {
+            Log.e("warning", "IO exception");
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio.controller.userInputRequestCommand;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -9,11 +10,15 @@ import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.AdminPage;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.RegularUserHomePage;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.presenters.LanguageType;
 import com.presenters.PresenterCreator;
 import com.useCase.UserAccess;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public abstract class UserLogInCommand implements View.OnClickListener {
@@ -86,6 +91,14 @@ public abstract class UserLogInCommand implements View.OnClickListener {
         PageActivity currentPageActivity = this.activityServiceCache.getCurrentPageActivity();
         this.displaySuccessfulLogInMsg(userID, currentPageActivity);
         this.updateServiceCache(userID);
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                currentPageActivity);
+        try {
+            ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+        } catch (IOException e) {
+            Log.e("warning", "IO exception");
+        }
         switch (this.userAccountType){
             case "Regular":
                 Intent itRegular = new Intent(currentPageActivity, RegularUserHomePage.class);

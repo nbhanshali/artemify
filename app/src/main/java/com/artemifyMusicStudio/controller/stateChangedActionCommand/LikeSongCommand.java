@@ -1,5 +1,6 @@
 package com.artemifyMusicStudio.controller.stateChangedActionCommand;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -8,7 +9,12 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.R;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
+
+import java.io.IOException;
 
 public class LikeSongCommand implements View.OnClickListener{
 
@@ -44,6 +50,18 @@ public class LikeSongCommand implements View.OnClickListener{
             activityServiceCache.getSongManager().unlikeSong(songId);
             activityServiceCache.getPlaylistManager().removeFromFavoritePlaylist(userFavouritesID, songId);
         }
+        // Updated the ActivityServiceCache.ser file
+        PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                currentPageActivity);
+        try {
+            ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+        } catch (IOException e) {
+            Log.e("warning", "IO exception");
+        }
+
+        // setLike
         setLike();
     }
 

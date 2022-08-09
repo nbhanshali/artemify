@@ -1,12 +1,18 @@
 package com.artemifyMusicStudio.controller.userInputRequestCommand;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
+
+import java.io.IOException;
 
 /**
  * A MakeAdminUserCommand class to grant another user the admin right
@@ -38,6 +44,15 @@ public class MakeAdminUserCommand implements View.OnClickListener {
     public void onClick(View view) {
         String username = InputTargetName.getText().toString();
         if(this.activityServiceCache.getUserAcctServiceManager().makeAdmin(username)){
+            PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
+            }
             String msg = this.languagePresenter.translateString("Admin rights granted");
             displayToastMsg(msg);
         }else{
