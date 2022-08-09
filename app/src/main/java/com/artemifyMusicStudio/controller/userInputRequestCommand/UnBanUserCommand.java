@@ -36,9 +36,6 @@ public class UnBanUserCommand implements View.OnClickListener {
      */
     @Override
     public void onClick(View view) {
-//        Scanner in = new Scanner(System.in);
-
-//        this.languagePresenter.display("Enter the username of the user you wish to unban: ");
         String username = InputTargetName.getText().toString();
         if(this.activityServiceCache.getUserAcctServiceManager().unban(username)){
             String msg = this.languagePresenter.translateString("Successfully unbanned");

@@ -37,9 +37,6 @@ public class DeleteUserCommand implements View.OnClickListener {
      */
     @Override
     public void onClick(View view) {
-//        Scanner in = new Scanner(System.in);
-
-//        this.languagePresenter.display("Enter the username of the user you wish to delete: ");
         String username = InputTargetName.getText().toString();
         if (this.activityServiceCache.getUserAcctServiceManager().exists(username)) {
             if (this.activityServiceCache.getUserAcctServiceManager().findUser(username).getIsAdmin()) {

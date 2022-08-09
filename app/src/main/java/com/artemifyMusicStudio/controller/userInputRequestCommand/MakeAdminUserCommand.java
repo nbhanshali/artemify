@@ -36,10 +36,6 @@ public class MakeAdminUserCommand implements View.OnClickListener {
      */
     @Override
     public void onClick(View view) {
-//        Scanner in = new Scanner(System.in);
-
-//        this.languagePresenter.
-//                display("Enter the username of the user you want to make admin: ");
         String username = InputTargetName.getText().toString();
         if(this.activityServiceCache.getUserAcctServiceManager().makeAdmin(username)){
             String msg = this.languagePresenter.translateString("Admin rights granted");
