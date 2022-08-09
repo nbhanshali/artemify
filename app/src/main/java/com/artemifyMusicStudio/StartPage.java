@@ -172,21 +172,21 @@ public class StartPage extends AppCompatActivity {
         userEntityContainer.add(user5);
         return userEntityContainer;
     }
-    String source = " ";
+
     private SongEntityContainer populateSongEntities(){
-        Song song201 = new Song(201, "Heat Waves", source, new int[]{3, 59}, "Glass Animals",
+        Song song201 = new Song(201, "Heat Waves", new int[]{3, 59}, "Glass Animals",
                 Timestamp.valueOf("2022-06-17 21:10:39.311"), 1000000, 2000000,
                 "Heat waves been faking me out", true);
-        Song song202 = new Song(202, "STAY", source, new int[]{2, 22}, "The Kid Laroi",
+        Song song202 = new Song(202, "STAY", new int[]{2, 22}, "The Kid Laroi",
                 Timestamp.valueOf("2022-06-18 21:10:39.311"), 500000,3000000,
                 "I need you to stay",true);
-        Song song203 = new Song(203, "Untitled", source, new int[]{3, 49}, "adminUser",
+        Song song203 = new Song(203, "Untitled", new int[]{3, 49}, "adminUser",
                 Timestamp.valueOf("2022-06-19 21:10:39.311"), 0,0,
                 "Easy as pie", false);
-        Song song204 = new Song(204, "Untitled2", source, new int[]{0, 1}, "foreignUser",
+        Song song204 = new Song(204, "Untitled2", new int[]{0, 1}, "foreignUser",
                 Timestamp.valueOf("2022-07-18 21:10:39.311"), 0,0,
                 "A dime a dozen", false);
-        Song song205 = new Song(205, "One Kiss", source, new int[]{3, 35}, "Dua Lipa",
+        Song song205 = new Song(205, "One Kiss", new int[]{3, 35}, "Dua Lipa",
                 Timestamp.valueOf("2012-06-18 21:10:39.311"), 10000000,1929034,
                 "One kiss is all it takes", true);
         SongEntityContainer songs = new SongEntityContainer();

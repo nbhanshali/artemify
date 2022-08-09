@@ -156,7 +156,7 @@ public class SongManagerTest {
         SongEntityContainer songListContainer = songManager.getSongs();
         ArrayList<Song> songList = songListContainer.values();
         Timestamp dateTime = new Timestamp(System.currentTimeMillis());
-        Song song = new Song(202, "STAY", "", new int[]{2, 25}, "The Kid Laroi", dateTime,
+        Song song = new Song(202, "STAY", new int[]{2, 25}, "The Kid Laroi", dateTime,
                 "I need you to stay", true);
         songList.add(song);
         songManager.setSongs(songList);
