@@ -68,7 +68,7 @@ public class SongDisplayPage extends PageActivity {
     @Override
     protected void populateMenuCommandCreatorMap() {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
-                List.of(CommandItemType.EXIT_PAGE, CommandItemType.ADD_TO_QUEUE,
+                List.of(CommandItemType.EXIT_PAGE,
                         CommandItemType.JUMP_TO_CREATE_NEW_PLAYLIST,
                         CommandItemType.INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY)
         );
@@ -76,7 +76,7 @@ public class SongDisplayPage extends PageActivity {
                 List.of(CommandItemType.VIEW_LYRICS, CommandItemType.VIEW_CREATOR)
         );
         ArrayList<CommandItemType> tempList3 = new ArrayList<>(
-                List.of(CommandItemType.PLAY_SONG)
+                List.of(CommandItemType.PLAY_SONG, CommandItemType.ADD_TO_QUEUE)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
         menuCommandCreatorMap.put("PopupCommandCreator", tempList2);

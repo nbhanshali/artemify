@@ -5,8 +5,6 @@ import android.view.View;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.transitionCommand.AddToExistingPlaylistCommand;
-import com.artemifyMusicStudio.controller.transitionCommand.AddToQueueCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.CreateAccountCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.EnableAdminCommand;
 import com.artemifyMusicStudio.controller.transitionCommand.EnableRegularUserHomePageCommand;
@@ -89,8 +87,6 @@ public class TransitionCommandCreator implements SimpleButtonCommandCreator {
                 return new ExitPageCommand(this.activityServiceCache);
             case QUIT_ADMIN_MODE:
                 return new EnableRegularUserHomePageCommand(this.activityServiceCache);
-            case ADD_TO_QUEUE:
-                return new AddToQueueCommand(this.activityServiceCache);
             case JUMP_TO_CREATE_NEW_PLAYLIST:
                 return new JumpToCreateNewPlaylistCommand(this.activityServiceCache);
             default:

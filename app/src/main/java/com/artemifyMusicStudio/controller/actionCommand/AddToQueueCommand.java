@@ -1,4 +1,4 @@
-package com.artemifyMusicStudio.controller.transitionCommand;
+package com.artemifyMusicStudio.controller.actionCommand;
 
 import android.content.Intent;
 import android.view.View;

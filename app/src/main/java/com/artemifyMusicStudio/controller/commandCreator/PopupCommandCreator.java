@@ -51,10 +51,7 @@ public class PopupCommandCreator implements SimpleButtonCommandCreator {
                         "Enter the index of the song in the queue you wish to remove",
                         CommandItemType.REMOVE_FROM_QUEUE);
             case VIEW_PLAYLIST_SONGS:
-                return new ViewPlaylistSongsCommand(this.activityServiceCache,
-                        this.activityServiceCache.getLanguagePresenter(),
-                        this.activityServiceCache.getPlaylistManager(),
-                        this.activityServiceCache.getTargetPlaylistID());
+                return new ViewPlaylistSongsCommand(this.activityServiceCache);
             case VIEW_CREATOR:
                 return new ViewCreatorCommand(this.activityServiceCache,
                         this.activityServiceCache.getPlaylistManager(),
