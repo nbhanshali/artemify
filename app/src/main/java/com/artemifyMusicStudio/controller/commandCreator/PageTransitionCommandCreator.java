@@ -28,7 +28,7 @@ import com.artemifyMusicStudio.controller.pageTransitionCommand.ViewQueueCommand
 /**
  *  A transition command factory to manufacture commands that are in transition command  category
  */
-public class pageTransitionCommandCreator implements SimpleButtonCommandCreator {
+public class PageTransitionCommandCreator implements SimpleButtonCommandCreator {
     private final ActivityServiceCache activityServiceCache;
     private String targetID = "";
 
@@ -36,7 +36,7 @@ public class pageTransitionCommandCreator implements SimpleButtonCommandCreator 
      *  A constructor of the transitionCommandCreator
      * @param activityServiceCache a ActivityServiceCache Object
      */
-    public pageTransitionCommandCreator(ActivityServiceCache activityServiceCache){
+    public PageTransitionCommandCreator(ActivityServiceCache activityServiceCache){
         this.activityServiceCache = activityServiceCache;
     }
 

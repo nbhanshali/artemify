@@ -8,7 +8,7 @@ import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand;
 import com.useCase.SongManager;
 
@@ -44,7 +44,7 @@ public class SongDisplayPage extends PageActivity {
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new pageTransitionCommandCreator(this.activityServiceCache);
+                return new PageTransitionCommandCreator(this.activityServiceCache);
             case "PopupCommandCreator":
                 return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "ActionCommandCreator":

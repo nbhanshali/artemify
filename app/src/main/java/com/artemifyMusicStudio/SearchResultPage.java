@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.artemifyMusicStudio.controller.searchCommand.SearchResultContainer;
 import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
@@ -56,7 +56,7 @@ public class SearchResultPage extends PageActivity {
         HashMap<String, String> searchResultInfoMap = this.searchResultContainer.getSearchResultMap();
         ArrayList<String> resultTargetID = new ArrayList<>(searchResultInfoMap.keySet());
         int count = 0;
-        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
+        PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
         for (String targetID : resultTargetID){
             String buttonDescription = languagePresenter.translateString(searchResultInfoMap.get(targetID));
             Button button = new Button(this);

@@ -9,7 +9,7 @@ import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.stateChangedActionCommand.LikePlaylistCommand;
 import com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.useCase.PlaylistManager;
 
 import java.util.ArrayList;
@@ -47,7 +47,7 @@ public class PlaylistDisplayPage extends PageActivity {
             case "PopupCommandCreator":
                 return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
-                return new pageTransitionCommandCreator(this.activityServiceCache);
+                return new PageTransitionCommandCreator(this.activityServiceCache);
             case "ActionCommandCreator":
                 return new StateChangedActionCommandCreator(this.activityServiceCache);
             default:

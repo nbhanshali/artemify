@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.UserAccess;
@@ -63,7 +63,7 @@ public class FollowerFollowingDisplayPage extends PageActivity {
         LinearLayout resultDisplay = findViewById(R.id.follower_following_result_display_layout);
         ArrayList<String> displayTargetNames = getDisplayNames(this.activityServiceCache.getUserAcctServiceManager());
         int count = 0;
-        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
+        PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
         for (String targetName : displayTargetNames){
             String buttonDescription = languagePresenter.translateString(targetName);
             Button button = new Button(this);

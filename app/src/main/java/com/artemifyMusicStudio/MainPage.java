@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,7 +44,7 @@ public class MainPage extends PageActivity {
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType){
         if ("TransitionCommandCreator".equals(creatorType)) {
-            return new pageTransitionCommandCreator(this.activityServiceCache);
+            return new PageTransitionCommandCreator(this.activityServiceCache);
         }
         return null;
     }

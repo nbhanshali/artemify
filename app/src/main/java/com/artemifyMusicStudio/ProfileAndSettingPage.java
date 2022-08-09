@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
@@ -183,7 +183,7 @@ public class ProfileAndSettingPage extends PageActivity {
         String currUserID = this.activityServiceCache.getUserID();
         this.activityServiceCache.setTargetUserID(currUserID);
 
-        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
+        PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
 
         // populate view follower button
         Button viewFollowerButton = findViewById(R.id.my_view_followers);
@@ -203,7 +203,7 @@ public class ProfileAndSettingPage extends PageActivity {
         // Get layout and create buttons
         LinearLayout publicSongDisplay = findViewById(layoutID);
         int count = 0;
-        pageTransitionCommandCreator pageTransitionCommandCreator = new pageTransitionCommandCreator(this.activityServiceCache);
+        PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
         for (int targetID: targetIDs){
             String buttonDescription = languagePresenter.translateString(targetNames.get(count));
             Button button = new Button(this);

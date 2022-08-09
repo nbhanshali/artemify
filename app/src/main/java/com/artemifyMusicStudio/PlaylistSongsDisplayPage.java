@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
 
@@ -38,7 +38,7 @@ public class PlaylistSongsDisplayPage extends PageActivity {
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         if ("TransitionCommandCreator".equals(creatorType)) {
-            return new pageTransitionCommandCreator(this.activityServiceCache);
+            return new PageTransitionCommandCreator(this.activityServiceCache);
         }
         return null;
     }

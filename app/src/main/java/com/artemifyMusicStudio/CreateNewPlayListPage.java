@@ -7,7 +7,7 @@ import android.widget.RadioGroup;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.pageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
 
 import java.util.ArrayList;
@@ -44,7 +44,7 @@ public class CreateNewPlayListPage extends PageActivity implements RadioGroup.On
         EditText inputDescription = findViewById(R.id.playlist_desc);
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new pageTransitionCommandCreator(this.activityServiceCache);
+                return new PageTransitionCommandCreator(this.activityServiceCache);
             case "UserInputCommandCreator":
                 return new UserInputRequestCommandCreator(this.activityServiceCache, inputPlaylistName,
                         inputDescription, isPublic);
