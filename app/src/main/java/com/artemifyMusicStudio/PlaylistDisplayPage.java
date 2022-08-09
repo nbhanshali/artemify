@@ -59,7 +59,7 @@ public class PlaylistDisplayPage extends PageActivity {
     protected void populateIdMenuMap() {
         idMenuItemMap.put(CommandItemType.VIEW_PLAYLIST_SONGS, R.id.view_playlist_songs);
         idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator_in_playlist);
-//        idMenuItemMap.put(CommandItemType.PLAY_PLAYLIST, R.id.play_playlist);
+        idMenuItemMap.put(CommandItemType.PLAY_PLAYLIST, R.id.play_playlist);
         idMenuItemMap.put(CommandItemType.EXIT_PAGE, R.id.exit);
 
     }
@@ -73,12 +73,12 @@ public class PlaylistDisplayPage extends PageActivity {
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.EXIT_PAGE)
         );
-//        ArrayList<CommandItemType> tempList3 = new ArrayList<>(
-//                List.of(CommandItemType.PLAY_PLAYLIST)
-//        );
+        ArrayList<CommandItemType> tempList3 = new ArrayList<>(
+                List.of(CommandItemType.PLAY_PLAYLIST)
+        );
         menuCommandCreatorMap.put("PopupCommandCreator", tempList1);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
-//        menuCommandCreatorMap.put("ActionCommandCreator", tempList3);
+        menuCommandCreatorMap.put("ActionCommandCreator", tempList3);
     }
 
     @Override
