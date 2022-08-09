@@ -63,7 +63,7 @@ public class User implements Serializable {
      *                                  this User has uploaded
      * @param myPrivateSongsPlaylistId  the id of this User's "Private Songs" playlist - a playlist of the private songs
      *                                  that this User has uploaded
-     * @param favoritesPlaylistId       the id of this User's "Favorites" playlist - a playist of the public songs that
+     * @param favoritesPlaylistId       the id of this User's "Favorites" playlist - a playlist of the public songs that
      *                                  this User has liked
      * @param myPublicPlaylists         the list of ids of the public playlists that this User has created
      * @param myPrivatePlaylists        the list of ids of the private playlists that this User has created

@@ -24,7 +24,7 @@ public class ViewLoginHistoryCommand extends RegularPopupCommand implements View
      *
      * @param activityServiceCache a PageCreator Object
      * @param languagePresenter A LanguagePresenter object
-     * @param userID the id of the user for whom the login history is being diplayed
+     * @param userID the id of the user for whom the login history is being displayed
      */
     public ViewLoginHistoryCommand(ActivityServiceCache activityServiceCache,
                                    LanguagePresenter languagePresenter, String userID){

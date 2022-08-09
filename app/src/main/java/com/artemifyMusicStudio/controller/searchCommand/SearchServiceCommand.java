@@ -66,7 +66,7 @@ public abstract class SearchServiceCommand implements View.OnClickListener {
 
     /**
      * A generic protected helper method to populate the search result based on the name that provided from the user
-     * @return a HashMap stores the target entity ids as the key and the descripiton of that entity
+     * @return a HashMap stores the target entity ids as the key and the description of that entity
      *         as a correspondent
      */
     protected LinkedHashMap<String, String> populateSearchResultMap(String searchString,

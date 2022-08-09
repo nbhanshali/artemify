@@ -10,7 +10,7 @@ public class GatewayCreator{
 
 
     /**
-     * Create a specific Gateway based on the input FileTypy filetype and also construct the new gateway using the
+     * Create a specific Gateway based on the input FileType filetype and also construct the new gateway using the
      * filePath string and entityType.
      * @param fileType the type of the input file
      * @param currPageActivity a PageActivity object

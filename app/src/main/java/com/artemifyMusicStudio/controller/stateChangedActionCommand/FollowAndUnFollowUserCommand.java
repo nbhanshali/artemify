@@ -47,7 +47,7 @@ public class FollowAndUnFollowUserCommand implements CompoundButton.OnCheckedCha
     /**
      * Execute the FollowAndUnfollow User command
      * @param compoundButton a compoundButton object
-     * @param switchIsChecked a boolen to indicate whether the swicht is checked or not
+     * @param switchIsChecked a boolean to indicate whether the switch is checked or not
      */
     @SuppressLint("SetTextI18n")
     @Override

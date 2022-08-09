@@ -1,4 +1,4 @@
-// heavily adapated program from: https://www.geeksforgeeks.org/how-to-create-language-translator-in-android-using-firebase-ml-kit/
+// heavily adapted program from: https://www.geeksforgeeks.org/how-to-create-language-translator-in-android-using-firebase-ml-kit/
 
 /*
 package com.presenters;

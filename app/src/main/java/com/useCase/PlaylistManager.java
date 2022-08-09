@@ -247,9 +247,9 @@ public class PlaylistManager implements Serializable {
     }
 
     /**
-     * Remove the song with sonngID from user's Favourite playlist.
-     * @param userFavouritesID
-     * @param songID
+     * Remove the song with songID from user's Favourite playlist.
+     * @param userFavouritesID  id of user's Favourites playlist
+     * @param songID            id of song to be removed
      */
     public void removeFromFavoritePlaylist(int userFavouritesID, int songID){
         findPlaylist(userFavouritesID).removeSong(songID);
