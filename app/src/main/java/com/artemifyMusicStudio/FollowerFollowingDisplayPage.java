@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.transitionCommand.ExitPageCommand;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
 import com.presenters.LanguagePresenter;
 import com.useCase.UserAccess;
 
@@ -63,7 +63,7 @@ public class FollowerFollowingDisplayPage extends PageActivity {
         LinearLayout resultDisplay = findViewById(R.id.follower_following_result_display_layout);
         ArrayList<String> displayTargetNames = getDisplayNames(this.activityServiceCache.getUserAcctServiceManager());
         int count = 0;
-        TransitionCommandCreator transitionCommandCreator = new TransitionCommandCreator(this.activityServiceCache);
+        PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
         for (String targetName : displayTargetNames){
             String buttonDescription = languagePresenter.translateString(targetName);
             Button button = new Button(this);
@@ -71,8 +71,8 @@ public class FollowerFollowingDisplayPage extends PageActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT));
             button.setId(count);
             button.setText(buttonDescription);
-            transitionCommandCreator.setTargetID(targetName);
-            View.OnClickListener onClickListener = transitionCommandCreator.create(CommandItemType.INVOKE_USER_DISPLAY);
+            pageTransitionCommandCreator.setTargetID(targetName);
+            View.OnClickListener onClickListener = pageTransitionCommandCreator.create(CommandItemType.INVOKE_USER_DISPLAY);
             button.setOnClickListener(onClickListener);
 
             // populate the button to the layout

@@ -6,10 +6,10 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.ActionCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.actionCommand.LikeSongCommand;
+import com.artemifyMusicStudio.controller.commandCreator.StateChangedActionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.stateChangedActionCommand.LikeSongCommand;
 import com.useCase.SongManager;
 
 import java.util.ArrayList;
@@ -44,11 +44,11 @@ public class SongDisplayPage extends PageActivity {
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new PageTransitionCommandCreator(this.activityServiceCache);
             case "PopupCommandCreator":
-                return new PopupCommandCreator(this.activityServiceCache);
+                return new InfoDisplayCommandCreator(this.activityServiceCache);
             case "ActionCommandCreator":
-                return new ActionCommandCreator(this.activityServiceCache);
+                return new StateChangedActionCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }
@@ -60,6 +60,7 @@ public class SongDisplayPage extends PageActivity {
         idMenuItemMap.put(CommandItemType.VIEW_LYRICS, R.id.view_lyrics);
         idMenuItemMap.put(CommandItemType.VIEW_CREATOR, R.id.view_creator);
         idMenuItemMap.put(CommandItemType.JUMP_TO_CREATE_NEW_PLAYLIST, R.id.display_add_to_new_playlist);
+        idMenuItemMap.put(CommandItemType.INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY, R.id.display_add_to_existing_playlist);
         idMenuItemMap.put(CommandItemType.PLAY_SONG, R.id.play_song);
         idMenuItemMap.put(CommandItemType.ADD_TO_QUEUE, R.id.display_add_to_queue);
     }
@@ -67,14 +68,15 @@ public class SongDisplayPage extends PageActivity {
     @Override
     protected void populateMenuCommandCreatorMap() {
         ArrayList<CommandItemType> tempList1 = new ArrayList<>(
-                List.of(CommandItemType.EXIT_PAGE, CommandItemType.ADD_TO_QUEUE,
-                        CommandItemType.JUMP_TO_CREATE_NEW_PLAYLIST)
+                List.of(CommandItemType.EXIT_PAGE,
+                        CommandItemType.JUMP_TO_CREATE_NEW_PLAYLIST,
+                        CommandItemType.INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY)
         );
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.VIEW_LYRICS, CommandItemType.VIEW_CREATOR)
         );
         ArrayList<CommandItemType> tempList3 = new ArrayList<>(
-                List.of(CommandItemType.PLAY_SONG)
+                List.of(CommandItemType.PLAY_SONG, CommandItemType.ADD_TO_QUEUE)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
         menuCommandCreatorMap.put("PopupCommandCreator", tempList2);

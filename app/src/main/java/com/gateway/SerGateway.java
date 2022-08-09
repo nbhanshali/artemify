@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.artemifyMusicStudio.PageActivity;
+import com.artemifyMusicStudio.ActivityServiceCache;
 import com.useCase.PlaylistEntityContainer;
 import com.useCase.SongEntityContainer;
 import com.useCase.UserEntityContainer;
@@ -99,6 +99,18 @@ public class SerGateway extends IGateway{
         SongEntityContainer songs = (SongEntityContainer) input.readObject();
         input.close();
         return songs;
+    }
+
+    @Override
+    public ActivityServiceCache readActivityServiceCacheFromFile() throws IOException, ClassNotFoundException {
+        FileInputStream file = this.currentPageActivity.openFileInput("ActivityServiceCache.ser");
+        InputStream buffer = new BufferedInputStream(file);
+        ObjectInput input = new ObjectInputStream(buffer);
+
+        // serialize the Map
+        ActivityServiceCache activityServiceCache = (ActivityServiceCache) input.readObject();
+        input.close();
+        return activityServiceCache;
     }
 
 }

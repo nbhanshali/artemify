@@ -7,8 +7,8 @@ import android.widget.RadioGroup;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +43,9 @@ public class AddToNewPlaylistPage extends PageActivity implements RadioGroup.OnC
         EditText inputDescription = findViewById(R.id.playlist_desc);
         switch (creatorType){
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new PageTransitionCommandCreator(this.activityServiceCache);
             case "UserInputCommandCreator":
-                return new UserInputCommandCreator(this.activityServiceCache, inputPlaylistName,
+                return new UserInputRequestCommandCreator(this.activityServiceCache, inputPlaylistName,
                         inputDescription, isPublic);
             default:
                 return null;

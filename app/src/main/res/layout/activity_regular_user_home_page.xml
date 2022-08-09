@@ -9,19 +9,11 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home"
-        android:textSize="25sp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
-
-    <TextView
         android:id="@+id/welcome_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/welcome_username"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:layout_marginTop="5dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"/>
@@ -41,21 +33,32 @@
 <!--            android:text="meow"-->
 <!--            android:textSize="20dp"/>-->
 
-        <Button
-            android:id="@+id/enable_admin"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="@string/enable_admin_mode"
-            android:textSize="11sp"/>
+            android:orientation="vertical"
+            android:layout_margin="3dp">
 
-        <Button
-            android:id="@+id/log_out"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="@string/home_log_out"
-            android:textSize="11sp" />
+            <Button
+                android:id="@+id/enable_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/enable_admin_mode"
+                android:textSize="11sp"/>
+
+            <Button
+                android:id="@+id/log_out"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/home_log_out"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+
 
         <Button
             android:id="@+id/search"
@@ -64,6 +67,7 @@
             android:layout_height="wrap_content"
             android:text="@string/home_search"
             android:textSize="20sp"
+            android:drawableStart="@drawable/search_logo"
             />
 
         <Button
@@ -71,21 +75,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/profile_and_setting"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:drawableStart="@drawable/account_logo"/>
 
         <Button
             android:id="@+id/create_playlist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/create_new_playlist"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:drawableStart="@drawable/add_playlist"/>
 
         <Button
             android:id="@+id/upload_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/upload_song"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:drawableStart="@drawable/add_song"/>
 
         <Button
             android:id="@+id/queue_page"

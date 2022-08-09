@@ -44,12 +44,11 @@ public enum CommandItemType {
     LOG_IN,
     LOG_OUT,
     ACCOUNT_CREATION,
-    EXIT_PROGRAM,
     // For UploadSongPage
     UPLOAD_SONG,
     // For SongDisplayPage
     VIEW_LYRICS,
-    LIKE_SONG,
+    INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY,
     ADD_TO_EXISTING_PLAYLIST,
     JUMP_TO_CREATE_NEW_PLAYLIST,
     PLAY_SONG,

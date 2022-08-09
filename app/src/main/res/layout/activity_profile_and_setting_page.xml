@@ -34,7 +34,7 @@
                 android:id="@+id/my_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="username"/>
+                android:text=""/>
 
 
             <LinearLayout
@@ -56,7 +56,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
 
@@ -67,7 +67,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/view_followers"
-                    android:textSize="9sp"
+                    android:textSize="11sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
@@ -77,7 +77,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/view_followings"
-                    android:textSize="9sp"
+                    android:textSize="11sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
@@ -85,7 +85,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/likes"
-                    android:textSize="9sp"
+                    android:textSize="11sp"
                     style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
 
@@ -131,21 +131,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/songs"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/my_display_public_songs"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -153,21 +152,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/private_songs"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/my_display_private_songs"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -175,21 +173,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/favourite_songs"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/my_display_favourites_songs"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -197,21 +194,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/playlists"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/my_display_public_playlist"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -219,21 +215,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/private_playlists"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/my_display_private_playlist"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>
@@ -241,21 +236,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:layout_gravity="start"
                     android:text="@string/liked_playlists"
                     android:textStyle="bold"/>
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
-                    android:layout_gravity="left">
+                    android:layout_gravity="start">
 
                     <LinearLayout
                         android:id="@+id/my_display_liked_playlist"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center">
+                        android:orientation="horizontal">
                     </LinearLayout>
 
                 </HorizontalScrollView>

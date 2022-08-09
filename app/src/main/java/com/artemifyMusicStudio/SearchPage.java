@@ -4,8 +4,8 @@ import android.os.Bundle;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,10 +34,10 @@ public class SearchPage extends PageActivity {
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){
-            case "PopupCommandCreator":
-                return new PopupCommandCreator(this.activityServiceCache);
+            case "UserInputCommandCreator":
+                return new UserInputRequestCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator":
-                return new TransitionCommandCreator(this.activityServiceCache);
+                return new PageTransitionCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }
@@ -64,7 +64,7 @@ public class SearchPage extends PageActivity {
         ArrayList<CommandItemType> tempList2 = new ArrayList<>(
                 List.of(CommandItemType.EXIT_PAGE)
         );
-        menuCommandCreatorMap.put("PopupCommandCreator", tempList1);
+        menuCommandCreatorMap.put("UserInputCommandCreator", tempList1);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
     }
 
