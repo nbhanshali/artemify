@@ -16,7 +16,7 @@ import com.presenters.LanguagePresenter;
 public class UnBanUserCommand implements View.OnClickListener {
     private final LanguagePresenter languagePresenter;
     protected final ActivityServiceCache activityServiceCache;
-    protected EditText InputTargetName;
+    protected final EditText InputTargetName;
 
     /**
      * Constructor of DeleteUserCommand class

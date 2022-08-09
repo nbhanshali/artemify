@@ -40,7 +40,6 @@ public class AddToNewPlaylistCommand implements View.OnClickListener {
     public void onClick(View v) {
         String playlistName = inputPlaylistName.getText().toString();
         String description = inputDescription.getText().toString();
-        String user = activityServiceCache.getUserID();
         Timestamp dateTimeCreated = new Timestamp(System.currentTimeMillis());
         boolean success = extractValidData(playlistName, description);
         if (success){

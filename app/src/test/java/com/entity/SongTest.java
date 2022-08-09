@@ -7,12 +7,12 @@ import java.sql.Timestamp;
 import static org.junit.Assert.*;
 
 public class SongTest {
-    int[] duration = {3, 59};
-    Timestamp dateTime = new Timestamp(System.currentTimeMillis());
-    User user1 = new User("Glass Animals", "20220716");
-    String user1name = user1.getUsername();
-    String lyrics1 = "Heat waves been faking me out\n" + "Can't make you happier now";
-    Song song1 = new Song(201, "Heat Waves", duration, user1name, dateTime, 1000000, 3208546,
+    final int[] duration = {3, 59};
+    final Timestamp dateTime = new Timestamp(System.currentTimeMillis());
+    final User user1 = new User("Glass Animals", "20220716");
+    final String user1name = user1.getUsername();
+    final String lyrics1 = "Heat waves been faking me out\n" + "Can't make you happier now";
+    final Song song1 = new Song(201, "Heat Waves", duration, user1name, dateTime, 1000000, 3208546,
             lyrics1, true);
 
     @Test

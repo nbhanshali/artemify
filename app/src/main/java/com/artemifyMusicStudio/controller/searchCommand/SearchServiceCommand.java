@@ -19,7 +19,7 @@ public abstract class SearchServiceCommand implements View.OnClickListener {
     protected final ActivityServiceCache activityServiceCache;
     protected final LanguagePresenter languagePresenter;
     protected String searchType = "";
-    protected EditText InputTargetName;
+    protected final EditText InputTargetName;
 
     /**
      * Constructor of SearchServiceCommand

@@ -188,36 +188,6 @@ public class PlaylistManager implements Serializable {
     }
 
     /**
-     * NOTE: This method has been implemented to be used in Phase 2
-     * Make a playlist with the specified ID public
-     * @param id The ID of a playlist
-     * @return true if the playlist exists and setPublic operation succeeds, and false otherwise.
-     */
-    public boolean makePublic(int id) {
-        if (exists(id)) {
-            findPlaylist(id).setPublic(true);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * NOTE: This method has been implemented to be used in Phase 2
-     * NOTE: REMOVE PLAYLIST FROM ALL OF USER'S LIKED PLAYLISTS & THIS USER'S PUBLIC PLAYLIST
-     *
-     * Make a playlist with the specified ID private.
-     * @param id The ID of the playlist
-     * @return true if the playlist exists and setPublic operation succeeds, and false otherwise.
-     */
-    public boolean makePrivate(int id) {
-        if (exists(id)) {
-            findPlaylist(id).setPublic(false);
-            return true;
-        }
-        return false;
-    }
-
-    /**
      * Have the user with the specified username like the playlist with the specified playlist ID.
      * @param id The ID of a playlist
      *
@@ -312,22 +282,6 @@ public class PlaylistManager implements Serializable {
             return null;
         }
         return IDs;
-    }
-
-    /**
-     * Return the playlistID with playlistName from the user account with name userID
-     * @param userID a String to represent userID
-     * @param playlistName a String to represent the playlistName
-     * @return the playlistID Integer object, return null if the id does not exit.
-     */
-    public Integer getUserOwnedPlaylistIDFromName(String userID, String playlistName){
-        for (Playlist playlist: getPlaylistInArray()) {
-            if (Objects.equals(playlist.getName(), playlistName) &&
-                    Objects.equals(playlist.getCreatorUsername(), userID)) {
-                return playlist.getId();
-            }
-        }
-        return null;
     }
 
     /**

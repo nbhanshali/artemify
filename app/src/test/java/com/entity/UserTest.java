@@ -7,14 +7,14 @@ import static org.junit.Assert.*;
 
 public class UserTest {
 
-    ArrayList<Timestamp> newLogin = new ArrayList<>();
-    Timestamp dateTime = new Timestamp(System.currentTimeMillis());
-    ArrayList<String> user1Following = new ArrayList<>();
-    ArrayList<String> user1Follower = new ArrayList<>();
-    ArrayList<Integer> user1PubPlaylist = new ArrayList<>();
-    ArrayList<Integer> user1PrivPlaylist = new ArrayList<>();
-    ArrayList<Integer> user1LikePlaylist = new ArrayList<>();
-    User user1 = new User("Glass Animals", "1234567890", "english", newLogin,
+    final ArrayList<Timestamp> newLogin = new ArrayList<>();
+    final Timestamp dateTime = new Timestamp(System.currentTimeMillis());
+    final ArrayList<String> user1Following = new ArrayList<>();
+    final ArrayList<String> user1Follower = new ArrayList<>();
+    final ArrayList<Integer> user1PubPlaylist = new ArrayList<>();
+    final ArrayList<Integer> user1PrivPlaylist = new ArrayList<>();
+    final ArrayList<Integer> user1LikePlaylist = new ArrayList<>();
+    final User user1 = new User("Glass Animals", "1234567890", "english", newLogin,
             false, false, user1Following, user1Follower, 0, 101,
             102, 103, user1PubPlaylist, user1PrivPlaylist, user1LikePlaylist);
 

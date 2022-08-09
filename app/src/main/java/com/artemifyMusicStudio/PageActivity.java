@@ -46,8 +46,6 @@ public abstract class PageActivity extends AppCompatActivity implements Serializ
         this.activityServiceCache = (ActivityServiceCache) getIntent().getSerializableExtra("cache");
     }
 
-    public void invokes(){}
-
     /**
      * A protected method that can be reused by a concrete page controller class to populate MenuItemMap
      */

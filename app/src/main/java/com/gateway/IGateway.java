@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public abstract class IGateway implements SimpleGateway{
 
-    protected AppCompatActivity currentPageActivity;
+    protected final AppCompatActivity currentPageActivity;
 
     /**
      * Constructor of IGateway

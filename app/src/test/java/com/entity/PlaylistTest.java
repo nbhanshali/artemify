@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class PlaylistTest {
-    Timestamp dateTime = new Timestamp(System.currentTimeMillis());
-    ArrayList<Integer> playlist1Songs = new ArrayList<>();
-    Playlist playlist1 = new Playlist(101, "Favorites", "Songs you like will appear here!",
+    final Timestamp dateTime = new Timestamp(System.currentTimeMillis());
+    final ArrayList<Integer> playlist1Songs = new ArrayList<>();
+    final Playlist playlist1 = new Playlist(101, "Favorites", "Songs you like will appear here!",
             "testUser1", dateTime, true, playlist1Songs, 10);
 
     @Test
