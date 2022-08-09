@@ -4,9 +4,9 @@ import android.os.Bundle;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.QueueServiceCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,8 +35,8 @@ public class QueueDisplayPage extends PageActivity{
         switch (creatorType) {
             case "QueueServiceCommandCreator":
                 return new QueueServiceCommandCreator(this.activityServiceCache);
-            case "PopupCommandCreator" :
-                return new PopupCommandCreator(this.activityServiceCache);
+            case "UserInputCommandCreator" :
+                return new UserInputCommandCreator(this.activityServiceCache);
             case "TransitionCommandCreator" :
                 return new TransitionCommandCreator(this.activityServiceCache);
             default:
@@ -82,7 +82,7 @@ public class QueueDisplayPage extends PageActivity{
                         CommandItemType.EXIT_PAGE)
         );
         menuCommandCreatorMap.put("QueueServiceCommandCreator", tempList1);
-        menuCommandCreatorMap.put("PopupCommandCreator", tempList2);
+        menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList3);
     }
 

@@ -1,4 +1,4 @@
-package com.artemifyMusicStudio.controller.popupCommand;
+package com.artemifyMusicStudio.controller.userInputCommand;
 
 import android.view.View;
 import android.widget.EditText;
@@ -11,11 +11,11 @@ import com.presenters.LanguagePresenter;
 import java.util.Scanner;
 
 /**
- * A UnBanUserCommand class to handle the ban user request from an admin user
+ * A MakeAdminUserCommand class to grant another user the admin right
  *
  */
 
-public class UnBanUserCommand implements View.OnClickListener {
+public class MakeAdminUserCommand implements View.OnClickListener {
     private final LanguagePresenter languagePresenter;
     protected final ActivityServiceCache activityServiceCache;
     protected EditText InputTargetName;
@@ -24,9 +24,9 @@ public class UnBanUserCommand implements View.OnClickListener {
      * Constructor of DeleteUserCommand class
      * @param activityServiceCache a PageCreator object
      * @param userInputTargetName a EditText to capture the user input for the username of a
-     *                            to-be unbanned user.
+     *                            to-be admin user.
      */
-    public UnBanUserCommand(ActivityServiceCache activityServiceCache,
+    public MakeAdminUserCommand(ActivityServiceCache activityServiceCache,
                              EditText userInputTargetName){
         this.activityServiceCache = activityServiceCache;
         this.languagePresenter = activityServiceCache.getLanguagePresenter();
@@ -34,16 +34,17 @@ public class UnBanUserCommand implements View.OnClickListener {
     }
 
     /**
-     * Execute to unban user request from an admin user
+     * Execute the request of granting a user the admin right
      */
     @Override
     public void onClick(View view) {
 //        Scanner in = new Scanner(System.in);
 
-//        this.languagePresenter.display("Enter the username of the user you wish to unban: ");
+//        this.languagePresenter.
+//                display("Enter the username of the user you want to make admin: ");
         String username = InputTargetName.getText().toString();
-        if(this.activityServiceCache.getUserAcctServiceManager().unban(username)){
-            String msg = this.languagePresenter.translateString("Successfully unbanned");
+        if(this.activityServiceCache.getUserAcctServiceManager().makeAdmin(username)){
+            String msg = this.languagePresenter.translateString("Admin rights granted");
             displayToastMsg(msg);
         }else{
             String msg = this.languagePresenter.translateString("User does not exist");

@@ -1,4 +1,4 @@
-package com.artemifyMusicStudio.controller.popupCommand;
+package com.artemifyMusicStudio.controller.userInputCommand;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import android.view.View;
 import android.widget.EditText;

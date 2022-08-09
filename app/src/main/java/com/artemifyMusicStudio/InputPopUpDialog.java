@@ -13,10 +13,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
-import com.artemifyMusicStudio.controller.popupCommand.BanUserCommand;
-import com.artemifyMusicStudio.controller.popupCommand.DeleteUserCommand;
-import com.artemifyMusicStudio.controller.popupCommand.MakeAdminUserCommand;
-import com.artemifyMusicStudio.controller.popupCommand.UnBanUserCommand;
+import com.artemifyMusicStudio.controller.userInputCommand.BanUserCommand;
+import com.artemifyMusicStudio.controller.userInputCommand.DeleteUserCommand;
+import com.artemifyMusicStudio.controller.userInputCommand.MakeAdminUserCommand;
+import com.artemifyMusicStudio.controller.userInputCommand.UnBanUserCommand;
 import com.artemifyMusicStudio.controller.queueServiceCommand.RemoveFromQueueCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchPlaylistCommand;
 import com.artemifyMusicStudio.controller.searchCommand.SearchSongCommand;

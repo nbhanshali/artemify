@@ -10,6 +10,7 @@ import com.artemifyMusicStudio.controller.userInputCommand.AddToNewPlaylistComma
 import com.artemifyMusicStudio.controller.userInputCommand.AdminLogInCommand;
 import com.artemifyMusicStudio.controller.userInputCommand.CreateNewPlaylistCommand;
 import com.artemifyMusicStudio.controller.userInputCommand.CreateRegularAccountCommand;
+import com.artemifyMusicStudio.controller.userInputCommand.PopUpInputDialogCommand;
 import com.artemifyMusicStudio.controller.userInputCommand.RegularLogInCommand;
 import com.artemifyMusicStudio.controller.userInputCommand.UploadSongCommand;
 
@@ -31,12 +32,28 @@ public class UserInputCommandCreator implements SimpleButtonCommandCreator {
     private EditText inputDescription;
 
 
-    public UserInputCommandCreator(ActivityServiceCache activityServiceCache, EditText inputUserName, EditText inputPassword){
+    /**
+     * Constructor of UserInputCommand Creator
+     * @param activityServiceCache a ActivityServiceCache object
+     * @param inputUserName a inputUserName
+     * @param inputPassword a inputPassword
+     */
+    public UserInputCommandCreator(ActivityServiceCache activityServiceCache,
+                                   EditText inputUserName, EditText inputPassword){
         this.activityServiceCache = activityServiceCache;
         this.inputUserName = inputUserName;
         this.inputPassword = inputPassword;
     }
 
+    /**
+     * Constructor of UserInputCommand Creator
+     * @param activityServiceCache a ActivityServiceCache object
+     * @param inputSongName a inputSongName
+     * @param inputMinute a inputMinute
+     * @param inputSecond a inputSecond
+     * @param inputLyrics a inputLyrics
+     * @param isPublic whether isPublic
+     */
     public UserInputCommandCreator(ActivityServiceCache activityServiceCache, EditText inputSongName,
                                    EditText inputMinute, EditText inputSecond, EditText inputLyrics,
                                    boolean isPublic){
@@ -48,6 +65,13 @@ public class UserInputCommandCreator implements SimpleButtonCommandCreator {
         this.isPublic = isPublic;
     }
 
+    /**
+     * Constructor of UserInputCommand Creator
+     * @param activityServiceCache a ActivityServiceCache object
+     * @param inputPlaylistName a inputPlaylistName
+     * @param inputDescription a inputDescription
+     * @param isPublic whether isPublic
+     */
     public UserInputCommandCreator(ActivityServiceCache activityServiceCache,
                                    EditText inputPlaylistName, EditText inputDescription,
                                    boolean isPublic){
@@ -55,6 +79,14 @@ public class UserInputCommandCreator implements SimpleButtonCommandCreator {
         this.inputPlaylistName = inputPlaylistName;
         this.inputDescription = inputDescription;
         this.isPublic = isPublic;
+    }
+
+    /**
+     * Constructor of UserInputCommand Creator
+     * @param activityServiceCache a ActivityServiceCache object
+     */
+    public UserInputCommandCreator(ActivityServiceCache activityServiceCache){
+        this.activityServiceCache = activityServiceCache;
     }
 
     @Override
@@ -81,6 +113,46 @@ public class UserInputCommandCreator implements SimpleButtonCommandCreator {
                 return new AddToNewPlaylistCommand(this.activityServiceCache,
                         this.activityServiceCache.getLanguagePresenter(), this.inputPlaylistName,
                         this.inputDescription, this.isPublic);
+            case POP_UP_SEARCH_USER_DIALOG:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Search by User",
+                        "Enter the username of the user you wish to search",
+                        CommandItemType.SEARCH_USER);
+            case POP_UP_SEARCH_PLAYLIST_DIALOG:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Search by Playlist",
+                        "Enter the name of the playlist you wish to search",
+                        CommandItemType.SEARCH_PLAYLIST);
+            case POP_UP_SEARCH_SONG_DIALOG:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Search by Song",
+                        "Enter the name of the song you wish to search",
+                        CommandItemType.SEARCH_SONG);
+            case POP_UP_REMOVE_FROM_QUEUE_DIALOG:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Remove from Queue",
+                        "Enter the index of the song in the queue you wish to remove",
+                        CommandItemType.REMOVE_FROM_QUEUE);
+            case BAN_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Ban a user:",
+                        "Enter the username of the user you wish to ban",
+                        CommandItemType.BAN_USER);
+            case UNBAN_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Unban a user:",
+                        "Enter the username of the user you wish to unban",
+                        CommandItemType.UNBAN_USER);
+            case DELETE_USER:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Delete a user:",
+                        "Enter the username of the user you wish to delete",
+                        CommandItemType.DELETE_USER);
+            case GRANT_ADMIN_RIGHT:
+                return new PopUpInputDialogCommand(this.activityServiceCache,
+                        "Make existing user an admin:",
+                        "Enter the username of the user you wish to make an admin",
+                        CommandItemType.GRANT_ADMIN_RIGHT);
             default:
                 return null;
         }

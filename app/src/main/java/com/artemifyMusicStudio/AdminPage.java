@@ -5,8 +5,8 @@ import android.widget.TextView;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
-import com.artemifyMusicStudio.controller.commandCreator.PopupCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.TransitionCommandCreator;
+import com.artemifyMusicStudio.controller.commandCreator.UserInputCommandCreator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +42,7 @@ public class AdminPage extends PageActivity {
                 List.of(CommandItemType.QUIT_ADMIN_MODE, CommandItemType.LOG_OUT)
         );
         menuCommandCreatorMap.put("TransitionCommandCreator", transitionList);
-        menuCommandCreatorMap.put("PopupCommandCreator", popupList);
+        menuCommandCreatorMap.put("UserInputCommandCreator", popupList);
     }
 
     @Override
@@ -60,8 +60,8 @@ public class AdminPage extends PageActivity {
         switch (creatorType) {
             case "TransitionCommandCreator":
                 return new TransitionCommandCreator(this.activityServiceCache);
-            case "PopupCommandCreator" :
-                return new PopupCommandCreator(this.activityServiceCache);
+            case "UserInputCommandCreator" :
+                return new UserInputCommandCreator(this.activityServiceCache);
             default:
                 return null;
         }
