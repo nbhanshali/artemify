@@ -1,12 +1,18 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
+
+import java.io.IOException;
 
 public class SkipSongCommand extends QueueServiceCommand{
 
@@ -28,6 +34,15 @@ public class SkipSongCommand extends QueueServiceCommand{
 
         if(activityServiceCache.getSongManager().exists(nowPlaying)) {
             activityServiceCache.getQueueManager().popFromQueue();
+            // Updated ActivityServiceCache.ser file
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
+            }
             String warningMsg =  this.languagePresenter.
                     translateString("Current song has been skipped, " +
                             "next song is being played.") ;

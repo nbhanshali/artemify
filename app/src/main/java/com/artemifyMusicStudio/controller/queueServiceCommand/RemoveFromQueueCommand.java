@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -8,7 +9,12 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.QueueDisplayPage;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
+
+import java.io.IOException;
 
 public class RemoveFromQueueCommand implements View.OnClickListener {
 
@@ -34,6 +40,17 @@ public class RemoveFromQueueCommand implements View.OnClickListener {
                 int songID = activityServiceCache.getQueueManager().getUpcomingSongs().get(songIndex);
                 String songName = activityServiceCache.getSongManager().getSongName(songID);
                 activityServiceCache.getQueueManager().removeFromQueue(songIndex);
+
+                // Updated ActivityServiceCache.ser file
+                GatewayCreator gatewayCreator = new GatewayCreator();
+                IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                        currentPageActivity);
+                try {
+                    ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+                } catch (IOException e) {
+                    Log.e("warning", "IO exception");
+                }
+
                 Intent it = new Intent(currentPageActivity, QueueDisplayPage.class);
                 it.putExtra("cache", this.activityServiceCache);
                 currentPageActivity.startActivity(it);
