@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio.controller.userInputRequestCommand;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -8,9 +9,13 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.SongDisplayPage;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.SongManager;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 
 /**
@@ -60,8 +65,18 @@ public class UploadSongCommand implements View.OnClickListener {
                     dateTimeCreated, lyrics, isPublic);
             activityServiceCache.setTargetSongID(String.valueOf(songManager.latestSongID()));
             activityServiceCache.setTargetUserID(activityServiceCache.getUserID());
-            // go back to regular user home page
+
+            // update the ActivityServiceCache.ser file
             PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
+            }
+            // go to song display page
             displaySuccessfulMsg(songName, currentPageActivity);
             currentPageActivity = activityServiceCache.getCurrentPageActivity();
             Intent it = new Intent(currentPageActivity, SongDisplayPage.class);

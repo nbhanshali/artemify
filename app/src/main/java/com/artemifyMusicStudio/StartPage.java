@@ -62,16 +62,31 @@ public class StartPage extends AppCompatActivity {
                 PlaylistEntityContainer playlists = populatePlaylistEntities();
                 SongEntityContainer songs = populateSongEntities();
 
+                // Initialize Language Presenter
+                PresenterCreator presenterCreator = new PresenterCreator();
+                LanguagePresenter languagePresenter = presenterCreator.createLanguagePresenter(LanguageType.ENGLISH);
+
+                // Initialize the UserAccess, PlaylistManager, SongManager and Queue for only once
+                UserAccess acctServiceManager = new UserAccess(users);
+                PlaylistManager playlistManager = new PlaylistManager(playlists);
+                SongManager songManager = new SongManager(acctServiceManager, playlistManager, songs);
+                ArrayList<Integer> empty = new ArrayList<>();
+                Queue queue = new Queue(songs.keys(), empty);
+
+                // Initialize the ActivityServiceCache
+                ActivityServiceCache activityServiceCache =
+                        new ActivityServiceCache(languagePresenter, acctServiceManager, queue,
+                        playlistManager, songManager, "");
                 try {
                     ioGateway.saveToFile("Users.ser", users);
                     ioGateway.saveToFile("Playlists.ser", playlists);
                     ioGateway.saveToFile("Songs.ser", songs);
+                    ioGateway.saveToFile("ActivityServiceCache.ser", activityServiceCache);
                 } catch (FileNotFoundException e) {
                     Log.e("warning", "cannot find file");
                 } catch (IOException e){
                     Log.e("warning", "IO exception");
                 }
-
             });
         }catch (Exception e){
             Log.e("warning", "other things go wrong");
@@ -79,31 +94,7 @@ public class StartPage extends AppCompatActivity {
     }
 
     private ActivityServiceCache getActivityServiceCache(){
-        try {
-            // Initialize a SerGateway to read all entities from .ser files to the program
-
-            UserEntityContainer users = ioGateway.readUsersFromFile();
-            PlaylistEntityContainer playlists = ioGateway.readPlaylistsFromFile();
-            SongEntityContainer songs = ioGateway.readSongsFromFile();
-
-            // Initialize Language Presenter
-            PresenterCreator presenterCreator = new PresenterCreator();
-            LanguagePresenter languagePresenter = presenterCreator.createLanguagePresenter(LanguageType.ENGLISH);
-
-            // Initialize the UserAccess, PlaylistManager, SongManager and Queue for only once
-            UserAccess acctServiceManager = new UserAccess(users);
-            PlaylistManager playlistManager = new PlaylistManager(playlists);
-            SongManager songManager = new SongManager(acctServiceManager, playlistManager, songs);
-            ArrayList<Integer> empty = new ArrayList<>();
-            Queue queue = new Queue(songs.keys(), empty);
-
-            // initialize the one and only PageCreator object that will be used by all controllers in the system
-            return new ActivityServiceCache(languagePresenter, acctServiceManager, queue,
-                    playlistManager, songManager, "");
-        } catch (IOException | ClassNotFoundException e) {
-            Log.e("warning", "other things go wrong");
-        }
-        return null;
+        return ioGateway.readActivityServiceCacheFromFile();
     }
 
     private UserEntityContainer populateUserEntities(){

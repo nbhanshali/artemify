@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio.controller.stateChangedActionCommand;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -8,9 +9,13 @@ import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.QueueDisplayPage;
 import com.entity.Playlist;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -55,8 +60,17 @@ public class PlayPlaylistCommand implements View.OnClickListener {
         String addedMsg =  this.languagePresenter.translateString("Added to your playing queue");
         Toast.makeText(this.activityServiceCache.getCurrentPageActivity(),
                 addedMsg, Toast.LENGTH_LONG).show();
+        // Updated the ActivityServiceCache.ser file
+        PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                currentPageActivity);
+        try {
+            ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+        } catch (IOException e) {
+            Log.e("warning", "IO exception");
+        }
         // Takes user to QueueDisplayPage
-        PageActivity currentPageActivity = this.activityServiceCache.getCurrentPageActivity();
         Intent it = new Intent(currentPageActivity, QueueDisplayPage.class);
         it.putExtra("cache", this.activityServiceCache);
         currentPageActivity.startActivity(it);

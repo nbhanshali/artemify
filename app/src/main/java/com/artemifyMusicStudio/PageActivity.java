@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.artemifyMusicStudio.controller.CommandItemType;
 import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -64,6 +67,19 @@ public abstract class PageActivity extends AppCompatActivity implements Serializ
                 }
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER, this);
+        ActivityServiceCache updatedActivityServiceCache = ioGateway.readActivityServiceCacheFromFile();
+        if (updatedActivityServiceCache != null){
+            this.activityServiceCache = updatedActivityServiceCache;
+            this.activityServiceCache.setCurrentPageActivity(this);
+        }
+        populateButtons();
     }
 
 

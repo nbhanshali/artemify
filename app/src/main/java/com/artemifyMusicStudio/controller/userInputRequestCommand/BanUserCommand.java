@@ -1,11 +1,18 @@
 package com.artemifyMusicStudio.controller.userInputRequestCommand;
 import com.artemifyMusicStudio.ActivityServiceCache;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.PageActivity;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
+
+import java.io.IOException;
 
 /**
  * A BanUserCommand class to handle the ban user request from an admin user
@@ -36,8 +43,6 @@ public class BanUserCommand implements View.OnClickListener {
      */
     @Override
     public void onClick(View view) {
-
-//        this.languagePresenter.display("Enter the username of the user you wish to ban: ");
         String username = InputTargetName.getText().toString();
         if (this.activityServiceCache.getUserAcctServiceManager().exists(username)) {
             if (this.activityServiceCache.
@@ -46,6 +51,15 @@ public class BanUserCommand implements View.OnClickListener {
                         translateString("Invalid action. You cannot ban admins.");
                 displayToastMsg(msg);
             } else if (this.activityServiceCache.getUserAcctServiceManager().ban(username)) {
+                PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
+                GatewayCreator gatewayCreator = new GatewayCreator();
+                IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                        currentPageActivity);
+                try {
+                    ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+                } catch (IOException e) {
+                    Log.e("warning", "IO exception");
+                }
                 String msg = this.languagePresenter. translateString("Successfully banned");
                 displayToastMsg(msg);
             }
