@@ -34,19 +34,26 @@ public class AdminPage extends PageActivity {
 
     @Override
     protected void populateMenuCommandCreatorMap() {
+        // separate the commands into their respective types
+
+        // deleting, banning, unbanning and grant admin rights are under user input commands
         ArrayList<CommandItemType> popupList = new ArrayList<>(
                 List.of(CommandItemType.DELETE_USER, CommandItemType.BAN_USER,
                         CommandItemType.UNBAN_USER, CommandItemType.GRANT_ADMIN_RIGHT)
         );
+        // quit admin mode and logging out are under transition command
         ArrayList<CommandItemType> transitionList = new ArrayList<>(
                 List.of(CommandItemType.QUIT_ADMIN_MODE, CommandItemType.LOG_OUT)
         );
+
+        // match the lists created above to their respective command creator types
         menuCommandCreatorMap.put("TransitionCommandCreator", transitionList);
         menuCommandCreatorMap.put("UserInputCommandCreator", popupList);
     }
 
     @Override
     protected void populateIdMenuMap() {
+        // populate the commands with the respective ids' of their buttons in the xml
         idMenuItemMap.put(CommandItemType.LOG_OUT, R.id.adminLogOut);
         idMenuItemMap.put(CommandItemType.QUIT_ADMIN_MODE, R.id.exitAdminMode);
         idMenuItemMap.put(CommandItemType.DELETE_USER, R.id.deleteUser);
@@ -57,6 +64,7 @@ public class AdminPage extends PageActivity {
 
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
+        // get the required command creators
         switch (creatorType) {
             case "TransitionCommandCreator":
                 return new PageTransitionCommandCreator(this.activityServiceCache);
@@ -69,6 +77,7 @@ public class AdminPage extends PageActivity {
 
     @Override
     protected void populateExitPageMenuItems() {
+        // populate exit page buttons
         exitPageMenuItems.add(CommandItemType.LOG_OUT);
         exitPageMenuItems.add(CommandItemType.QUIT_ADMIN_MODE);
     }

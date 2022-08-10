@@ -44,7 +44,9 @@ public class BanUserCommand implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         String username = InputTargetName.getText().toString();
+        // check if anyone with this username exists
         if (this.activityServiceCache.getUserAcctServiceManager().exists(username)) {
+            // check if they're an admin
             if (this.activityServiceCache.
                     getUserAcctServiceManager().findUser(username).getIsAdmin()) {
                 String msg = this.languagePresenter.
@@ -64,12 +66,14 @@ public class BanUserCommand implements View.OnClickListener {
                 displayToastMsg(msg);
             }
         }
+        // if there are no users with the input username
         else{
             String msg = this.languagePresenter.translateString("User does not exist");
             displayToastMsg(msg);
         }
     }
 
+    // method to display pop-up message
     public void displayToastMsg(String msg) {
         PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
         Toast.makeText(currentPageActivity, msg, Toast.LENGTH_LONG).show();
