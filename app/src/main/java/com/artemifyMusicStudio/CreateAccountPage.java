@@ -10,6 +10,9 @@ import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommand
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * An CreateAccountPage Activity
+ */
 public class CreateAccountPage extends PageActivity {
 
     @Override

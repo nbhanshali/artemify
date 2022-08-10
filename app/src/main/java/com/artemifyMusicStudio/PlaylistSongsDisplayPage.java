@@ -16,6 +16,9 @@ import com.useCase.SongManager;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A PlaylistSongDisplayPage Activity
+ */
 public class PlaylistSongsDisplayPage extends PageActivity {
 
     @Override

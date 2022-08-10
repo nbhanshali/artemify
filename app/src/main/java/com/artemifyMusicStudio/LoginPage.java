@@ -17,6 +17,9 @@ import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommand
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A LoginPage activity
+ */
 public class LoginPage extends PageActivity {
     private CommandItemType loginCommandType = CommandItemType.REGULAR_LOG_IN_MODE;
 

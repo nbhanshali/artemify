@@ -15,6 +15,9 @@ import com.useCase.SongManager;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A SongDisplayPage Activity
+ */
 public class SongDisplayPage extends PageActivity {
 
     private int songId;
@@ -39,10 +42,6 @@ public class SongDisplayPage extends PageActivity {
         populateButtons();
         setUpSongInformation();
     }
-
-//    @Override
-//    protected void onResume() {
-//    }
 
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {

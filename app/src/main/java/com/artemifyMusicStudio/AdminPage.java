@@ -11,6 +11,9 @@ import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommand
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * An AdminPage Activity
+ */
 public class AdminPage extends PageActivity {
 
     @Override

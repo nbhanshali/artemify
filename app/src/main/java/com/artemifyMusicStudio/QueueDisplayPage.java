@@ -11,6 +11,9 @@ import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommand
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A QueueDisplayPage Activity
+ */
 public class QueueDisplayPage extends PageActivity{
 
     @Override

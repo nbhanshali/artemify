@@ -16,6 +16,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A PlaylistDisplayPage Activity
+ */
 public class PlaylistDisplayPage extends PageActivity {
     private int playlistID;
 

@@ -9,6 +9,9 @@ import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCr
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * A MainPage Activity
+ */
 public class MainPage extends PageActivity {
 
     @Override

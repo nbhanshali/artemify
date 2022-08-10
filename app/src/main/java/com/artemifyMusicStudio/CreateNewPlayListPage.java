@@ -13,6 +13,9 @@ import com.artemifyMusicStudio.controller.commandCreator.UserInputRequestCommand
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * An CreateNewPlayListPage Activity
+ */
 public class CreateNewPlayListPage extends PageActivity implements RadioGroup.OnCheckedChangeListener {
 
     private boolean isPublic = true;

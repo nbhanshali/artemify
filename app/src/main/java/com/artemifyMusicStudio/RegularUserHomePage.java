@@ -10,6 +10,9 @@ import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCr
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A RegularUserHomePage Activity
+ */
 public class RegularUserHomePage extends PageActivity {
 
     @Override

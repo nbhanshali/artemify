@@ -13,6 +13,9 @@ import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCr
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A UploadSongPage Activity
+ */
 public class UploadSongPage extends PageActivity implements RadioGroup.OnCheckedChangeListener {
 
     private boolean isPublic = true;

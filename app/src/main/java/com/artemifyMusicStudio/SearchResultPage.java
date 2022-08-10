@@ -17,6 +17,9 @@ import com.presenters.LanguagePresenter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * A SearchResultPage Activity
+ */
 public class SearchResultPage extends PageActivity {
     private SearchResultContainer searchResultContainer;
     private String searchType;
