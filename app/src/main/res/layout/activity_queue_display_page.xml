@@ -11,7 +11,7 @@
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="exit" />
+        android:text="@string/exit" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Songs"
-            android:drawableLeft="@drawable/music"/>
+            android:drawableLeft="@drawable/music"
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
 
         <Button
@@ -33,42 +34,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Shuffle Queue"
-            android:drawableLeft="@drawable/shuffle"/>
+            android:drawableLeft="@drawable/shuffle"
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/skip_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Skip Song"
-            android:drawableLeft="@drawable/skip_next"/>
+            android:drawableLeft="@drawable/skip_next"
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/play_previous_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Play Previous Song"
-            android:drawableLeft="@drawable/skip_previous"/>
+            android:drawableLeft="@drawable/skip_previous"
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/remove_from_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Remove from Queue"
-            android:drawableLeft="@drawable/remove"/>
+            android:drawableLeft="@drawable/remove"
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/repeat_song_once"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Repeat Song Once"
-            android:drawableLeft="@drawable/repeat_once"/>
+            android:drawableLeft="@drawable/repeat_once"
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/repeat_song_infinitely"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Repeat Song Infinitely"
-            android:drawableLeft="@drawable/infinity"/>
+            android:drawableLeft="@drawable/infinity"
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
     </LinearLayout>
 

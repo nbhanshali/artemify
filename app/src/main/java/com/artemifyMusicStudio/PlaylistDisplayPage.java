@@ -104,7 +104,7 @@ public class PlaylistDisplayPage extends PageActivity {
         TextView playlistNameDisplay = findViewById(R.id.playlist_name_display);
         playlistNameDisplay.setText(playlistName);
         // display numLikes
-        TextView numLikesDisplay = findViewById(R.id.display_numlikes);
+        TextView numLikesDisplay = findViewById(R.id.display_num_likes);
         numLikesDisplay.setText(String.valueOf(numLikes));
         // display creatorName
         TextView creatorNameDisplay = findViewById(R.id.creator_info_display);

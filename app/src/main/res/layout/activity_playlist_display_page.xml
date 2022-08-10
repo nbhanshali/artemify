@@ -50,7 +50,7 @@
                 android:contentDescription="@string/likes" />
 
             <TextView
-                android:id="@+id/display_numlikes"
+                android:id="@+id/display_num_likes"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -106,7 +106,7 @@
             android:id="@+id/play_playlist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play Playlist"
+            android:text="@string/play_playlist"
             android:layout_marginTop="12dp"/>
 
         <Button
