@@ -1,6 +1,7 @@
 package com.artemifyMusicStudio;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -12,11 +13,15 @@ import com.artemifyMusicStudio.controller.SimpleButtonCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.InfoDisplayCommandCreator;
 import com.artemifyMusicStudio.controller.commandCreator.PageTransitionCommandCreator;
 import com.artemifyMusicStudio.controller.pageTransitionCommand.ExitPageCommand;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
 import com.useCase.UserAccess;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -178,6 +183,15 @@ public class ProfileAndSettingPage extends PageActivity {
         // set target user to be the current user so that we can reuse some commands from UserDisplayPage
         String currUserID = this.activityServiceCache.getUserID();
         this.activityServiceCache.setTargetUserID(currUserID);
+        // Updated ActivityServiceCache.ser file
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                this);
+        try {
+            ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+        } catch (IOException e) {
+            Log.e("warning", "IO exception");
+        }
 
         PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
 
