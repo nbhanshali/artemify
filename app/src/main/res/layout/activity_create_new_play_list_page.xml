@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.artemifyMusicStudio.CreateNewPlayListPage"
+    tools:context=".CreateNewPlayListPage"
     android:orientation="vertical">
 
     <Button
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="exit"/>
+        android:text="@string/exit"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,12 +23,13 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_marginBottom="20dp"
-            android:src="@drawable/playlist_cover"/>
+            android:src="@drawable/playlist_cover"
+            android:contentDescription="@string/playlist_cover"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter your new playlist name"/>
+            android:text="@string/enter_playlist_name"/>
 
         <EditText
             android:id="@+id/upload_playlist_name"
@@ -36,13 +37,14 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:layout_marginBottom="20dp"
-            android:hint="playlist name"
-            android:selectAllOnFocus="true"/>
+            android:hint="@string/new_playlist_name"
+            android:selectAllOnFocus="true"
+            tools:ignore="Autofill,TextContrastCheck"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter your description"/>
+            android:text="@string/enter_description"/>
 
         <EditText
             android:id="@+id/playlist_desc"
@@ -50,9 +52,10 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:layout_marginBottom="20dp"
-            android:hint="description"
+            android:hint="@string/description"
             android:selectAllOnFocus="true"
-            android:imeOptions="actionDone"/>
+            android:imeOptions="actionDone"
+            tools:ignore="Autofill,TextContrastCheck"/>
 
         <RadioGroup
             android:id="@+id/radioGroup_public_playlist"
@@ -67,21 +70,21 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:checked="true"
-                android:text="Public" />
+                android:text="@string/playlist_public" />
             <RadioButton
                 android:id="@+id/radio_private_playlist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:checked="false"
-                android:text="Private" />
+                android:text="@string/playlist_private" />
         </RadioGroup>
 
         <Button
             android:id="@+id/create_playlist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create" />
+            android:text="@string/create_playlist" />
 
     </LinearLayout>
 
