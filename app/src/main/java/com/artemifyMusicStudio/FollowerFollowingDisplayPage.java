@@ -61,6 +61,7 @@ public class FollowerFollowingDisplayPage extends PageActivity {
     protected void populateButtons() {
         LanguagePresenter languagePresenter = this.activityServiceCache.getLanguagePresenter();
         LinearLayout resultDisplay = findViewById(R.id.follower_following_result_display_layout);
+        resetViewState(resultDisplay);
         ArrayList<String> displayTargetNames = getDisplayNames(this.activityServiceCache.getUserAcctServiceManager());
         int count = 0;
         PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
@@ -84,6 +85,9 @@ public class FollowerFollowingDisplayPage extends PageActivity {
         exitButton.setOnClickListener(new ExitPageCommand(this.activityServiceCache));
     }
 
+    private void resetViewState(LinearLayout layout){
+        layout.removeAllViews();
+    }
 
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
