@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
+import com.artemifyMusicStudio.LoginPage;
 import com.artemifyMusicStudio.PageActivity;
 import com.artemifyMusicStudio.RegularUserHomePage;
 import com.gateway.FileType;
@@ -78,8 +79,13 @@ public class CreateRegularAccountCommand implements View.OnClickListener {
                 Log.e("warning", "IO exception");
             }
 
+            // Toast Creation Successful message
+            String msg = this.languagePresenter.translateString("Account Created, You may now Login with your Username and Password.");
+            Toast.makeText(this.activityServiceCache.getCurrentPageActivity(),
+                    msg, Toast.LENGTH_LONG).show();
+
             // Bring user to User Home Page
-            Intent it = new Intent(currentPageActivity, RegularUserHomePage.class);
+            Intent it = new Intent(currentPageActivity, LoginPage.class);
             it.putExtra("cache", this.activityServiceCache);
             currentPageActivity.startActivity(it);
         }
