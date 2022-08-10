@@ -41,8 +41,6 @@ import java.util.LinkedHashMap;
 public abstract class PageActivity extends AppCompatActivity implements Serializable {
     protected final LinkedHashMap<CommandItemType, Integer> idMenuItemMap = new LinkedHashMap<>();
     protected final LinkedHashMap<String, ArrayList<CommandItemType>> menuCommandCreatorMap = new LinkedHashMap<>();
-    protected final ArrayList<CommandItemType> exitPageMenuItems = new ArrayList<>();
-
     protected ActivityServiceCache activityServiceCache = new ActivityServiceCache();
 
     protected void parseActivityServiceCache(){

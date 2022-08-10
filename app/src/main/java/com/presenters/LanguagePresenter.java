@@ -14,9 +14,11 @@ public abstract class LanguagePresenter implements SimplePresenter, Serializable
         this.language = language;
     }
 
-    @Deprecated
-    public abstract void display(String english);
-
+    /**
+     * An method to translate string from english to another language
+     * @param english a English String
+     * @return a String in other language
+     */
     public abstract String translateString(String english);
     
 }

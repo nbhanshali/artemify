@@ -49,33 +49,23 @@ public enum CommandItemType {
     // For SongDisplayPage
     VIEW_LYRICS,
     INVOKE_ADD_TO_EXISTING_PLAYLIST_DISPLAY,
-    ADD_TO_EXISTING_PLAYLIST,
     JUMP_TO_CREATE_NEW_PLAYLIST,
     PLAY_SONG,
     ADD_TO_QUEUE,
     // For CreateNewPlaylistPage
     ADD_TO_NEW_PLAYLIST,
     // For UserDisplayPage:
-    FOLLOW_USER,
-    UNFOLLOW_USER,
     VIEW_FOLLOWERS,
     VIEW_FOLLOWINGS,
-    VIEW_USER_SONGS,
-    VIEW_USER_PLAYLISTS,
-    VIEW_USER_FAVORITES,
-    VIEW_USER_LIKED_PLAYLISTS,
 
     // For PlaylistDisplayPage
     VIEW_PLAYLIST_SONGS,
     VIEW_CREATOR,
-    LIKE_PLAYLIST,
     PLAY_PLAYLIST,
     // For NewPlaylistPage
     CREATE_NEW_PLAYLIST,
     // For MyAccountPage
     VIEW_LOGIN_HISTORY,
-    VIEW_PRIVATE_SONGS,
-    VIEW_PRIVATE_PLAYLISTS,
 
     // For QueueDisplay Page
     VIEW_QUEUE,

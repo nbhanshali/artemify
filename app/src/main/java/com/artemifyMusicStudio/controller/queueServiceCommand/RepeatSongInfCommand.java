@@ -1,18 +1,12 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
-import com.gateway.FileType;
-import com.gateway.GatewayCreator;
-import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
-
-import java.io.IOException;
 
 public class RepeatSongInfCommand extends QueueServiceCommand{
 

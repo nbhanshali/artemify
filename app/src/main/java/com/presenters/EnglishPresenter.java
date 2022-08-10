@@ -10,15 +10,12 @@ public class EnglishPresenter extends LanguagePresenter {
         super(language);
     }
 
-    /**
-     * Display method to display an English string to the language of this Presenter
-     * @param englishString a String written in english
-     */
-    @Override
-    public void display(String englishString) {
-        System.out.println(englishString);
-    }
 
+    /**
+     * Translating String from English to English
+     * @param english a English String
+     * @return a English String
+     */
     @Override
     public String translateString(String english) {
         return english;

@@ -12,14 +12,10 @@ public class GermanPresenter extends LanguagePresenter {
     }
 
     /**
-     * Display method to display a Mandarin string to the language of this Presenter
-     * @param germanString a String written in German
+     * Translate a String to a German String
+     * @param otherLanguageString string from other language
+     * @return a German String
      */
-    @Override
-    public void display(String germanString) {
-        System.out.println(germanString);
-    }
-
     @Override
     public String translateString(String otherLanguageString) {
         return translator.translate("","de", otherLanguageString);

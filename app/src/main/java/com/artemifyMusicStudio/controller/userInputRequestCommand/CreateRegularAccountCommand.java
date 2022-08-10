@@ -9,7 +9,6 @@ import android.widget.Toast;
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.LoginPage;
 import com.artemifyMusicStudio.PageActivity;
-import com.artemifyMusicStudio.RegularUserHomePage;
 import com.gateway.FileType;
 import com.gateway.GatewayCreator;
 import com.gateway.IGateway;
