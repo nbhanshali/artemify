@@ -77,12 +77,14 @@ public class DeleteUserCommand implements View.OnClickListener {
                 displayToastMsg(msg);
             }
         }
+        // if there are no users with the input username
         else{
             String msg = this.languagePresenter.translateString("User does not exist");
             displayToastMsg(msg);
         }
     }
 
+    // method to display pop-up message
     public void displayToastMsg(String msg) {
         PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
         Toast.makeText(currentPageActivity, msg, Toast.LENGTH_LONG).show();
