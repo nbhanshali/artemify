@@ -19,6 +19,11 @@ public class QueueServiceCommandCreator implements SimpleButtonCommandCreator {
     private final ActivityServiceCache activityServiceCache;
     private final Queue queueService;
 
+    /**
+     * Constructor for QueueServiceCommandCreator class
+     * @param activityServiceCache  instance of ActivityServiceCache class to parse important data
+     *                              to conduct page activities
+     */
     public QueueServiceCommandCreator(ActivityServiceCache activityServiceCache) {
         this.activityServiceCache = activityServiceCache;
         this.languagePresenter = this.activityServiceCache.getLanguagePresenter();
