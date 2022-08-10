@@ -87,5 +87,6 @@
     <string name="exit_view_queue">exit</string>
     <string name="playlist_name_view_queue">Playlist Name</string>
     <string name="cat_logo">cat logo</string>
+    <string name="first_time_initialization">First Time Initialization</string>
 
 </resources>

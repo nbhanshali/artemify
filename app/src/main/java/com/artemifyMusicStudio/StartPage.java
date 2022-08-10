@@ -93,7 +93,37 @@ public class StartPage extends AppCompatActivity {
     }
 
     private ActivityServiceCache getActivityServiceCache(){
-        return ioGateway.readActivityServiceCacheFromFile();
+        ActivityServiceCache activityServiceCache = ioGateway.readActivityServiceCacheFromFile();
+        if (activityServiceCache != null){
+            return activityServiceCache;
+        }else{
+            return buildActivityServiceCacheFromEntities();
+        }
+    }
+
+    private ActivityServiceCache buildActivityServiceCacheFromEntities() {
+        GatewayCreator gatewayCreator = new GatewayCreator();
+        IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER, this);
+        UserEntityContainer users = ioGateway.readUsersFromFile();
+        PlaylistEntityContainer playlists = ioGateway.readPlaylistsFromFile();
+        SongEntityContainer songs = ioGateway.readSongsFromFile();
+        if(users==null || playlists == null || songs == null){
+            return null;
+        }else{
+            // Initialize Language Presenter
+            PresenterCreator presenterCreator = new PresenterCreator();
+            LanguagePresenter languagePresenter = presenterCreator.createLanguagePresenter(LanguageType.ENGLISH);
+
+            // Initialize the UserAccess, PlaylistManager, SongManager and Queue for only once
+            UserAccess acctServiceManager = new UserAccess(users);
+            PlaylistManager playlistManager = new PlaylistManager(playlists);
+            SongManager songManager = new SongManager(acctServiceManager, playlistManager, songs);
+            Queue queue = new Queue();
+
+            // Initialize a ActivityServiceCache
+            return new ActivityServiceCache(languagePresenter,acctServiceManager,
+                    queue,playlistManager, songManager, "");
+        }
     }
 
     private UserEntityContainer populateUserEntities(){

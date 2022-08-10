@@ -36,27 +36,22 @@ public abstract class IGateway implements SimpleGateway{
     /**
      * An abstract method that read user entities from a file
      * @return a UserContainer class object
-     * @throws IOException throw IOException
-     * @throws ClassNotFoundException throw ClassNotFoundException
+     *
      */
-    public abstract UserEntityContainer readUsersFromFile() throws IOException, ClassNotFoundException;
+    public abstract UserEntityContainer readUsersFromFile();
 
     /**
      * An abstract method that read playlist entities from a file
      * @return a PlaylistContainer object
-     * @throws IOException throw IOException
-     * @throws ClassNotFoundException throw ClassNotFoundException
      *
      */
-    public abstract PlaylistEntityContainer readPlaylistsFromFile() throws IOException, ClassNotFoundException;
+    public abstract PlaylistEntityContainer readPlaylistsFromFile();
 
     /**
      * An abstract method that read song entities from a file
      * @return a SongContainer object
-     * @throws IOException throw IOException
-     * @throws ClassNotFoundException throw ClassNotFoundException
      */
-    public abstract SongEntityContainer readSongsFromFile() throws IOException, ClassNotFoundException;
+    public abstract SongEntityContainer readSongsFromFile();
 
     /**
      * An abstract method that read activityServiceCache from a file

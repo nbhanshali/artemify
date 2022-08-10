@@ -49,57 +49,88 @@ public class SerGateway extends IGateway{
      * A method that read user entities from a .ser file
      *
      * @return a UserContainer class object
-     * @throws IOException            throw IOException
-     * @throws ClassNotFoundException throw ClassNotFoundException
+     *
      */
     @Override
-    public UserEntityContainer readUsersFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream file = this.currentPageActivity.openFileInput("Users.ser");
-        InputStream buffer = new BufferedInputStream(file);
-        ObjectInput input = new ObjectInputStream(buffer);
+    public UserEntityContainer readUsersFromFile() {
+        try{
+            FileInputStream file = this.currentPageActivity.openFileInput("Users.ser");
+            InputStream buffer = new BufferedInputStream(file);
+            ObjectInput input = new ObjectInputStream(buffer);
 
-        // serialize the Map
-        UserEntityContainer users = (UserEntityContainer) input.readObject();
-        input.close();
-        return users;
+            // serialize the Map
+            UserEntityContainer users = (UserEntityContainer) input.readObject();
+            input.close();
+            return users;
+        } catch (FileNotFoundException e) {
+            Log.e("warning", "cannot find file");
+            return null;
+        } catch (IOException e) {
+            Log.e("warning", "IOException");
+            return null;
+        } catch (ClassNotFoundException e) {
+            Log.e("warning", "No class object with type UserEntityContainer");
+            return null;
+        }
     }
 
     /**
      * A method that read playlist entities from a .ser file
      *
      * @return a PlaylistContainer object
-     * @throws IOException            throw IOException
-     * @throws ClassNotFoundException throw ClassNotFoundException
      */
     @Override
-    public PlaylistEntityContainer readPlaylistsFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream file = this.currentPageActivity.openFileInput("Playlists.ser") ;
-        InputStream buffer = new BufferedInputStream(file);
-        ObjectInput input = new ObjectInputStream(buffer);
+    public PlaylistEntityContainer readPlaylistsFromFile() {
+        try{
+            FileInputStream file = this.currentPageActivity.openFileInput("Playlists.ser") ;
+            InputStream buffer = new BufferedInputStream(file);
+            ObjectInput input = new ObjectInputStream(buffer);
 
-        // serialize the Map
-        PlaylistEntityContainer playlists = (PlaylistEntityContainer) input.readObject();
-        input.close();
-        return playlists;
+            // serialize the Map
+            PlaylistEntityContainer playlists = (PlaylistEntityContainer) input.readObject();
+            input.close();
+            return playlists;
+        }catch (FileNotFoundException e) {
+            Log.e("warning", "cannot find file");
+            return null;
+        } catch (IOException e) {
+            Log.e("warning", "IOException");
+            return null;
+        } catch (ClassNotFoundException e) {
+            Log.e("warning", "No class object with type PlaylistEntityContainer");
+            return null;
+        }
+
     }
 
     /**
      * A method that read song entities from a .ser file
      *
      * @return a SongContainer object
-     * @throws IOException            throw IOException
-     * @throws ClassNotFoundException throw ClassNotFoundException
+     *
      */
     @Override
-    public SongEntityContainer readSongsFromFile() throws IOException, ClassNotFoundException {
-        FileInputStream file = this.currentPageActivity.openFileInput("Songs.ser");
-        InputStream buffer = new BufferedInputStream(file);
-        ObjectInput input = new ObjectInputStream(buffer);
+    public SongEntityContainer readSongsFromFile() {
+        try{
+            FileInputStream file = this.currentPageActivity.openFileInput("Songs.ser");
+            InputStream buffer = new BufferedInputStream(file);
+            ObjectInput input = new ObjectInputStream(buffer);
 
-        // serialize the Map
-        SongEntityContainer songs = (SongEntityContainer) input.readObject();
-        input.close();
-        return songs;
+            // serialize the Map
+            SongEntityContainer songs = (SongEntityContainer) input.readObject();
+            input.close();
+            return songs;
+        }catch (FileNotFoundException e) {
+            Log.e("warning", "cannot find file");
+            return null;
+        } catch (IOException e) {
+            Log.e("warning", "IOException");
+            return null;
+        } catch (ClassNotFoundException e) {
+            Log.e("warning", "No class object with type SongEntityContainer");
+            return null;
+        }
+
     }
 
     @Override
