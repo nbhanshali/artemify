@@ -7,9 +7,11 @@
 
         <menu>
             <item android:id="@+id/regular_user"
-                android:title="@string/regular_user"/>
+                android:title="@string/regular_user"
+                app:showAsAction="always" />
             <item android:id="@+id/admin_user"
-                android:title="@string/admin_user"/>
+                android:title="@string/admin_user"
+                app:showAsAction="always"/>
         </menu>
 
     </item>
