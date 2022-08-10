@@ -22,7 +22,12 @@ public class RemoveFromQueueCommand implements View.OnClickListener {
     private final LanguagePresenter languagePresenter;
     private final EditText inputSongIndex;
 
-
+    /**
+     * Constructor for PlayPreviousSongCommand class
+     * @param activityServiceCache instance of ActivityServiceCache class to parse important data
+     *                             to conduct page activities
+     * @param inputSongIndex       instance of EditText, the input from the user on our app
+     */
     public RemoveFromQueueCommand(ActivityServiceCache activityServiceCache, EditText inputSongIndex) {
         this.activityServiceCache = activityServiceCache;
         this.languagePresenter = activityServiceCache.getLanguagePresenter();

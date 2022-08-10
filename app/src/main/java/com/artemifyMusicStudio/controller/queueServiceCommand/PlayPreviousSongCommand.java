@@ -15,24 +15,31 @@ import com.useCase.Queue;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class PlayPreviousSongCommand extends QueueServiceCommand{
+public class PlayPreviousSongCommand extends QueueServiceCommand {
 
     private final ActivityServiceCache activityServiceCache;
     private final LanguagePresenter languagePresenter;
 
+    /**
+     * Constructor for PlayPreviousSongCommand class
+     * @param activityServiceCache instance of ActivityServiceCache class to parse important data
+     *                             to conduct page activities
+     * @param languagePresenter    instance of languagePresenter class to allow for output to screen
+     * @param queueService         instance of Queue class to execute command using methods in Queue
+     */
     public PlayPreviousSongCommand(ActivityServiceCache activityServiceCache,
-                           LanguagePresenter languagePresenter, Queue queueService) {
+                                   LanguagePresenter languagePresenter, Queue queueService) {
         super(queueService);
         this.activityServiceCache = activityServiceCache;
         this.languagePresenter = languagePresenter;
     }
 
     @Override
-    public void onClick (View view) {
+    public void onClick(View view) {
         PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
         if (activityServiceCache.getQueueManager().getRecentlyPlayedSongs().size() == 0) {
-            String warningMsg =  this.languagePresenter.
-                    translateString("No song has been played previously.") ;
+            String warningMsg = this.languagePresenter.
+                    translateString("No song has been played previously.");
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         } else {
             ArrayList<Integer> recentlyPlayedSongs = activityServiceCache.getQueueManager().
@@ -51,12 +58,9 @@ public class PlayPreviousSongCommand extends QueueServiceCommand{
             } catch (IOException e) {
                 Log.e("warning", "IO exception");
             }
-            String warningMsg =  this.languagePresenter.
-                    translateString("Previous is song is being played.") ;
+            String warningMsg = this.languagePresenter.
+                    translateString("Previous is song is being played.");
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         }
     }
-
 }
-
-

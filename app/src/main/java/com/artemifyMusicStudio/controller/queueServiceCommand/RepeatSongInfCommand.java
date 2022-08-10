@@ -13,6 +13,13 @@ public class RepeatSongInfCommand extends QueueServiceCommand{
     private final ActivityServiceCache activityServiceCache;
     private final LanguagePresenter languagePresenter;
 
+    /**
+     * Constructor for RepeatSongInfCommand class
+     * @param activityServiceCache instance of ActivityServiceCache class to parse important data
+     *                             to conduct page activities
+     * @param languagePresenter    instance of languagePresenter class to allow for output to screen
+     * @param queueService         instance of Queue class to execute command using methods in Queue
+     */
     public RepeatSongInfCommand(ActivityServiceCache activityServiceCache,
                                  LanguagePresenter languagePresenter, Queue queueService) {
         super(queueService);
