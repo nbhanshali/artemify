@@ -48,7 +48,7 @@
                 android:drawableLeft="@drawable/regular_user_logo"
                 android:text="@string/quit_admin_mode"
                 android:textSize="11sp"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck,RtlHardcoded" />
 
             <Button
                 android:id="@+id/adminLogOut"
@@ -58,7 +58,7 @@
                 android:drawableLeft="@drawable/logout"
                 android:text="@string/log_out"
                 android:textSize="11sp"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         </LinearLayout>
 
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/delete_user"
             android:text="@string/delete_a_user"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/banUser"
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ban_user"
             android:text="@string/ban_a_user"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/unbanUser"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/unban_user"
             android:text="@string/unban_a_user"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="TextContrastCheck,RtlHardcoded" />
 
         <Button
             android:id="@+id/MakeAdmin"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/make_admin"
             android:text="@string/make_a_user_an_admin"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="RtlHardcoded,TextContrastCheck" />
 
     </LinearLayout>
 
