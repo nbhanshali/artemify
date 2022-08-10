@@ -16,7 +16,8 @@
         android:textSize="30sp"
         android:layout_marginTop="5dp"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"/>
+        android:paddingRight="16dp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +47,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:text="@string/enable_admin_mode"
-                android:textSize="11sp"/>
+                android:textSize="11sp"
+                android:drawableLeft="@drawable/admin_logo"/>
 
             <Button
                 android:id="@+id/log_out"
@@ -54,7 +56,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:text="@string/home_log_out"
-                android:textSize="11sp" />
+                android:textSize="11sp"
+                android:drawableLeft="@drawable/logout"/>
 
         </LinearLayout>
 
@@ -67,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="@string/home_search"
             android:textSize="20sp"
-            android:drawableStart="@drawable/search_logo"
+            android:drawableLeft="@drawable/search_logo"
             />
 
         <Button
@@ -76,7 +79,7 @@
             android:layout_height="wrap_content"
             android:text="@string/profile_and_setting"
             android:textSize="20sp"
-            android:drawableStart="@drawable/account_logo"/>
+            android:drawableLeft="@drawable/profile_settings"/>
 
         <Button
             android:id="@+id/create_playlist"
@@ -84,7 +87,7 @@
             android:layout_height="wrap_content"
             android:text="@string/create_new_playlist"
             android:textSize="20sp"
-            android:drawableStart="@drawable/add_playlist"/>
+            android:drawableLeft="@drawable/add_playlist"/>
 
         <Button
             android:id="@+id/upload_song"
@@ -92,14 +95,15 @@
             android:layout_height="wrap_content"
             android:text="@string/upload_song"
             android:textSize="20sp"
-            android:drawableStart="@drawable/add_song"/>
+            android:drawableLeft="@drawable/add_song"/>
 
         <Button
             android:id="@+id/queue_page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/view_queue"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/queue_logo"/>
 
     </LinearLayout>
 

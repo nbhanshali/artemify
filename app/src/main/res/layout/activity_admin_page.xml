@@ -14,7 +14,8 @@
         android:text="@string/admin_page"
         android:textSize="25sp"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        android:paddingEnd="16dp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,21 +33,34 @@
             android:textSize="20sp"
             android:layout_marginTop="5dp"/>
 
-        <Button
-            android:id="@+id/exitAdminMode"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="@string/quit_admin_mode"
-            android:textSize="11sp"/>
+            android:orientation="vertical"
+            android:layout_margin="3dp" >
 
-        <Button
-            android:id="@+id/adminLogOut"
-            android:layout_width="143dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="@string/log_out"
-            android:textSize="11sp" />
+            <Button
+                android:id="@+id/exitAdminMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:drawableLeft="@drawable/regular_user_logo"
+                android:text="@string/quit_admin_mode"
+                android:textSize="11sp"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/adminLogOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:drawableLeft="@drawable/logout"
+                android:text="@string/log_out"
+                android:textSize="11sp"
+                tools:ignore="TextContrastCheck" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,25 +74,33 @@
             android:id="@+id/deleteUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/delete_a_user" />
+            android:drawableLeft="@drawable/delete_user"
+            android:text="@string/delete_a_user"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/banUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ban_a_user" />
+            android:drawableLeft="@drawable/ban_user"
+            android:text="@string/ban_a_user"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/unbanUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/unban_a_user" />
+            android:drawableLeft="@drawable/unban_user"
+            android:text="@string/unban_a_user"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/MakeAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/make_a_user_an_admin" />
+            android:drawableLeft="@drawable/make_admin"
+            android:text="@string/make_a_user_an_admin"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 

@@ -16,50 +16,59 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="4dp">
 
         <Button
             android:id="@+id/view_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Songs"/>
+            android:text="View Songs"
+            android:drawableLeft="@drawable/music"/>
 
 
         <Button
             android:id="@+id/shuffle_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shuffle Queue"/>
+            android:text="Shuffle Queue"
+            android:drawableLeft="@drawable/shuffle"/>
 
         <Button
             android:id="@+id/skip_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Skip Song"/>
-
-        <Button
-            android:id="@+id/remove_from_queue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Remove from Queue"/>
+            android:text="Skip Song"
+            android:drawableLeft="@drawable/skip_next"/>
 
         <Button
             android:id="@+id/play_previous_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play Previous Song"/>
+            android:text="Play Previous Song"
+            android:drawableLeft="@drawable/skip_previous"/>
+
+        <Button
+            android:id="@+id/remove_from_queue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove from Queue"
+            android:drawableLeft="@drawable/remove"/>
 
         <Button
             android:id="@+id/repeat_song_once"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Repeat Song Once"/>
+            android:text="Repeat Song Once"
+            android:drawableLeft="@drawable/repeat_once"/>
 
         <Button
             android:id="@+id/repeat_song_infinitely"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Repeat Song Infinitely"/>
+            android:text="Repeat Song Infinitely"
+            android:drawableLeft="@drawable/infinity"/>
 
     </LinearLayout>
 

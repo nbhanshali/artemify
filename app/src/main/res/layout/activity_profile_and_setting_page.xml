@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:text="@string/exit"/>
+        android:text="@string/exit"
+        tools:ignore="TextContrastCheck" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,11 +25,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="78dp"
-                android:layout_height="69dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="95dp"
+                android:layout_height="74dp"
+                android:background="@drawable/circle"
                 android:contentDescription="@string/userlogo"
                 android:scaleType="fitCenter"
-                android:src="@drawable/temp_logo" />
+                android:src="@drawable/meow"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/my_user_name"
@@ -45,12 +49,13 @@
                 <Button
                     android:id="@+id/my_login_history"
                     android:layout_width="wrap_content"
-                    android:layout_height="32dp"
+                    android:layout_height="37dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
+                    android:drawableLeft="@drawable/history"
                     android:text="@string/login_history"
-                    android:textSize="11sp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:textSize="12sp"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             </LinearLayout>
 
@@ -68,7 +73,7 @@
                     android:layout_weight="1"
                     android:text="@string/view_followers"
                     android:textSize="11sp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
                 <Button
                     android:id="@+id/my_view_followings"
@@ -78,15 +83,16 @@
                     android:layout_weight="1"
                     android:text="@string/view_followings"
                     android:textSize="11sp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
                 <Button
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/likes"
                     android:textSize="11sp"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    tools:ignore="TextContrastCheck" />
             </LinearLayout>
 
             <LinearLayout

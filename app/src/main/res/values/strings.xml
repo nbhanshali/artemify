@@ -22,7 +22,7 @@
     <string name="enter_your_password">Enter your password</string>
     <string name="enter_your_username">Enter your username</string>
     <string name="username">USERNAME</string>
-    <string name="create_account">Create Account</string>
+    <string name="create_account">Create New Account</string>
     <string name="app_logo">APP LOGO</string>
     <string name="search">Search</string>
     <string name="exit">exit</string>
@@ -83,5 +83,9 @@
     <string name="public_playlist">Public Playlist</string>
     <string name="private_playlist">Private Playlist</string>
     <string name="list_of_playlists">List of Playlists</string>
+    <string name="log_in_page">Log In</string>
+    <string name="exit_view_queue">exit</string>
+    <string name="playlist_name_view_queue">Playlist Name</string>
+    <string name="cat_logo">cat logo</string>
 
 </resources>
