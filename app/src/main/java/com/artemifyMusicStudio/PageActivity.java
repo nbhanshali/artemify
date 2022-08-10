@@ -60,8 +60,11 @@ public abstract class PageActivity extends AppCompatActivity implements Serializ
             // Populate menu item if and only if there exists a command creator for it
             if (currentCreator != null && itemTypeList != null){
                 for (CommandItemType itemType: itemTypeList){
-                    Button button = findViewById(idMenuItemMap.get(itemType));
-                    button.setOnClickListener(currentCreator.create(itemType));
+                    Integer viewID = idMenuItemMap.get(itemType);
+                    if (viewID != null){
+                        Button button = findViewById(viewID);
+                        button.setOnClickListener(currentCreator.create(itemType));
+                    }
                 }
             }
         }
