@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.artemifyMusicStudio.ViewQueuePage"
+    tools:context=".ViewQueuePage"
     android:padding="10dp"
     android:orientation="vertical">
 
@@ -37,7 +37,7 @@
             <LinearLayout
                 android:id="@+id/list_songs_display"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <!--            A song display with cover, song name, artist name-->
@@ -52,7 +52,7 @@
                         android:layout_height="90dp"
                         android:background="@color/green"
                         android:gravity="center"
-                        android:text="cover"
+                        android:text="@string/song_cover1"
                         android:textColor="#ffffff"
                         tools:ignore="TextContrastCheck" />
 
@@ -68,8 +68,8 @@
                             android:layout_weight="1"
                             android:layout_marginTop="13dp"
                             android:gravity="center"
-                            android:textSize="18dp"
-                            android:text="Song Name" />
+                            android:textSize="18sp"
+                            android:text="@string/song_name1" />
 
                         <TextView
                             android:id="@+id/display_artist_name1"
@@ -79,8 +79,8 @@
                             android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:layout_weight="1"
-                            android:textSize="15dp"
-                            android:text="Artist Name" />
+                            android:textSize="15sp"
+                            android:text="@string/artist_name1" />
 
                     </LinearLayout>
 
@@ -99,7 +99,7 @@
                         android:layout_height="90dp"
                         android:background="@color/green"
                         android:gravity="center"
-                        android:text="cover"
+                        android:text="@string/song_cover2"
                         android:textColor="#ffffff"
                         tools:ignore="TextContrastCheck" />
 
@@ -115,8 +115,8 @@
                             android:layout_weight="1"
                             android:layout_marginTop="13dp"
                             android:gravity="center"
-                            android:textSize="18dp"
-                            android:text="Song Name" />
+                            android:textSize="18sp"
+                            android:text="@string/song_name2" />
 
                         <TextView
                             android:id="@+id/display_artist_name2"
@@ -126,8 +126,8 @@
                             android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:layout_weight="1"
-                            android:textSize="15dp"
-                            android:text="Artist Name" />
+                            android:textSize="15sp"
+                            android:text="@string/artist_name2" />
 
                     </LinearLayout>
 
@@ -145,7 +145,7 @@
                         android:layout_height="90dp"
                         android:background="@color/green"
                         android:gravity="center"
-                        android:text="cover"
+                        android:text="@string/song_cover3"
                         android:textColor="#ffffff"
                         tools:ignore="TextContrastCheck" />
 
@@ -161,8 +161,8 @@
                             android:layout_weight="1"
                             android:layout_marginTop="13dp"
                             android:gravity="center"
-                            android:textSize="18dp"
-                            android:text="Song Name" />
+                            android:textSize="18sp"
+                            android:text="@string/song_name3" />
 
                         <TextView
                             android:id="@+id/display_artist_name3"
@@ -172,8 +172,8 @@
                             android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:layout_weight="1"
-                            android:textSize="15dp"
-                            android:text="Artist Name" />
+                            android:textSize="15sp"
+                            android:text="@string/artist_name3" />
 
                     </LinearLayout>
 
@@ -191,7 +191,7 @@
                         android:layout_height="90dp"
                         android:background="@color/green"
                         android:gravity="center"
-                        android:text="cover"
+                        android:text="@string/song_cover4"
                         android:textColor="#ffffff"
                         tools:ignore="TextContrastCheck" />
 
@@ -207,8 +207,8 @@
                             android:layout_weight="1"
                             android:layout_marginTop="13dp"
                             android:gravity="center"
-                            android:textSize="18dp"
-                            android:text="Song Name" />
+                            android:textSize="18sp"
+                            android:text="@string/song_name4" />
 
                         <TextView
                             android:id="@+id/display_artist_name4"
@@ -218,8 +218,8 @@
                             android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:layout_weight="1"
-                            android:textSize="15dp"
-                            android:text="Artist Name" />
+                            android:textSize="15sp"
+                            android:text="@string/artist_name4" />
 
                     </LinearLayout>
 
@@ -237,7 +237,7 @@
                         android:layout_height="90dp"
                         android:background="@color/green"
                         android:gravity="center"
-                        android:text="cover"
+                        android:text="@string/song_cover5"
                         android:textColor="#ffffff" />
 
                     <LinearLayout
@@ -252,8 +252,8 @@
                             android:layout_weight="1"
                             android:layout_marginTop="13dp"
                             android:gravity="center"
-                            android:textSize="18dp"
-                            android:text="Song Name" />
+                            android:textSize="18sp"
+                            android:text="@string/song_name5" />
 
                         <TextView
                             android:id="@+id/display_artist_name5"
@@ -263,8 +263,8 @@
                             android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:layout_weight="1"
-                            android:textSize="15dp"
-                            android:text="Artist Name" />
+                            android:textSize="15sp"
+                            android:text="@string/artist_name5" />
 
                     </LinearLayout>
 
@@ -282,7 +282,7 @@
                         android:layout_height="90dp"
                         android:background="@color/green"
                         android:gravity="center"
-                        android:text="cover"
+                        android:text="@string/song_cover6"
                         android:textColor="#ffffff" />
 
                     <LinearLayout
@@ -297,8 +297,8 @@
                             android:layout_weight="1"
                             android:layout_marginTop="13dp"
                             android:gravity="center"
-                            android:textSize="18dp"
-                            android:text="Song Name" />
+                            android:textSize="18sp"
+                            android:text="@string/song_name6" />
 
                         <TextView
                             android:id="@+id/display_artist_name6"
@@ -308,8 +308,8 @@
                             android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:layout_weight="1"
-                            android:textSize="15dp"
-                            android:text="Artist Name" />
+                            android:textSize="15sp"
+                            android:text="@string/artist_name6" />
                     </LinearLayout>
 
                 </LinearLayout>
