@@ -40,6 +40,10 @@ public class SongDisplayPage extends PageActivity {
         setUpSongInformation();
     }
 
+//    @Override
+//    protected void onResume() {
+//    }
+
     @Override
     protected SimpleButtonCommandCreator getSimpleOnClickCommandCreator(String creatorType) {
         switch (creatorType){

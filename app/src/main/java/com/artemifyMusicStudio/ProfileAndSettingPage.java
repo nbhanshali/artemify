@@ -30,10 +30,6 @@ public class ProfileAndSettingPage extends PageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_and_setting_page);
 
-//        // set target user to be the current user so that we can reuse some commands from UserDisplayPage
-//        String currUserID = this.activityServiceCache.getUserID();
-//        this.activityServiceCache.setTargetUserID(currUserID);
-
         // parse service cache, searchResult and searchType
         parseActivityServiceCache();
         this.activityServiceCache.setCurrentPageActivity(this);
@@ -201,7 +197,9 @@ public class ProfileAndSettingPage extends PageActivity {
                                              ArrayList<String> targetNames, Integer layoutID,
                                              CommandItemType targetCommandType){
         // Get layout and create buttons
-        LinearLayout publicSongDisplay = findViewById(layoutID);
+        LinearLayout targetEntityDisplay = findViewById(layoutID);
+        resetViewState(targetEntityDisplay);
+
         int count = 0;
         PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
         for (int targetID: targetIDs){
@@ -216,10 +214,14 @@ public class ProfileAndSettingPage extends PageActivity {
             button.setOnClickListener(onClickListener);
 
             // populate the button to the layout
-            publicSongDisplay.addView(button);
+            targetEntityDisplay.addView(button);
             count += 1;
         }
-        publicSongDisplay.setGravity(Gravity.CENTER);
+        targetEntityDisplay.setGravity(Gravity.CENTER);
+    }
+
+    private void resetViewState(LinearLayout layout){
+        layout.removeAllViews();
     }
 
     protected void setUpUserDisplayInfo(){

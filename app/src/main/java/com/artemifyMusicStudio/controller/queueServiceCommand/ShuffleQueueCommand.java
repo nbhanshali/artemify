@@ -1,12 +1,18 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
+
+import java.io.IOException;
 
 public class ShuffleQueueCommand extends QueueServiceCommand{
 
@@ -30,6 +36,15 @@ public class ShuffleQueueCommand extends QueueServiceCommand{
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         } else {
             activityServiceCache.getQueueManager().shuffleQueue();
+            // Updated ActivityServiceCache.ser file
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
+            }
             String warningMsg =  this.languagePresenter.
                     translateString("Your upcoming songs in the queue have been shuffled.") ;
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();

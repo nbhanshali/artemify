@@ -1,13 +1,18 @@
 package com.artemifyMusicStudio.controller.queueServiceCommand;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
 import com.artemifyMusicStudio.PageActivity;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.Queue;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class PlayPreviousSongCommand extends QueueServiceCommand{
@@ -38,6 +43,14 @@ public class PlayPreviousSongCommand extends QueueServiceCommand{
             activityServiceCache.getQueueManager().addToQueue(currSong, 0);
             activityServiceCache.getQueueManager().setNowPlaying(prevSong);
             activityServiceCache.getQueueManager().setRecentlyPlayedSongs(recentlyPlayedSongs);
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
+            }
             String warningMsg =  this.languagePresenter.
                     translateString("Previous is song is being played.") ;
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();

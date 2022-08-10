@@ -39,6 +39,7 @@ public class InvokeLogOutCommand implements View.OnClickListener{
             ioGateway.saveToFile("Users.ser", users);
             ioGateway.saveToFile("Playlists.ser", playlists);
             ioGateway.saveToFile("Songs.ser", songs);
+            ioGateway.saveToFile("ActivityServiceCache.ser", activityServiceCache);
 
             PageActivity currentPageActivity = activityServiceCache.getCurrentPageActivity();
             Intent it = new Intent(currentPageActivity, LoginPage.class);

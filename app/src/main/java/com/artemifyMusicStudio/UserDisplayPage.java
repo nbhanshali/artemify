@@ -155,8 +155,10 @@ public class UserDisplayPage extends PageActivity {
                                            ArrayList<Integer> targetIDs,
                                            ArrayList<String> targetNames, Integer layoutID,
                                            CommandItemType targetCommandType){
-        // Get layout and create buttons
-        LinearLayout publicSongDisplay = findViewById(layoutID);
+        // Get layout and create buttons and reset layout state
+        LinearLayout targetEntityDisplay = findViewById(layoutID);
+        resetViewState(targetEntityDisplay);
+
         int count = 0;
         PageTransitionCommandCreator pageTransitionCommandCreator = new PageTransitionCommandCreator(this.activityServiceCache);
         for (int targetID: targetIDs){
@@ -171,10 +173,14 @@ public class UserDisplayPage extends PageActivity {
             button.setOnClickListener(onClickListener);
 
             // populate the button to the layout
-            publicSongDisplay.addView(button);
+            targetEntityDisplay.addView(button);
             count += 1;
         }
-        publicSongDisplay.setGravity(Gravity.CENTER);
+        targetEntityDisplay.setGravity(Gravity.CENTER);
+    }
+
+    private void resetViewState(LinearLayout layout){
+        layout.removeAllViews();
     }
 
     protected void setUpUserDisplayInfo(){

@@ -51,6 +51,7 @@ public class SearchResultPage extends PageActivity {
 
     @Override
     protected void populateButtons(){
+        resetViewState();
         LanguagePresenter languagePresenter = this.activityServiceCache.getLanguagePresenter();
         LinearLayout searchResultDisplay = findViewById(R.id.search_result_display_layout);
         HashMap<String, String> searchResultInfoMap = this.searchResultContainer.getSearchResultMap();
@@ -75,6 +76,11 @@ public class SearchResultPage extends PageActivity {
         searchResultDisplay.setGravity(Gravity.CENTER);
         Button exitButton = findViewById(R.id.exit);
         exitButton.setOnClickListener(new ExitPageCommand(this.activityServiceCache));
+    }
+
+    private void resetViewState(){
+        LinearLayout searchResultDisplay = findViewById(R.id.search_result_display_layout);
+        searchResultDisplay.removeAllViews();
     }
 
     /**
