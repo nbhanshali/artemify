@@ -34,7 +34,6 @@ public class LoginPage extends PageActivity {
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
     }
@@ -95,7 +94,4 @@ public class LoginPage extends PageActivity {
         }
         return null;
     }
-
-    @Override
-    protected void populateExitPageMenuItems() {}
 }

@@ -119,6 +119,4 @@ public class AddToExistingPlaylistDisplayPage extends PageActivity {
     @Override
     protected void populateMenuCommandCreatorMap() {}
 
-    @Override
-    protected void populateExitPageMenuItems() {}
 }

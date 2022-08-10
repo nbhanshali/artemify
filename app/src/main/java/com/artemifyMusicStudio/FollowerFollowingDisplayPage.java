@@ -100,6 +100,4 @@ public class FollowerFollowingDisplayPage extends PageActivity {
     @Override
     protected void populateMenuCommandCreatorMap() {}
 
-    @Override
-    protected void populateExitPageMenuItems() {}
 }

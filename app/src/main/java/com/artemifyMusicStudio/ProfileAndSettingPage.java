@@ -303,9 +303,4 @@ public class ProfileAndSettingPage extends PageActivity {
     @Override
     protected void populateMenuCommandCreatorMap() {}
 
-    /**
-     * No usage in this class, no actual implementation
-     */
-    @Override
-    protected void populateExitPageMenuItems() {}
 }

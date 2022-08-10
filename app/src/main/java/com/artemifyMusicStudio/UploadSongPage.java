@@ -31,7 +31,6 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
 
@@ -68,11 +67,6 @@ public class UploadSongPage extends PageActivity implements RadioGroup.OnChecked
             default:
                 return null;
         }
-    }
-
-    @Override
-    protected void populateExitPageMenuItems() {
-
     }
 
     @Override

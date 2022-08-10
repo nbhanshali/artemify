@@ -27,7 +27,6 @@ public class AdminPage extends PageActivity {
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
         //set user name
@@ -76,12 +75,5 @@ public class AdminPage extends PageActivity {
             default:
                 return null;
         }
-    }
-
-    @Override
-    protected void populateExitPageMenuItems() {
-        // populate exit page buttons
-        exitPageMenuItems.add(CommandItemType.LOG_OUT);
-        exitPageMenuItems.add(CommandItemType.QUIT_ADMIN_MODE);
     }
 }

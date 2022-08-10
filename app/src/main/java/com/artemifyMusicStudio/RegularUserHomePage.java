@@ -26,7 +26,6 @@ public class RegularUserHomePage extends PageActivity {
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
         // set user name
@@ -54,12 +53,6 @@ public class RegularUserHomePage extends PageActivity {
             return new PageTransitionCommandCreator(this.activityServiceCache);
         }
         return null;
-    }
-
-    @Override
-    protected void populateExitPageMenuItems() {
-        this.exitPageMenuItems.add(CommandItemType.LOG_OUT);
-        this.exitPageMenuItems.add(CommandItemType.ENABLE_ADMIN_MODE);
     }
 
     @Override

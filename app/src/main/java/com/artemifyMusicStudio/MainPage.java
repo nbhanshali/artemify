@@ -25,7 +25,6 @@ public class MainPage extends PageActivity {
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
     }
@@ -51,7 +50,4 @@ public class MainPage extends PageActivity {
         }
         return null;
     }
-
-    @Override
-    protected void populateExitPageMenuItems() {}
 }

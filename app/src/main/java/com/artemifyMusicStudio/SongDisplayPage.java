@@ -37,7 +37,6 @@ public class SongDisplayPage extends PageActivity {
         activityServiceCache.setTargetUserID(artist);
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
         setUpSongInformation();
@@ -85,10 +84,7 @@ public class SongDisplayPage extends PageActivity {
         menuCommandCreatorMap.put("PopupCommandCreator", tempList2);
         menuCommandCreatorMap.put("ActionCommandCreator", tempList3);
     }
-
-    @Override
-    protected void populateExitPageMenuItems() {}
-
+    
     private void setUpSongInformation(){
         // primary setup
         SongManager songManager = activityServiceCache.getSongManager();

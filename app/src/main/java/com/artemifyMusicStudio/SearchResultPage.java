@@ -109,8 +109,6 @@ public class SearchResultPage extends PageActivity {
     @Override
     protected void populateMenuCommandCreatorMap() {}
 
-    @Override
-    protected void populateExitPageMenuItems() {}
 
     private void populateInvokeSearchResultType(){
         switch (this.searchType){

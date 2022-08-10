@@ -26,7 +26,6 @@ public class CreateAccountPage extends PageActivity {
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
     }
@@ -52,10 +51,5 @@ public class CreateAccountPage extends PageActivity {
             return new UserInputRequestCommandCreator(this.activityServiceCache, inputUserName, inputPassword);
         }
         return null;
-    }
-
-    @Override
-    protected void populateExitPageMenuItems() {
-
     }
 }

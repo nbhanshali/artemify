@@ -30,7 +30,6 @@ public class AddToNewPlaylistPage extends PageActivity implements RadioGroup.OnC
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
 
@@ -72,9 +71,6 @@ public class AddToNewPlaylistPage extends PageActivity implements RadioGroup.OnC
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList1);
         menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
     }
-
-    @Override
-    protected void populateExitPageMenuItems() {}
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {

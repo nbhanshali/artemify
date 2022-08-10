@@ -37,7 +37,6 @@ public class PlaylistDisplayPage extends PageActivity {
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
         setUpPlaylistInformation();
@@ -82,11 +81,6 @@ public class PlaylistDisplayPage extends PageActivity {
         menuCommandCreatorMap.put("PopupCommandCreator", tempList1);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
         menuCommandCreatorMap.put("ActionCommandCreator", tempList3);
-    }
-
-    @Override
-    protected void populateExitPageMenuItems() {
-        this.exitPageMenuItems.add(CommandItemType.EXIT_PAGE);
     }
 
     private void setUpPlaylistInformation(){

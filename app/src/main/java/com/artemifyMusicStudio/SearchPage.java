@@ -26,7 +26,6 @@ public class SearchPage extends PageActivity {
 
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
     }
@@ -68,8 +67,4 @@ public class SearchPage extends PageActivity {
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList2);
     }
 
-    @Override
-    protected void populateExitPageMenuItems() {
-        this.exitPageMenuItems.add(CommandItemType.EXIT_PAGE);
-    }
 }

@@ -80,7 +80,6 @@ public abstract class PageActivity extends AppCompatActivity implements Serializ
         populateButtons();
     }
 
-
     /**
      * A protected method to enforce a concrete page controller class to implement its specific way of getting
      * its menu command creators
@@ -93,13 +92,5 @@ public abstract class PageActivity extends AppCompatActivity implements Serializ
      * A protected method that can be reused by a concrete page controller class to populate menu command creator
      */
     protected abstract void populateMenuCommandCreatorMap();
-
-    /**
-     * A protected method to enforce a concrete page controller class to implement its specific
-     * items that will trigger the exit of the page controller. Namely, the conditions that will terminate the call of
-     * invokes()
-     */
-    @Deprecated
-    protected abstract void populateExitPageMenuItems();
 
 }

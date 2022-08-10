@@ -28,7 +28,6 @@ public class QueueDisplayPage extends PageActivity{
         
         // populate button
         populateMenuCommandCreatorMap();
-        populateExitPageMenuItems();
         populateIdMenuMap();
         populateButtons();
     }
@@ -87,10 +86,5 @@ public class QueueDisplayPage extends PageActivity{
         menuCommandCreatorMap.put("QueueServiceCommandCreator", tempList1);
         menuCommandCreatorMap.put("UserInputCommandCreator", tempList2);
         menuCommandCreatorMap.put("TransitionCommandCreator", tempList3);
-    }
-
-    @Override
-    protected void populateExitPageMenuItems() {
-        this.exitPageMenuItems.add(CommandItemType.EXIT_PAGE);
     }
 }
