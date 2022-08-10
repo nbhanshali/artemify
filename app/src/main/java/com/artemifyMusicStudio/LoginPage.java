@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -47,12 +48,18 @@ public class LoginPage extends PageActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.admin_user:
+                TextView tv = findViewById(R.id.logInText);
+                String adminText = "Admin Log In";
+                tv.setText(adminText);
                 this.loginCommandType = CommandItemType.ADMIN_LOG_IN_MODE;
                 populateMenuCommandCreatorMap();
                 populateIdMenuMap();
                 populateButtons();
                 return true;
             case R.id.regular_user:
+                TextView tv1 = findViewById(R.id.logInText);
+                String regularText = "Log In";
+                tv1.setText(regularText);
                 this.loginCommandType = CommandItemType.REGULAR_LOG_IN_MODE;
                 populateMenuCommandCreatorMap();
                 populateIdMenuMap();
