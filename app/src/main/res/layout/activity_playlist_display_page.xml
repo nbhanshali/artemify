@@ -50,7 +50,7 @@
                 android:contentDescription="@string/likes" />
 
             <TextView
-                android:id="@+id/display_num_likes"
+                android:id="@+id/display_numlikes"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
