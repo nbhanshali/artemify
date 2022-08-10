@@ -31,7 +31,7 @@
             android:background="@drawable/circle"
             android:contentDescription="@string/app_logo"
             android:scaleType="fitCenter"
-            android:src="@drawable/shrek_cat_dimensions2"
+            android:src="@drawable/meow3"
             tools:ignore="ImageContrastCheck" />
 
         <TextView
