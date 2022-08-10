@@ -70,8 +70,7 @@ public class StartPage extends AppCompatActivity {
                 UserAccess acctServiceManager = new UserAccess(users);
                 PlaylistManager playlistManager = new PlaylistManager(playlists);
                 SongManager songManager = new SongManager(acctServiceManager, playlistManager, songs);
-                ArrayList<Integer> empty = new ArrayList<>();
-                Queue queue = new Queue(songs.keys(), empty);
+                Queue queue = new Queue();
 
                 // Initialize the ActivityServiceCache
                 ActivityServiceCache activityServiceCache =

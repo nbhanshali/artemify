@@ -36,35 +36,34 @@ public class RemoveFromQueueCommand implements View.OnClickListener {
         try {
             int songIndex = Integer.parseInt(text);
 
-            if(songIndex <= activityServiceCache.getQueueManager().getUpcomingSongs().size()){
-                int songID = activityServiceCache.getQueueManager().getUpcomingSongs().get(songIndex);
-                String songName = activityServiceCache.getSongManager().getSongName(songID);
-                activityServiceCache.getQueueManager().removeFromQueue(songIndex);
+            int songID = activityServiceCache.getQueueManager().getUpcomingSongs().get(songIndex);
+            String songName = activityServiceCache.getSongManager().getSongName(songID);
+            activityServiceCache.getQueueManager().removeFromQueue(songIndex);
 
-                // Updated ActivityServiceCache.ser file
-                GatewayCreator gatewayCreator = new GatewayCreator();
-                IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
-                        currentPageActivity);
-                try {
-                    ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
-                } catch (IOException e) {
-                    Log.e("warning", "IO exception");
-                }
-
-                Intent it = new Intent(currentPageActivity, QueueDisplayPage.class);
-                it.putExtra("cache", this.activityServiceCache);
-                currentPageActivity.startActivity(it);
-                String warningMsg =  this.languagePresenter.
-                        translateString(songName + " has been removed from the queue.") ;
-                Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
-            } else {
-                String warningMsg =  this.languagePresenter.
-                        translateString("There is no song at your given index. ") ;
-                Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
+            // Updated ActivityServiceCache.ser file
+            GatewayCreator gatewayCreator = new GatewayCreator();
+            IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                    currentPageActivity);
+            try {
+                ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+            } catch (IOException e) {
+                Log.e("warning", "IO exception");
             }
+
+            Intent it = new Intent(currentPageActivity, QueueDisplayPage.class);
+            it.putExtra("cache", this.activityServiceCache);
+            currentPageActivity.startActivity(it);
+            String warningMsg =  this.languagePresenter.
+                    translateString(songName + " has been removed from the queue.") ;
+            Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
+
         } catch (NumberFormatException e) {
             String warningMsg =  this.languagePresenter.
                     translateString("Input is not an integer, please enter a valid input.") ;
+            Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
+        } catch (IndexOutOfBoundsException e) {
+            String warningMsg =  this.languagePresenter.
+                    translateString("There is no song at your given index. ") ;
             Toast.makeText(currentPageActivity, warningMsg, Toast.LENGTH_LONG).show();
         }
 
