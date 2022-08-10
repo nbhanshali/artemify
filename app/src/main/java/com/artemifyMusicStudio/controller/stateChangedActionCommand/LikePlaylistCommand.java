@@ -40,7 +40,7 @@ public class LikePlaylistCommand implements View.OnClickListener{
         this.playlistID = playlistID;
 
         imageButton = playlistDisplayPage.findViewById(R.id.display_like_playlist_button);
-        likeView = playlistDisplayPage.findViewById(R.id.display_numlikes);
+        likeView = playlistDisplayPage.findViewById(R.id.display_num_likes);
 
     }
 
