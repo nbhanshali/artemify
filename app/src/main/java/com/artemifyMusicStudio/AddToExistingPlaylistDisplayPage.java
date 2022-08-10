@@ -41,6 +41,9 @@ public class AddToExistingPlaylistDisplayPage extends PageActivity {
         UserAccess acctServiceManager = this.activityServiceCache.getUserAcctServiceManager();
         String myUserID = this.activityServiceCache.getUserID();
 
+        // reset to empty view
+        resetViewState();
+
         // populate playlist buttons
         populatePublicPlaylistButtons(languagePresenter, acctServiceManager, playlistServiceManager,
                 myUserID);
@@ -81,8 +84,6 @@ public class AddToExistingPlaylistDisplayPage extends PageActivity {
                                              ArrayList<String> targetNames, Integer layoutID){
         // Get layout and create buttons
         LinearLayout publicSongDisplay = findViewById(layoutID);
-        resetViewState(publicSongDisplay);
-
         int count = 0;
         for (int targetID: targetIDs){
             String buttonDescription = languagePresenter.translateString(targetNames.get(count));
@@ -102,7 +103,8 @@ public class AddToExistingPlaylistDisplayPage extends PageActivity {
         publicSongDisplay.setGravity(Gravity.CENTER);
     }
 
-    private void resetViewState(LinearLayout layout){
+    private void resetViewState(){
+        LinearLayout layout = findViewById(R.id.playlist_display_layout);
         layout.removeAllViews();
     }
 

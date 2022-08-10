@@ -1,12 +1,19 @@
 package com.artemifyMusicStudio.controller.pageTransitionCommand;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.artemifyMusicStudio.ActivityServiceCache;
+import com.artemifyMusicStudio.PageActivity;
+import com.gateway.FileType;
+import com.gateway.GatewayCreator;
+import com.gateway.IGateway;
 import com.presenters.LanguagePresenter;
 import com.useCase.PlaylistManager;
 import com.useCase.SongManager;
+
+import java.io.IOException;
 
 
 /**
@@ -56,6 +63,16 @@ public class AddToExistingPlaylistCommand implements View.OnClickListener {
                         this.languagePresenter.translateString(msg), Toast.LENGTH_LONG).show();
             }else {
                 playlistServiceManager.addToPlaylist(playlistID, songID);
+                // Updated ActivityServiceCache.ser file
+                PageActivity currentPageActivity = this.activityServiceCache.getCurrentPageActivity();
+                GatewayCreator gatewayCreator = new GatewayCreator();
+                IGateway ioGateway = gatewayCreator.createIGateway(FileType.SER,
+                        currentPageActivity);
+                try {
+                    ioGateway.saveToFile("ActivityServiceCache.ser", this.activityServiceCache);
+                } catch (IOException e) {
+                    Log.e("warning", "IO exception");
+                }
                 String msg = "Successfully added! (⌒‿⌒) You can now find this song in \uD83D\uDCBD " +
                         songManager.getSongName(songID) + " \uD83D\uDCBD.";
                 Toast.makeText(this.activityServiceCache.getCurrentPageActivity(),
