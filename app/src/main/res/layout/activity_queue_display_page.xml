@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.artemifyMusicStudio.QueueDisplayPage"
+    tools:context=".QueueDisplayPage"
     android:padding="10dp"
     android:orientation="vertical">
 
@@ -24,7 +24,7 @@
             android:id="@+id/view_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Songs"
+            android:text="@string/view_queue_queue_display"
             android:drawableLeft="@drawable/music"
             tools:ignore="TextContrastCheck,RtlHardcoded" />
 
@@ -33,7 +33,7 @@
             android:id="@+id/shuffle_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shuffle Queue"
+            android:text="@string/shuffle_queue"
             android:drawableLeft="@drawable/shuffle"
             tools:ignore="TextContrastCheck,RtlHardcoded" />
 
@@ -41,7 +41,7 @@
             android:id="@+id/skip_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Skip Song"
+            android:text="@string/skip_song"
             android:drawableLeft="@drawable/skip_next"
             tools:ignore="TextContrastCheck,RtlHardcoded" />
 
@@ -49,7 +49,7 @@
             android:id="@+id/play_previous_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play Previous Song"
+            android:text="@string/play_previous_song"
             android:drawableLeft="@drawable/skip_previous"
             tools:ignore="TextContrastCheck,RtlHardcoded" />
 
@@ -57,7 +57,7 @@
             android:id="@+id/remove_from_queue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Remove from Queue"
+            android:text="@string/remove_from_queue"
             android:drawableLeft="@drawable/remove"
             tools:ignore="TextContrastCheck,RtlHardcoded" />
 
@@ -65,7 +65,7 @@
             android:id="@+id/repeat_song_once"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Repeat Song Once"
+            android:text="@string/repeat_song_once"
             android:drawableLeft="@drawable/repeat_once"
             tools:ignore="TextContrastCheck,RtlHardcoded" />
 
@@ -73,7 +73,7 @@
             android:id="@+id/repeat_song_infinitely"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Repeat Song Infinitely"
+            android:text="@string/repeat_song_infinitely"
             android:drawableLeft="@drawable/infinity"
             tools:ignore="TextContrastCheck,RtlHardcoded" />
 

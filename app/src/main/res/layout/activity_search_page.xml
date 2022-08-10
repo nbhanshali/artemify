@@ -25,20 +25,20 @@
             android:layout_height="52dp"
             android:layout_marginTop="130dp"
             android:layout_marginBottom="55dp"
-            android:text="Search by User" />
+            android:text="@string/search_by_user" />
 
         <Button
             android:id="@+id/search_by_song"
             android:layout_width="310dp"
             android:layout_height="52dp"
             android:layout_marginBottom="55dp"
-            android:text="Search by Song" />
+            android:text="@string/search_by_song" />
 
         <Button
             android:id="@+id/search_by_playlist"
             android:layout_width="310dp"
             android:layout_height="52dp"
-            android:text="Search by Playlist" />
+            android:text="@string/search_by_playlist" />
 
     </LinearLayout>
 
