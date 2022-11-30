@@ -1,4 +1,5 @@
-Welcome to Artemify by Group_0244!
+Welcome to Artemify! 
+Your favorite platform to stream and organize music.
 
 To use our program,
 
